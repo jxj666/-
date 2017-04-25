@@ -4,7 +4,7 @@
 }
 
 
-/* 文本输入框 */
+/* æ–‡æœ¬è¾“å…¥æ¡† */
 
 .u-ipt {
     width: 95%;
@@ -18,7 +18,7 @@
     border-radius: 5px;
 }
 
-/* 通用自定义按钮-默认蓝色 */
+/* é€šç”¨è‡ªå®šä¹‰æŒ‰é’®-é»˜è®¤è“è‰² */
 
 .u-btn {
     display: inline-block;
@@ -79,21 +79,21 @@
     border-top-color: rgba(255, 255, 255, 1);
 }
 
-/* 文本输入框-窄 */
+/* æ–‡æœ¬è¾“å…¥æ¡†-çª„ */
 
 .u-ipt-1 {
     width: 90px;
 }
 
 
-/* 文本输入框-出错 */
+/* æ–‡æœ¬è¾“å…¥æ¡†-å‡ºé”™ */
 
 .u-ipt-err {
     border-color: #c00 #e00 #e00;
 }
 
 
-/* 简易表单 */
+/* ç®€æ˜“è¡¨å• */
 
 .m-form {
     line-height: 29px;
@@ -176,7 +176,7 @@
 }
 
 
-/* 普通翻页器-默认居中 */
+/* æ™®é€šç¿»é¡µå™¨-é»˜è®¤å±…ä¸­ */
 
 .m-page {
     margin: 10px 0 0;
@@ -272,21 +272,21 @@
 }
 
 
-/* 居左 */
+/* å±…å·¦ */
 
 .m-page-lt {
     text-align: left;
 }
 
 
-/* 居右 */
+/* å±…å³ */
 
 .m-page-rt {
     text-align: right;
 }
 
 
-/* 较小 */
+/* è¾ƒå° */
 
 .m-page-sm {
     line-height: 22px;
@@ -298,7 +298,7 @@
 }
 
 
-/* 分离 */
+/* åˆ†ç¦» */
 
 .m-page-sr a,
 .m-page-sr i {
@@ -378,7 +378,7 @@
 }
 
 
-/* tabè¾ƒå° */
+/* tabÃ¨Â¾Æ’Ã¥Â°Â */
 
 .m-hd-sm {
     height: 44px;
@@ -428,6 +428,7 @@ li.nth2 {
     background: #fff;
     font-size: 14px;
     color: #333333;
+    padding: 2px 0;
 }
 
 .time_select button {
