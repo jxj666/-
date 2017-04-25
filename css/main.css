@@ -426,9 +426,11 @@ li.nth2 {
     height: 40px;
     border: 1px solid #0068B7;
     background: #fff;
+    border-radius: 5px;
     font-size: 14px;
     color: #333333;
     height: 14px\9;
+    padding: 13px 0 \9;
 }
 
 .time_select button {
