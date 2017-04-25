@@ -428,7 +428,7 @@ li.nth2 {
     background: #fff;
     font-size: 14px;
     color: #333333;
-    _height: 14px;
+    height: 14px\9;
 }
 
 .time_select button {
