@@ -4,6 +4,178 @@
 }
 
 
+/* 文本输入框 */
+
+.u-ipt {
+    width: 95%;
+    padding: 5px;
+    height: 30px;
+    border: 1px solid #D9D9D9;
+    line-height: 17px;
+    font-size: 14px;
+    color: #777;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* 通用自定义按钮-默认蓝色 */
+
+.u-btn {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 28px;
+    line-height: 28px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    word-wrap: normal;
+    white-space: nowrap;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.2);
+}
+
+.u-btn,
+.u-btn:hover {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    height: 66px;
+    font-size: 18px;
+    background: #0068B7;
+    margin: 0;
+}
+
+.u-btn:hover,
+.u-btn:focus {
+    background: #399dd8;
+}
+
+.u-btn:active {
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.u-btn::-moz-focus-inner {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.u-btn .btnsel {
+    display: inline-block;
+    vertical-align: middle;
+    border-style: solid;
+    border-width: 4px 4px 0;
+    border-color: rgba(255, 255, 255, 0.8) transparent transparent;
+}
+
+.u-btn:hover .btnsel,
+.u-btn:focus .btnsel {
+    border-top-color: rgba(255, 255, 255, 1);
+}
+
+/* 文本输入框-窄 */
+
+.u-ipt-1 {
+    width: 90px;
+}
+
+
+/* 文本输入框-出错 */
+
+.u-ipt-err {
+    border-color: #c00 #e00 #e00;
+}
+
+
+/* 简易表单 */
+
+.m-form {
+    line-height: 29px;
+    color: #555;
+}
+
+.zhyz .m-form {
+    width: 509px;
+    margin: 0 auto;
+}
+
+.mmcz .m-form {
+    width: 509px;
+    margin: 0 auto;
+}
+
+.m-form legend {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.m-form .formitm {
+    padding: 40px 0 0;
+    line-height: 42px;
+    box-sizing: border-box;
+}
+
+.m-form .formitm-1 {
+    padding-top: 100px;
+    width: 100%;
+    padding: 100px 30px;
+    box-sizing: border-box;
+}
+
+.m-form .lab {
+    float: left;
+    width: 110px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.m-form .ipt {
+    margin-left: 138px;
+}
+
+.m-form .ipt * {
+    vertical-align: middle;
+}
+
+.m-form .ipt a,
+.m-form .ipt a:hover {
+    text-decoration: none;
+    color: #3891eb;
+}
+
+.m-form .ipt img {
+    height: 32px;
+    margin: 0 15px 0 5px;
+}
+
+.m-form .ipt .domain {
+    margin: 0 0 0 5px;
+    font-weight: bold;
+    color: #777;
+}
+
+.m-form .ipt p {
+    height: 22px;
+    line-height: 22px;
+    color: #999;
+}
+
+.m-form .tip {
+    padding-top: 10px;
+}
+
+.m-form .tip input {
+    margin: 0 5px 3px 0;
+}
+
+
 /* 普通翻页器-默认居中 */
 
 .m-page {
@@ -22,10 +194,8 @@
 .m-page a,
 .m-page i {
     display: inline-block;
-    *
-    display: inline;
-    *
-    zoom: 1;
+    * display: inline;
+    * zoom: 1;
     vertical-align: top;
     padding: 0 12px;
     margin-left: -1px;
@@ -301,6 +471,7 @@ table {
 
 td {
     padding: 0 15px;
+    box-sizing: border-box;
 }
 
 th {
@@ -337,11 +508,15 @@ td.yscbd_td6 button {
     font-size: 16px;
     color: #fff;
 }
-.table_bottom{
+
+.table_bottom {
     margin-top: 55px;
     margin-bottom: 55px;
 }
-.update_sort{}
+
+.update_sort {
+    height: 40px;
+}
 
 .update_sort button {
     width: 162px;
@@ -352,23 +527,30 @@ td.yscbd_td6 button {
     font-size: 16px;
     color: #fff;
 }
-.pagin{}
-.ysccxmd{}
-.ysccxmd_td1{
+
+.pagin {}
+
+.ysccxmd {}
+
+.ysccxmd_td1 {
     width: 90px;
 }
-.ysccxmd_td2{
+
+.ysccxmd_td2 {
     width: 320px;
     text-align: left;
 }
-.ysccxmd_td3{
+
+.ysccxmd_td3 {
     width: 176px;
 }
-.ysccxmd_td4{
+
+.ysccxmd_td4 {
     width: 307px;
     text-align: left;
 }
-.ysccxmd_td5{
+
+.ysccxmd_td5 {
     width: 312px;
 }
 
@@ -383,4 +565,97 @@ td.ysccxmd_td5 button {
     color: #fff;
 }
 
+.zjdl {}
 
+.zjdl_td1 {
+    width: 90px;
+}
+
+.zjdl_td2 {
+    width: 320px;
+    text-align: left;
+}
+
+.zjdl_td3 {
+    width: 158px;
+}
+
+.zjdl_td4 {
+    width: 177px;
+}
+
+.zjdl_td5 {
+    width: 297px;
+    text-align: left;
+}
+
+.zjdl_td6 {
+    width: 180px;
+}
+
+td.zjdl_td6 button {
+    width: 73px;
+    height: 49px;
+    background: #0068B7;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.cxmd {}
+
+.cxmd_td1 {
+    width: 90px;
+}
+
+.cxmd_td2 {
+    width: 349px;
+    text-align: left;
+}
+
+.cxmd_td3 {
+    width: 237px;
+}
+
+.cxmd_td4 {
+    width: 296px;
+}
+
+.cxmd_td5 {
+    width: 231px;
+}
+
+td.cxmd_td5 button {
+    width: 73px;
+    height: 49px;
+    background: #0068B7;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+}
+.phone86{
+    height: 42px;
+    background: #fff;
+    border: 1px solid #D9D9D9;
+    color: #c3c4c5;
+    width: 53px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+}
+#phone_num{
+    width: 160px;
+    border-radius: 0 5px 5px 0;
+    margin-left: -5px;
+}
+.message_num{
+    font-size: 16px;
+    color: #e56a2d;
+    border: 1px solid #e56a2d;
+    width: 129px;
+    background: #fff;
+    border-radius: 5px;
+    height: 42px;
+    margin-left: 8px;
+}
