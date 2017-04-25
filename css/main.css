@@ -287,7 +287,7 @@ li.nth2 {
     overflow: hidden;
 }
 
-.yscbd table {
+table {
     text-align: center;
     line-height: 75px;
     border-color: #9f9e9e;
@@ -353,3 +353,34 @@ td.yscbd_td6 button {
     color: #fff;
 }
 .pagin{}
+.ysccxmd{}
+.ysccxmd_td1{
+    width: 90px;
+}
+.ysccxmd_td2{
+    width: 320px;
+    text-align: left;
+}
+.ysccxmd_td3{
+    width: 176px;
+}
+.ysccxmd_td4{
+    width: 307px;
+    text-align: left;
+}
+.ysccxmd_td5{
+    width: 312px;
+}
+
+td.ysccxmd_td5 button {
+    margin: 0 27px;
+    width: 73px;
+    height: 49px;
+    background: #0068B7;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+}
+
+

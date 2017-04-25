@@ -234,3 +234,9 @@ a:hover {
 .u-btn:focus .btnsel {
     border-top-color: rgba(255, 255, 255, 1);
 }
+.fleft{
+	float: left;
+}
+.fright{
+	float:right;
+}
