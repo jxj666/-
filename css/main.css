@@ -422,14 +422,15 @@ li.nth2 {
 .time_select select {
     margin: 0 35px;
     width: 160px;
-    /* line-height: 40px; */
-    /* height: 40px; */
+    line-height: 40px;
+    height: 40px;
     border: 1px solid #0068B7;
     background: #fff;
     font-size: 14px;
     color: #333333;
-    padding: 13px 0;
-    box-sizing: border-box;
+    padding: 13px 0\0;
+    line-height: normal\0;
+    height: inherit\0;
 }
 
 .time_select button {
