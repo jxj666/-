@@ -177,7 +177,8 @@ s .u-btn:focus {
 
 #select_time ul {
     top: 31px;
-    width: 163px;
+    left: 30px;
+    width: 161px;
     border: 1px solid #0068B7;
 }
 
@@ -522,11 +523,15 @@ li.nth2 {
     height: 40px;
     border-radius: 5px;
     border: 1px solid #0068B7;
+    margin-bottom: -3px;
 }
 
 #select_time .u-btn {
     background: #fff;
     color: #0068B7;
+    margin-left: 30px;
+    margin-right: 30px;
+    box-sizing: border-box;
 }
 
 button#select_time {
