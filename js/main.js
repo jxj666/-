@@ -21,7 +21,6 @@ $('#select_site li').on('click', function(ev) {
 		var ev = ev || window.event;
 		var target = ev.target || ev.srcElement;
 		var $t = $(target);
-		console.log($t)
 		$('#select_site li').removeClass('z-crt');
 		$t.closest('li').addClass('z-crt');
 
