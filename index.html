@@ -14,17 +14,17 @@
 <body>
     <div class="main">
         <div class="manage_select">
-            <div class="m-hd m-hd-sm">
+            <div class="m-hd m-hd-sm" id="select_site">
                 <ul>
                     <li class="z-crt"><a href="#">院士专家工作站评选管理</a></li>
-                    <li class="nth2"><a href="#">院士专家工作站评选管理</a></li>
+                    <li class="nth2"><a href="#">院士专家工作示范单位评选管理</a></li>
                 </ul>
             </div>
             <div class="time_select">
                 评选年度:
                 <span class="u-btns" style="position:relative;" id="select_time">
     <button type="button" class="u-btn"><span class="btntxt">2017</span><span class="btnsel"></span></button>
-                <ul class="u-menu u-menu-max u-menu-show">
+                <ul class="u-menu u-menu-max u-menu-show" style="display:none;">
                     <li><a href="#">2017</a></li>
                     <li><a href="#">2016</a></li>
                     <li><a href="#">2015</a></li>
@@ -536,7 +536,7 @@
         </div>
         <div class="mmcz">
             <div class="m-form">
-                <form name="" action="#" method="get">
+                <form name=""  method="get">
                     <fieldset>
                         <legend>账号验证</legend>
                         <div class="formitm">
@@ -550,7 +550,7 @@
                             <div class="ipt">
                                 <button class="phone86">+86</button>
                                 <input type="text" id="phone_num" class="u-ipt" placeholder="请输入注册手机号码" />
-                                <button class="message_num">获取验证码</button>
+                                <button class="message_num" >获取验证码</button>
                             </div>
                         </div>
                         <div class="formitm">
@@ -567,6 +567,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src='js/main.js'></script>
 </body>
 

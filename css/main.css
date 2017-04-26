@@ -233,7 +233,7 @@ s .u-btn:focus {
 
 .m-form .lab {
     float: left;
-    width: 110px;
+    width: 115px;
     text-align: right;
     font-weight: bold;
     font-size: 18px;
@@ -245,6 +245,7 @@ s .u-btn:focus {
 
 .m-form .ipt * {
     vertical-align: middle;
+    text-indent: 3px;
 }
 
 .m-form .ipt a {
