@@ -45,11 +45,12 @@ body{
 }
 .AE_select{
     font-size: 24px;
-    vertical-align: top;
+    vertical-align: text-top;
+    line-height: 80px;
 }
 .AE_people{
     display: inline-block;
-    vertical-align: top;
+    vertical-align: text-top;
     width: 111px;
     height: 133px;
     border: 1px solid #C2C2C2;
@@ -71,7 +72,7 @@ body{
 }
 .AE_add{
     display: inline-block;
-    vertical-align: top;
+    vertical-align: text-top;
     height: 135px;
     overflow: hidden;
     margin: 0 5px;
