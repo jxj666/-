@@ -53,7 +53,7 @@
 #expert_navigation {
     line-height: 72px;
     color: #0068b7;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 div#expert_navigation i {
@@ -118,6 +118,8 @@ div#expert_navigation a {
     text-align: center;
     height: 25px;
     margin-bottom: 55px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .text_title h2 {
@@ -164,7 +166,8 @@ div#expert_navigation a {
     width: 65%;
     padding-left: 20px;
 }
-.life_text{
+
+.life_text {
     width: 1000px;
     line-height: 40px;
     font-size: 18px;
@@ -175,14 +178,290 @@ div#expert_navigation a {
 .life_text li {
     margin-bottom: 15px;
 }
-.life_name{
+
+.life_name {
     width: 10%;
     display: inline-block;
     vertical-align: top;
     text-align: right;
 }
-.life_contain{
+
+.life_contain {
     width: 88%;
     display: inline-block;
     margin-left: 20px;
+}
+
+.company_problem {}
+
+.problem_text {
+    width: 820px;
+    overflow: hidden;
+    min-height: 500px;
+    margin-bottom: 130px;
+    background: url(../img/diwen_03.png) no-repeat bottom center;
+}
+
+.recommend {
+    width: 340px;
+    min-height: 500px;
+    padding-bottom: 30px;
+}
+
+.problem_title {
+    /* height: 94px; */
+    line-height: 94px;
+    overflow: hidden;
+}
+
+.problem_title h1 {
+    display: inline-block;
+    width: 613px;
+    font-size: 36px;
+    padding-left: 10px;
+    /* height: 94px; */
+    /* overflow: hidden; */
+}
+
+.problem_title h5 {
+    display: inline-block;
+    line-height: 94px;
+    vertical-align: top;
+    height: 94px;
+    width: 192px;
+    color: #929292;
+    font-size: 14px;
+    text-align: right;
+}
+
+.problem_base {
+    margin-bottom: 70px;
+}
+
+.problem_base ul {}
+
+.problem_base li {
+    line-height: 40px;
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.problem_base span {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: text-top;
+}
+
+.PBase31,
+.PBase33 {
+    width: 127px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.PBase32 {}
+
+.PBase34 {}
+
+.PBase41,
+.PBase43,
+.PBase45,
+.PBase51,
+.PBase53,
+.PBase55 {
+    width: 127px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.PBase42,
+.PBase52 {}
+
+.PBase44,
+.PBase54 {}
+
+.PBase46,
+.PBase56 {}
+
+.PBaseL {
+    width: 127px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.PBaseR {
+    width: 686px;
+}
+.tech_achieve_talents_show{}
+.TAT_word{
+    margin-bottom: 70px;
+}
+.TAT_L{
+    width: 127px;
+    text-align: right;
+    padding-right: 20px;
+}
+.TAT_R{
+    width: 686px;
+}
+.TAT_word li {
+    line-height: 40px;
+    margin: 15px 0;
+    font-size: 16px;
+}
+.TAT_word span {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: text-top;
+}
+.TAT_L_bac{
+    width: 127px;
+    text-align: right;
+    padding-right: 20px;
+}
+.TAT_R_bac{}
+.TAT_L_degree{
+    width: 127px;
+    text-align: right;
+    padding-right: 20px;
+}
+.TAT_R_degree{}
+.tech_achieve_talents_hide{
+    text-align: center;
+}
+
+.tech_achieve_talents_hide button {
+    width: 397px;
+    height: 75px;
+    font-size: 20px;
+    margin: 90px 0 140px;
+}
+
+.tech_achieve_talents_hide h2 {
+    font-size: 24px;
+    text-align: center;
+    line-height: 60px;
+}
+.recommend_people{
+    min-height: 100px;
+}
+.recommend_achieve{
+    min-height: 100px;
+}
+.RHead{
+    height: 47px;
+    line-height: 47px;
+    background: #0068b7;
+    border-radius: 5px 5px 0 0;
+}
+
+.RHead a {
+    color: #fff;
+}
+
+.RHead span {
+    color: #FFF;
+    padding: 0 20px;
+}
+.RBody{
+    border: 1px solid #eeeeee;
+    padding: 20px 0;
+}
+.RPeople{width: 234px;margin: 0 auto;border-bottom: 2px solid #dcdbdb;padding: 13px;}
+
+.RPeople div {
+    display: inline-block;
+    width: 141px;
+    height: 116px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.RPeople button {
+    /* display: inline-block; */
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #fff;
+    background: #0068B7;
+    margin: 0 auto;
+    border: 0px;
+    border-radius: 3px;
+}
+
+.RPeople h5 {
+    /* display: inline-block; */
+    line-height: 32px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.RPeople h3 {
+    /* display: inline-block; */
+    color: #0068b7;
+    line-height: 32px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.RPeople img {
+    display: inline-block;
+    width: 88px;
+    height: 116px;
+}
+.RAchieve{
+    display: block;
+    width: 297px;
+    margin: 0 auto;
+    border-bottom: 2px solid #dcdbdb;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.RAchieve button {
+    width: 227px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    margin: 20px auto;
+}
+
+.RAchieve span {
+    display: inline-block;
+}
+
+.RAchieve h5 {
+    color: #0068b7;
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+.RAchieve ul {}
+
+.RAchieve li {
+    line-height: 35px;
+}
+.RA_L{
+    width: 70px;
+    padding-right: 25px;
+    text-align: right;
+    font-size: 12px;
+    color: #97999a;
+    vertical-align: text-top;
+}
+.RA_R{
+    width: 163px;
+    vertical-align: text-top;
+    font-size: 12px;
+}
+.recommend_line{
+    height: 2px;
+    margin: 40px 0;
+    background: #DCDBDB;
+}
+.NBB{
+    border-bottom: 0px;
 }

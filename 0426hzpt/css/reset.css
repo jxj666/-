@@ -172,11 +172,24 @@ a:hover {
     color: #333;
 }
 
-
-
-.fleft{
-	float: left;
+.fleft {
+    float: left;
 }
-.fright{
-	float:right;
+
+.fright {
+    float: right;
 }
+
+.fclear {
+    clear: both;
+}
+
+button {
+    font-size: 12px;
+    color: #fff;
+    background: #0068B7;
+    margin: 0 auto;
+    border: 0px;
+    border-radius: 3px;
+}
+
