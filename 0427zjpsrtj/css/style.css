@@ -2,7 +2,7 @@ body{
     background: #f9f9f9;
 }
 .add_expert{
-    width: 660px;
+    width: 580px;
     margin: 127px auto;
     border: 1px solid #E8EEF3;
     box-shadow: 0 0 25px #888888;
@@ -23,7 +23,7 @@ body{
 }
 
 .add_expert select {
-    width: 150px;
+    width: 140px;
     vertical-align: middle;
     font-size: 24px;
     margin: 0 10px;
@@ -34,7 +34,7 @@ body{
 }
 
 .AE_field_time input {
-    width: 140px;
+    width: 130px;
     height: 31px;
     border-radius: 5px;
     border: 1px solid gray;
