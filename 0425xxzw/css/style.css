@@ -14,7 +14,9 @@
     width: 820px;
 }
 
-.g-mn img {}
+.g-mn img {
+    max-width: 100%;
+}
 
 .g-mn p {
     font-size: 16px;
@@ -91,7 +93,12 @@
     padding-top: 1px;
 }
 
-.img_info {}
+.img_info {
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    color: #929292;
+}
 
 .operate {
     line-height: 36px;
