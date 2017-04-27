@@ -73,7 +73,7 @@ s .u-btn:focus {
 }
 
 
-/* 下拉式菜单-默认左对齐 */
+/* ä¸‹æ‹‰å¼èœå•-é»˜è®¤å·¦å¯¹é½ */
 
 .u-menu {
     display: none;
@@ -133,14 +133,14 @@ s .u-btn:focus {
 }
 
 
-/* 显示 */
+/* æ˜¾ç¤º */
 
 .u-menu-show {
     display: block;
 }
 
 
-/* 分组 */
+/* åˆ†ç»„ */
 
 .u-menu-gp li.menusep,
 .u-menu-gp li.menusep .menuline {
@@ -165,7 +165,7 @@ s .u-btn:focus {
 }
 
 
-/* 宽度限制 */
+/* å®½åº¦é™åˆ¶ */
 
 .u-menu-min {
     min-width: 100%;
@@ -183,7 +183,7 @@ s .u-btn:focus {
 }
 
 
-/* 右对齐 */
+/* å³å¯¹é½ */
 
 .u-menu-rt {
     left: auto;
@@ -365,7 +365,7 @@ s .u-btn:focus {
 }
 
 
-/* å±…å·¦ */
+/* Ã¥Â±â€¦Ã¥Â·Â¦ */
 
 .m-page-lt {
     text-align: left;
@@ -600,7 +600,7 @@ th {
     width: 182px;
 }
 
-td.yscbd_td6 button {
+td.yscbd_td6 button,td.yscbd_td5 button {
     width: 73px;
     height: 49px;
     background: #0068B7;
