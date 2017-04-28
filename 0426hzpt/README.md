@@ -2,4 +2,6 @@
 
 [专家信息](info_expert.html)
 
-[头部](head.html)
+[公司信息](company_info.html)
+
+[科技成果](tech_achieve.html)
