@@ -1,0 +1,216 @@
+body {
+    background: #f2f2f2;
+}
+.g_head{}
+
+
+.g_body{
+    min-height: 500px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.g_foot{
+    height: 160px;
+    color: #fff;
+    background: #2c2c2c;
+    padding-top: 40px;
+}
+
+.g_foot h5 {
+    font-size: 18px;
+    text-align: center;
+    line-height: 44px;
+}
+.m_nav{
+    height: 177px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.navmain{
+    height: 105px;
+    line-height: 105px;
+    overflow: hidden;
+}
+
+.navmain h2 {
+    display: inline-block;
+    font-size: 48px;
+    color: #4797ec;
+    width: 793px;
+}
+.navsearch{
+    display: inline-block;
+    width: 400px;
+    position: relative;
+    line-height: 105px;
+    vertical-align: top;
+}
+
+.navsearch button {
+    width: 75px;
+    height: 32px;
+    position: absolute;
+    border-radius: 3px;
+    right: 0;
+    top: 36px;
+    border: 0;
+    background: #4797ec url(../img/newTech_03.png) no-repeat center;
+}
+
+.navsearch input {
+    width: 388px;
+    padding: 0 5px;
+    height: 32px;
+    border: 1px solid #4797ec;
+    border-radius: 3px;
+}
+.navchange{
+    text-align: right;
+}
+
+.navchange a {
+    font-size: 23px;
+    display: inline-block;
+}
+
+.navchange ul {}
+
+.navchange li {
+    display: inline-block;
+    width: 170px;
+    line-height: 38px;
+}
+
+.active a{
+	border-bottom: 2px solid #4797ec;
+	color:#4797ec;
+}
+.m_newview{
+    width: 590px;
+    min-height: 100px;
+}
+.viewhead{
+    height: 54px;
+    line-height: 54px;
+    background: #4797ec;
+    color: #FFF;
+    font-size: 18px;
+    text-indent: 20px;
+    border-radius: 5px 5px 0  0;
+}
+
+.viewhead a {
+    float: right;
+    margin-right: 30px;
+    color: #fff;
+}
+.viewtext{
+    min-height: 300px;
+    background: #fff;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.viewtype1{
+    width: 263px;
+    height: 156px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.viewtype1 img {
+    width: 100%;
+    height: 100%;
+}
+.imgtext a{
+    font-size: 14px;
+    height: 40px;
+    white-space: nowrap;
+    color: #fff;
+    display: inline-block;
+    width: 200px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.imgtext {
+    line-height: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.viewtype2{
+    border-top: 1px solid #dcdbdb;
+    width: 550px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.viewtype2 h3 {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 6px;
+}
+
+.viewtype2 p {
+    font-size: 14px;
+    line-height: 30px;
+    height: 60px;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.viewtype21 img {
+    float: left;
+    margin-right: 20px;
+    width: 166px;
+    height: 122px;
+}
+.textsource{
+    height: 26px;
+    line-height: 26px;
+    overflow: auto;
+    font-size: 12px;
+}
+
+.textsource span {
+    float: right;
+}
+.maintext h3{color:#4797ec}
+.viewtype22{
+
+}
+.imgs{
+    width: 101%;
+    margin-bottom: 5px;
+}
+
+.imgs img {
+    width: 132px;
+    height: 97px;
+    margin-right: 4px;
+}
+.bigimg{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.bigimg img {
+    width: 100%;
+}
+.loadtext{
+    display: block;
+    width: 270px;
+    height: 40px;
+    color: #4797ec;
+    border: 1px solid #4797ec;
+    border-radius: 5px;
+    background: #fff;
+    margin: 20px auto;
+}
