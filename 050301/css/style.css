@@ -7,6 +7,11 @@ body {
 
 .g_head {}
 
+.g_head.g_pol_head h2 {
+    width: 333px;
+    float: left;
+}
+
 .g_body {
     min-height: 500px;
     width: 1200px;
@@ -200,6 +205,7 @@ body {
     height: 26px;
     line-height: 26px;
     overflow: auto;
+    color: #929292;
     font-size: 12px;
 }
 
@@ -279,6 +285,11 @@ body {
     margin-bottom: 20px;
 }
 
+.bighotimg>a {
+    height: 100%;
+    width: 100%;
+}
+
 .bighottext {
     width: 100%;
     height: 40px;
@@ -302,6 +313,11 @@ body {
     width: 110%;
 }
 
+.hotimgs div>a {
+    height: 133px;
+    width: 100%;
+}
+
 .hotimgs img {
     width: 100%;
     height: 133px;
@@ -320,6 +336,8 @@ body {
     width: 171px;
     display: inline-block;
     margin-right: 15px;
+    height: 192px;
+    overflow: hidden;
 }
 
 .hottext {
@@ -365,7 +383,7 @@ body {
 
 .g_inn_body {
     min-height: 111px;
-    width: 120px;
+    width: 1200px;
     margin: 0 auto;
 }
 
@@ -373,9 +391,16 @@ body {
     min-height: 111px;
 }
 
-.g_inn_left {}
+.g_inn_left {
+    width: 712px;
+    float: left;
+    padding: 36px 0;
+}
 
-.g_inn_right {}
+.g_inn_right {
+    width: 400px;
+    float: right;
+}
 .nav_top{
     width: 1200px;
     height: 110px;
@@ -421,6 +446,7 @@ body {
     width: 555px;
     height: 110px;
     line-height: 110px;
+    text-align: right;
 }
 
 .m_nav_change {
@@ -488,4 +514,72 @@ span#u_place button {
     border: 1px solid #4797EC;
     border-radius: 5px;
     box-sizing: border-box;
+    padding: 0 5px;
 }
+.news_main{
+    overflow-x: hidden;
+}
+
+.news_main .c_news {
+    width: 310px;
+    display: inline-block;
+    margin-right: 90px;
+    margin-bottom: 5px;
+}
+.news_main .c_news h1{
+    font-size: 16px;
+    line-height: 36px;
+    height: 36px;
+    overflow: hidden;
+}
+.news_main .c_news p{
+    font-size: 14px;
+    line-height: 24px;
+    height: 48px;
+    overflow: hidden;
+}
+
+.news_main .c_body {
+    width: 120%;
+    margin: 36px 0;
+}
+
+.news_main .c_main {
+    height: 378px;
+}
+
+.news_main .c_main p {
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+}
+.news_all{}
+.tech_recommend{}
+.tech_img{}
+.tech_hot{}
+.tech_subject{}
+.m_imgtext{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.m_imgtext a {color: #fff;font-size: 18px;display: inline-block;width: 80%;height: 100%;overflow: hidden;}
+
+.m_imgtext img {
+    width: 100%;
+    height: 100%;
+}
+
+.m_imgtext p {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+/*policy>pol*/
