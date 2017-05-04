@@ -1,15 +1,19 @@
 body {
     background: #f2f2f2;
 }
-.g_head{}
 
 
-.g_body{
+/*index*/
+
+.g_head {}
+
+.g_body {
     min-height: 500px;
     width: 1200px;
     margin: 0 auto;
 }
-.g_foot{
+
+.g_foot {
     height: 160px;
     color: #fff;
     background: #2c2c2c;
@@ -22,12 +26,14 @@ body {
     line-height: 44px;
     font-weight: 100;
 }
-.m_nav{
+
+.m_nav {
     height: 177px;
     width: 1200px;
     margin: 0 auto;
 }
-.navmain{
+
+.navmain {
     height: 105px;
     line-height: 105px;
     overflow: hidden;
@@ -39,7 +45,8 @@ body {
     color: #4797ec;
     width: 793px;
 }
-.navsearch{
+
+.navsearch {
     display: inline-block;
     width: 400px;
     position: relative;
@@ -65,7 +72,8 @@ body {
     border: 1px solid #4797ec;
     border-radius: 3px;
 }
-.navchange{
+
+.navchange {
     text-align: right;
 }
 
@@ -82,11 +90,12 @@ body {
     line-height: 38px;
 }
 
-.active a{
-	border-bottom: 2px solid #4797ec;
-	color:#4797ec;
+.active a {
+    border-bottom: 2px solid #4797ec;
+    color: #4797ec;
 }
-.m_newview{
+
+.m_newview {
     width: 590px;
     min-height: 100px;
 }
@@ -94,14 +103,15 @@ body {
 .goodnews .viewtext {
     padding-bottom: 20px;
 }
-.viewhead{
+
+.viewhead {
     height: 54px;
     line-height: 54px;
     background: #4797ec;
     color: #FFF;
     font-size: 18px;
     text-indent: 20px;
-    border-radius: 5px 5px 0  0;
+    border-radius: 5px 5px 0 0;
 }
 
 .viewhead a {
@@ -109,7 +119,8 @@ body {
     margin-right: 30px;
     color: #fff;
 }
-.viewtext{
+
+.viewtext {
     min-height: 300px;
     background: #fff;
     margin-bottom: 30px;
@@ -119,7 +130,8 @@ body {
 .viewtext.hotnews {
     padding: 0 20px 20px 20px;
 }
-.viewtype1{
+
+.viewtype1 {
     width: 263px;
     height: 156px;
     display: inline-block;
@@ -132,7 +144,8 @@ body {
     width: 100%;
     height: 100%;
 }
-.imgtext a{
+
+.imgtext a {
     font-size: 14px;
     height: 40px;
     white-space: nowrap;
@@ -140,7 +153,7 @@ body {
     display: inline-block;
     width: 200px;
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
 }
 
 .imgtext {
@@ -153,7 +166,8 @@ body {
     text-align: center;
     overflow: hidden;
 }
-.viewtype2{
+
+.viewtype2 {
     border-top: 1px solid #dcdbdb;
     width: 550px;
     margin: 0 auto;
@@ -181,7 +195,8 @@ body {
     width: 166px;
     height: 122px;
 }
-.textsource{
+
+.textsource {
     height: 26px;
     line-height: 26px;
     overflow: auto;
@@ -191,11 +206,14 @@ body {
 .textsource span {
     float: right;
 }
-.maintext h3{color:#4797ec}
-.viewtype22{
 
+.maintext h3 {
+    color: #4797ec
 }
-.imgs{
+
+.viewtype22 {}
+
+.imgs {
     width: 101%;
     margin-bottom: 5px;
 }
@@ -205,7 +223,8 @@ body {
     height: 97px;
     margin-right: 4px;
 }
-.bigimg{
+
+.bigimg {
     width: 100%;
     margin-bottom: 5px;
 }
@@ -213,7 +232,8 @@ body {
 .bigimg img {
     width: 100%;
 }
-.loadtext{
+
+.loadtext {
     display: block;
     width: 270px;
     height: 40px;
@@ -223,7 +243,6 @@ body {
     background: #fff;
     margin: 20px auto;
 }
-
 
 .hotnews li a {
     font-size: 16px;
@@ -251,7 +270,8 @@ body {
     line-height: 60px;
     border-bottom: 2px solid #DCDBDB;
 }
-.bighotimg{
+
+.bighotimg {
     margin-top: 20px;
     position: relative;
     font-size: 16px;
@@ -277,7 +297,8 @@ body {
     width: 100%;
     height: 229px;
 }
-.hotimgs{
+
+.hotimgs {
     width: 110%;
 }
 
@@ -300,7 +321,8 @@ body {
     display: inline-block;
     margin-right: 15px;
 }
-.hottext{
+
+.hottext {
     margin-top: 20px;
 }
 
@@ -318,7 +340,8 @@ body {
     overflow: hidden;
     color: #929292;
 }
-.more{
+
+.more {
     text-align: right;
     padding-right: 10px;
     color: #4797ec;
@@ -327,7 +350,142 @@ body {
 .more a {
     color: #4797EC;
 }
-.hotnews .active a{
-	color: #4797EC;
-	display: inline-block;
+
+.hotnews .active a {
+    color: #4797EC;
+    display: inline-block;
+}
+
+
+/*innovate>inn*/
+
+.g_inn_head {
+    min-height: 111px;
+}
+
+.g_inn_body {
+    min-height: 111px;
+    width: 120px;
+    margin: 0 auto;
+}
+
+.g_inn_foot {
+    min-height: 111px;
+}
+
+.g_inn_left {}
+
+.g_inn_right {}
+.nav_top{
+    width: 1200px;
+    height: 110px;
+    margin: 0 auto;
+    line-height: 110px;
+    overflow: hidden;
+}
+.nav_title {
+    float: left;
+    text-align: center;
+    height: 110px;
+    line-height: 110px;
+}
+
+.nav_title h2 {
+    width: 266px;
+    font-size: 48px;
+    color: #4797ec;
+    line-height: 110px;
+}
+
+.nav_weather {
+    float: left;
+}
+
+.nav_weather img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+.nav_weather span {
+    font-size: 24px;
+    color: #4797ec;
+    display: inline-block;
+    min-width: 79px;
+    text-align: center;
+}
+
+.nav_search {
+    float: right;
+    width: 555px;
+    height: 110px;
+    line-height: 110px;
+}
+
+.m_nav_change {
+    height: 80px;
+    line-height: 80px;
+    background: #4797EC;
+}
+
+.m_nav_change a {
+    font-size: 16px;
+    color: #FFF;
+}
+
+.m_nav_change li {
+    width: 85px;
+    display: inline;
+    border-right: 1px solid #fff;
+    padding: 0 20px;
+}
+
+.m_nav_change ul {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.m_nav_change .f_noli {
+    border: 0px;
+    border-right: 0px;
+}
+
+#u_place {
+    line-height: 110px;
+    height: 110px;
+    vertical-align: middle;
+}
+
+span#u_place button {
+    background: #4797EC;
+    /* line-height: 110px; */
+    margin-top: 37px;
+    height: 32px;
+    line-height: 32px;
+}
+.u_search{
+    width: 400px;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+
+.u_search button {
+    position: absolute;
+    width: 75px;
+    height: 35px;
+    border: 0;
+    border-radius: 5px;
+    top: 38px;
+    right: 0;
+    background: #4797EC url(../img/newTech_03.png) no-repeat center;
+}
+
+.u_search input {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #4797EC;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
