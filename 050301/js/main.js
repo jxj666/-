@@ -80,7 +80,6 @@ $('#know_change li').on("click",function(ev){
 })
 //地点选择框
 $('#select_port .u-btn').on('click',function() {
-	console.log("1")
 	$('#select_port ul').toggle()
 })
 $("#select_port ul a").on('click', function(ev) {
