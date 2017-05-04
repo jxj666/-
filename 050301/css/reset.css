@@ -170,7 +170,7 @@ button,
 select,
 keygen,
 legend {
-    font-family: "Microsoft YaHei"
+    font-family: "Arial","Microsoft YaHei","黑体","宋体";
 }
 
 body {
