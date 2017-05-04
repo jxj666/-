@@ -97,7 +97,7 @@ body {
 
 .active a {
     border-bottom: 2px solid #4797ec;
-    color: #4797ec;
+    color: #4797ec!important;
 }
 
 .m_newview {
@@ -401,13 +401,15 @@ body {
     width: 400px;
     float: right;
 }
-.nav_top{
+
+.nav_top {
     width: 1200px;
     height: 110px;
     margin: 0 auto;
     line-height: 110px;
     overflow: hidden;
 }
+
 .nav_title {
     float: left;
     text-align: center;
@@ -490,7 +492,8 @@ span#u_place button {
     height: 32px;
     line-height: 32px;
 }
-.u_search{
+
+.u_search {
     width: 400px;
     display: inline-block;
     position: relative;
@@ -516,7 +519,8 @@ span#u_place button {
     box-sizing: border-box;
     padding: 0 5px;
 }
-.news_main{
+
+.news_main {
     overflow-x: hidden;
 }
 
@@ -526,13 +530,15 @@ span#u_place button {
     margin-right: 90px;
     margin-bottom: 5px;
 }
-.news_main .c_news h1{
+
+.news_main .c_news h1 {
     font-size: 16px;
     line-height: 36px;
     height: 36px;
     overflow: hidden;
 }
-.news_main .c_news p{
+
+.news_main .c_news p {
     font-size: 14px;
     line-height: 24px;
     height: 48px;
@@ -553,18 +559,31 @@ span#u_place button {
     line-height: 38px;
     text-align: center;
 }
-.news_all{}
-.tech_recommend{}
-.tech_img{}
-.tech_hot{}
-.tech_subject{}
-.m_imgtext{
+
+.news_all {}
+
+.tech_recommend {}
+
+.tech_img {}
+
+.tech_hot {}
+
+.tech_subject {}
+
+.m_imgtext {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-.m_imgtext a {color: #fff;font-size: 18px;display: inline-block;width: 80%;height: 100%;overflow: hidden;}
+.m_imgtext a {
+    color: #fff;
+    font-size: 18px;
+    display: inline-block;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+}
 
 .m_imgtext img {
     width: 100%;
@@ -580,6 +599,287 @@ span#u_place button {
 }
 
 
-
-
 /*policy>pol*/
+
+.g_pol_body {}
+
+.g_pol_body div {
+    /* min-height: 11px; */
+}
+
+.g_pol_body>div {
+    min-height: 111px;
+    margin-bottom: 40px;
+}
+
+.u_win {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.u_win>div {
+    min-height: 111px;
+    background: #FFF;
+    padding: 40px;
+}
+
+.u_win h1>a {
+    font-size: 14px;
+    color: #fff;
+    float: right;
+}
+
+.u_win h1 {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 40px;
+    color: #fff;
+    background: #4797EC;
+    font-size: 16px;
+}
+
+.pol_main {}
+
+.pol_main .c_text {
+    width: 450px;
+    float: right;
+}
+
+.pol_main .c_text ul {}
+
+.pol_main .c_text li {
+    padding-left: 20px;
+    line-height: 26px;
+    font-size: 16px;
+    height: 52px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    background: url(../img/point_03.png) no-repeat 0 10px;
+}
+
+.pol_main .c_text a {}
+
+.pol_main .c_img {
+    width: 595px;
+    height: 363px;
+    float: left;
+    background: #4797EC;
+}
+
+.pol_china {}
+
+.pol_china .c_text {
+    overflow: hidden;
+}
+
+.pol_china .c_text ul {
+    width: 120%;
+}
+
+.pol_china .c_text li {
+    width: 425px;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 90px;
+    margin-top: 12px;
+    font-size: 14px;
+    padding: 0 60px 0 20px;
+    position: relative;
+    line-height: 26px;
+    height: 52px;
+    background: url(../img/point_03.png) no-repeat 0 12px;
+}
+
+.pol_china .c_text span {
+    position: absolute;
+    right: 0;
+    top: 14px;
+    color: #929292;
+}
+
+.m_change {}
+
+.m_change a {
+    display: inline-block;
+    font-size: 16px;
+    color: #4d4c4c;
+}
+
+.m_change li {
+    width: 90px;
+    display: inline-block;
+    height: 66px;
+    line-height: 66px;
+}
+
+li.china_change12 {
+    text-align: right;
+}
+
+li.china_change12 a {
+    color: #4797EC;
+    font-size: 14px;
+}
+
+.m_change ul {
+    border-bottom: 2px solid #dcdcdc;
+    margin-top: -40px;
+}
+
+.china_text {
+    display: none;
+}
+
+.pol_know {}
+
+.pol_know .c_textl {
+    width: 495px;
+    display: inline-block;
+    margin-right: 90px;
+    margin-top: -40px;
+}
+
+.pol_know .c_textl h3 {
+    height: 70px;
+    line-height: 70px;
+    font-size: 16px;
+    color: #4797EC;
+    border-bottom: 1px solid gainsboro;
+}
+
+.pol_know .c_type1 {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 18px 0;
+}
+
+.pol_know .c_type1 h5 {
+    font-size: 16px;
+    line-height: 26px;
+    height: 52px;
+    overflow: hidden;
+    color: #4797ec;
+}
+
+.pol_know .c_type1 p {
+    font-size: 14px;
+    line-height: 24px;
+    height: 48px;
+    color: #929292;
+    overflow: hidden;
+}
+
+.pol_know .c_type2 {
+    margin-top: 30px;
+    padding-left: 108px;
+    font-size: 16px;
+    line-height: 26px;
+    height: 52px;
+    overflow: hidden;
+    position: relative;
+}
+
+.pol_know .c_type2 a {}
+
+.pol_know .c_type2 h6 {
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    color: #4797ec;
+}
+
+.pol_know .c_textr {
+    width: 495px;
+    float: right;
+}
+
+.pol_know .m_change li {
+    width: 106px;
+    display: inline-block;
+    height: 66px;
+    line-height: 66px;
+}
+
+li.know_change5 {
+    width: 51px!important;
+    font-size: 14px;
+    color: #4797EC;
+}
+
+li.know_change5 a {
+    color: #4797EC!important;
+}
+
+.pol_know .m_change a {
+    display: inline-block;
+    font-size: 16px;
+    color: #4d4c4c;
+}
+
+.know_text {
+    display: none
+}
+
+.line1 {
+    background: #929292;
+}
+
+.pol_phone {}
+
+.pol_phone .c_phonel {
+    width: 465px;
+    float: left;
+    padding: 0 15px;
+}
+.pol_phone .c_phonel a{}
+.pol_phone .c_phonel img{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+.pol_phone .que {
+    padding: 20px 0;
+}
+.pol_phone .que h6{
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.pol_phone .quekey {}
+.pol_phone .quekey a{
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    color: #4797EC;
+    width: 155px;
+}
+.pol_phone .phonetype1 {
+    margin-top: 20px;
+}
+.pol_phone .c_phoner {
+    width: 465px;
+    float: right;
+    padding: 0 15px;
+}
+.pol_phone .phonetype1 h5{
+    font-size: 16px;
+    line-height: 26px;
+}
+.pol_phone .phonetype1 span{
+    color: #4797EC;
+    margin-right: 5px;
+}
+.pol_phone .phonetype1 p{
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #929292;
+}
+.pol_phone .phonetype1 div{
+    color: #4797EC;
+    text-align: right;
+    margin-bottom: 20px;
+}
+.pol_phone .phonetype1 a{
+    color: #4797EC;
+    font-size: 16px;
+}
