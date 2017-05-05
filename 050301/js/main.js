@@ -95,3 +95,37 @@ $(document).on("click", function(e) {
 		$("#select_port ul").slideUp();
 	}
 });
+//科技创新云切换
+$('#inn_box_s li').on("click",function(ev){
+	var ev = ev || window.event;
+	var target = ev.target || ev.srcElement;
+	var $t = $(target)
+	var $tli=$t.closest("li")
+	if($tli.hasClass("switch_active")){
+		return;
+	}else{
+		var change=$tli.prop("className")
+		var changeid='#'+change
+	}
+	$('#inn_box_s li').removeClass('switch_active')
+	$tli.addClass('switch_active')
+	$('.inn_box').hide()
+	$(changeid).show()
+})
+//科技创新云地点选择框
+$('#select_port2 .u-btn').on('click',function() {
+	$('#select_port2 ul').toggle()
+})
+$("#select_port2 ul a").on('click', function(ev) {
+	var ev = ev || window.event;
+	var target = ev.target || ev.srcElement;
+	var $t = $(target)
+	var valtxt = $t.text();
+	$("#select_port2 .btntxt").text(valtxt);
+	$('#select_port2 ul').slideUp()
+})
+$(document).on("click", function(e) {
+	if ($(e.target).parents("#select_port2").length == 0) {
+		$("#select_port2 ul").slideUp();
+	}
+});

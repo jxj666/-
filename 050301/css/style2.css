@@ -58,6 +58,7 @@ body {
     font-size: 48px;
     color: #4797ec;
     width: 793px;
+    font-weight: 100;
 }
 
 .navsearch {
@@ -451,7 +452,7 @@ body {
 
 .g_inn_head {
     min-height: 111px;
-    padding-top: 10px;
+    /* padding-top: 10px; */
 }
 
 .g_inn_body {
@@ -499,6 +500,7 @@ body {
     font-size: 48px;
     color: #4797ec;
     line-height: 110px;
+    font-weight: 100;
 }
 
 .nav_weather {
@@ -601,6 +603,7 @@ span#u_place button {
     border-radius: 5px;
     box-sizing: border-box;
     padding: 0 5px;
+    background: #F2F2F2;
 }
 
 .news_main {
@@ -744,7 +747,9 @@ span#u_place button {
     color: #fff;
 }
 
-.inn_box {}
+.inn_box {
+    display: none;
+}
 
 .switch_active {}
 
@@ -1690,9 +1695,7 @@ li.know_change5 a {
     margin-bottom: 2px;
 }
 
-.inn_box{
-    display: none;
-}
+
 /*innovate2>inn2*/
 
 .inn2_search {
