@@ -85,6 +85,7 @@ body {
     height: 32px;
     border: 1px solid #4797ec;
     border-radius: 3px;
+    background: #F2F2F2;
 }
 
 .navchange {
@@ -140,6 +141,7 @@ body {
     margin-bottom: 30px;
     overflow: hidden;
 }
+
 .inn_box .viewtext {
     min-height: 300px;
     background: #F2F2F2;
@@ -193,6 +195,7 @@ body {
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-top: -1px!important;
 }
 
 .inn_box .viewtype2 {
@@ -209,6 +212,7 @@ body {
     line-height: 26px;
     margin-bottom: 6px;
 }
+
 .inn_box .viewtype2 h3 {
     font-size: 18px;
     line-height: 26px;
@@ -222,6 +226,7 @@ body {
     overflow: hidden;
     font-weight: bold;
 }
+
 .inn_box .viewtype2 p {
     font-size: 16px;
     line-height: 38px;
@@ -231,19 +236,20 @@ body {
     margin-bottom: 10px;
 }
 
-
 .viewtype21 img {
     float: left;
     margin-right: 20px;
     width: 166px;
     height: 122px;
 }
+
 .inn_box .viewtype21 img {
     float: left;
     margin-right: 38px;
     width: 222px;
     height: 150px;
 }
+
 .textsource {
     height: 26px;
     line-height: 26px;
@@ -266,6 +272,7 @@ body {
     width: 101%;
     margin-bottom: 5px;
 }
+
 .inn_box .imgs {
     width: 110%;
     margin-bottom: 5px;
@@ -276,6 +283,7 @@ body {
     height: 97px;
     margin-right: 4px;
 }
+
 .inn_box .imgs img {
     width: 170px;
     height: 123px;
@@ -290,17 +298,19 @@ body {
 .bigimg img {
     width: 100%;
 }
+
 .inn_box .loadtext {
     display: block;
     width: 456px;
     height: 60px;
-    font-size:20px;
+    font-size: 20px;
     color: #fff;
     border: 1px solid #4797ec;
     border-radius: 5px;
     background: #4797ec;
     margin: 20px auto;
 }
+
 .loadtext {
     display: block;
     width: 270px;
@@ -657,6 +667,7 @@ span#u_place button {
     height: 100%;
     overflow: hidden;
 }
+
 .c_imgs .m_imgtext>p a {
     color: #fff;
     font-size: 12px;
@@ -665,6 +676,7 @@ span#u_place button {
     height: 100%;
     overflow: hidden;
 }
+
 .c_bigimg .m_imgtext>p a {
     color: #fff;
     font-size: 14px;
@@ -673,6 +685,7 @@ span#u_place button {
     height: 100%;
     overflow: hidden;
 }
+
 .m_imgtext img {
     width: 100%;
     height: 100%;
@@ -685,6 +698,7 @@ span#u_place button {
     bottom: 0;
     background: rgba(0, 0, 0, 0.7);
 }
+
 .c_imgs .m_imgtext p {
     width: 100%;
     height: 32px;
@@ -694,6 +708,7 @@ span#u_place button {
     bottom: 0;
     background: rgba(0, 0, 0, 0.7);
 }
+
 .c_bigimg .m_imgtext p {
     width: 100%;
     height: 32px;
@@ -703,15 +718,19 @@ span#u_place button {
     bottom: 0;
     background: rgba(0, 0, 0, 0.7);
 }
-.news_all{}
-.news_switch{}
-.news_switch ul{
+
+.news_all {}
+
+.news_switch {}
+
+.news_switch ul {
     height: 46px;
     background: #98c2ef;
     line-height: 46px;
     border-radius: 5px;
 }
-.news_switch li{
+
+.news_switch li {
     width: 115px;
     height: 100%;
     display: inline-block;
@@ -719,12 +738,15 @@ span#u_place button {
     position: relative;
     vertical-align: middle;
 }
-.news_switch a{
+
+.news_switch a {
     font-size: 16px;
     color: #fff;
 }
-.inn_box{}
-.switch_active{}
+
+.inn_box {}
+
+.switch_active {}
 
 li.switch_active a {
     background: url(../img/switch.png) no-repeat center;
@@ -791,6 +813,7 @@ li.switch_active a {
     text-indent: 15px;
     background: url(../img/contain_30.png) no-repeat 0 center;
 }
+
 .rectext li {
     line-height: 55px;
     font-size: 14px;
@@ -813,8 +836,12 @@ li.switch_active a {
 .clear {
     clear: both;
 }
-.g_inn_right .tech_subject{border-bottom: 0px;}
-.tech_subject h5{
+
+.g_inn_right .tech_subject {
+    border-bottom: 0px;
+}
+
+.tech_subject h5 {
     line-height: 20px;
     font-size: 20px;
     color: #333333;
@@ -822,17 +849,20 @@ li.switch_active a {
     border-left: 4px solid #4797ec;
     margin: 30px 0 15px;
 }
-.c_subject img{
+
+.c_subject img {
     width: 100%;
     height: 100%;
 }
-.c_subject>a{
+
+.c_subject>a {
     display: inline-block;
     width: 166px;
     height: 132px;
     float: left;
 }
-.c_subject p{
+
+.c_subject p {
     display: inline-block;
     width: 212px;
     vertical-align: top;
@@ -844,24 +874,27 @@ li.switch_active a {
     padding-top: 6px;
     float: right;
 }
-.c_subject h6{
+
+.c_subject h6 {
     line-height: 50px;
     font-size: 14px;
 }
-.c_subject>span{
+
+.c_subject>span {
     display: inline-block;
     width: 212px;
     float: right;
     text-align: right;
-    height:32px;
-    line-height:32px;
+    height: 32px;
+    line-height: 32px;
 }
-.c_subject>span a{
-    color:#4797ec;
-    font-size:14px;
 
+.c_subject>span a {
+    color: #4797ec;
+    font-size: 14px;
 }
-.tech_recommend{
+
+.tech_recommend {
     padding-bottom: 10px;
 }
 
@@ -873,21 +906,25 @@ li.switch_active a {
     border-left: 4px solid #4797ec;
     margin: 36px 0 15px;
 }
-.imgwall{}
-.tech_recommend .c_bigimg{
+
+.imgwall {}
+
+.tech_recommend .c_bigimg {
     height: 144px;
     margin-bottom: 24px;
 }
-.tech_recommend .c_imgs{
-   
+
+.tech_recommend .c_imgs {}
+
+.tech_recommend .c_imgs>div {
+    width: 182px;
+    height: 144px;
+    display: inline-block;
+    margin: 0 8px;
 }
-.tech_recommend .c_imgs>div{
-     width: 182px;
-     height: 144px;
-     display: inline-block;
-     margin: 0 8px;
-}
-.rectext{}
+
+.rectext {}
+
 
 /*policy>pol*/
 
@@ -1542,9 +1579,8 @@ li.know_change5 a {
     box-sizing: border-box;
 }
 
+
 /*lbt*/
-
-
 
 #content {
     padding: 10px 0;
@@ -1554,8 +1590,6 @@ li.know_change5 a {
 .path {
     padding: 0 0 5px 5px;
 }
-
-
 
 .effectNav {
     margin-top: 10px;
@@ -1586,7 +1620,6 @@ li.know_change5 a {
 .effectNav li.new {
     background: #fce8cd;
 }
-
 
 .slideBox {
     position: relative;
@@ -1640,7 +1673,6 @@ li.know_change5 a {
 
 .slideBox .bd li a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-   
 }
 
 .slideBox .bd li .tit {
@@ -1659,3 +1691,46 @@ li.know_change5 a {
 }
 
 
+/*innovate2>inn2*/
+
+.inn2_search {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.inn2_search input {
+    width: 100%;
+    height: 78px;
+    background: #F2F2F2;
+    border: 1px solid #4797ec;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0 156px 0 20px;
+    height: 78px;
+    font-size: 30px;
+    line-height: 78px;
+}
+
+.inn2_search button {
+    position: absolute;
+    right: 0;
+    /* padding: 0 100px 0 20px; */
+    top: 0;
+    width: 132px;
+    height: 78px;
+    font-size: 30px;
+    line-height: 78px;
+    border: 0;
+    background: #4797ec;
+    border-radius: 5px;
+    background: #4797ec url(../img/search_03.png) no-repeat center;
+}
+
+
+/*innovate3>inn3*/
+
+.inn3_main {}
+
+.inn3_main img {
+    width: 100%;
+}
