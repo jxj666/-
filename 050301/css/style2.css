@@ -70,6 +70,7 @@ body {
     position: relative;
     /* line-height: 105px; */
     vertical-align: top;
+    float: right;
 }
 
 .navsearch button {
