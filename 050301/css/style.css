@@ -1119,6 +1119,7 @@ li.know_change5 a {
     background-image: url(../img/declareBg2.png);
     padding: 36px 50px 36px 40px;
     float: left;
+    margin-left: -10px;
 }
 
 .declare-list-area .title {
@@ -1176,6 +1177,7 @@ li.know_change5 a {
     font-size: 18px;
     padding: 16px;
     vertical-align: middle;
+    text-align: center;
 }
 
 .pro-item .time {
