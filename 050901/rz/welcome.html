@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>认证管理</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    .wrapper {
+      width: 840px;
+      padding-top: 96px;
+      overflow: hidden;
+    }
+
+    .welcome {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .admin-name {
+      color: #0068b7;
+      font-size: 36px;
+      padding: 0 10px;
+    }
+
+    .text {
+      font-size: 24px;
+      margin-top: 30px;
+    }
+
+    .count {
+      color: #e56a2d;
+      font-size: 30px;
+      padding: 0 10px;
+    }
+
+    .begin {
+      width: 210px;
+      height: 52px;
+      color: white;
+      background-color: #0068b7;
+      display: inline-block;
+      vertical-align: text-bottom;
+      line-height: 52px;
+      text-align: center;
+      font-size: 18px;
+      margin-left: 60px;
+    }
+
+    .mt-10 { margin-top: 10px; }
+
+    .card {
+      width: 267px;
+      height: 194px;
+      background-image: url(img/card_bg.png);
+      float: left;
+      margin: 40px 6px 100px;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .manage {
+      width: 458px;
+      height: 122px;
+      background-image: url(img/begin.png);
+      margin: 0 auto;
+      display: block;
+      color: white;
+      line-height: 90px;
+      text-align: center;
+      margin-bottom: 100px;
+      font-size: 24px;
+    }
+    
+    .type {
+      font-size: 18px;
+    }
+
+    .count {
+      color: #e56a2d;
+      font-size: 36px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <div class="header">
+    <div class="nav">
+      <span class="title">院士专家工作站认证平台</span>
+      <span class="name">认证管理</span>
+      <div class="user">
+        <img src="img/person.png" class="icon">
+        <span class="user-name">管理员姓名</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">    
+    <p class="welcome">欢迎<span class="admin-name">管理员姓名</span>管理员</p>
+    <p class="text">您所在的 <span class="province">河北省</span></p>
+    <p class="text mt-10">当前有
+      <span class="count">10</span>份认证备案信息未审核
+      <a href="##" class="begin border-radius-5">开始审核</a>
+    </p>
+    <div class="card">
+      <p class="type">已审核</p>
+      <p class="count">100</p>
+    </div>
+    <div class="card">
+      <p class="type">已通过</p>
+      <p class="count">50</p>
+    </div>
+    <div class="card">
+      <p class="type">未通过</p>
+      <p class="count">50</p>
+    </div>
+  </div>
+  
+  <a href="##" class="manage">认证管理</a>
+  
+  <!-- footer -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">院士专家工作站认证平台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="verify-info.html">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>

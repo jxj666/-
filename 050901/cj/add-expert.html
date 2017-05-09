@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>添加专家</title>
+  <link rel="stylesheet" href="css/reset.css"> 
+  <link rel="stylesheet" href="../rz/css/common.css">
+  <link rel="stylesheet" href="css/add-expert-group.css">
+  <style>
+
+    .main {
+      width: 712px;
+      height: 732px;
+      background-image: url(img/addExpertBg.png);
+    }
+
+    .box>input { width: 220px; }
+
+    .expert-list {
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .add-expert {
+      width: 120px;
+      height: 40px;
+      border-radius: 5px;
+      color: white;
+      background-color: #0068b7;
+      line-height: 40px;
+      text-align: center;
+      margin-top: 0;
+      vertical-align: middle;
+      display: inline-block;
+      background-image: none;
+      font-size: 14px;
+      position: relative;
+    }
+
+    .add-expert:after {
+      content: '(非必选项)';
+      color: #e56a2d;
+      font-size: 12px;
+      position: absolute;
+      right: -80px;
+    }
+
+    .tip {
+      font-size: 12px;
+      color: #e56a2d;
+      padding-bottom: 34px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <div class="header">
+    <div class="nav">
+      <span class="title">院士专家工作站信息服务平台管理后台</span>
+      <!-- <span class="name">填写信息</span> -->
+      <div class="user">
+        <img src="../rz/img/person.png" class="icon">
+        <span class="user-name">管理员</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- middle -->
+  <div class="main">
+    <p class="title">评选专家添加</p>
+
+    <div class="box">
+      <span class="txt">专家姓名：</span>
+      <input type="text" placeholder="请输入专家姓名">
+    </div>
+
+    <div class="box">
+      <span class="txt">专家领域：</span>
+      <select>
+        <option value="">全部领域</option>
+        <option value="">全部领域1</option>
+        <option value="">全部领域2</option>
+      </select>
+    </div>
+
+    <div class="box">
+      <span class="txt">登录密码：</span>
+      <input type="text" placeholder="请输入登录密码"> 
+    </div>
+
+    <div class="box">
+      <span class="txt">专家选择：</span>
+      <div class="expert-choose">
+        <!-- 专家列表 -->
+        <ul class="expert-list">
+          <li class="expert-item">
+            <img src="img/headImg.png" class="expert-img">
+            <p class="expert-name">专家姓名</p>
+          </li>
+        </ul>
+        
+        <!-- 添加按钮 -->
+        <a href="javascript:void(0);" class="add-expert">本地上传</a>
+      </div>
+    </div>
+    
+    <p class="tip">专家账号确认添加后自动生成</p>
+    <a href="list.html" class="btn sure">确认添加</a>
+    <a href="javascript:void(0);" class="btn cancel">取消添加</a> 
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">院士专家工作站信息服务平台管理后台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="../rz/img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+</body>
+</html>

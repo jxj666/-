@@ -1,0 +1,164 @@
+h2 {
+  text-align: center;
+  padding: 80px 0;
+}
+
+select {
+  padding: 5px;
+}
+/*---流程---*/
+.process-list {
+  width: 1020px;
+  margin: 0 auto 62px;
+  overflow: hidden;
+}
+
+.process-item {
+  width: 255px;
+  height: 100px;
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  color: #b5b5b5;
+}
+
+.item-name {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #b5b5b5;
+}
+
+.item-img {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: -10px;
+  background-color: white;
+}
+
+.step {
+  font-size: 18px;
+}
+
+/*输入*/
+.input-area {
+  width: 840px;
+  margin: 62px auto;
+  font-size: 18px;
+}
+
+.block {
+  margin-bottom: 64px;
+  overflow: hidden;
+}
+
+#province, #city {
+  width: 312px;
+  height: 40px;
+  display: inline-block;
+}
+
+.place {
+  display: inline-block;
+  width: 74px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.place, #province, #city, .fielf, #choose-field {
+  vertical-align: middle;
+}
+
+/*---所属分类---*/
+.type {
+  float: left;
+  width: 74px;
+  text-align: right;
+  margin-right: 26px;
+  margin-top: 36px;
+  overflow: hidden;
+}
+
+.belong {
+  width: 219px;
+  height: 100px;
+  float: left;
+  margin-right: 34px;
+  position: relative;
+  cursor: pointer;
+}
+
+.qy {
+  background-image: url(../img/qy.png);
+}
+
+.sy {
+  background-image: url(../img/sy_gray.png);
+}
+
+.yq {
+  background-image: url(../img/yq_gray.png);
+}
+
+.txt {
+  font-size: 14px;
+  text-align: center;
+  margin-left: 76px;
+  margin-top: 38px;
+}
+
+.font-16 { font-size: 16px; }
+
+.selected { color: #0068b7; }
+
+/*所属领域*/
+.field {
+  display: inline-block;
+  width: 74px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+#choose-field {
+  width: 730px;
+  height: 40px;
+}
+
+/*下一步*/
+.next-step {
+  width: 420px;
+  height: 65px;
+  background-color: #0068b7;
+  color: white;
+  font-size: 18px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  behavior: url(ie-css3.htc);
+
+  text-align: center;
+  line-height: 65px;
+  margin: 0 auto 85px;
+  display: block;
+}
+
+.highlight {
+  color: #0068b7;
+}
+
+.type-highlight {
+  border-color: #4797ec;
+  color: #4797ec;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}

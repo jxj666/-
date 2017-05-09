@@ -1,0 +1,249 @@
+.introduce { padding: 50px 30px; }
+
+.header { border-bottom: none; }
+
+.tab-bar {
+  width: 100%;
+  height: 60px;
+  background-color: #eaf2f9;
+  margin-bottom: 54px;
+}
+
+.box {
+  width: 1200px;
+  margin: 0 auto;
+  height: 60px;
+}
+
+.tab-list {
+  overflow: hidden;
+}
+
+.tab-item {
+  float: left;
+  line-height: 60px;
+  cursor: pointer;
+  color: #0068b7;
+  margin-right: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.tab1 { width: 252px; color: white; background-image: url(../img/gzzHoverBg.png)}
+.tab2 { width: 332px; }
+.tab3 { width: 152px; }
+
+.tab1:hover {
+  color: white !important;
+  background-image: url(../img/gzzHoverBg.png) !important;
+}
+
+.tab2:hover {
+  color: white !important;
+  background-image: url(../img/dwHoverBg.png) !important;
+}
+
+.tab3:hover {
+  color: white !important;
+  background-image: url(../img/zjHoverBg.png) !important;
+}
+
+.content {
+  width: 1200px;
+  margin: 0 auto;
+  display: none;
+}
+
+table {
+  width: 1200px;
+  border: 1px solid #9f9e9e;
+  text-align: center;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+  // display: none;
+}
+
+/*--- 院士专家工作站评选管理 ---*/
+.h-76 {
+  height: 76px;
+}
+
+.add {
+  display: inline-block;
+  width: 80px;
+  height: 48px;
+  background-color: #0068b7;
+  color: white;
+  line-height: 48px;
+  text-align: center;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  border-radius: 5px;
+}
+
+.add:hover { color: white; }
+
+.work-check, .work-delete {
+  display: inline-block;
+  margin: 0 27px;
+  width: 80px;
+  height: 48px;
+  background: #0068B7;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 48px;
+}
+
+.w-100 { width: 100px; }
+.w-90 { width: 90px; }
+.w-320 { width: 320px; }
+.w-175 { width: 175px; }
+.w-310 { width: 310px; }
+.w-305 { width: 305px; }
+
+
+.select-year {
+  margin-bottom: 50px;
+  height: 50px;
+}
+
+.year {
+  line-height: 40px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.select-year select {
+  vertical-align: middle;
+}
+
+.choose-workstation {
+  display: inline-block;
+  width: 140px;
+  height: 40px;
+  vertical-align: middle;
+  background-color: #0068b7;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  margin-left: 40px;
+  border-radius: 5px;
+}
+
+.sort {
+  position: relative;
+  height: 50px;
+  margin-bottom: 50px;
+}
+
+.sort a {
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  background-color: #0068b7;
+  text-align: center;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.update-sort {
+  left: 0;
+}
+
+.submit-list {
+  right: 0;
+}
+/*------------- 专家管理 -------------*/
+
+.expert-table {
+  display: none;
+}
+
+.expert-tab-control {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #0068b7;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.expert-list {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.expert-item {
+  width: 140px;
+  height: 50px;
+  float: left;
+  border: 1px solid #0068b7;
+  border-radius: 5px 5px 0 0;
+  margin-right: 30px;
+  font-size: 20px;
+  color: #0068b7;
+  line-height: 48px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.expert-active {
+  background-color: #0068b7;
+  color: white;
+}
+
+.add-expert-btn {
+  position: absolute;
+  right: 0;
+  width: 160px;
+  height: 40px;
+  background-color: #0068b7;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.expert-no, .expert-group-no { width: 90px; }
+.expert-name, .expert-group-name { width: 320px; }
+.expert-img, .expert-group { width: 315px; padding: 0 5px; }
+.expert-img img { width: 88px; height: 88px; }
+.expert-job, .expert-group-job { width: 296px; }
+
+.operate {
+  width: 180px;
+}
+
+.table-head { height: 60px; font-size: 18px; }
+
+.table-row { height: 120px; font-size: 16px; }
+
+.check, .update {
+  color: #0068b7;
+  text-decoration: underline;
+  margin-right: 20px;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+
+
+
+.show {
+  display: block;
+}
+
+
+
+
+
+
+

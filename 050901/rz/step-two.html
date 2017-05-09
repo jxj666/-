@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>填写信息</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/step-two.css">
+  <!-- <link rel="stylesheet" href="css/calendar.css"> -->
+  <style>
+    .upload {
+      width: 200px;
+      height: 40px;
+      color: white;
+      background-color: #0068b7;
+      text-align: center;
+      line-height: 40px;
+      margin: 20px auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="header">
+    <div class="nav">
+      <span class="title">院士专家工作站认证平台</span>
+      <span class="name">填写信息</span>
+      <div class="user">
+        <img src="img/person.png" class="icon">
+        <span class="user-name">用户账户号</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="wrapper">  
+    <h2>院士专家工作站(园区服务中心)认证</h2>
+    <ul class="process-list">
+      <li class="process-item">
+        <p class="item-name">基础信息</p>
+        <img src="img/gray.png" class="item-img">
+        <p class="step">第一步</p>
+      </li>
+      <li class="process-item highlight">
+        <p class="item-name">建站单位基本情况</p>
+        <img src="img/blue.png" class="item-img">
+        <p class="step">第二步</p>
+      </li>
+      <li class="process-item">
+        <p class="item-name">工作站基本情况</p>
+        <img src="img/gray.png" class="item-img">
+        <p class="step">第三步</p>
+      </li>
+      <li class="process-item">
+        <p class="item-name">工作站建设情况</p>
+        <img src="img/gray.png" class="item-img">
+        <p class="step">第四步</p>
+      </li>
+    </ul>
+    
+    <div class="container">
+      <div class="block">
+        <div class="type-name">单位名称：</div>
+        <input type="text" class="input">
+      </div>
+
+      <div class="block">
+        <div class="type-name">通讯地址：</div>
+        <input type="text" class="input">
+      </div>
+
+      <div class="block">
+        <div class="type-name">单位网站：</div>
+        <input type="text" class="input">
+      </div>
+      
+      <div class="block">
+        <div class="type-name">单位性质：</div>
+        <div class="radio-area" id="company-type">
+          <input class="level" type="radio" name="unit-type" checked id="qy">
+          <label for="qy">企业(</label>
+          <input class="level" type="radio" name="unit-type" id="gq">
+          <label for="gq">国有企业</label>
+          <input class="level" type="radio" name="unit-type" id="gk">
+          <label for="gk">国有控股企业</label>
+          <input class="level" type="radio" name="unit-type" id="wz">
+          <label for="wz">外资企业</label>
+          <input class="level" type="radio" name="unit-type" id="hz">
+          <label for="hz">合资企业</label>
+          <input class="level" type="radio" name="unit-type" id="sy">
+          <label for="sy">私营企业(又称民营企业)）</label>
+        <br>
+          <input class="sy-level" type="radio" name="unit-type" id="sy">
+          <label for="sy">事业单位(</label>
+          <input class="sy-level" type="radio" name="unit-type" id="xx">
+          <label for="xx">学校</label>
+          <input class="sy-level" type="radio" name="unit-type" id="yq">
+          <label for="yq">园区</label>
+          <input class="sy-level" type="radio" name="unit-type" id="yy">
+          <label for="yy">医院</label>
+          <input class="sy-level" type="radio" name="unit-type" id="ky">
+          <label for="ky">科研院所）</label>
+          <input class="sy-level" type="radio" name="unit-type" id="qt">
+          <label for="qt">其他</label>
+          <input type="text" class="line">（如：学会、协会等）
+        </div>
+      </div>
+      
+      <!-- 企业填写 -->
+      <div class="institution-unit show">
+        <div class="block">
+          <div class="type-name">单位法人代表：</div>
+          <input type="text" class="input">
+          <div class="type-name">联系电话：</div>
+          <input type="text" class="input">
+        </div>
+
+        <div class="block">
+          <div class="type-name">所属行业：</div>
+          <div class="select-area">
+            <select>
+              <option value="">农、林、牧、渔业</option>
+              <option value="">采矿业</option>
+              <option value="">制造业</option>
+              <option value="">电力、热力、燃气及水生产和供应业</option>
+              <option value="">建筑业</option>
+              <option value="">批发和零售业</option>
+              <option value="">交通运输、仓储和邮政业</option>
+              <option value="">住宿和餐饮业</option>
+              <option value="">信息传输、软件和信息技术服务业</option>
+              <option value="">金融业</option>
+              <option value="">房地产业</option>
+              <option value="">租赁和商务服务业</option>
+              <option value="">科学研究和技术服务业</option>
+              <option value="">水利、环境和公共设施管理业</option>
+              <option value="">居民服务、修理和其他服务业</option>
+              <option value="">教育</option>
+              <option value="">卫生和社会工作</option>
+              <option value="">文化、体育和娱乐业</option>
+              <option value="">公共管理、社会保障和社会组织</option>
+              <option value="">国际组织</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="type-name">主要产品或提供服务：</div>
+          <textarea class="tiny-textarea"></textarea>
+        </div>
+
+        <div class="block">
+          <div class="type-name">企业上市情况：</div>
+          <div class="radio-area w-200">
+            <input class="level" type="radio" name="sh" checked id="sh-yes">
+            <label for="sh-yes">是</label>
+            <input class="level" type="radio" name="sh" id="sh-no">
+            <label for="sh-no">否</label>
+          </div>
+          <div class="type-name">企业资格情况：</div>
+          是否是高新技术企业
+          <div class="radio-area w-200">
+            <input class="level" type="radio" name="zg" checked id="zg-yes">
+            <label for="zg-yes">是</label>
+            <input class="level" type="radio" name="zg" id="zg-no">
+            <label for="zg-no">否</label>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="type-name pl-50">建有省级以上科研载体情况：</div>
+          <div class="radio-area">
+            <label><input type="radio" name="qy-level" checked>国家级 (</label>
+            <label><input type="radio" name="qy-level">技术中心</label>
+            <label><input type="radio" name="qy-level">工程技术中心</label>
+            <label><input type="radio" name="qy-level">博士后科研工作站</label>
+            <label><input type="radio" name="qy-level">其他，请填写</label>
+            <input type="text" class="line">）
+            <br>
+            <label><input type="radio" name="qy-level">省级 (</label>
+            <label><input type="radio" name="qy-level">技术中心</label>
+            <label><input type="radio" name="qy-level">工程技术中心</label>
+            <label><input type="radio" name="qy-level">博士后科研工作站</label>
+            <label><input type="radio" name="qy-level">企业研究院</label>
+            <label><input type="radio" name="qy-level">院士专家工作站</label>
+            <label><input type="radio" name="qy-level">其他，请填写</label>
+            <input type="text" class="line">）
+          </div>
+          <div class="upload">上传附件</div>
+        </div>
+
+        <div class="block">
+          <div class="type-name pl-50">上一年度销售额（万元）：</div>
+          <input type="text" class="line">
+          <div class="type-name w-175">上一年度科研投入（万元）：</div>
+          <input type="text" class="line">
+          <div class="type-name w-160">上一年度研发经费投入占销售收入比例：</div>
+          <input type="text" class="line">
+        </div>
+
+        <div class="block">
+          <div class="type-name">上年度末职工总数（人）：</div>
+          <input type="text" class="line">
+          <div class="type-name">科研人员数（人）：</div>
+          <input type="text" class="line">
+          <div class="type-name">科研人员占职工总数比例：</div>
+          <input type="text" class="line">
+        </div>
+      </div>
+      
+      <!-- 事业填写 -->
+      <div class="enterprise-unit">
+
+        <div class="block">
+          <div class="type-name">单位法人代表：</div>
+          <input type="text">
+          <div class="type-name">联系电话：</div>
+          <input type="text">
+        </div>
+
+        <div class="block">
+          <div class="type-name">上级主管单位：</div>
+          <input type="text">
+          <div class="type-name">所属行业：</div>
+          <div class="select-area">
+            <select>
+              <option value="">农、林、牧、渔业</option>
+              <option value="">采矿业</option>
+              <option value="">制造业</option>
+              <option value="">电力、热力、燃气及水生产和供应业</option>
+              <option value="">建筑业</option>
+              <option value="">批发和零售业</option>
+              <option value="">交通运输、仓储和邮政业</option>
+              <option value="">住宿和餐饮业</option>
+              <option value="">信息传输、软件和信息技术服务业</option>
+              <option value="">金融业</option>
+              <option value="">房地产业</option>
+              <option value="">租赁和商务服务业</option>
+              <option value="">科学研究和技术服务业</option>
+              <option value="">水利、环境和公共设施管理业</option>
+              <option value="">居民服务、修理和其他服务业</option>
+              <option value="">教育</option>
+              <option value="">卫生和社会工作</option>
+              <option value="">文化、体育和娱乐业</option>
+              <option value="">公共管理、社会保障和社会组织</option>
+              <option value="">国际组织</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="type-name pl-50">建有省级以上科研载体情况：</div>
+          <div class="radio-area">
+            <label><input type="radio" name="qy-level" checked>国家级 (</label>
+            <label><input type="radio" name="qy-level">技术中心</label>
+            <label><input type="radio" name="qy-level">工程技术中心</label>
+            <label><input type="radio" name="qy-level">博士后科研工作站</label>
+            <label><input type="radio" name="qy-level">其他，请填写</label>
+            <input type="text" class="line">）
+            <br>
+            <label><input type="radio" name="qy-level">省级 (</label>
+            <label><input type="radio" name="qy-level">技术中心</label>
+            <label><input type="radio" name="qy-level">工程技术中心</label>
+            <label><input type="radio" name="qy-level">博士后科研工作站</label>
+            <label><input type="radio" name="qy-level">企业研究院</label>
+            <label><input type="radio" name="qy-level">院士专家工作站</label>
+            <label><input type="radio" name="qy-level">其他，请填写</label>
+            <input type="text" class="line">）
+          </div>
+
+          <div class="upload">上传附件</div>
+        </div>
+
+        <div class="block">
+          <div class="type-name">上一年度研发投入总额（万元）：</div>
+          <input type="text" class="line">
+          <div class="type-name">上年度末职工总数（人）：</div>
+          <input type="text" class="line">
+          <div class="type-name">科研人员数（人）：</div>
+          <input type="text" class="line">
+        </div>
+      </div>
+    </div>
+    
+    <p class="attention">备注：本页每项内容都为必填项</p>
+    <a href="step-three.html" class="next-step">下一步</a>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">院士专家工作站认证平台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="verify-info.html">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+  
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/common.js"></script>
+  <!-- <script src="js/calendar.js"></script> -->
+  <script>
+
+    // var today = new Date();
+    // var year = today.getFullYear();
+    // var month = today.getMonth() + 1;
+    // var day = today.getDate();
+
+    // calender('#mydatepicker').init({
+    //   format: 'yyyy-MM-dd',
+    //   date: [year,month,day],
+    //   button: true
+    // }, function(date){
+    //   this.value = date;
+    // }); 
+
+    
+
+
+    $('#company-type input').on('click', function () {
+      if ($('#company-type input:checked').attr('class') == 'sy-level') {
+        $('.institution-unit').removeClass('show');
+        $('.enterprise-unit').addClass('show');
+      } else {
+        $('.institution-unit').addClass('show');
+        $('.enterprise-unit').removeClass('show');
+      }
+    });
+  </script>
+</body>
+</html>

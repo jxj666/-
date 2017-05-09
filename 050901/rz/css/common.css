@@ -1,0 +1,101 @@
+textarea { font-size: 18px; }
+
+.border-radius-5 {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  behavior: url(ie-css3.htc);
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*---header---*/
+.header {
+  height: 86px;
+  border-bottom: 1px solid #0068b7;
+}
+
+.nav { 
+  width: 1200px;
+  line-height: 86px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.icon, .user-name {
+  vertical-align: middle;
+}
+
+.nav .title {
+  color: #0068b7;
+  font-size: 30px;
+}
+
+.name {
+  font-size: 24px;
+  margin-left: 30px;
+}
+
+.user-name {
+  cursor: pointer;
+}
+
+.user {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+.user-name {
+  font-size: 18px;
+}
+
+/*---footer---*/
+.footer {
+  width: 100%;
+  height: 240px;
+  // background-color: #333;
+  background-image: url(../img/footerBg.png);
+  color: white;
+}
+
+.introduce {
+  width: 1080px;
+  height: 170px;
+  margin: 0 auto;
+  padding: 50px;
+  vertical-align: top;
+  border-bottom: 1px solid #616161;
+}
+
+.introduce .title {
+  color: white;
+  font-size: 18px;
+  vertical-align: top;
+  margin-right: 390px;
+}
+
+.about-us, .contact-us {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+}
+
+.about-us {
+  margin-right: 60px;
+}
+
+.about-us a {
+  padding-bottom: 10px;
+  display: block;
+  color: white;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 12px;
+}

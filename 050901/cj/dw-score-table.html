@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>评分表</title>
+  <link rel="stylesheet" href="../rz/css/reset.css">
+  <link rel="stylesheet" href="../rz/css/common.css">
+  <link rel="stylesheet" href="css/dw-score-table.css">
+  <!-- <link rel="stylesheet" href="../rz/css/calendar.css"> -->
+  <style>
+    .wrapper { 
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="header">
+    <div class="nav">
+      <span class="title">全国示范院士专家工作站创建工作平台</span>
+      <span class="name">填写信息</span>
+      <div class="user">
+        <img src="../rz/img/person.png" class="icon">
+        <span class="user-name">用户账户号</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-box">
+    <!-- 打分表 -->
+    <!-- <div class="wrapper">
+      <h2>企业类示范院士专家工作站(园区院士专家服务中心)评分表</h2>
+      <table class="score" border="1" style="border-collapse: collapse;">
+        <tr class="table-title">
+          <td colspan="2">审核项(100分)</td>
+          <td>请打分</td>
+        </tr>
+
+        <tr>
+          <td rowspan="3" class="w-216">基础条件情况<br>（20分）</td>
+          <td class="w-530 p-20">1. 工作站是否有保障经费</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">2. 工作站是否有进站的院士专家及企业配套的研发团队</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">3. 工作站是否有专门办公场所，或企业拥有其他科研载体</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="3" class="w-216">运行管理情况<br>（30分）</td>
+          <td class="w-530 p-20">1. 是否制定出台工作站管理配套制度，有年度工作计划，保障工作站运行</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">2. 工作站是否有企业高层或专门人员对工作站进行管理</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">3. 企业是否与院士专家签署合作协议，对知识产权归属、经济利益分配有明确约定</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="3" class="w-216">工作站成效<br>（40分）
+            <p>（注：适用于对工作站进行评分）</p>
+          </td>
+          <td class="w-530 p-20">1. 是否在解决企业发展战略、攻克关键技术、促进成果转化、申请发明专利、合作项目获奖、发 表论文著作或参与制定国家行业标准等方面发挥作用，提升了企业创新能力。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">2. 是否帮助企业在吸收外部高端人才、培养企业内部创新人才、依托工作站建立人才培养基地或 与院士专家团队开展双向人才培养方面发挥作用。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">3. 是否为企业产生经济效益和社会效益，及对区域、行业和产业发挥辐射溢出效应，且成效显著。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="4" class="w-216">园区服务中心成效<br>（40分）
+            <p>（注：适用于对园区服务中心进行评分）</p>
+          </td>
+          <td class="w-530 p-20">1. 是否为提升园区产业创新能力发挥作用。 </td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">2. 是否引领带动产业转型升级。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">3. 是否为园区战略发展及区域科技经济发展发挥作用。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">3. 是否开展了重大产学研活动。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        
+        <tr>
+          <td rowspan="3" class="w-216">院士专家团队<br>评价意见<br>（10分）
+            <p>（注：适用于对园区服务中心进行评分）</p>
+          </td>
+          <td class="w-530 p-20">1. 充分肯定。工作站在解决技术难题、成果转化和培养人才方面成效显著。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">2. 正面评价。工作站在解决技术难题、成果转化和人才培养方面作用较好。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">3. 负面评价。工作站在解决技术难题、成果转化和人才培养方面没有起到作用</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+
+        <tr style="text-align: center;">
+          <td class="w-216" style="height: 70px;">总分</td>
+          <td colspan="2"><input type="text" class="score-input w-730"></td>
+        </tr>
+
+      </table>
+
+      <a href="javascript:void(0);" class="save-score">保存评分</a>
+    </div> -->
+    <div class="wrapper">
+      <h2>示范单位项目申报书评分表</h2>
+      <table class="score" border="1" style="border-collapse: collapse;">
+        <tr class="table-title">
+          <td colspan="2" style="height: 80px;">审核项(100分)</td>
+          <td>请打分</td>
+        </tr>
+
+        <tr>
+          <td rowspan="5" style="padding: 0 30px; width: 70px; font-size: 18px;">评价打分</td>
+          <td class="w-216">项目实施方案<br>（20分）</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="w-216">项目成果<br>（30分）</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="w-216">项目进度<br>（20分）</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="w-216">组织实施条件<br>（15分）</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="w-216">经费开支内容<br>（15分）</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+
+        <tr>
+          <td style="padding: 0 30px; height: 150px;font-size: 18px;">评审意见</td>
+          <td colspan="2">
+            <p style="padding: 10px 0;">专家评审意见：</p>
+            <textarea class="option-input"></textarea>
+          </td>
+        </tr>
+      </table>
+
+      <a href="javascript:void(0);" class="save-score">保存评分</a>
+    </div>
+
+    <!-- 申报表 -->
+    <div class="wrapper show">  
+      <h2>示范单位项目申报书</h2>
+      
+      <div class="seperate-line">
+        <p class="txt">单位基本情况</p>
+      </div>
+
+      <div class="block">
+        <div class="left">单位名称：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" value="福建省科学技术咨询服务中心" disabled="true">
+        </div>
+
+        <span class="tel">单位类别：</span>
+        <input type="text" class="normal w-212" value="事业单位" disabled="true">
+      </div>
+
+      <div class="block">
+        <div class="left">通讯地址：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" value="福州市群众路278号源利明珠9楼" disabled="true">
+        </div>
+
+        <span class="tel">邮编：</span>
+        <input type="text" class="normal w-212" value="350005" disabled="true">
+      </div>
+
+      <div class="block">
+        <div class="left">单位法定代表人：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" value="杨勇" disabled="true">
+        </div>
+
+        <span class="tel">上级主管部门：</span>
+        <input type="text" class="normal w-212" value="福建省科学技术协会" disabled="true">
+      </div>
+
+      <div class="block">
+        <div class="left">开户银行：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" value="中国农业银行福州五一中路支行" disabled="true">
+        </div>
+
+        <span class="tel">财务负责人：</span>
+        <input type="text" class="normal w-212" value="邓霞" disabled="true">
+      </div>
+
+      <div class="block">
+        <div class="left">银行账号：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" value="1313520104000116" disabled="true">
+        </div>
+
+        <span class="tel">联系方式：</span>
+        <input type="text" class="normal w-212" value="0591-63336511" disabled="true">
+      </div>
+
+      <div class="block">
+        <div class="left">开户名称：</div>
+        <div class="right">
+          <input type="text" class="normal w-525" value="福建省科学技术咨询服务中心" disabled="true">
+        </div>
+      </div>
+      
+      <div class="block">
+        <div class="left">项目负责人：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" value="黄忠平" disabled="true">
+        </div>
+
+        <span class="tel">职称职务：</span>
+        <input type="text" class="normal w-212" value="高级工程师主任助理" disabled="true">
+      </div>
+
+      <div class="block">
+        <div class="left">身份证件：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" value="身份证" disabled="true">
+        </div>
+
+        <span class="tel">身份证号：</span>
+        <input type="text" class="normal w-212" value="610103197204062853" disabled="true">
+      </div>
+
+      <div class="block">
+        <div class="left">办公电话：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" value="0591-63336521" disabled="true">
+        </div>
+
+        <span class="tel">移动电话：</span>
+        <input type="text" class="normal w-212" value="13805059918" disabled="true">
+      </div>
+
+      <div class="block">
+        <div class="left">电子邮箱：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" value="fjqykx@126.com" disabled="true">
+        </div>
+
+        <span class="tel">传真：</span>
+        <input type="text" class="normal w-212" value="0591-63336505" disabled="true">
+      </div>
+
+      <div class="seperate-line mt-100">
+        <p class="txt">项目概况</p>
+      </div>
+      
+      <div class="block">
+        <div class="left">
+          项目执行时间：
+        </div>
+        <div class="right">
+          <input type="text" class="normal w-60" value="2016" disabled="true"> 年
+          <input type="text" class="normal w-60" value="1" disabled="true"> 月
+          <input type="text" class="normal w-60" value="1" disabled="true"> 日&nbsp;&nbsp;到
+          <input type="text" class="normal w-60" value="2016" disabled="true"> 年
+          <input type="text" class="normal w-60" value="8" disabled="true"> 月
+          <input type="text" class="normal w-60" value="31" disabled="true"> 日
+
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left">
+          项目执行时间：
+        </div>
+        <div class="right pt-10">
+          <label><input type="radio" name="type" checked disabled="true">子项目一</label>
+          <label><input type="radio" name="type">子项目二</label>
+          <label><input type="radio" name="type">子项目三</label>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left">
+          预算经费：
+        </div>
+        <div class="right">
+          总经费&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="normal w-290" value="140" disabled="true">&nbsp;&nbsp;&nbsp;&nbsp;万元
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left">
+          决算经费：
+        </div>
+        <div class="right">
+          总经费&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="normal w-290" value="140.15" disabled="true">&nbsp;&nbsp;&nbsp;&nbsp;万元
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left" style="line-height: 20px;">
+          申请中央财政<br>后补助经费：
+        </div>
+        <div class="right">
+          <input type="text" class="normal w-290" value="20" disabled="true">&nbsp;&nbsp;&nbsp;&nbsp;万元
+        </div>
+      </div>
+      
+      <div class="seperate-line mt-100">
+        <p class="txt">项目实施方案</p>
+      </div>
+
+      <p class="text">
+        说明：<br>1.详细描述申报单位为实施该项目所制定的工作方案，包括：推进院士专家工作站（园区服务中心）建设的主要工作；在已建立的工作站（服务中心）中开展示范站（服务中心）创建活动的主要工作目标、工作内容，工作机制、保障措施、出台的相关文件等；<br>2.详细描述实施该项目所具备的专家资源（工程技术类），工作资源（科研院所、大专院校，社会力量，联系企业渠道）等；<br>3.在实施方案中写明申报单位的具体任务。
+      </p>
+
+      <textarea class="textarea" disabled="true">1、项目依据
+  继2014年我省院士专家示范工作站遴选工作启动以来，为进一步促进我省工作站的规范管理、有序运行，发挥工作站在科技创新、人才培养和产学研用平台建设等方面的示范引领作用，以《中国科协关于推进院士专家工作站建设的指导意见》、《关于加强院士专家工作站建设的意见》、《福建省院士专家工作站管理办法》、《关于成立“福建省院士专家工作站建设协调小组”的通知》指导，以“院士专家八闽行”活动为载体，以“不求所有、但求所用”的柔性引进人才原则，在省级联合授牌两年以上院士专家工作站中，持续推动福建省院士专家示范工作站遴选工作。
+  2、工作目标
+  按照“整合资源、搭建平台，优势互补、互惠共赢”的原则，坚持“以需求为导向，以项目为纽带，以引智为目标”，引导和支持院士专家团队等创新要素向企业集中、向产业集聚，推动项目对接、人才引进和科技创新工作。通过大力推进福建省院士专家示范工作站建设，进一步促进我省院士专家工作站的规范管理、有序运行，推动建站单位与院士团队智力的密切交流与合作，加快企业科技人才的成长和提高，提升企业的核心竞争力。在项目实施的基础上，根据遴选办法，结合各设区市工作站建设实际情况，每年开展一次“福建省院士专家示范工作站”的遴选工作，遴选出10家综合绩效突出、具有较强引领示范作用的省级示范工作站，树立一批典型、标杆，为我省企事业单位在科技创新、人才培养、产学研用平台建设等方面发挥示范引领作用。
+  3、项目内容
+  1）数据库建设与完善。根据中国科技咨询服务中心数据库的信息设计要求，结合正在开发的国家科技部火炬项目《技术转移信息支持系统》，利用福建省科技咨询服务中心的信息化条件和工作基础，建立与完善福建省《院士专家工作站信息库》、《院士专家信息库》、《企业难题需求库》、《科技成果库》等基础数据库，为实行网络化动态管理，实时了解工作站与项目运行情况服务，为推进我省院士专家工作站建设的深入实施提供数据支撑。
+  2）绩效评估体系建设与完善。为了进一步规范工作站建设和有序运行，更好的发挥工作站作用，探索建立工作站建设绩效评估体系：按照院士专家工作站建设、运行情况，从工作站基础建设情况、团队建设情况、主要工作内容完成情况、工作业绩等方面建立“评估内容、评估项目、评估指标”的三级指标体系（一级指标4个，二级指标13个，三级指标33个），对全
+      </textarea>
+
+      <div class="seperate-line mt-100">
+        <p class="txt" style="width: 340px;">预期成果及考核指标/项目成果</p>
+      </div>
+      
+      <p class="text">
+        说明：结合实际情况描述以下5个方面的工作成效。<br>1.     2016年度开展示范工作站创建活动情况及取得的成果。<br>2.     写明经过评选，择优推荐示范院士专家工作站（园区服务中心）数量、名称及相关推荐材料（另附）（要求：以不超过本省建站总数10%的数量推荐）。（备注：地市级科协只需填报向省级科协推荐的示范站数量及名称）<br>3.     描述2016年新建院士专家工作站（服务中心）情况，以及在建站工作中开拓的新思路，探索的新方法和新模式方面的内容。（要求：在高科技企业，以及高新区、经开区和产业聚集区中，新建院士专家工作站、园区院士专家服务中心5家以上，每家工作站进站院士1名以上，开展合作项目1项以上）<br>4.     开展工作站相关基础工作。申报单位围绕上述工作，按我中心统一要求格式建立《专家（院士）工作站基本信息库》、《专家（院士）信息库》、《企业难题需求库》、《科技成果库》，并报送上述数据库信息及相关活动的工作简报，提交典型案例、工作总结等。（要求：收集、整理院士专家站（园区服务中心）的创新成果10项以上，建立4个基础数据库，条目数达500条以上，建立网络服务平台，编写典型案例10个以上、成果汇编1册以上）。<br>5.     描述2016年度取得的的经济效益和社会效益，并量化。
+      </p>
+
+      <textarea class="textarea" disabled="true">
+        省工作站进行“工作站自评、地市管理机构初评、省考核调研组绩效评估”等3个层面进行百分制绩效打分，采取加权算术和的方式对工作站绩效进行综合评价，打分依据为各工作站根
+  据“评估指标”要求提供的佐证材料以及实地调研情况。
+  3）调研评估。采取汇报座谈、材料审核、实地考察和征求意见等多种方式结合的形式，展开对全省工作站进行调研评估工作。通过调研全面深入了解我省院士专家工作站现状，调研工
+  作站运作、合作项目进展、创新人才培养和地方党委政府为推动工作站建设出台的优惠政策、给予的经费支持力度。通过调研对全省工作站进行阶段性评估，系统总结工作站建设、运作
+  过程中取得的成效和经验，分析、解决存在的困难和问题，为规范管理、树立典型，探索工作站建设的新模式、新方法，为建设创新人才培养基地提供依据，进一步促进我省院士专家工
+  作站建设和院士项目对接，提升工作站服务企业科技创新发展的能力。
+  2014、2015、2016年遴选的示范工作站名单
+  序号  2014年 2015年 2016年
+  1 福建省肝病科学研究中心院士专家工作站  福建省公安厅刑事技术总队院士专家工作站 神蜂科技院士专家工作站
+  2 福建仙芝楼生物科技有限公司院士专家工作站  福建新大陆环保科技有限公司院士专家工作站  福建福光数码科技有限公司院士专家工作站
+  3 爱德森院士专家工作站  厦门厦工机械股份有限公司院士专家工作站 麦克奥迪集团院士专家工作站
+  4 漳州科华技术有限责任公司院士专家工作站 平和县琯溪蜜柚产业发展院士专家工作站  福建东方食品集团有限公司院士专家工作站
+  5 安溪铁观音集团院士专家工作站　 福建绿宝食品集团有限公司院士专家工作站 福建思特电子有限公司院士专家工作站
+  6 城厢区院士专家工作站  金保利（泉州）科技实业有限公司院士专家工作站  信和新材料股份有限公司院士专家工作站
+  7 三明林业产业院士专家工作站 超级稻、再生稻院士专家工作站  福建水利电力职业技术学院院士专家工作站
+  8 福建省紫金矿业集团有限公司院士专家工作站  新万鑫（福建）精密薄板有限公司院士专家工作站  福建省莆田新美食品有限公司院士专家工作站
+  9 南平市农科所院士专家工作站 福建畅丰车桥院士专家工作站 福建一春农业发展有限公司院士专家工作站
+      </textarea>
+      
+      <div class="seperate-line mt-100">
+        <p class="txt" style="width: 380px;">项目进度计划/项目各阶段已完成的工作</p>
+      </div>
+
+      <p style="padding-bottom: 20px;">说明：填写截止申报日，本年度各阶段已完成的工作</p>
+
+      <table style="font-size: 14px;text-align: center;border-collapse: collapse;" border="1" >
+        <tr style="font-size: 18px;">
+          <td style="width: 300px;">项目活动阶段</td>
+          <td style="width: 602px;">主要工作内容和成果</td>
+          <td style="width: 298px;">起止时间／时间节点<br>(x月至x月)</td>
+        </tr>
+        <tr>
+          <td style="height: 62px;">项目筹备、培育阶段</td>
+          <td class="pl-10">1、召开协调小组会议、确定开展“福建省院士专家示范工作站”建设与遴选工作，落实工作经费和补助经费。2、起草“福建省院士专家示范工作站”遴选方案。</td>
+          <td>2015.9 - 2016.1</td>
+        </tr>
+        <tr>
+          <td style="height: 62px;">项目实施阶段</td>
+          <td class="pl-10">1、根据调研方案和遴选办法，结合绩效评估机制对全省符合条件的工作站展开调研工作。<br>2、按照绩效评估机制和评估指标体系的要求完成绩效评估工作。</td>
+          <td>2016.1 - 5</td>
+        </tr>
+        <tr>
+          <td style="height: 62px;">项目总结阶段</td>
+          <td class="pl-10">1、根据调研评估情况，起草调研评估报告。<br>2、根据遴选情况，组织召开协调小组会议，研究讨论遴选结果。</td>
+          <td>2016.5 - 6</td>
+        </tr>
+        <tr>
+          <td style="height: 62px;">项目收尾阶段</td>
+          <td class="pl-10">1、补助经费落实与发放。<br>2、典型示范宣传。</td>
+          <td>2016.6 - 10</td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+        </tr>
+      </table>
+      
+      <div class="seperate-line mt-100">
+        <p class="txt">项目实施条件</p>
+      </div>
+
+      <p class="text">
+        说明：<br>1. 从申报单位的服务能力、服务队伍建设、制度保障（含工作制度、财务制度）、专项配套资金等角度，详细描述本单位承担该项目的组织实施条件、支撑条件（含网络条件）；<br>2. 详细描述申报单位实施该项目的工作基础、工作经验；与全国学会和本省学会开展产学研协同服务的工作基础，既往业绩（近三年承担服务企业创新项目的绩效，包括：院士专家工作站建设、园区服务中心建设、金桥工程等工作的绩效）。
+      </p>
+
+      <textarea class="textarea" disabled="true">1、组织实施条件
+  1）组织机构
+  福建省科学技术咨询服务中心，是经福建省人民政府批准于1983年7月成立的独立法人事业单位，隶属福建省科学技术协会，是福建省最早成立的咨询服务机构之一，拥有工程咨询甲级资格、水土保持方案编制乙级资格和司法鉴定许可证，先后被授予首批国家技术转移示范机构和国家中小企业公共服务示范平台。“咨询中心”主要负责全省科协系统科技咨询和金桥工程的组织、指导、实施和管理工作；承担全省院士专家项目成果对接转化服务、院士专家工作站建设管理；负责全省企业科协组织建设和创新活动组织管理；负责指导、组织全省“讲、比”活动开展；负责全省“企会协作创新联盟”建设工作开展；承担福建省院士专家工作站建设办公室、福建省“讲、比”活动领导小
+  组办公室、福建省科协企业科技创新专门委员会办事机构和省科协“金桥工程”领导小组、企业科协工作领导小组办公室职责，以及福建省科技咨询协会、省技术经济与管理现代化研究会、福建紫金科技创新奖管理委员会秘书处工作职责；为企业提供技术转移、决策咨询、工程咨询和司法鉴定等服务。
+  2）人员情况
+  在岗职工32人，高级职称9人，中级职称5人，研究生3人，本科22人。本项目工作团队成员共13名，其中高级职称4名，硕士研究生3名，本科以上学历10名。项目组人员长期从事企业科协组织建设、院士专家工作站建设金桥工程、“讲、比”活动等工作，具有丰富的工作经验，熟悉全省企业科协、院士专家工作站以及科技园区情况。
+  3）制度建设
+  在科学管理方面，近几年根据院士专家工作站建设推进需要先后制定出台了《关于加强院士专家工作站建设的意见》、《福建省院士专家工作站管理办法》、《关于成立“福建省院士专家工作站建设协调小组”的通知》和6批新建工作站、3批示范工作站授牌决定等15份管理、激励制度和文件，建立了院士工作站建设的长效工作机制，为工作站建设、示范工作站培育提供了制度保障。
+  4）资源配置
+  ①基础资源。“咨询中心”注册资金1386万元，拥有市中心地段办公场所两处，共1823平方米，设有业务洽谈厅、专家办公室、会议室、多功能培训室、机房和办公场所，为本项目的实
+      </textarea>
+
+      <div class="seperate-line mt-100">
+        <p class="txt">项目组成员</p>
+      </div>
+
+      <table disable="true" style="font-size: 14px;text-align: center;border-collapse: collapse;" border="1" >
+        <tr style="font-size: 18px;">
+          <td style="width: 126px;">姓名</td>
+          <td style="width: 75px;">年龄</td>
+          <td style="width: 128px;">职务／职称</td>
+          <td style="width: 158px;">业务专业</td>
+          <td style="width: 263px;">为本项目工作时间<br>（年月）</td>
+          <td style="width: 304px;">所在单位</td>
+          <td style="width: 155px;">职责分工</td>
+        </tr>
+        <tr>
+          <td style="height: 62px;">杨勇</td>
+          <td>47</td>
+          <td>主任 高级工程师</td>
+          <td>自动化</td>
+          <td>12个月</td>
+          <td>省科学技术咨询服务中心</td>
+          <td>项目负责人</td>
+        </tr>
+        <tr>
+          <td style="height: 62px;">林光宇</td>
+          <td>57</td>
+          <td>高级工程师</td>
+          <td>化工</td>
+          <td>12个月</td>
+          <td>省科学技术咨询服务中心</td>
+          <td>项目执行负责人</td>
+        </tr>
+        <tr>
+          <td style="height: 62px;">林光宇</td>
+          <td>47</td>
+          <td>主任 高级工程师</td>
+          <td>自动化</td>
+          <td>12个月</td>
+          <td>省科学技术咨询服务中心</td>
+          <td>项目负责人</td>
+        </tr>
+        <tr>
+          <td style="height: 62px;">林光宇</td>
+          <td>47</td>
+          <td>主任 高级工程师</td>
+          <td>自动化</td>
+          <td>12个月</td>
+          <td>省科学技术咨询服务中心</td>
+          <td>项目负责人</td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;">林光宇</td>
+          <td>47</td>
+          <td>主任 高级工程师</td>
+          <td>自动化</td>
+          <td>12个月</td>
+          <td>省科学技术咨询服务中心</td>
+          <td>项目负责人</td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;">林光宇</td>
+          <td>47</td>
+          <td>主任 高级工程师</td>
+          <td>自动化</td>
+          <td>12个月</td>
+          <td>省科学技术咨询服务中心</td>
+          <td>项目负责人</td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;">林光宇</td>
+          <td>47</td>
+          <td>主任 高级工程师</td>
+          <td>自动化</td>
+          <td>12个月</td>
+          <td>省科学技术咨询服务中心</td>
+          <td>项目负责人</td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td style="height: 62px;"></td>
+          <td class="pl-10"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      
+      <div class="seperate-line mt-100">
+        <p class="txt">附表附件</p>
+      </div>
+
+      <p class="text pl-120">1. 提交项目预算、决算明细表，申请中央财政补助、专项配套资金须分别编报。预算、决算明细表须签盖申报单位财务章；财务主管签字。<br>2. 提供其他关于项目申报相关的附件材料。</p>
+      <a href="javascript:void(0);" class="upload">点击上传</a>
+
+      <div class="seperate-line mt-100"></div>
+
+      <div class="block">
+        <a href="javascript:void(0);" class="btn sure">确认填报</a>
+        <a href="javascript:void(0);" class="btn save">保存草稿</a>
+      </div>
+    </div>
+  </div>
+
+  <ul class="tab">
+    <li class="tab-item pingfen"></li>
+    <li class="tab-item shenbao"></li>
+  </ul>  
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">院士专家工作站认证平台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="verify-info.html">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="../rz/img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+
+  <script src="../rz/js/jquery-1.8.3.min.js"></script>
+  <script src="../rz/js/common.js"></script>
+  <script>
+    var left = (document.documentElement.clientWidth-1200)/2 + 1200;
+    $('.tab').css('left', left + 'px');
+
+    $('.tab-item').on('click', function() {
+      $('.wrapper').eq($(this).index()).addClass('show').siblings().removeClass('show');
+    });
+  </script>
+</body>
+</html>

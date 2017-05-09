@@ -1,0 +1,115 @@
+body{
+    background: #f9f9f9;
+}
+.add_expert{
+    width: 580px;
+    // margin: 127px auto;
+    margin: 70px auto;
+    border: 1px solid #E8EEF3;
+    box-shadow: 0 0 25px #888888;
+    padding: 0 41px;
+}
+
+.add_expert h3 {
+    font-weight: normal;
+
+    line-height: 82px;
+    font-size: 24px;
+    color: #0068b7;
+    margin: 0 auto;
+    border-bottom: 1px solid #bfbfbf;
+}
+.AE_type{
+    line-height: 80px;
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+.txt {
+    font-size: 18px;
+}
+
+.add_expert select {
+    width: 140px;
+    vertical-align: middle;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.AE_field_time{
+    line-height: 80px;
+    font-size: 24px;
+}
+
+.AE_field_time input {
+    width: 130px;
+    height: 31px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    vertical-align: middle;
+    font-size: 20px;
+    padding: 0 5px;
+    margin: 0 5px;
+}
+.AE_select{
+    font-size: 24px;
+    vertical-align: text-top;
+    line-height: 80px;
+}
+.AE_people{
+    display: inline-block;
+    vertical-align: text-top;
+    width: 111px;
+    height: 133px;
+    border: 1px solid #C2C2C2;
+    border-radius: 3px;
+    margin-left: 11px;
+}
+
+.AE_people p {
+    line-height: 32px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.AE_people img {
+    display: block;
+    width: 84px;
+    height: 84px;
+    margin: 13px auto 0;
+}
+.AE_add{
+    display: inline-block;
+    vertical-align: text-top;
+    height: 135px;
+    overflow: hidden;
+    margin: 0 5px;
+}
+
+.AE_add img {
+    width: 72px;
+    height: 72px;
+    margin-top: 32px;
+}
+
+.AE_btn{
+    height: 130px;
+    padding-top: 56px;
+}
+
+.AE_btn button {
+    color: #FFF;
+    border: 0px;
+    width: 240px;
+    height: 61px;
+    line-height: 61px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.AE_btn1{
+    background: #0068b7;
+}
+.AE_btn2{
+    float: right;
+    background: #b4b2b2;
+}

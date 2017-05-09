@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>认证管理</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/verify.css">
+  <link rel="stylesheet" href="css/pager.css">
+  <style>
+    .selector { margin-bottom: 46px; }
+    .btn { width: 410px; margin-right: 40px;}
+    .tab-bar { padding-left: 0; }
+
+    .no { width: 90px; }
+    .unit { width: 320px; }
+    .time { width: 140px; }
+    .end-time { width: 160px; }
+    .h70 { height: 70px; }
+    .person { width: 300px;}
+
+    .name {
+      position: relative;
+      text-align: left;
+      font-size: 16px;
+      padding-left: 15px; 
+      padding-right: 10px;
+    }
+
+    .name a {
+      display: block;
+      position: absolute;
+      right: 15px;
+      width: 74px;
+      height: 48px;
+      background-color: #0068b7;
+      top: 11px;
+      color: white;
+      line-height: 48px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .info { width: 150px; }
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <div class="header">
+    <div class="nav">
+      <span class="title">院士专家工作站信息服务平台管理后台</span>
+      <div class="user">
+        <img src="img/person.png" class="icon">
+        <span class="user-name">管理员姓名</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">    
+    <div class="tab-bar">
+      <span class="btn btn-highlight">院士专家工作站评选管理</span>
+      <span class="btn">院士专家工作站示范单位评选管理</span>
+    </div>
+    
+    <div class="selector">
+      <span class="type">评选年度：</span>
+      <select name="year" id="year">
+        <option value="">2017年度</option>
+        <option value="">2016年度</option>
+        <option value="">2015年度</option>
+        <option value="">2014年度</option>
+        <option value="">2013年度</option>
+      </select>
+    </div>
+    
+    <div class="list">
+      <table class="invisible visible">
+        <tr>
+          <th class="w-60 h70"></th>
+          <th class="no">编号</th>
+          <th class="unit">建站单位</th>
+          <th class="time">提交时间</th>
+          <th class="end-time">最终评选期</th>
+          <th class="person">专家评审人</th>
+          <th class="info">资料信息</th>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+      </table>
+      
+      <table class="invisible">
+        <tr>
+          <th class="w-60 h70"></th>
+          <th class="no">编号</th>
+          <th class="unit">建站单位</th>
+          <th class="time">提交时间</th>
+          <th class="end-time">最终评选期</th>
+          <th class="person">专家评审人</th>
+          <th class="info">资料信息</th>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>示范单位名称示范单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>示范单位名称示范单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>示范单位名称示范单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>示范单位名称示范单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>示范单位名称示范单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>示范单位名称示范单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>示范单位名称示范单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>示范单位名称示范单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="h70"><input type="checkbox"></td>
+          <td>00001</td>
+          <td>示范单位名称示范单位名称</td>
+          <td>2017-3-20</td>
+          <td>2017-04-01</td>
+          <td class="name">专家姓名
+            <a href="javascript:void(0);">添加</a>
+          </td>
+          <td>
+            <a href="javascript:void(0);" class="verify">查看</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+    <label for="select-all"><input type="checkbox" id="select-all">全选</label>
+    <div class="page-control"></div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">院士专家工作站信息服务平台管理后台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="verify-info.html">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/jquery.page.js"></script>
+  <script>
+    
+    // 分页器
+    $(".page-control").createPage({
+        pageCount:20,  //总页数
+        current:3,     //当前页数
+        callbackFn:function(page){
+          // console.log(page);
+          // 这里请求接口返回数据, page为当前页数
+        }
+    });
+
+
+    var allSelect = $('#select-all');
+    var checkBox = $('td input:checkbox');
+
+    allSelect.on('click', function(){
+      if (this.checked) {
+        checkBox.attr('checked', true);
+      } else {
+        checkBox.attr('checked', false);
+      }
+    });
+
+    checkBox.on('click', function() {
+
+      if (checkState(this.checked)) {
+        allSelect.attr('checked', true);
+      } else {
+        allSelect.attr('checked', false);
+      }
+    });
+
+    function checkState(state) {
+      var flag = false;
+      for(var i = 0 ; i < checkBox.length ; i++) {
+        if (checkBox[i].checked != state) {
+          flag = false;
+          break;
+        } else {
+          flag = true;
+        }
+      }
+
+      return flag;
+    }
+
+    // tab切换
+    var btn = $('.btn');
+    var table = $('table');
+
+    btn.on('click', function() {
+      $('input:checkbox').attr('checked', false);
+      var index = $(this).index();
+      $(this).addClass('btn-highlight').siblings().removeClass('btn-highlight');
+      $(table).eq(index).addClass('visible').siblings().removeClass('visible');
+    });
+  </script>
+</body>
+</html>
+
+

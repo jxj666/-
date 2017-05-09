@@ -1,0 +1,224 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 410px;
+  background-image: url(../platform-img/headBg.png);
+  background-size: 100% 100%;
+  color: white;
+}
+
+.header .container {
+  padding: 100px 110px;
+}
+
+.header .title {
+  font-size: 52px;
+  padding-bottom: 20px;
+}
+
+.header .sub-title {
+  font-size: 24px;
+}
+
+/*认证资料*/
+.data-box {
+  height: 324px;
+}
+
+.data-box .title, .result .title {
+  font-size: 24px;
+  text-align: center;
+  padding-top: 34px;
+  padding-bottom: 50px;
+}
+
+.data-list {
+  overflow: hidden;
+  width: 1040px;
+  margin: 0 auto;
+}
+
+.data-list-item {
+  width: 80px;
+  height: 160px;
+  float: left;
+  margin: 0 90px;
+  border-bottom: 4px solid transparent;
+  position: relative;
+}
+
+.data-list-item a {
+  display: block;
+  color: #333;
+  text-align: center;
+}
+
+.data-list-item a p {
+  padding-top: 5px;
+}
+
+.data-list-item img {
+  border: none;
+}
+
+.notice:hover { border-bottom-color: #5bb7ec; }
+.ways:hover { border-bottom-color: #9ed337; }
+.index:hover { border-bottom-color: #f5cc50; }
+.methods:hover { border-bottom-color: #e47d6f; }
+
+.notice .count {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.type {
+  height: 485px;
+  background-image: url(../platform-img/middleBg.png);
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+.type .box {
+  float: left;
+  width: 600px;
+  font-size: 36px;
+  color: white;
+  padding-top: 115px;
+}
+
+.type .box .title {
+  padding: 0 100px 88px;
+  text-align: center;
+}
+
+.type .box .join {
+  display: block;
+  width: 322px;
+  height: 134px;
+  background-image: url(../platform-img/btn-normal.png);
+  color: white;
+  font-size: 24px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 90px;
+}
+
+.type .box .join:hover {
+  background-image: url(../platform-img/btn-hover.png);
+}
+
+
+.result {
+  height: 1070px;
+}
+
+.choose-year {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#year {
+  width: 150px;
+  // height: 40px;
+  vertical-align: middle;
+}
+
+.result .card-group {
+  overflow: hidden;
+}
+
+.card {
+  float: left;
+  width: 600px;
+  height: 790px;
+  background-image: url(../platform-img/card-bg.png);
+}
+
+.card-title {
+  font-size: 22px;
+  width: 320px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.station-list, .center-list {
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 50px;
+  height: 545px;
+  overflow-y: scroll;
+}
+
+.station-list {
+  width: 470px;
+}
+
+.center-list {
+  width: 380px;
+}
+
+/*底部*/
+.footer {
+  width: 100%;
+  height: 240px;
+  background-image: url(../../images/footerBg.png);
+  color: white;
+}
+.footer .introduce {
+  width: 1080px;
+  height: 170px;
+  margin: 0 auto;
+  padding: 50px;
+  vertical-align: top;
+  border-bottom: 1px solid #616161;
+}
+.footer .introduce .title {
+  font-size: 18px;
+  vertical-align: top;
+  margin-right: 344px;
+}
+.footer .introduce .about-us,
+.footer .introduce .contact-us {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+}
+.footer .introduce .about-us {
+  margin-right: 60px;
+}
+.footer .introduce .about-us a {
+  padding-bottom: 10px;
+  display: block;
+  color: white;
+}
+.footer .bottom {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

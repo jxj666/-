@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>填写信息</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="../rz/css/common.css">
+  <link rel="stylesheet" href="css/recommend-table.css">
+</head>
+<body>
+  <div class="header">
+    <div class="nav">
+      <span class="title">全国示范院士专家工作站创建工作平台</span>
+      <span class="name">填写信息</span>
+      <div class="user">
+        <img src="../rz/img/person.png" class="icon">
+        <span class="user-name">用户账户号</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">  
+    <h2>院士专家工作站(服务中心)认证申请表</h2>
+    
+    <div class="seperate-line">
+      <p class="txt">建站(服务中心)单位基本情况</p>
+    </div>
+
+    <div class="block">
+      <div class="left">单位名称：</div>
+      <input type="text" class="normal" value="福建省科协" disabled="true">
+    </div>
+
+    <div class="block">
+      <div class="left">通讯地址：</div>
+      <input type="text" class="normal" value="福建省福州市仓山区建新镇洪山桥隧道口北侧神蜂楼" disabled="true">
+    </div>
+
+    <div class="block">
+      <div class="left">单位网站：</div>
+      <input type="text" class="normal" value="http://www.fjsfkj.com/" disabled="true">
+    </div>
+
+    <div class="block">
+      <div class="left">单位性质：</div>
+      <div class="right" id="company-type">
+        <label><input class="level" type="radio" name="c-type" checked disabled="true">企业(</label>
+        <label><input class="level" type="radio" name="c-type" disabled="true">国有企业</label>
+        <label><input class="level" type="radio" name="c-type" disabled="true">国有控股企业</label>
+        <label><input class="level" type="radio" name="c-type" disabled="true">外资企业</label>
+        <label><input class="level" type="radio" name="c-type" disabled="true">合资企业</label>
+        <label><input class="level" type="radio" name="c-type" disabled="true">私营企业(又称民营企业)）</label>
+        <br>
+        <label><input class="sy-level" type="radio" name="c-type" disabled="true">事业单位(</label>
+        <label><input class="sy-level" type="radio" name="c-type" disabled="true">学校</label>
+        <label><input class="sy-level" type="radio" name="c-type" disabled="true">园区</label>
+        <label><input class="sy-level" type="radio" name="c-type" disabled="true">医院</label>
+        <label><input class="sy-level" type="radio" name="c-type" disabled="true">科研院所）</label>
+        <label><input class="sy-level" type="radio" name="c-type" disabled="true">其他</label>
+        <input type="text" class="normal w80-h40">（如：学会、协会等）
+      </div>
+    </div>
+    
+    <!-- 企业单位 -->
+    <div class="enterprise-unit show">
+      
+      <div class="block">
+        <div class="left">单位法人代表：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" value="钟韬" disabled="true">
+        </div>
+
+        <span class="tel">联系电话：</span>
+        <input type="text" class="normal w-212" value="0591－87849383" disabled="true">
+      </div>
+      
+      <div class="block">
+        <div class="left">所属行业：</div>
+        <div class="right pt-10">
+          <select disabled="true">
+            <option value="" selected>农、林、牧、渔业</option>
+            <option value="">采矿业</option>
+            <option value="">制造业</option>
+            <option value="">电力、热力、燃气及水生产和供应业</option>
+            <option value="">建筑业</option>
+            <option value="">批发和零售业</option>
+            <option value="">交通运输、仓储和邮政业</option>
+            <option value="">住宿和餐饮业</option>
+            <option value="">信息传输、软件和信息技术服务业</option>
+            <option value="">金融业</option>
+            <option value="">房地产业</option>
+            <option value="">租赁和商务服务业</option>
+            <option value="">科学研究和技术服务业</option>
+            <option value="">水利、环境和公共设施管理业</option>
+            <option value="">居民服务、修理和其他服务业</option>
+            <option value="">教育</option>
+            <option value="">卫生和社会工作</option>
+            <option value="">文化、体育和娱乐业</option>
+            <option value="">公共管理、社会保障和社会组织</option>
+            <option value="">国际组织</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="block">
+        <div class="left h-60" style="line-height: 60px;">
+          主要产品或提供服务：
+        </div>
+        <div class="right">
+          <textarea class="tiny-textarea" disabled="true">从事蜂产品和蜂疗制品的研究开发、生产和销售，涉及药品、保健食品和食品多个领域。</textarea>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left">企业上市情况：</div>
+        <div class="right pt-10">
+          <label><input type="radio" name="is-in" checked disabled="true">是</label>
+          <label><input type="radio" name="is-in" disabled="true">否</label>
+        </div>
+        
+        <div style="float: left;width: 500px;height: 40px;line-height: 40px;margin-left: 90px;">
+          <span>是否是高新技术企业：</span>
+          <label><input type="radio" name="is-hight-tech" checked disabled="true">是</label>
+          <label><input type="radio" name="is-hight-tech" disabled="true">否</label>
+          <label><input type="radio" name="is-hight-tech" disabled="true">正在申请</label>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left">建有省级以上科研载体情况：</div>
+        <div class="right" style="width: 700px;">
+          <label><input type="radio" name="qy-level" checked disabled="true">国家级 (</label>
+          <label><input type="radio" name="qy-level" disabled="true">技术中心</label>
+          <label><input type="radio" name="qy-level" disabled="true">工程技术中心</label>
+          <label><input type="radio" name="qy-level" disabled="true">博士后科研工作站</label>
+          <label><input type="radio" name="qy-level" disabled="true">其他，请填写</label>
+          <input type="text" class="normal w80-h40">;）
+          <br>
+          <label><input type="radio" name="qy-level" disabled="true">省级 (</label>
+          <label><input type="radio" name="qy-level" disabled="true">技术中心</label>
+          <label><input type="radio" name="qy-level" disabled="true">工程技术中心</label>
+          <label><input type="radio" name="qy-level" disabled="true">博士后科研工作站</label>
+          <label><input type="radio" name="qy-level" disabled="true">企业研究院</label>
+          <label><input type="radio" name="qy-level" disabled="true">院士专家工作站</label>
+          <label><input type="radio" name="qy-level" disabled="true">其他，请填写</label>
+          <input type="text" class="normal w80-h40">。）
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left">上一年度销售额（万元）：</div>
+        <div class="right">
+          <input type="text" class="normal" style="width: 100px;" value="100" disabled="true">
+        </div>
+
+        <span class="tel">上一年度科研投入（万元）：</span>
+        <input type="text" class="normal" style="width: 100px;" value="50" disabled="true">
+
+        <span style="margin-left: 20px;">上一年度研发经费投入占销售收入比例</span>
+        <input type="text" class="normal line" value="50%" disabled="true">
+      </div>
+
+      <div class="block">
+        <div class="left">上一年度末职工总数（人）：</div>
+        <div class="right">
+          <input type="text" class="normal" style="width: 100px;" value="3000" disabled="true">
+        </div>
+
+        <span class="tel">科研人员数（人）：</span>
+        <input type="text" class="normal" style="width: 100px;" value="500" disabled="true"
+        >
+
+        <span style="margin-left: 20px;">科研人员占职工总数比例</span>
+        <input type="text" class="normal line">
+      </div>
+
+    </div>
+
+    <!-- 事业单位 -->
+    <div class="institution-unit">
+      <div class="block">
+        <div class="left">单位法人代表：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" disabled="true">
+        </div>
+
+        <span class="tel">联系电话：</span>
+        <input type="text" class="normal w-212" disabled="true">
+      </div>
+      
+      <div class="block">
+        <div class="left">上级主管单位：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" disabled="true">
+        </div>
+
+        <span class="tel">所属行业：</span>
+        <select disabled="true">
+          <option value="">农、林、牧、渔业</option>
+          <option value="">采矿业</option>
+          <option value="">制造业</option>
+          <option value="">电力、热力、燃气及水生产和供应业</option>
+          <option value="">建筑业</option>
+          <option value="">批发和零售业</option>
+          <option value="">交通运输、仓储和邮政业</option>
+          <option value="">住宿和餐饮业</option>
+          <option value="">信息传输、软件和信息技术服务业</option>
+          <option value="">金融业</option>
+          <option value="">房地产业</option>
+          <option value="">租赁和商务服务业</option>
+          <option value="">科学研究和技术服务业</option>
+          <option value="">水利、环境和公共设施管理业</option>
+          <option value="">居民服务、修理和其他服务业</option>
+          <option value="">教育</option>
+          <option value="">卫生和社会工作</option>
+          <option value="">文化、体育和娱乐业</option>
+          <option value="">公共管理、社会保障和社会组织</option>
+          <option value="">国际组织</option>
+        </select>
+      </div>
+
+      <div class="block">
+        <div class="left">建有省级以上科研载体情况：</div>
+        <div class="right" style="width: 700px;">
+          <label><input type="radio" name="level" checked disabled="true">国家级 (</label>
+          <label><input type="radio" name="level" disabled="true">技术中心</label>
+          <label><input type="radio" name="level" disabled="true">工程技术中心</label>
+          <label><input type="radio" name="level" disabled="true">博士后科研工作站</label>
+          <label><input type="radio" name="level" disabled="true">其他，请填写</label>
+          <input type="text" class="normal w80-h40">;）
+          <br>
+          <label><input type="radio" name="level" disabled="true">省级 (</label>
+          <label><input type="radio" name="level" disabled="true">技术中心</label>
+          <label><input type="radio" name="level" disabled="true">工程技术中心</label>
+          <label><input type="radio" name="level" disabled="true">博士后科研工作站</label>
+          <label><input type="radio" name="level" disabled="true">企业研究院</label>
+          <label><input type="radio" name="level" disabled="true">院士专家工作站</label>
+          <label><input type="radio" name="level" disabled="true">其他，请填写</label>
+          <input type="text" class="normal w80-h40">。）
+        </div>
+      </div>
+
+      <!-- <div class="block">
+        <div class="left">上一年度研发投入总额（万元）：</div>
+        <input type="text" class="normal">
+      </div> -->
+      
+      <div class="block">
+        <div class="left">上一年度研发投入总额（万元）：</div>
+        <div class="right">
+          <input type="text" class="normal w-130" disabled="true" value="50">
+        </div>
+        
+        <span class="tel">上年度末职工总数（人）：</span>
+        <input type="text" class="normal w-100" disabled="true" value="20">
+
+        <span class="tel">科研人员数（人）</span>
+        <input type="text" class="normal w-100" disabled="true" value="300">
+      </div>
+
+    </div>
+
+    <div class="seperate-line mt-100">
+      <p class="txt">工作站（服务中心）基础情况</p>
+    </div>
+    
+    <div class="block">
+      <div class="left">工作站（园区服务中心）名称：</div>
+      <input type="text" class="normal" value="神蜂科技院士专家工作站" disabled="true">
+    </div>
+
+    <div class="block">
+      <div class="left">类型：</div>
+      <div class="right pt-10">
+        <label><input class="level" type="radio" name="station-type" checked  disabled="true">院士工作站</label>
+        <label><input class="level" type="radio" name="station-type" disabled="true">专家工作站</label>
+        <label><input class="level" type="radio" name="station-type" disabled="true">院士专家服务中心</label>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="left">工作站（服务中心）审批时间：</div>
+      <input type="text" class="normal" value="2016-11-29" disabled="true">
+    </div>
+
+    <div class="block">
+      <div class="left">审批（备案）部门：</div>
+      <input type="text" class="normal" value="福建省委组织部、福建省科协、福建省财政厅、福建省科技厅" disabled="true">
+    </div>
+    
+    <div class="block">
+      <div class="left">工作站（园区服务中心）联系人：</div>
+      <input type="text" class="normal" value="陈焕超" disabled="true">
+    </div>
+
+    <div class="block">
+      <div class="left">联系方式：</div>
+
+      <span class="tel" style="padding-left: 0;">电话：</span>
+      <input type="text" class="normal w-150" value="0591-88269981" disabled="true">
+      <span class="tel">手机：</span>
+      <input type="text" class="normal w-150" value="18050200757" disabled="true">
+      <span class="tel">E-Mail</span>
+      <input type="text" class="normal w-200" disabled="true">
+    </div>
+    
+    <div class="seperate-line mt-100">
+      <p class="txt">工作站（服务中心）院士专家及其团队建设情况</p>
+    </div>
+
+
+    <p class="table-title">进站院士专家</p>
+
+    <table class="table" border="1">
+      <tr style="height: 70px;">
+        <td style="width: 100px;">姓名</td>
+        <td style="width: 50px;">性别</td>
+        <td style="width: 50px;">年龄</td>
+        <td style="width: 320px;">职务／级别</td>
+        <td style="width: 210px;">专业领域</td>
+        <td style="width: 200px;">工作单位</td>
+        <td style="width: 100px;">签约进站期限</td>
+        <td style="width: 150px;">联系电话</td>
+      </tr>
+
+      <tr style="height: 70px;">
+        <td><input type="text" value="陈建生" disabled="true"></td>
+        <td><input type="text" value="男" disabled="true"></td>
+        <td><input type="text" value="67" disabled="true"></td>
+        <td>
+          <select disabled="true">
+            <option value="" selected>中国科学院院士</option>
+            <option value="">中国工程院院士</option>
+            <option value="">国际欧亚科学院院士</option>
+            <option value="">"千人计划"人才</option>
+            <option value="">"《国家高层次人才特殊支持计划》"人才</option>
+            <option value="">长江学者</option>
+            <option value="">正高</option>
+            <option value="">副高</option>
+            <option value="">中级</option>
+            <option value="">其他</option>
+          </select>
+        </td>
+        <td>
+          <select disabled="true">
+            <option value="" selected>数学物理学</option>
+            <option value="">化学</option>
+            <option value="">生命科学和医学</option>
+            <option value="">地学</option>
+            <option value="">信息技术科学</option>
+            <option value="">技术科学</option>
+            <option value="">机械与运载工程</option>
+            <option value="">信息与电子工程</option>
+            <option value="">化工、冶金与材料工程</option>
+            <option value="">能源与矿业工程</option>
+            <option value="">土木、水利与建筑工程</option>
+            <option value="">环境与轻纺工程</option>
+            <option value="">农业</option>
+            <option value="">医药卫生</option>
+            <option value="">工程管理</option>
+          </select>
+        </td>
+        <td><input type="text" value="北京大学地球物理系" disabled="true"></td>
+        <td>
+          <select disabled="true">
+            <option value="">1年</option>
+            <option value="">2年</option>
+            <option value="">3年</option>
+            <option value="">4年</option>
+            <option value="">5年</option>
+            <option value="" selected>5年以上</option>
+          </select>
+        </td>
+        <td><input type="text" value="010-64888708" disabled="true"></td>
+      </tr>
+    </table>
+
+    <div class="tel" style="padding-left: 0;">
+      院士专家团队情况：
+      总人数：<input type="text" class="normal line" value="500" disabled="true">人，其中，
+      正高：<input type="text" class="normal line" value="50" disabled="true">人，
+      副高：<input type="text" class="normal line" value="40" disabled="true">人，
+      中级：<input type="text" class="normal line" value="30" disabled="true">人，
+      博士生：<input type="text" class="normal line" value="100" disabled="true">人，
+      硕士生：<input type="text" class="normal line" value="100" disabled="true">人，
+      其他：<input type="text" class="normal line" value="120" disabled="true">人。
+    </div>
+    
+
+    <p class="table-title pt-60">建站单位配套工作站研发人员</p>
+
+    <table class="table" border="1">
+      <tr style="height: 70px;">
+        <td style="width: 100px;">姓名</td>
+        <td style="width: 100px;">性别</td>
+        <td style="width: 100px;">年龄</td>
+        <td style="width: 320px;">职务／级别</td>
+        <td style="width: 210px;">专业领域</td>
+        <td style="width: 200px;">工作单位</td>
+        <td style="width: 150px;">联系电话</td>
+      </tr>
+
+      <tr style="height: 70px;">
+        <td><input type="text" value="武向平" disabled="true"></td>
+        <td><input type="text" value="男" disabled="true"></td>
+        <td><input type="text" value="83" disabled="true"></td>
+        <td>
+          <select disabled="true">
+            <option value="">中国科学院院士</option>
+            <option value="">中国工程院院士</option>
+            <option value="">国际欧亚科学院院士</option>
+            <option value="">"千人计划"人才</option>
+            <option value="">"《国家高层次人才特殊支持计划》"人才</option>
+            <option value="">长江学者</option>
+            <option value="">正高</option>
+            <option value="" selected>副高</option>
+            <option value="">中级</option>
+            <option value="">其他</option>
+          </select>
+        </td>
+        <td>
+          <select disabled="true">
+            <option value="">数学物理学</option>
+            <option value="">化学</option>
+            <option value="">生命科学和医学</option>
+            <option value="">地学</option>
+            <option value="">信息技术科学</option>
+            <option value="">技术科学</option>
+            <option value="" selected>机械与运载工程</option>
+            <option value="">信息与电子工程</option>
+            <option value="">化工、冶金与材料工程</option>
+            <option value="">能源与矿业工程</option>
+            <option value="">土木、水利与建筑工程</option>
+            <option value="">环境与轻纺工程</option>
+            <option value="">农业</option>
+            <option value="">医药卫生</option>
+            <option value="">工程管理</option>
+          </select>
+        </td>
+        <td><input type="text" value="中国科学院国家天文台" disabled="true"></td>
+        <td><input type="text" value="0571-88181103" disabled="true"></td>
+      </tr>
+    </table>
+
+    <div class="seperate-line mt-100">
+      <p class="txt">工作站（服务中心）经费投入情况</p>
+    </div>
+    
+    <div class="block">
+      <div class="left">工作站是否有工作经费：</div>
+      <div class="right pt-10">
+        <label><input type="radio" name="has-money" checked disabled="true">是</label>
+        <label><input type="radio" name="has-money" disabled="true">否</label>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="left">工作站运行管理经费总额：</div>
+      2016年
+      <input type="text" class="normal line w-100" value="121" disabled="true">
+      <span class="ml-30">2017年</span>
+      <select disabled="true">
+        <option value="">20万以上</option>
+        <option value="" selected>10万-20万</option>
+        <option value="">10万以下</option>
+      </select>
+    </div>
+
+    <div class="block">
+      <div class="left">工作站研发经费总额：</div>
+      2016年
+      <input type="text" class="normal line w-100" value="96" disabled="true">
+      <span class="ml-30">2017年</span>
+      <select disabled="true">
+        <option value="">100万以上</option>
+        <option value="" selected>50万-100万</option>
+        <option value="">50万以下</option>
+      </select>
+    </div>
+
+    <div class="seperate-line mt-100">
+      <p class="txt">工作站配套基础设施情况</p>
+    </div>
+    
+    <div class="block">
+      <div class="left">有无固定场所：</div>
+      <div class="right pt-10">
+        <label><input type="radio" name="has-place" checked disabled="true">有</label>
+        <label><input type="radio" name="has-place" disabled="true">无</label>
+      </div>
+
+      <div class="left" style="width: 450px; margin-right: 0; margin-left: 20px;">有供院士专家团队研发的实验室或研究中心：</div>
+      <div class="right pt-10">
+        <label><input type="radio" name="has-center" checked disabled="true">有</label>
+        <label><input type="radio" name="has-center" disabled="true">无</label>
+      </div>
+    </div>
+
+    <div class="seperate-line mt-100">
+      <p class="txt">进站专家与建站单位开展服务合作情况</p>
+    </div>
+    
+    <table border="1" style="width: 1200px;border-collapse: collapse;text-align: center;">
+      <tr style="height: 70px;">
+        <td style="width: 100px;">项目名称</td>
+        <td style="width: 100px;">项目类别</td>
+        <td style="width: 80px;">经费</td>
+        <td style="width: 100px;">是否签订合作协议</td>
+        <td style="width: 230px;">项目完成情况</td>
+        <td style="width: 200px;">项目成果</td>
+        <td style="width: 100px;">附件上传按钮</td>
+      </tr>
+
+      <tr style="height: 70px;">
+        <td>项目1</td>
+        <td>
+          <select disabled="true">
+            <option value="">战略咨询</option>
+            <option value="">具体创新难题</option>
+            <option value="">成果转化</option>
+            <option value="">培养创新人才</option>
+            <option value="">其他</option>
+          </select>
+        </td>
+        <td><input type="text" disabled="true" value="300万"></td>
+        <td>
+          <label><input type="radio" name="has-order" checked disabled="true">是</label>
+          <label><input type="radio" name="has-order" disabled="true">否</label>
+        </td>
+        <td style="height: 100px;">
+          <div class="right">
+            <label><input type="radio" name="pro-process" checked disabled="true">已完成</label>
+            <label><input type="radio" name="pro-process" disabled="true">进行中</label>
+            <label><input type="radio" name="pro-process" disabled="true">未完成</label>
+          </div>
+          <input type="text" placeholder="请输入合作周期" class="explain" disabled="true">
+          <input type="text" placeholder="未完成原因" class="explain" disabled="true">
+        </td>
+        <td class="program-result">
+          1.解决企业发展战略问题<input type="text" class="normal line" disabled="true" value="30">项<br>
+          2.攻克关键技术难题<input type="text" class="normal line" disabled="true" value="10">项<br>
+          3.成果转化<input type="text" class="normal line" disabled="true" value="5">项<br>
+          4.申请发明专利<input type="text" class="normal line" disabled="true" value="3">项<br>
+          5.为培养企业创新正高<input type="text" class="normal line" disabled="true" value="57">名
+          ，副高<input type="text" class="normal line" disabled="true" value="30">名，中级<input type="text" class="normal line" disabled="true" value="10">名，博士<input type="text" class="normal line" disabled="true" value="3">名，硕士<input type="text" class="normal line" disabled="true" value="2">名，企业骨干<input type="text" class="normal line" disabled="true" value="80">名
+        </td>
+        <td>
+          <span class="file-upload">查看</span>
+        </td>
+      </tr>
+    </table>
+
+
+    <p style="text-align: center;padding-top: 30px;">示范院士专家工作站(园区服务中心)情况报告上传</p>
+    <a href="javascript:void(0);" style="padding-top: 25px;text-align: center;color: #0068b7;display: block;text-decoration: underline;">下载《示范院士专家工作站(园区服务中心)情况报告》提纲</a>
+    <a href="javascript:void(0);" class="upload">点击查看</a>
+
+    <!-- <div class="seperate-line mt-100"></div>
+
+    <div class="block">
+      <a href="javascript:void(0);" class="btn sure">确认填报</a>
+      <a href="javascript:void(0);" class="btn save">保存草稿</a>
+    </div> -->
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">院士专家工作站认证平台</span>
+      <div class="about-us">
+        <a href="javascript:void(0);">关于我们</a>
+        <a href="javascript:void(0);">关于我们</a>
+        <a href="javascript:void(0);">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="javascript:void(0);">关于我们</a>
+        <a href="javascript:void(0);">关于我们</a>
+        <a href="javascript:void(0);">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="../rz/img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+
+  <script src="../rz/js/jquery-1.8.3.min.js"></script>
+  <script src="../rz/js/common.js"></script>
+</body>
+</html>

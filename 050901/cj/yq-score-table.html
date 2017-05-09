@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>评分表</title>
+  <link rel="stylesheet" href="../rz/css/reset.css">
+  <link rel="stylesheet" href="../rz/css/common.css">
+  <link rel="stylesheet" href="css/yq-score-table.css">
+  <!-- <link rel="stylesheet" href="../rz/css/calendar.css"> -->
+  <style>    
+    .wrapper { 
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="header">
+    <div class="nav">
+      <span class="title">全国示范院士专家工作站创建工作平台</span>
+      <span class="name">填写信息</span>
+      <div class="user">
+        <img src="../rz/img/person.png" class="icon">
+        <span class="user-name">用户账户号</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-box">
+    <div class="wrapper">
+      <h2>企业类示范院士专家工作站(园区院士专家服务中心)评分表</h2>
+      <table class="score" border="1" style="border-collapse: collapse;">
+        <tr class="table-title">
+          <td colspan="2">审核项(100分)</td>
+          <td>请打分</td>
+        </tr>
+
+        <tr>
+          <td rowspan="3" class="w-216">基础条件情况<br>（20分）</td>
+          <td class="w-530 p-20">1. 工作站是否有保障经费</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">2. 工作站是否有进站的院士专家及企业配套的研发团队</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">3. 工作站是否有专门办公场所，或企业拥有其他科研载体</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="3" class="w-216">运行管理情况<br>（30分）</td>
+          <td class="w-530 p-20">1. 是否制定出台工作站管理配套制度，有年度工作计划，保障工作站运行</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <!-- <td>4</td> -->
+          <td class="p-20">2. 工作站是否有企业高层或专门人员对工作站进行管理</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <!-- <td>7</td> -->
+          <td class="p-20">3. 企业是否与院士专家签署合作协议，对知识产权归属、经济利益分配有明确约定</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="3" class="w-216">工作站成效<br>（40分）
+            <p>（注：适用于对工作站进行评分）</p>
+          </td>
+          <td class="w-530 p-20">1. 是否在解决企业发展战略、攻克关键技术、促进成果转化、申请发明专利、合作项目获奖、发 表论文著作或参与制定国家行业标准等方面发挥作用，提升了企业创新能力。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <!-- <td>4</td> -->
+          <td class="p-20">2. 是否帮助企业在吸收外部高端人才、培养企业内部创新人才、依托工作站建立人才培养基地或 与院士专家团队开展双向人才培养方面发挥作用。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <!-- <td>7</td> -->
+          <td class="p-20">3. 是否为企业产生经济效益和社会效益，及对区域、行业和产业发挥辐射溢出效应，且成效显著。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="4" class="w-216">园区服务中心成效<br>（40分）
+            <p>（注：适用于对园区服务中心进行评分）</p>
+          </td>
+          <td class="w-530 p-20">1. 是否为提升园区产业创新能力发挥作用。 </td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <!-- <td>4</td> -->
+          <td class="p-20">2. 是否引领带动产业转型升级。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <!-- <td>7</td> -->
+          <td class="p-20">3. 是否为园区战略发展及区域科技经济发展发挥作用。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <td class="p-20">3. 是否开展了重大产学研活动。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        
+        <tr>
+          <td rowspan="3" class="w-216">院士专家团队<br>评价意见<br>（10分）
+            <p>（注：适用于对园区服务中心进行评分）</p>
+          </td>
+          <td class="w-530 p-20">1. 充分肯定。工作站在解决技术难题、成果转化和培养人才方面成效显著。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <!-- <td>4</td> -->
+          <td class="p-20">2. 正面评价。工作站在解决技术难题、成果转化和人才培养方面作用较好。</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+        <tr>
+          <!-- <td>7</td> -->
+          <td class="p-20">3. 负面评价。工作站在解决技术难题、成果转化和人才培养方面没有起到作用</td>
+          <td><input type="text" class="score-input"></td>
+        </tr>
+
+        <tr style="text-align: center;">
+          <td class="w-216" style="height: 70px;">总分</td>
+          <!-- <td></td> -->
+          <td colspan="2"><input type="text" class="score-input w-730"></td>
+        </tr>
+
+      </table>
+
+      <a href="javascript:void(0);" class="save-score">保存评分</a>
+    </div>
+
+    <div class="wrapper show"> 
+      <h2>示范院士专家工作站(园区服务中心)推荐表</h2>
+      
+      <div class="seperate-line">
+        <p class="txt">工作站基本信息</p>
+      </div>
+
+      <div class="block">
+        <div class="left">推荐单位：</div>
+        <div class="right">
+          <input type="text" class="normal" value="福建省科协" disabled="true">
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left">联系人：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" value="钟韬" disabled="true">
+        </div>
+
+        <span class="tel">联系电话：</span>
+        <input type="text" class="normal w-212" value="18259170272" disabled="true">
+      </div>
+      
+      <div class="block">
+        <div class="left h-60">
+          推荐示范工作站&nbsp;&nbsp;<br>(园区服务中心)名称：
+        </div>
+        <div class="right">
+          <textarea class="tiny-textarea" disabled="true">神蜂科技院士专家工作站</textarea>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left">
+          推荐类型：
+        </div>
+        <div class="right pt-10">
+          <label><input type="radio" name="station" checked disabled="true">示范院士专家工作站</label>
+          <label><input type="radio" name="station" disabled="true">示范园区院士专家服务中心</label>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left">建站(中心)时间：</div>
+        <div class="right">
+          <input type="text" class="normal" value="2011年6月" disabled="true">
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left">审批部门：</div>
+        <div class="right">
+          <input type="text" class="normal" value="福建省委组织部、福建省科协、福建省财政厅、福建省科技厅" disabled="true">
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left h-60">
+          建站(园区服务中心)&nbsp;&nbsp;<br>单位(签章)：
+        </div>
+        <div class="right">
+          <textarea class="tiny-textarea" disabled="true"></textarea>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left">联系人：</div>
+        <div class="right">
+          <input type="text" class="normal w-212" value="陈焕超" disabled="true">
+        </div>
+
+        <span class="tel">联系电话：</span>
+        <input type="text" class="normal w-212" value="18050200757" disabled="true">
+      </div>
+
+      <div class="block">
+        <div class="left">
+          单位性质：
+        </div>
+        <div class="right">
+          <label><input type="radio" name="type" checked disabled="true">企业(</label>
+          <label><input type="radio" name="type" disabled="true">高薪技术企业)</label>
+          <label><input type="radio" name="type" disabled="true">科研院所</label>
+          <label><input type="radio" name="type" disabled="true">园区</label>
+          <label><input type="radio" name="type" disabled="true">其他</label>
+          <input type="text" class="normal w80-h40" disabled="true">
+        </div>
+      </div>
+      
+      <div class="block">
+        <div class="left">建站单位所属行业领域：</div>
+        <div class="right">
+          <input type="text" class="normal" value="蜂产品行业：食品、药品、保健品、蜂毒产品和日用化妆品" disabled="true">
+        </div>
+      </div>
+      
+      <div class="block">
+        <div class="left">研发投入情况：</div>
+        <div class="right">
+          近两年年均研发经费投入占销售收入比例
+          <input type="text" class="normal line" value="8%" disabled="true">
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left">企业研发人员情况：</div>
+        <div class="right">
+          2015年人
+          <input type="text" class="normal line" value="15" disabled="true"> ;
+          2015年人
+          <input type="text" class="normal line" value="15" disabled="true"> ;
+          研发人员占员工比例
+          <input type="text" class="normal line" value="12.5%" disabled="true">
+        </div>
+      </div>
+
+
+      <div class="seperate-line mt-100">
+        <p class="txt">工作站基础条件情况</p>
+      </div>
+      
+
+      <div class="block">
+        <div class="left h-170">
+          经费保障：
+        </div>
+        <div class="right">
+          <textarea class="big-textarea" disabled="true">企业专门工作站运转提供的经费近3000万元，提供新技术设备及其他相关实验研究与生产设备共计价值约2000多万元。并获得项目经费如下：
+  “携蜂毒肽控制释放靶向纳米给药系统”，2013-2015，国家自然科学基金，25万。“蜂产品中污染物检测的样品制备新方法研究”2013-2015，国家自然科学基金，20万。蜜蜂毒素药物的抗癌研究项目获得福建省发改委的立项，项目金额60万元 ，时间自2013年11月至2016年12月。岗位科学家项目活动农业部资助，2011-2015年，每年70万元。
+          </textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left h-170">
+          工作站团队建设情况：
+        </div>
+        <div class="right">
+          <textarea class="big-textarea" disabled="true">企业技术负责人：缪晓青教授
+企 业 联 络 人：陈文彬博士
+团  队  成  员：吴珍红研究员
+                杨文超博士
+                程林兵副教授
+                廖招连工程师</textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+      
+      <div class="block">
+        <div class="left h-170">
+          配套基础设施情况：
+        </div>
+        <div class="right">
+          <textarea class="big-textarea" disabled="true"> 企业为工作站提供新技术设备包括实验室、生产车间和中药制剂车间，及其他相关实验研究与生产设备还有相应的办公室、办公设备、技术设备、研究和生产设备以及相应的配套科研办公条件。</textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+      
+      <div class="seperate-line mt-100">
+        <p class="txt">运行管理情况</p>
+      </div>
+
+      <div class="block">
+        <div class="left h-170">
+          制度建设情况：
+        </div>
+        <div class="right">
+          <textarea class="big-textarea" disabled="true">神蜂院士专家工作站拥有制度如下：
+1.院士工作站日常管理规章制度
+实验室绩效考核办法</textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left h-170">
+          组织管理情况：
+        </div>
+        <div class="right">
+          <textarea class="big-textarea" disabled="true">人力资源办公室为院士工作站的归口管理部门，负责工作站的后勤工作，协调有关部门做好工作站管理工作。研究室为院士工作站的业务承担部门，负责工作站的日常事务，承担工作站建设和各项工作的开展。由负责人制定工作站建设规划和年度实施计划，并对年度工作总结进行归纳总结。并建立健全各项规章制度，严格执行，规范操作，同时加强对工作站技术人员的培训和管理。负责人组织合作项目的开展包括资金、设备的落实、研究进度的跟踪、研究成果的总结申报等，并协同财务部做好建设、研究经费的审批、使用和管理。并记录、收集、分析、</textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left h-170">
+          合作机制：
+        </div>
+        <div class="right">
+          <textarea class="big-textarea" disabled="true">院士专家与企业共建蜂产品加工与应用研究中心和天然生物毒素国家地方联合共建实验室，同时与福建农林大学同时也加强了企业与院士所在单位—国家质检总局和高校的密切联系，促进了产学研的紧密结合，合作设立人才培养和实践基地，一方面帮助企业培养研究、检测的研究人才，提高产品的加工、检测和监控水平。另一方面企业为技术人员和大学生提供实践基地。</textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left h-170">
+          工作站运行情况：
+        </div>
+        <div class="right">
+          <textarea class="big-textarea" disabled="true"></textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+      
+
+      <div class="seperate-line mt-100">
+        <p class="txt">工作站成效</p>
+      </div>
+
+      <div class="block">
+        <div class="left h-170">
+          提高企业创新能力情况：
+        </div>
+        <div class="right">
+          <textarea class="big-textarea" disabled="true"></textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left h-170">
+          培养人才情况：
+        </div>
+        <div class="right">
+          <textarea class="big-textarea" disabled="true"></textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left h-170">
+          产生经济和社会效益情况：
+        </div>
+        <div class="right">
+          <textarea class="big-textarea" disabled="true">神蜂科技院士工作站的成立，及院士的进站与项目合作，强强联合、优势互补，大大提高企业的创新能力，特别是加快了设备技术参数的完善、技术的改进以及标准的建立，对企业实现高节能、高环保、高品质和高效益具有重要的意义，对我省产业的转型升级、产业优化等具有示范和带动作用，带动农户致富。同时将有力提升我国蜂产品加工新技术研发与质量安全控制水平，促进现代蜂业与大农业发展，产生很好的经济效益和社会效益。</textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="left h-170 lh-20">
+          对产业创新、区域创新的影响<br>(对园区服务中心)：
+        </div>
+        <div class="right">
+          <textarea class="big-textarea" disabled="true"></textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+
+      <div class="seperate-line mt-100">
+        <p class="txt w-320">其他需补充说明的内容(可附件)</p>
+      </div>
+      <div class="block">
+        <div class="box">
+          <textarea class="big-textarea" disabled="true"></textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+
+      <div class="seperate-line mt-100">
+        <p class="txt w-320">院士专家团队对工作站评价意见</p>
+      </div>
+      <div class="block">
+        <div class="box">
+          <textarea class="big-textarea" disabled="true">
+          企业对工作站提供良好的基础条件包括实验室新技术设备包括、生产车间和中药制剂车间设备，及其他相关实验研究与生产设备还有相应的办公室、办公设备、技术设备、研究和生产设备以及相应的配套科研办公条件，为工作与研发实验地有效开展创造优越条件。院士专家工作站建设以来，尤其是近三年来，围绕研发新产品与完善现有特色工艺，神蜂科技院士专家工作站取得了显著成效。首先感谢政府对企业的鼓励使企业加大科研投入的力度，院士专家工作队伍帮助解决阻碍企业新技术产业化和市场化进程的一些体制机制障碍。与基础科学相比，强调实际效果的应用科学更容易让企业和地方政府看到实实在在的好处，并充分调动了企业的积极性，对打通产学研结合的通道至关重要。工作站创造良好的研发环境，得益于相应的引导工作，与各方面。</textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+
+      <p style="text-align: center;padding-top: 30px;">示范院士专家工作站(园区服务中心)情况报告上传</p>
+      <a href="javascript:void(0);" style="padding-top: 25px;text-align: center;color: #0068b7;display: block;text-decoration: underline;">下载《示范院士专家工作站(园区服务中心)情况报告》提纲</a>
+      <a href="javascript:void(0);" class="upload">点击查看</a>
+
+      <!-- <div class="seperate-line mt-100"></div>
+
+      <div class="block">
+        <a href="javascript:void(0);" class="btn sure">确认填报</a>
+        <a href="javascript:void(0);" class="btn save">保存草稿</a>
+      </div> -->
+    </div>
+
+  </div>
+
+  <ul class="tab">
+    <li class="tab-item pingfen"></li>
+    <li class="tab-item tuijian"></li>
+  </ul>  
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">院士专家工作站认证平台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="verify-info.html">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="../rz/img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+
+  <script src="../rz/js/jquery-1.8.3.min.js"></script>
+  <script src="../rz/js/common.js"></script>
+  <!-- <script src="../rz/js/calendar.js"></script> -->
+  <script>
+
+    var left = (document.documentElement.clientWidth-1200)/2 + 1200;
+    $('.tab').css('left', left + 'px');
+
+    $('.tab-item').on('click', function() {
+      $('.wrapper').eq($(this).index()).addClass('show').siblings().removeClass('show');
+    });
+
+    // 日历调用，这个页面应该不需要 
+    // var today = new Date();
+    // var year = today.getFullYear();
+    // var month = today.getMonth() + 1;
+    // var day = today.getDate();
+
+    // calender('#mydatepicker').init({
+    //   format: 'yyyy-MM-dd',
+    //   date: [year,month,day],
+    //   button: true
+    // }, function(date){
+    //   this.value = date;
+    // }); 
+
+  </script>
+</body>
+</html>

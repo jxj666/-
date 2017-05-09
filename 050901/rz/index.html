@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>全国院士专家工作站认证备案平台</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/index.css">
+  <!--[if gte IE 8]>
+    <style>
+    .blur {
+      filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+    }
+    </style>
+  <![endif]-->
+</head>
+<body>
+  <div class="nav">
+    <div class="block lh-60">
+      <img src="img/logo.png" class="logo">
+      <span class="title">全国院士专家工作站认证备案平台</span>
+      <div class="user">
+        <!-- <img src="img/icon.png" class="icon"> -->
+        <!-- <a href="manager-login.html" class="admin-login">管理登录</a> -->
+        <a href="login.html" class="login blue-bg">登录</a>
+        <a href="pre-register.html" class="register">注册</a>
+      </div>  
+    </div>
+  </div>
+
+  <div class="banner">
+    <div class="block padding">
+      <p class="big-title">全国院士专家工作站认证备案平台</p>
+      <p class="text">培育科技创新团队 , 聚集创新资源 <br/>突破关键技术制约 , 推动产学研紧密合作</p>
+
+      <div class="small-logo">
+        <img src="img/science.png">
+        <span>中国科学技术学会</span>
+        <p><img src="img/logo-tiny.png" style="width: 41px; height: 24px;">企业创新信息服务平台</p>
+      </div>
+    </div>
+  </div>
+  <!-- 认证资料 -->
+  <div class="verify-data">
+    <div class="block">
+      <p class="process-title">认证备案资料</p>
+      <ul class="verify-data-list">
+        <li class="verify-data-item notice verify-data-select">认证备案通知</li>
+        <li class="verify-data-item method" style="padding-left: 66px;">认证办法</li>
+        <li class="verify-data-item standard" style="padding-left: 66px;">认证标准</li>
+        <li class="verify-data-item index" style="padding-left: 66px;">认证指标</li>
+      </ul>
+    </div> 
+  </div>
+  <!-- 认证流程 -->
+  <div class="process">
+    <div class="block">
+      <p class="process-title">认证备案流程</p>
+      <ul class="process-content">
+        <li class="process-item">
+          <img src="img/img1.png" class="process-img">
+          <p class="process-item-name highlight-font">进入认证系统</p>
+          <div class="normal highlight-img">1</div>
+        </li>
+        <li class="process-item">
+          <img src="img/img2.png" class="process-img blur">
+          <p class="process-item-name">填写信息提交认证</p>
+          <div class="normal">2</div>
+        </li>
+        <li class="process-item">
+          <img src="img/img3.png" class="process-img blur">
+          <p class="process-item-name">地方科协认证</p>
+          <div class="normal">3</div>
+        </li>
+        <li class="process-item">
+          <img src="img/img4.png" class="process-img blur">
+          <p class="process-item-name">中国科协认证备案</p>
+          <div class="normal">4</div>
+        </li>
+        <li class="process-item">
+          <img src="img/img5.png" class="process-img blur">
+          <p class="process-item-name">认证备案成功</p>
+          <div class="normal">5</div>
+        </li>
+      </ul>
+      <a href="login.html" class="begin">开始认证</a>
+    </div>  
+  </div>
+
+  <!-- 各省认证情况 -->
+  <div class="province">
+    <div class="block">
+      <p class="process-title">认证备案情况</p>
+      <div class="map">
+        <div id="map"></div>
+        <p class="info">
+          <strong>全国已认证<span class="blue-font">16688</span>个院士专家工作站</strong>
+          <br>
+          企业院士专家工作站<span class="num">5260</span>个&nbsp;&nbsp;&nbsp;
+          事业单位院士专家工作站<span class="num">6920</span>个&nbsp;&nbsp;&nbsp;
+          园区院士专家工作站<span class="num">4508</span>个&nbsp;&nbsp;&nbsp;
+        </p>
+      </div>
+      <div class="area">
+        <p class="area-title">北京地区</p>
+        <ul class="type">
+          <li class="type-item select">已认证工作站</li>
+          <!-- <li class="type-item">认证规则</li> -->
+        </ul>
+        
+        <div class="container">
+          <!-- 已认证工作站 -->
+          <div class="type-data show">
+            <!-- 已认证 -->
+            <div class="already">
+              <p class="type-data-title">
+                已认证<span class="blue-font total">3680</span>个院士专家工作站<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中,
+              </p>
+              <table class="type-form">
+                <tr>
+                  <td>企业院士专家工作站</td>
+                  <td class="blue-font qiye">1260</td>
+                  <td>个</td>
+                </tr>
+                <tr>
+                  <td>事业单位院士专家工作站</td>
+                  <td class="blue-font shiye">1368</td>
+                  <td>个</td>
+                </tr>
+                <tr>
+                  <td>院士专家工作站</td>
+                  <td class="blue-font yuanqu">1052</td>
+                  <td>个</td>
+                </tr>
+              </table>
+            </div>
+            <!-- 最新认证 -->
+            <div class="new">
+              <p class="type-data-title">最新认证</p>
+              <ul class="new-list">
+                <li class="new-item"><span>中国电子工程设计院院士专家工作站</span></li>
+                <li class="new-item"><span>首都医科大学附属北京安贞医院院士专家工作站</span></li>
+                <li class="new-item"><span>北京首创股份有限公司院士专家工作站</span></li>
+                <li class="new-item"><span>北京康立生医药技术开发有限公司院士专家工作站</span></li>
+                <li class="new-item"><span>北京中科纳泰生物科技有限公司院士专家工作站</span></li>
+                <li class="new-item"><span>中粮营养健康研究院有限公司院士专家工作站</span></li>
+              </ul> 
+            </div>
+          </div>
+
+          <!-- 认证规则 -->
+          <div class="type-data">
+            敬请期待
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">全国院士专家工作站认证备案平台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="verify-info.html">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      全国院士专家工作站认证备案平台 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+  
+  <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+  
+</body>
+</html>

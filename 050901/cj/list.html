@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>管理后台</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="../rz/css/common.css">
+  <link rel="stylesheet" href="../rz/css/pager.css">
+  <link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <div class="header">
+    <div class="nav">
+      <span class="title">院士专家工作站信息服务平台管理后台</span>
+      <!-- <span class="name">填写信息</span> -->
+      <div class="user">
+        <img src="../rz/img/person.png" class="icon">
+        <span class="user-name">管理员</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-bar">
+    <div class="box">
+      <ul class="tab-list">
+        <li class="tab-item tab1">院士专家工作站评选管理</li>
+        <li class="tab-item tab2">院士专家工作站示范单位评选管理</li>
+        <li class="tab-item tab3">专家管理</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="content show">
+      
+      <div class="select-year">
+        <span class="year">评选年度：</span>
+        <select>
+          <option value="">2016年度</option>
+          <option value="">2015年度</option>
+          <option value="">2014年度</option>
+          <option value="">2013年度</option>
+          <option value="">2012年度</option>
+        </select>
+        <a href="choose-manager.html" class="choose-workstation">添加工作站名单</a>
+      </div>
+
+      <table border="1" style="border: 1px solid #d5d5d5; border-collapse: collapse;">
+        <tr style="font-size: 18px;" class="h-76">
+          <td class="w-90">编号</td>
+          <td class="w-320">建站单位</td>
+          <td class="w-175">专家评分</td>
+          <td class="w-310">专家评审人</td>
+          <td class="w-305">资料信息</td>
+        </tr>
+        <tr class="h-76">
+          <td>00001</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>100</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+
+        <tr class="h-76">
+          <td>00002</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>100</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+
+        <tr class="h-76">
+          <td>00003</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>100</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+
+        <tr class="h-76">
+          <td>00004</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>100</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+
+        <tr class="h-76">
+          <td>00005</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>100</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+
+        <tr class="h-76">
+          <td>00006</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>100</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+
+        <tr class="h-76">
+          <td>00007</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>100</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+      </table>
+
+      <div class="sort">
+        <a href="javascript:void(0);" class="update-sort">更新排序</a>
+        <a href="javascript:void(0);" class="submit-list">提交名单</a>
+      </div>
+    </div>
+    
+    <!-- 院士专家工作站示范单位评选管理 -->
+    <div class="content">
+      <div class="select-year">
+        <span class="year">评选年度：</span>
+        <select>
+          <option value="">2016年度</option>
+          <option value="">2015年度</option>
+          <option value="">2014年度</option>
+          <option value="">2013年度</option>
+          <option value="">2012年度</option>
+        </select>
+        <a href="choose-manager.html" class="choose-workstation">添加工作站名单</a>
+      </div>
+
+      <table border="1" style="border: 1px solid #d5d5d5; border-collapse: collapse;">
+        <tr style="font-size: 18px;" class="h-76">
+          <td class="w-90">编号</td>
+          <td class="w-320">建站单位</td>
+          <td class="w-175">专家评分</td>
+          <td class="w-310">专家评审人</td>
+          <td class="w-305">资料信息</td>
+        </tr>
+        <tr class="h-76">
+          <td>00001</td>
+          <td>示范单位名称建站单位名称</td>
+          <td>90</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+
+        <tr class="h-76">
+          <td>00002</td>
+          <td>示范单位名称建站单位名称</td>
+          <td>50</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+
+        <tr class="h-76">
+          <td>00003</td>
+          <td>示范单位名称建站单位名称</td>
+          <td>70</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+
+        <tr class="h-76">
+          <td>00004</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>80</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+
+        <tr class="h-76">
+          <td>00005</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>90</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+
+        <tr class="h-76">
+          <td>00006</td>
+          <td>示范单位名称建站单位名称</td>
+          <td>100</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+
+        <tr class="h-76">
+          <td>00007</td>
+          <td>建站单位名称建站单位名称</td>
+          <td>100</td>
+          <td style="position: relative;text-align: left;padding-left: 20px;">
+            专家姓名
+            <a href="add-expert.html" class="add">添加</a>
+          </td>
+          <td>
+            <a href="recommend-table-full.html" class="work-check">查看</a>
+            <a href="javascript:void(0);" class="work-delete">删除</a>
+          </td>
+        </tr>
+      </table>
+
+      <div class="sort">
+        <a href="javascript:void(0);" class="update-sort">更新排序</a>
+        <a href="javascript:void(0);" class="submit-list">提交名单</a>
+      </div>
+    </div>
+
+    <!-- 专家管理 -->
+    <div class="content">
+      <div class="expert-tab-control">
+        <ul class="expert-list">
+          <li class="expert-item expert-active">专家</li>
+          <li class="expert-item">专家组</li>
+        </ul>
+        <a href="##" class="add-expert-btn">添加专家</a>      
+      </div>
+
+      <div class="table">
+        <!-- 专家 -->
+        <table border="1" class="expert-table show">
+          <tr class="table-head">
+            <td class="expert-no">编号</td>
+            <td class="expert-name">专家姓名</td>
+            <td class="expert-img">头像</td>
+            <td class="expert-job">所属领域</td>
+            <td class="operate">操作</td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-no">00001</td>
+            <td class="expert-name">专家姓名</td>
+            <td class="expert-img"><img src="img/expert1.png"></td>
+            <td class="expert-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-check.html" class="check">查看</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-no">00002</td>
+            <td class="expert-name">专家姓名</td>
+            <td class="expert-img"><img src="img/expert1.png"></td>
+            <td class="expert-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-check.html" class="check">查看</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-no">00003</td>
+            <td class="expert-name">专家姓名</td>
+            <td class="expert-img"><img src="img/expert1.png"></td>
+            <td class="expert-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-check.html" class="check">查看</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-no">00004</td>
+            <td class="expert-name">专家姓名</td>
+            <td class="expert-img"><img src="img/expert1.png"></td>
+            <td class="expert-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-check.html" class="check">查看</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-no">00005</td>
+            <td class="expert-name">专家姓名</td>
+            <td class="expert-img"><img src="img/expert1.png"></td>
+            <td class="expert-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-check.html" class="check">查看</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-no">00006</td>
+            <td class="expert-name">专家姓名</td>
+            <td class="expert-img"><img src="img/expert1.png"></td>
+            <td class="expert-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-check.html" class="check">查看</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-no">00007</td>
+            <td class="expert-name">专家姓名</td>
+            <td class="expert-img"><img src="img/expert1.png"></td>
+            <td class="expert-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-check.html" class="check">查看</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-no">00008</td>
+            <td class="expert-name">专家姓名</td>
+            <td class="expert-img"><img src="img/expert1.png"></td>
+            <td class="expert-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-check.html" class="check">查看</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+        </table>
+        
+        <!-- 专家组 -->
+        <table border="1" class="expert-table">
+          <tr class="table-head">
+            <td class="expert-group-no">编号</td>
+            <td class="expert-group-name">专家组名称</td>
+            <td class="expert-group">组内专家</td>
+            <td class="expert-group-job">所属领域</td>
+            <td class="operate">操作</td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-group-no">00001</td>
+            <td class="expert-group-name">专家组名称</td>
+            <td class="expert-group">
+              专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名
+            </td>
+            <td class="expert-group-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-group-update.html" class="update">修改</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-group-no">00001</td>
+            <td class="expert-group-name">专家组名称</td>
+            <td class="expert-group">
+              专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名
+            </td>
+            <td class="expert-group-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-group-update.html" class="update">修改</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-group-no">00001</td>
+            <td class="expert-group-name">专家组名称</td>
+            <td class="expert-group">
+              专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名
+            </td>
+            <td class="expert-group-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-group-update.html" class="update">修改</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-group-no">00001</td>
+            <td class="expert-group-name">专家组名称</td>
+            <td class="expert-group">
+              专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名
+            </td>
+            <td class="expert-group-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-group-update.html" class="update">修改</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-group-no">00001</td>
+            <td class="expert-group-name">专家组名称</td>
+            <td class="expert-group">
+              专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名
+            </td>
+            <td class="expert-group-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-group-update.html" class="update">修改</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-group-no">00001</td>
+            <td class="expert-group-name">专家组名称</td>
+            <td class="expert-group">
+              专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名
+            </td>
+            <td class="expert-group-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-group-update.html" class="update">修改</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-group-no">00001</td>
+            <td class="expert-group-name">专家组名称</td>
+            <td class="expert-group">
+              专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名
+            </td>
+            <td class="expert-group-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-group-update.html" class="update">修改</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="expert-group-no">00001</td>
+            <td class="expert-group-name">专家组名称</td>
+            <td class="expert-group">
+              专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名、专家姓名
+            </td>
+            <td class="expert-group-job">能源计量与能效管理领域</td>
+            <td class="operate">
+              <a href="expert-group-update.html" class="update">修改</a>
+              <span class="delete">删除</span>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+    
+    <div class="page-control"></div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">院士专家工作站信息服务平台管理后台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="../rz/img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作站信息服务平台管理后台 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script src="../rz/js/jquery.page.js"></script>
+  <script>
+    // 分页器
+    $(".page-control").createPage({
+        pageCount:20,  //总页数
+        current:3,     //当前页数
+        callbackFn:function(page){
+          // console.log(page);
+          // 这里请求接口返回数据, page为当前页数
+        }
+    });
+  </script>
+  <script>
+
+    var imgName = ['gzzHoverBg.png','dwHoverBg.png','zjHoverBg.png'];
+    var tabItem = $('.tab-item');
+
+    tabItem.on('click',function() {
+
+      for(var i = 0 ; i < tabItem.length ; i++) {
+        var str = '';
+        if ($(this).index() == i) {
+          str = 'url(img/' + imgName[i] + ')';
+          console.log(str);
+        } else {
+          str = 'none';
+        }
+
+        tabItem.eq(i).css('background-image', str);
+      }
+
+      $(this).css('color', 'white').siblings().css('color','#0068b7');
+
+      $('.content').eq($(this).index()).addClass('show').siblings().removeClass('show');
+    });
+
+
+
+    // 专家和专家组切换
+    $('.expert-item').on('click', function() {
+      $(this).addClass('expert-active').siblings().removeClass('expert-active');
+      $('.expert-table').eq($(this).index()).addClass('show').siblings().removeClass('show');
+    });
+
+    // 点击添加专家按钮
+    $('.add-expert-btn').on('click', function() {
+      if($('.expert-table').eq(0).hasClass('show')) {
+        window.location.href = 'add-expert.html';
+      } else if($('.expert-table').eq(1).hasClass('show')) {
+        window.location.href = 'add-expert-group.html'
+      } 
+    });
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+

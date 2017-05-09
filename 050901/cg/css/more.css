@@ -1,0 +1,189 @@
+/*-- 金融企业库的导航栏 --*/
+.special-nav {
+  width: 1200px;
+  margin: 0 auto; 
+  height: 74px;
+}
+
+.special-nav .type-item {
+  margin: 0 30px;
+}
+
+.info { background-image: url(../img/bg1.png); }
+.result { background-image: url(../img/bg2.png); }
+.need { background-image: url(../img/bg3.png); }
+.company { background-image: url(../img/bg4.png); }
+
+/*-- 中间部分 --*/ 
+.list { 
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 100px;
+  display: none;
+}
+
+/*-- 院士专家库 --*/
+.zj-item {
+  width: 264px;
+  height: 156px;
+  float: left;
+  margin: 30px 18px 0;
+  padding: 20px;
+}
+
+.zj-item:hover {
+  background-image: url(../img/zj-hover-bg.png);
+}
+
+.zj-item:hover .check-zj-detail {
+  color: white;
+  background-color: #0068b7;
+}
+
+.zj-item-img {
+  width: 88px;
+  height: 116px;
+  border: none;
+}
+
+.zj-item-content {
+  width: 130px;
+  height: 116px;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 10px;
+}
+
+.zj-name { 
+  color: #0068b7; 
+  font-size: 16px; 
+  padding-bottom: 8px;
+}
+
+.zj-job { 
+  color: #333;
+  font-size: 14px;
+  height: 40px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.check-zj-detail {
+  display: block;
+  width: 90px;
+  height: 30px;
+  color: #0068b7;
+  font-size: 12px;
+  text-align: center;
+  line-height: 28px;
+  border: 1px solid #0068b7;
+  // margin-top: 14px;
+  border-radius: 5px; 
+}
+
+
+/*-- 科技成果库 --*/
+.cg-item {
+  width: 538px;
+  height: 234px;
+  float: left;
+  margin: 20px 30px;
+  padding: 20px;
+}
+
+.cg-item:hover {
+  background-image: url(../img/cg-hover-bg.png);
+}
+
+.cg-item:hover .check-cg-detail {
+  color: white;
+  background-color: #0068b7;
+}
+
+.cg-item a {
+  display: block;
+  overflow: hidden;
+}
+
+.cg-item p{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cg-item-title { 
+  color: #0168b7; 
+  font-size: 18px; 
+  padding-bottom: 20px;
+}
+
+.cg-item-img {
+  width: 202px;
+  height: 140px;
+  float: left;
+  border: none;
+}
+
+.cg-item-info {
+  width: 260px;
+  height: 140px;
+  float: right;
+  font-size: 14px;
+  color: #97999a;
+}
+
+.cg-item-info .name {
+  line-height: 32px;
+}
+
+.cg-item-info .cg-type {
+  color: #7a7b7c;
+}
+
+.check-cg-detail {
+  display: block;
+  width: 186px;
+  height: 30px;
+  color: #0068b7;
+  font-size: 12px;
+  text-align: center;
+  line-height: 28px;
+  border: 1px solid #0068b7;
+  margin-top: 14px;
+  border-radius: 5px;
+}
+
+/*-- 企业难题需求库 --*/
+.xq-item {
+  float: left;
+  width: 538px;
+  height: 318px;
+  background-image: url(../img/xq-hover-bg.png);
+  margin: 40px 30px 0;
+  padding: 20px;
+}
+
+.xq-item a { color: #7a7b7c; display: block; }
+
+.xq-title {
+  color: #0168b7;
+  font-size: 18px;
+  overflow: hidden;
+  height: 50px;
+  margin: 10px 0;
+}
+
+.xq-sub-item { padding: 5px 0;}
+
+.xq-sub-item .txt {
+  display: inline-block;
+  width: 80px;
+}
+
+.xq-sub-item .content {
+  display: inline-block;
+  width: 410px;
+  vertical-align: text-top;
+}
+

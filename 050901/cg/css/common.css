@@ -1,0 +1,115 @@
+.header {
+  width: 100%;
+  height: 84px;
+  border-bottom: 1px solid #0068b7;
+}
+
+.header .title {
+  width: 1200px;
+  line-height: 84px;
+  font-size: 30px;
+  color: #0068b7;
+  margin: 0 auto;
+}
+
+.ku-list {
+  width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+  font-size: 24px;
+  color: white;
+}
+
+.ku-item {
+  width: 270px;
+  height: 133px;
+  float: left;
+  margin: 55px 15px 45px;
+  padding: 46px 0 0 82px;
+  cursor: pointer;
+}
+
+.ku-item a {
+  color: white;
+}
+
+.pl-110 { padding-left: 110px; }
+
+/*-- 导航栏 --*/
+.nav {
+  width: 1200px;
+  margin: 0 auto; 
+  font-size: 0;
+}
+
+.show-view {
+  width: 1140px;
+  height: 73px;
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: bottom;
+  font-size: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.type-list {
+  background-color: #eaf1f7;
+  height: 63px;
+  white-space:nowrap;
+  font-size: 20px;
+  color: #0068b7;
+  position: absolute;
+  bottom: 0;
+}
+
+.type-item {
+  height: 73px;
+  display: inline-block;
+  line-height: 64px;
+  padding: 0 20px;
+  cursor: pointer;
+  // background-color: green;
+  margin: 0 8px;
+}
+
+.active {
+  background-color: #2669b1;
+  // position: absolute;
+  position: relative;
+  // top: -10px;
+  // padding-top: 10px;
+  top: -10px;
+  color: white;
+}
+
+.active:after, .active:before {
+  width: 8px;
+  height: 73px;
+  display: inline-block;
+  content: '';
+}
+
+.active:before {
+  position: absolute;
+  top: 0;
+  left: -8px;
+  background-image: url(../img/nav-left-bg.png);
+}
+
+.active:after {
+  position: absolute;
+  top: 0;
+  right: -8px;
+  background-image: url(../img/nav-right-bg.png);
+}
+
+.pre-btn, .next-btn {
+  width: 20px;
+  height: 64px;
+  background-color: #eaf1f7;
+  padding: 20px 4px;
+  vertical-align: bottom;
+  display: inline-block;
+  cursor: pointer;
+}

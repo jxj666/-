@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>注册</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    .account-exist {
+      width: 1200px;
+      margin: 15px auto 30px;
+      font-size: 20px;
+      color: #9f9e9e;
+      padding-right: 20px;
+      text-align: right;
+    }
+
+    .login {
+      color: #0068b7;
+    }
+    
+    .section {
+      width: 490px;
+      margin: 0 auto 100px;
+    }
+    
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 54px;
+    }
+
+    .tip {
+      color: #606060;
+      font-size: 16px;
+      margin-left: 50px;
+      font-weight: normal;
+    }
+
+    .block {
+      margin-bottom: 30px;
+    }
+
+    .item-name {
+      width: 82px;
+      font-size: 18px;
+      display: inline-block;
+      text-align: right;
+      margin-right: 42px;
+    }
+
+    input {
+      width: 360px;
+      height: 40px;
+      border: 1px solid #b5b5b5;
+      background-color: transparent;
+      border-radius: 5px;
+    }
+
+    .verify-phone {
+      width: 240px;
+      height: 40px;
+      vertical-align: middle;
+      display: inline-block;
+      border: 1px solid #b5b5b5;
+      border-radius: 5px;
+      font-size: 0;
+    }
+
+    .verify-phone>span {
+      float: left;
+      vertical-align: middle;
+      width: 53px;
+      height: 39px;
+      color: #c3c4c5;
+      font-size: 16px;
+      border-right: 1px solid #b5b5b5;
+      text-align: center;
+      line-height: 39px;
+    }
+
+    .get-code {
+      display: inline-block;
+      width: 115px;
+      border: 1px solid #e56a2d;
+      font-size: 16px;
+      height: 40px;
+      vertical-align: middle;
+      border-radius: 5px;
+      line-height: 40px;
+      text-align: center;
+      color: #e56a2d;
+      cursor: pointer;
+    }
+    
+    .tel-num {
+      padding-left: 5px;
+      border: 0;
+      height: 38px;
+      width: 185px;
+    }
+
+    /*下一步*/
+    .sure {
+      width: 420px;
+      height: 65px;
+      background-color: #0068b7;
+      color: white;
+      font-size: 18px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      behavior: url(ie-css3.htc);
+
+      text-align: center;
+      line-height: 65px;
+      margin: 0 auto 85px;
+      display: block;
+    }
+
+    .disable {
+      color: #aaa;
+      border-color: #aaa;
+    }
+
+    .line {
+      width: 800px;
+      border-bottom: 1px dashed #aaa;
+      margin: 0 auto 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="nav">
+      <span class="title">全国院士专家工作站信息服务平台</span>
+      <span class="name">注册</span>
+    </div>
+  </div>
+  <div class="account-exist">
+    已有账号，<a href="login.html" class="login">立即登录</a>
+  </div>
+
+  <div class="section">
+    <p class="section-title">账户设置</p>
+    <div class="block">
+      <span class="item-name">账户设置</span>
+      <input type="text" placeholder="设置账号">
+    </div>
+    <div class="block">
+      <span class="item-name">登录密码</span>
+      <input type="text" placeholder="设置你的登录密码">
+    </div>
+    <div class="block">
+      <span class="item-name">确认密码</span>
+      <input type="text" placeholder="请再次输入你的登录密码">
+    </div>
+  </div>
+  <div class="line"></div>
+  <div class="section">
+    <p class="section-title">
+      基本信息<span class="tip">请输入真实的信息</span>
+    </p>
+    <div class="block">
+      <span class="item-name">企业名称</span>
+      <input type="text" placeholder="请输入企业名称">
+    </div>
+    <div class="block">
+      <span class="item-name">邮箱地址</span>
+      <input type="text" placeholder="请输入邮箱地址">
+    </div>
+    <div class="block">
+      <span class="item-name">手机号</span>
+      <div class="verify-phone">
+        <span>+86</span>
+        <input type="text" class="tel-num" placeholder="请输入手机号">
+      </div>
+
+      <span class="get-code">获取验证码</span>
+    </div>
+    <div class="block">
+      <span class="item-name">验证码</span>
+      <input type="text" placeholder="请输入短信验证码">
+    </div>
+  </div>
+
+  <a href="register-success.html" class="sure">确认注册</a>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">全国院士专家工作站信息服务平台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="javascript:void(0);">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    var wait = 60;
+    function timeCount() {
+      if (wait == 0) {
+        $('.get-code').html('获取验证码');
+        $('.get-code').removeClass('disable');
+        clearTimeout(clearFun);
+        wait = 60;
+      } else {
+        $('.get-code').html('已发送' + wait + 's');
+        $('.get-code').addClass('disable');
+        wait--;
+        clearFun = setTimeout(timeCount, 1000);
+      }
+    }
+
+    $('.get-code').on('click', function () {
+      if($(this).hasClass('disable')){
+        return;
+      }else {
+        timeCount();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>认证信息</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    .card {
+      width: 888px;
+      height: 493px;
+      background-image: url(img/card-bg.png);
+      margin: 0 auto;
+      padding: 50px 60px;
+    }
+
+    .card-title {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .option-input {
+      width: 750px;
+      height: 198px;
+      resize: none;
+      margin-top: 5px;
+      margin-bottom: 34px;
+      border: 1px solid #0068b7;
+    }
+
+    .operate {
+      width: 750px;
+    }
+
+    .mt {
+      margin-top: 192px;
+    }
+
+    .mb {
+      margin-top: 50px;
+      margin-bottom: 170px;
+    }
+    
+    .operate {
+      overflow: hidden;
+    }
+
+    .sure, .cancle {
+      width: 260px;
+      height: 64px;
+      line-height: 64px;
+      color: white;
+      display: block;
+      text-align: center;
+    }
+
+    .sure {
+      float: left;
+      background-color: #0068b7;
+    }
+
+    .cancle {
+      float: right;
+      background-color: #b4b3b3;
+    }
+
+    #fail-reason {
+      font-size: 14px;
+      margin: 16px 0;
+    }
+    
+    .fail {
+      height: 164px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="nav">
+      <span class="title">院士专家工作站认证平台</span>
+      <span class="name">认证管理</span>
+      <div class="user">
+        <img src="img/person.png" class="icon">
+        <span class="user-name">管理员姓名</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt">
+    <p class="card-title">审核通过</p>
+    <p class="card-option" style="margin-bottom: 10px;">省科协意见：</p>
+    <textarea class="option-input"></textarea>
+    <div class="operate">
+      <a href="javascript:void(0);" class="sure">确认通过</a>
+      <a href="javascript:void(0);" class="cancle">取消</a>
+    </div>
+  </div>
+
+  <div class="card mb">
+    <p class="card-title">审核未通过</p>
+    <p class="card-option">审核未通过理由：</p>
+
+    <select id="fail-reason">
+      <option value="one">未通过理由1</option>
+      <option value="two">未通过理由2</option>
+      <option value="three">未通过理由3</option>
+      <option value="four">未通过理由4</option>
+    </select>
+
+    <textarea class="option-input fail"></textarea>
+    <div class="operate">
+      <a href="javascript:void(0);" class="sure">确认未通过</a>
+      <a href="javascript:void(0);" class="cancle">取消</a>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">院士专家工作站认证平台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="verify-info.html">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    $('#fail-reason').on('change', function() {
+      var failReason = $('#fail-reason option:selected').text();
+      $('.fail').text(failReason);
+    });
+
+  </script>
+</body>
+</html>

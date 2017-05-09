@@ -1,0 +1,303 @@
+h2 {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.seperate-line {
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid #b5b5b5;
+    margin-bottom: 60px;
+}
+
+.txt {
+    width: 300px;
+    padding: 0 30px;
+    margin: 0 auto -38px;
+    background-color: #f9f9f9;
+    position: relative;
+    top: -12px;
+}
+
+.block {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.left {
+    width: 340px;
+    float: left;
+    margin-right: 63px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+
+.right {
+    // width: 540px;
+    float: left;
+    position: relative;
+}
+
+.normal {
+    width: 540px;
+    height: 40px;
+    border: 1px solid #b5b5b5;
+    border-radius: 5px;
+}
+
+.w-212 {
+    width: 212px;
+}
+
+.tel {
+    line-height: 40px;
+    padding-left: 30px;
+}
+
+.w-540-h-60 {
+    width: 540px;
+    height: 60px;
+}
+
+.tiny-textarea {
+    width: 540px;
+    height: 60px;
+    vertical-align: middle;
+    resize: none;
+    border: 1px solid #b5b5b5;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.h-60 {
+    height: 60px;
+    line-height: 30px;
+}
+
+.line {
+    border-radius: 0;
+    width: 36px;
+    border: none;
+    border-bottom: 1px solid #333;
+    position: relative;
+    top: -4px;
+    padding-bottom: 0;
+}
+
+.w80-h40 {
+    width: 80px;
+    height: 40px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #b5b5b5;
+    text-align: center;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.big-textarea {
+    width: 713px;
+    height: 170px;
+    border: 1px solid #b5b5b5;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    resize: none;
+    overflow: auto;
+}
+
+.count {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.h-170 {
+    height: 170px;
+    line-height: 170px;
+}
+
+.lh-20 {
+    line-height: 20px;
+    padding-top: 60px;
+}
+
+.box {
+    width: 948px;
+    height: 170px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.box .big-textarea {
+    width: 948px;
+    height: 170px;
+}
+
+.w-320 {
+    width: 320px;
+}
+
+.upload {
+    width: 400px;
+    height: 80px;
+    display: block;
+    margin: 50px auto 80px;
+    line-height: 80px;
+    text-align: center;
+    color: white;
+    background-color: #0068b7;
+    border-radius: 5px;
+}
+
+.btn {
+    display: block;
+    width: 400px;
+    height: 80px;
+    border: 1px solid #0068b7;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 5px;
+    color: #0068b7;
+    margin-bottom: 50px;
+}
+
+.btn:hover {
+    color: white;
+    background-color: #0068b7;
+}
+
+.sure {
+    float: left;
+}
+
+.save {
+    float: right;
+}
+
+label,
+label input {
+    cursor: pointer;
+}
+
+label input {
+    -webkit-appearance: radio;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+.w-130 {
+    width: 130px;
+}
+
+.w-100 {
+    width: 100px;
+}
+
+.w-150 {
+    width: 150px;
+}
+
+.w-200 {
+    width: 200px;
+}
+
+.ml-30 {
+    margin-left: 30px;
+}
+
+.table {
+    width: 1200px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table input {
+    width: 100%;
+}
+
+.explain {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+    margin: 20px 0 0;
+    border-radius: 5px;
+    display: none;
+}
+
+.program-result {
+    padding: 10px;
+    text-align: left;
+}
+
+.program-result input {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.file-upload {
+    display: inline-block;
+    width: 140px;
+    height: 40px;
+    background-color: #0068b7;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.table-title {
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+.enterprise-unit,
+.institution-unit {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.right {
+    float: left;
+    position: relative;
+    max-width: 790px;
+}
+
+h6 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 52px;
+}
+.clearb{
+    clear: both;
+    text-align: center;
+}
+.clearb input{
+    width: 215px;
+}
+
+input[type="button"] {
+    cursor: pointer;
+    box-sizing: border-box;
+    /* border: 1px solid; */
+    color: gray;
+}
+.clearb span{
+    font-size: 12px;
+    color: gray;
+}

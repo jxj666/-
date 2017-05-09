@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>登录</title>
+  <link rel="stylesheet" href="../rz/css/reset.css">
+  <link rel="stylesheet" href="../rz/css/common.css">
+  <style>
+    .container {
+      width: 1200px;
+      margin: 0 auto;
+      padding-left: 40px;
+    }
+    
+    .banner {
+      width: 530px;
+      height: 351px;
+      vertical-align: middle;
+    }
+    
+    .fill-info-p {
+      line-height: 56px;
+    }
+
+    .login-block {
+      width: 525px;
+      height: 626px;
+      background-image: url(../rz/img/bgc.png);
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 18px;
+      position: relative;
+      margin: 32px 0 32px 98px;
+    }
+    
+    .login-block ul {
+      overflow: hidden;
+      margin-top: 15px;
+      margin-left: 15px;
+    }
+
+    .user-type {
+      float: left;
+      width: 162px;
+      height: 72px;
+      background-image: url(../rz/img/tab_bg.png);
+      font-size: 18px;
+      color: #7e7c7c;
+      text-align: center;
+      line-height: 72px;
+      cursor: pointer;
+      background-size: cover;
+    }
+
+    .user-type-select {
+      font-size: 22px;
+      color: #0068b7;
+      background: none;
+      border-top: 2px solid #0068b7;
+    }
+
+    /*.login {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: 50px;
+    }*/
+
+    .fill-info {
+      width: 444px;
+      font-size: 18px;
+      position: relative;
+      margin: 70px auto 0;
+    }
+
+    input {
+      width: 436px;
+      height: 60px;
+      border: 1px solid #b5b5b5;
+      border-radius: 5px;
+      padding:20px;
+      padding-left:5px;
+    }
+
+    .forget {
+      position: absolute;
+      right: 0;
+      color: #0068b7;
+      cursor: pointer;
+    }
+
+    .login-btn {
+      width: 436px;
+      height: 60px;
+      background-color: #0068b7;
+      color: white;
+      line-height: 60px;
+      text-align: center;
+      font-size: 18px;
+      margin-top: 40px;
+      display: block;
+      border-radius: 5px;
+    }
+
+    .register-now {
+      display: block;
+      text-align: right;
+      padding: 20px;
+      color: #0068b7;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .introduce { padding: 50px 30px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="nav">
+      <span class="title">全国示范院士专家工作站创建工作平台</span>
+      <span class="name">登录</span>
+    </div>
+  </div>
+  
+  <div class="container">
+    <img src="img/login-bg.png" class="banner">
+    <div class="login-block">
+      <ul>
+        <li class="user-type user-type-select">地方科协登录</li>
+        <li class="user-type">中国科协登录</li>
+        <li class="user-type">专家登录</li>
+      </ul>
+
+      <div class="fill-info">
+        <p class="fill-info-p">登录账号：<span class="forget">忘记登录账号？</span></p>
+        <input type="text" placeholder="输入登录账号">
+        <p class="fill-info-p">登录密码：<span class="forget">忘记登录密码？</span></p>
+        <input type="password" placeholder="输入登录密码">
+        <a href="javascript:void(0);" class="login-btn">登录</a>
+        <!-- <a href="javascript:void(0);" class="register-now">快速注册</a> -->
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">全国示范院士专家工作站创建工作平台</span>
+      <div class="about-us">
+        <a href="javascript:void(0);">关于我们</a>
+        <a href="javascript:void(0);">关于我们</a>
+        <a href="javascript:void(0);">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="javascript:void(0);">关于我们</a>
+        <a href="javascript:void(0);">关于我们</a>
+        <a href="javascript:void(0);">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="../rz/img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      全国示范院士专家工作站创建工作平台 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+  <script src="../rz/js/jquery-1.8.3.min.js"></script>
+  <script src="../rz/js/common.js"></script>
+  <script>
+    $('.user-type').on('click', function() {
+      $(this).addClass('user-type-select').siblings().removeClass('user-type-select');
+
+      if ($(this).index() == 0) {
+        $('.register-now').removeClass('hidden').addClass('show');
+      } else {
+        $('.register-now').removeClass('show').addClass('hidden');
+      }
+    });
+
+    $('.login-btn').on('click', function() {
+
+      if ($('.user-type').eq(2).hasClass('user-type-select')) {
+        window.location.href = 'dw-score-table.html';
+      } else if($('.user-type').eq(0).hasClass('user-type-select')){
+        window.location.href = 'declarate-book.html?local';
+      } else if($('.user-type').eq(1).hasClass('user-type-select')){
+        window.location.href = 'list.html?yq';
+      }
+    });
+  </script>
+</body>
+</html>

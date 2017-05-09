@@ -1,0 +1,20 @@
+.preview-table {
+  width: 900px;
+  margin: 40px auto 10px;
+  border: 1px solid #d5d5d5;
+  border-collapse: collapse;
+}
+
+.w-350 {
+  width: 350px;
+}
+
+.preview-table tr {
+  height: 70px;
+}
+
+.table-title {
+  font-size: 24px;
+  text-align: center;
+  padding-top: 30px;
+}

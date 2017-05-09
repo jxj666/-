@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>填写信息</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/step-one.css">
+</head>
+<body>
+  
+  <div class="header">
+    <div class="nav">
+      <span class="title">院士专家工作站认证平台</span>
+      <span class="name">填写信息</span>
+      <div class="user">
+        <img src="img/person.png" class="icon">
+        <span class="user-name">用户账户号</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="wrapper">  
+    <h2>院士专家工作站(园区服务中心)认证</h2>
+    <ul class="process-list">
+      <li class="process-item highlight">
+        <p class="item-name">基础信息</p>
+        <img src="img/blue.png" class="item-img">
+        <p class="step">第一步</p>
+      </li>
+      <li class="process-item">
+        <p class="item-name">建站单位基本情况</p>
+        <img src="img/gray.png" class="item-img">
+        <p class="step">第二步</p>
+      </li>
+      <li class="process-item">
+        <p class="item-name">工作站基本情况</p>
+        <img src="img/gray.png" class="item-img">
+        <p class="step">第三步</p>
+      </li>
+      <li class="process-item">
+        <p class="item-name">工作站建设情况</p>
+        <img src="img/gray.png" class="item-img">
+        <p class="step">第四步</p>
+      </li>
+    </ul>
+
+    <div class="input-area">
+
+      <!-- 省市 -->
+      <div class="block select_addr">
+        <span class="place">所在省</span>
+        <select name="province" id="province">
+          <option value="beijing">北京</option>
+          <option value="hebeisheng">河北省</option>
+          <option value="sichuansheng">四川省</option>
+          <option value="shandongsheng">山东</option>
+          <option value="heilongjiangsheng">黑龙江</option>
+          <option value="liaoningsheng">辽宁</option>
+        </select>
+        <span class="place">所在市</span>
+        <select name="city" id="city">
+          <option value="beijing">北京市</option>
+          <option value="shanghai">上海</option>
+          <option value="shenzhen">深圳</option>
+          <option value="guangzhou">广州</option>
+          <option value="dalian">大连</option>
+          <option value="xinjiang">新疆</option>
+        </select>
+      </div>
+      
+      <!-- 所属分类 -->
+      <div class="block">
+        <span class="type">所属分类</span>
+        <div class="type-container">
+          <div class="belong qy selected">
+            <p class="txt">
+              <span class="font-16">企业</span>
+            </p>
+          </div>
+          <div class="belong sy">
+            <p class="txt"> 
+              <span class="font-16">事业单位</span>
+            </p>
+          </div>
+          <!-- <div class="belong yq mr-0">
+            <p class="txt"> 
+              <span class="font-16">园区服务中心</span>
+            </p>
+          </div> -->
+        </div>
+      </div>
+      
+      <!-- 中心类型 -->
+      <div class="block center-type hidden">
+        <span class="field">中心类型</span>
+        <select name="choose-field" id="choose-field">
+          <option value="1">产学中心</option>
+          <option value="2">水工环中心</option>
+          <option value="3">能源计量与能效管理中心</option>
+          <option value="4">草原生态中心</option>
+          <option value="5">林业培育中心</option>
+          <option value="6">生物提取中心</option>
+          <option value="7">械装备设计与制造中心</option>
+        </select>
+      </div>
+
+      <!-- 所属领域 -->
+      <div class="block">
+        <span class="field">所属领域</span>
+        <select name="choose-field" id="choose-field">
+          <option value="1">产学研领域</option>
+          <option value="2">水工环领域</option>
+          <option value="3">能源计量与能效管理领域</option>
+          <option value="4">草原生态领域</option>
+          <option value="5">林业培育领域</option>
+          <option value="6">生物提取领域</option>
+          <option value="7">械装备设计与制造领域</option>
+        </select>
+      </div>
+    </div>
+
+    <a href="step-two.html" class="next-step">下一步</a>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">院士专家工作站认证平台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="verify-info.html">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      var belong = $('.belong');
+
+      belong.on('click', function() {
+
+        $(this).addClass('selected').siblings().removeClass('selected');
+
+        var index = $(this).index();
+        var centerType = $('.center-type');
+        var imgArr = ['qy', 'sy', 'yq'];
+        for(var i = 0 ; i < belong.length ; i++) {
+          var url = '';
+          if(index === i) {
+            url = 'url(img/' + imgArr[i] + '.png)';
+
+          } else {
+            url = 'url(img/' + imgArr[i] + '_gray.png)';
+           }
+          belong.eq(i).css('background-image', url);
+        }
+
+        if(index === 2) {
+          centerType.removeClass('hidden').addClass('show');
+        } else {
+          centerType.removeClass('show').addClass('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

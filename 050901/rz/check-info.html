@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>认证管理</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    h2 {
+      text-align: center;
+      padding-top: 80px;
+      padding-bottom: 70px;
+    }
+
+    .card {
+      width: 862px;
+      height: 296px;
+      margin: 0 auto 10px;
+      padding: 50px 30px;
+    }
+
+    .todo { background-image: url(img/todo.png); }
+    .pass { background-image: url(img/pass.png); }
+    .fail { background-image: url(img/fail.png);  margin-bottom: 160px;}
+    
+    .info {
+      color: #b5b5b5;
+      font-size: 16px;
+      overflow: hidden;
+    }
+
+    .fr { float: right; }
+    .fl { float: left; }
+
+    .work-station {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .time {
+      font-size: 16px;
+      color: #333;
+    }
+    
+    .type {
+      font-size: 24px;
+      color: #0068b7;
+      text-align: center;
+      padding: 35px;
+    }
+
+    .operate {
+      width: 420px;
+      height: 65px;
+      color: white;
+      background-color: #0068b7;
+      font-size: 18px;
+      text-align: center;
+      line-height: 65px;
+      display:  block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <div class="header">
+    <div class="nav">
+      <span class="title">院士专家工作站认证平台</span>
+      <span class="name">认证信息</span>
+      <div class="user">
+        <img src="img/person.png" class="icon">
+        <span class="user-name">用户账户号</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>认证信息查询</h2>
+
+  <div class="card todo">
+    <div class="info">
+      <p class="txt fl">工作站名称：<span class=work-station>院士专家工作站名称</span></p>
+      <p class="txt fr">认证提交时间：<span class="time">2017-5-10</span></p>
+    </div>
+    <p class="type">待审核</p>
+    <a href="##" class="operate border-radius-5">修改认证信息</a>
+  </div>
+
+  <div class="card pass">
+    <div class="info">
+      <p class="txt fl">工作站名称：<span class=work-station>院士专家工作站名称</span></p>
+      <p class="txt fr">认证提交时间：<span class="time">2017-5-10</span></p>
+    </div>
+    <p class="type">审核通过</p>
+    <a href="##" class="operate border-radius-5">查看认证备案信息</a>
+  </div>
+
+  <div class="card fail">
+    <div class="info">
+      <p class="txt fl">工作站名称：<span class=work-station>院士专家工作站名称</span></p>
+      <p class="txt fr">认证提交时间：<span class="time">2017-5-10</span></p>
+    </div>
+    <p class="type">审核未通过</p>
+    <a href="##" class="operate border-radius-5">查看未通过理由</a>
+  </div>
+  <!-- <div class="wrapper">    
+    <p class="welcome">欢迎<span class="admin-name">管理员姓名</span>管理员</p>
+    <p class="text">您所在的 <span class="province">河北省</span></p>
+    <p class="text mt-10">当前有
+      <span class="count">10</span>份认证备案信息未审核
+      <a href="##" class="begin border-radius-5">开始审核</a>
+    </p>
+    <div class="card">
+      <p class="type">已审核</p>
+      <p class="count">100</p>
+    </div>
+    <div class="card">
+      <p class="type">已通过</p>
+      <p class="count">50</p>
+    </div>
+    <div class="card">
+      <p class="type">未通过</p>
+      <p class="count">50</p>
+    </div>
+  </div>
+  
+  <a href="##" class="manage">认证管理</a> -->
+  
+  <!-- footer -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">院士专家工作站认证平台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="verify-info.html">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>

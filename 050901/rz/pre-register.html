@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>注册</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+
+    .section {
+      height: 700px;
+    }
+
+    .list {
+      width: 1200px;
+      overflow: hidden;
+      margin: 0 auto;
+      padding-top: 260px;
+    }
+    
+    .link {
+      width: 280px;
+      height: 130px;
+      display: block;
+      float: left;
+      margin: 0 10px;
+      color: #0068b7;
+      border: 1px solid #0068b7;
+      border-radius: 5px;
+      text-align: center;
+      /*line-height: 130px;*/
+      padding-top: 50px;
+      font-size: 20px;
+    }
+
+    .pt { padding-top: 38px; }
+
+    .link:hover {
+      color: white;
+      background-color: #0068b7;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="nav">
+      <span class="title">全国院士专家工作站信息服务平台</span>
+      <span class="name">注册</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <ul class="list">
+      <li class="list-item"><a href="gzz-register.html" class="link">工作站注册</a></li>
+      <li class="list-item"><a href="kx-register.html" class="link pt">科协企业创新服务<br>负责单位注册</a></li>
+      <li class="list-item"><a href="dfkx-register.html" class="link">地方科协注册</a></li>
+      <li class="list-item"><a href="zj-register.html" class="link">专家注册</a></li>
+    </ul>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">全国院士专家工作站信息服务平台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="javascript:void(0);">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    var wait = 60;
+    function timeCount() {
+      if (wait == 0) {
+        $('.get-code').html('获取验证码');
+        $('.get-code').removeClass('disable');
+        clearTimeout(clearFun);
+        wait = 60;
+      } else {
+        $('.get-code').html('已发送' + wait + 's');
+        $('.get-code').addClass('disable');
+        wait--;
+        clearFun = setTimeout(timeCount, 1000);
+      }
+    }
+
+    $('.get-code').on('click', function () {
+      if($(this).hasClass('disable')){
+        return;
+      }else {
+        timeCount();
+      }
+    });
+  </script>
+</body>
+</html>

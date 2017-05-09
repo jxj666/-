@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>填写信息</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <!-- 下面的两个链接 是给预览用的，与check.html的样式一致-->
+  <!-- <link rel="stylesheet" href="css/step-two.css"> -->
+  <!-- <link rel="stylesheet" href="css/check.css"> -->
+
+  <link rel="stylesheet" href="css/step-four.css">
+  <link rel="stylesheet" href="css/preview.css">
+</head>
+<body>
+  <div class="header">
+    <div class="nav">
+      <span class="title">院士专家工作站认证平台</span>
+      <span class="name">填写信息</span>
+      <div class="user">
+        <img src="img/person.png" class="icon">
+        <span class="user-name">用户账户号</span>
+      </div>
+    </div>
+  </div>
+    
+  <div class="wrapper">
+    <h2>院士专家工作站(园区服务中心)认证</h2>
+    <ul class="process-list">
+      <li class="process-item">
+        <p class="item-name">基础信息</p>
+        <img src="img/gray.png" class="item-img">
+        <p class="step">第一步</p>
+      </li>
+      <li class="process-item">
+        <p class="item-name">建站单位基本情况</p>
+        <img src="img/gray.png" class="item-img">
+        <p class="step">第二步</p>
+      </li>
+      <li class="process-item">
+        <p class="item-name">工作站基本情况</p>
+        <img src="img/gray.png" class="item-img">
+        <p class="step">第三步</p>
+      </li>
+      <li class="process-item highlight">
+        <p class="item-name">工作站建设情况</p>
+        <img src="img/blue.png" class="item-img">
+        <p class="step">第四步</p>
+      </li>
+    </ul>
+
+    <div class="container">
+
+      <table border="1" class="first-table">
+        <tr><td colspan="8" class="table-title">进站院士专家</td></tr>
+        <tr class="h-80">
+          <td class="w-80">姓名</td>
+          <td class="w-80">性别</td>
+          <td class="w-80">年龄</td>
+          <td class="w-320">职务／级别</td>
+          <td class="w-190">专业领域</td>
+          <td class="w-180">工作单位</td>
+          <td class="w-90">签约进站期限</td>
+          <td class="w-180">联系电话</td>
+        </tr>
+
+        <tr class="h-80">
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td>
+            <select>
+              <option value="">中国科学院院士</option>
+              <option value="">中国工程院院士</option>
+              <option value="">国际欧亚科学院院士</option>
+              <option value="">"千人计划"人才</option>
+              <option value="">"《国家高层次人才特殊支持计划》"人才</option>
+              <option value="">长江学者</option>
+              <option value="">正高</option>
+              <option value="">副高</option>
+              <option value="">中级</option>
+              <option value="">其他</option>
+            </select>
+          </td>
+          <td>
+            <select>
+              <option value="">数学物理学</option>
+              <option value="">化学</option>
+              <option value="">生命科学和医学</option>
+              <option value="">地学</option>
+              <option value="">信息技术科学</option>
+              <option value="">技术科学</option>
+              <option value="">机械与运载工程</option>
+              <option value="">信息与电子工程</option>
+              <option value="">化工、冶金与材料工程</option>
+              <option value="">能源与矿业工程</option>
+              <option value="">土木、水利与建筑工程</option>
+              <option value="">环境与轻纺工程</option>
+              <option value="">农业</option>
+              <option value="">医药卫生</option>
+              <option value="">工程管理</option>
+            </select>
+          </td>
+          <td><input type="text"></td>
+          <td>
+            <select>
+              <option value="">1年</option>
+              <option value="">2年</option>
+              <option value="">3年</option>
+              <option value="">4年</option>
+              <option value="">5年</option>
+              <option value="">5年以上</option>
+            </select>
+          </td>
+          <td><input type="text"></td>
+        </tr>
+
+      </table>
+
+      <div class="add-btn">
+        <a href="javascript:void(0);" class="first">添加</a>
+      </div>
+
+      <p class="team-info">
+        院士专家团队情况：总人数<input type="text">人,其中，正高<input type="text">人，副高<input type="text">人，中级<input type="text">人，博士生<input type="text">人，硕士生<input type="text">人，其他<input type="text">人。</p>
+
+
+      <table border="1" class="second-table">
+        <tr><td colspan="8" class="table-title">建站单位配套工作站研发人员</td></tr>
+        <tr class="h-80">
+          <td class="w-80">姓名</td>
+          <td class="w-80">性别</td>
+          <td class="w-80">年龄</td>
+          <td class="w-320">职务／级别</td>
+          <td class="w-190">专业领域</td>
+          <td class="w-180">工作单位</td>
+          <td class="w-180">联系电话</td>
+        </tr>
+
+        <tr class="h-80">
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td>
+            <select>
+              <option value="">中国科学院院士</option>
+              <option value="">中国工程院院士</option>
+              <option value="">国际欧亚科学院院士</option>
+              <option value="">"千人计划"人才</option>
+              <option value="">"《国家高层次人才特殊支持计划》"人才</option>
+              <option value="">长江学者</option>
+              <option value="">正高</option>
+              <option value="">副高</option>
+              <option value="">中级</option>
+              <option value="">其他</option>
+            </select>
+          </td>
+          <td>
+            <select>
+              <option value="">数学物理学</option>
+              <option value="">化学</option>
+              <option value="">生命科学和医学</option>
+              <option value="">地学</option>
+              <option value="">信息技术科学</option>
+              <option value="">技术科学</option>
+              <option value="">机械与运载工程</option>
+              <option value="">信息与电子工程</option>
+              <option value="">化工、冶金与材料工程</option>
+              <option value="">能源与矿业工程</option>
+              <option value="">土木、水利与建筑工程</option>
+              <option value="">环境与轻纺工程</option>
+              <option value="">农业</option>
+              <option value="">医药卫生</option>
+              <option value="">工程管理</option>
+            </select>
+          </td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+        </tr>
+
+
+      </table>
+      <div class="add-btn">
+        <a href="javascript:void(0);" class="second">添加</a>
+      </div>
+
+
+      <table border="1" class="third-table">
+        <tr><td colspan="8" class="table-title">进站专家与建站单位开展服务合作情况</td></tr>
+        <tr class="h-80">
+          <td class="w-100">项目名称</td>
+          <td class="w-100">项目类别</td>
+          <td class="w-80">经费<br>(万元)</td>
+          <td class="w-80">是否签订合作协议</td>
+          <td class="w-190">项目完成情况</td>
+          <td class="w-320">项目成果</td>
+          <td class="w-180">附件</td>
+        </tr>
+
+        <tr class="h-80">
+          <td><input type="text"></td>
+          <td>
+            <select>
+              <option value="">战略咨询</option>
+              <option value="">具体创新难题</option>
+              <option value="">成果转化</option>
+              <option value="">培养创新人才</option>
+              <option value="">其他</option>
+            </select>
+          </td>
+          <td><input type="text"></td>
+          <td>
+            <input type="radio"><label for="">是</label>
+            <input type="radio"><label for="">否</label>
+          </td>
+          <td>
+            <input type="radio"><label for="">已完成</label><br>
+            <input type="radio"><label for="">进行中</label><br>
+            <input type="radio"><label for="">未完成</label>
+          </td>
+          <td class="program-result">
+            1.解决企业发展战略问题<input type="text" class="underline">项<br>
+            2.攻克关键技术难题<input type="text" class="underline">项<br>
+            3.成果转化<input type="text" class="underline">项<br>
+            4.申请发明专利<input type="text" class="underline">项<br>
+            5.为培养企业创新正高<input type="text" class="underline">名、副高<input type="text" class="underline">名、中级<input type="text" class="underline">名、博士<input type="text" class="underline">名、硕士<input type="text" class="underline">名、企业骨干<input type="text" class="underline">名
+          </td>
+          <td><input type="button" class="upload" value="上传协议扫描版"></td>
+        </tr>
+      </table>
+      <div class="add-btn">
+        <a href="javascript:void(0);" class="third">添加</a>
+      </div>
+    </div>
+    
+    <!-- <p class="submit-block">
+      <span class="submit-block-title">资质提交：</span>
+      <label><input type="radio" class="radio" name="zhengshu" checked>国家工程中心证书</label>
+      <label><input type="radio" class="radio" name="zhengshu">技术中心证书</label>
+      <label><input type="radio" class="radio" name="zhengshu">博士后流动站证书</label>
+      <label><input type="radio" class="radio" name="zhengshu">国家重点实验室证书</label>
+    </p> -->
+    
+    <!-- <div class="file-upload hidden">
+      <p class="file">
+        国家工程中心证书国家工程中心证书国家工程中心证书.格式字符
+        <span class="upload-status done">
+          <img src="img/done.png">已上传
+        </span>
+        <img src="img/delete.png" class="delete">
+      </p>
+      <p class="file">
+        国家工程中心证书国家工程中心证书国家工程中心证书.格式字符
+        <span class="upload-status doing"> -->
+          <!-- <img src="img/done.png">已上传 -->
+          <!-- <img src="img/current.png" class="current-process">
+        </span>
+        <img src="img/delete.png" class="delete">
+      </p>
+    </div> -->
+
+    <!-- <p class="desc">
+      提交描述工作站详细情况的《示范院士专家工作站（园区服务中心）情况报告一份》
+    </p> -->
+    
+    <!-- <input type="file" class="upload"> -->
+    <!-- <div class="upload">上传</div> -->
+  </div>
+
+  <p class="attention">
+    备注：本页每项内容都为必填项<br>
+  </p>
+
+  <div class="operate">
+    <a href="javascript:void(0);" class="btn preview">点击预览</a>
+    <a href="verify-success.html" class="btn submit">确认提交</a>
+  </div>
+
+  <!-- 预览 start-->
+  <div class="blur-view">
+    <div class="pre-view">
+      
+      <p class="table-title">基础信息</p>
+      <table class="preview-table" border="1">
+        <tr>
+          <td class="w-350">所在省</td>
+          <td>广东省</td>
+        </tr>
+
+        <tr>
+          <td>所在市</td>
+          <td>深圳</td>
+        </tr>
+
+        <tr>
+          <td>所属分类</td>
+          <td>事业单位</td>
+        </tr>
+        
+        <tr>
+          <td>所属领域</td>
+          <td></td>
+        </tr>
+      </table>
+      
+      <p class="table-title">建站单位基本情况</p>
+      <table class="preview-table" border="1">
+        <tr>
+          <td class="w-350">单位名称</td>
+          <td>福建省科协</td>
+        </tr>
+
+        <tr>
+          <td>通讯地址</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>单位网站</td>
+          <td></td>
+        </tr>
+        
+        <tr>
+          <td>单位性质</td>
+          <td>民营企业</td>
+        </tr>
+
+        <tr>
+          <td>单位法人代表</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>所属行业</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>主要产品或提供服务</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>企业上市情况</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>是否是高新技术企业</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>建有省级以上科研载体情况</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>上一年度销售额（万元）</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>上一年度科研投入（万元）</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>上一年度研发经费投入占销售收入比例</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>上年度末职工总数（人）</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>科研人员数（人）</td>
+          <td></td>
+        </tr>
+      </table>
+
+      <table class="preview-table" border="1">
+        <tr>
+          <td class="w-350">科研人员占职工总数比例</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>工作站（园区服务中心）名称</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>类型</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>工作站（服务中心）审批时间</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>审批（备案）部门</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>工作站（园区服务中心）联系人</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>联系电话</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>手机</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>E-mail</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>工作站是否有工作经费</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>工作站运行管理经费总额</td>
+          <td>2016年 2017年</td>
+        </tr>
+
+        <tr>
+          <td>工作站研发经费总额</td>
+          <td>2016年 2017年</td>
+        </tr>
+        
+        <tr>
+          <td>有无固定场所</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>有供院士专家团队研发的实验室或研究中心</td>
+          <td></td>
+        </tr>
+      </table>  
+        
+      
+      <p class="table-title">进站院士专家</p>
+
+      <table class="preview-table" border="1">
+        <tr>
+          <td class="w-350">姓名</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>性别</td>
+          <td>男</td>
+        </tr>
+
+        <tr>
+          <td>年龄</td>
+          <td>67</td>
+        </tr>
+
+        <tr>
+          <td>职务／级别</td>
+          <td>国际欧亚科学院院士</td>
+        </tr>
+
+        <tr>
+          <td>专业领域</td>
+          <td>数学物理学</td>
+        </tr>
+        
+        <tr>
+          <td>工作单位</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>签约进站期限</td>
+          <td>3年</td>
+        </tr>
+
+        <tr>
+          <td>联系电话</td>
+          <td>00000</td>
+        </tr>
+        
+        <tr>
+          <td>院士专家团队情况</td>
+          <td>总人数200人,其中，正高20人，副高30人，中级50人，博士生3人，硕士生55人，其他42人。</td>
+        </tr>
+      </table>
+
+      <p class="table-title">建站单位配套工作站研发人员</p>
+      <table class="preview-table" border="1">
+        <tr>
+          <td class="w-350">姓名</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>性别</td>
+          <td>男</td>
+        </tr>
+
+        <tr>
+          <td>年龄</td>
+          <td>67</td>
+        </tr>
+
+        <tr>
+          <td>职务／级别</td>
+          <td>国际欧亚科学院院士</td>
+        </tr>
+
+        <tr>
+          <td>专业领域</td>
+          <td>数学物理学</td>
+        </tr>
+        
+        <tr>
+          <td>工作单位</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>联系电话</td>
+          <td>00000</td>
+        </tr>
+      </table>
+      
+      <p class="table-title">进站专家与建站单位开展服务合作情况</p>
+      <table class="preview-table" border="1">
+        <tr>
+          <td class="w-350">项目名称</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>项目类别</td>
+          <td>男</td>
+        </tr>
+
+        <tr>
+          <td>经费（万元）</td>
+          <td>67</td>
+        </tr>
+
+        <tr>
+          <td>是否签订合作协议</td>
+          <td>是</td>
+        </tr>
+
+        <tr>
+          <td>项目完成情况</td>
+          <td>已完成</td>
+        </tr>
+        
+        <tr>
+          <td>项目成果</td>
+          <td>
+            1.解决企业发展战略问题30项<br>
+            2.攻克关键技术难题30项<br>
+            3.成果转化14项<br>
+            4.申请发明专利项<br>
+            5.为培养企业创新正高5名、副高10名、中级3名、博士5名、硕士7名、企业骨干12名</td>
+        </tr>
+
+        <tr>
+          <td>附件</td>
+          <td></td>
+        </tr>
+      </table>
+      <!-- <p class="basic">基础信息</p>
+      <div class="container">
+        <div class="basic-info">
+          <div class="type-name">所在省：</div><span>所在省名称</span>
+          <div class="type-name">所在市：</div><span>所在市名称</span>
+        </div>
+        <div class="basic-info">
+          <div class="type-name">所在分类：</div><span>企业院士专家工作站</span>
+        </div>
+        <div class="basic-info">
+          <div class="type-name">所在领域：</div><span>所在领域名称所在领域名称所在领域名称</span>
+        </div>
+      </div>
+
+      <div class="seperate-line">
+        <p class="txt">
+          工作站基本信息<br><span class="color-orange">（必填）</span>
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="block">
+          <div class="type-name">推荐单位：</div>
+          <input type="text" class="input" disabled="disabled" value="菲达环保公司院士专家工作站">
+        </div>
+
+        <div class="block">
+          <div class="type-name">推荐单位联系人：</div>
+          <input type="text" class="input" disabled="disabled" value="季国标">
+        </div>
+
+        <div class="block">
+          <div class="type-name">联系人电话：</div>
+          <input type="text" class="input" disabled="disabled" value="13833883838">
+        </div>
+
+        <div class="block">
+          <div class="type-name">认证示范工作站名称：<br>(园区服务中心)</div>
+          <textarea class="tiny-textarea" disabled="disabled">高新园区</textarea>
+        </div>
+        <div class="block">
+          <div class="type-name">建站（中心）时间：</div>
+          <input type="text" class="input" placeholder="例：2017-3-20" disabled="disabled" value="2017-3-31">
+        </div>
+        <div class="block">
+          <div class="type-name">审批（备案）部门：</div>
+          <input type="text" class="input" disabled="disabled" value="教育部">
+        </div>
+        <div class="block">
+          <div class="type-name">建站单位联系人：</div>
+          <input type="text" class="input" disabled="disabled" value="蒋士成">
+        </div>
+
+        <div class="block">
+          <div class="type-name">联系人电话：</div>
+          <input type="text" class="input" disabled="disabled" value="13833883930">
+        </div>
+
+        <div class="block">
+          <div class="type-name">研发投入情况：</div>
+          <span class="font-16">近两年年均研发经费投入占销售收入比例</span>
+          <input type="text" class="input width-190" placeholder="例：50%" disabled="disabled" value="110%">
+        </div>
+        <div class="block">
+          <div class="type-name">企业研发情况：</div>
+          <span class="font-16">2016年</span>
+          <input type="text" class="input width-70" placeholder="例：50%" disabled="disabled" value="70%">
+          <span class="font-16" style="margin-right: 20px;">人;</span>
+        </div>
+
+        <div class="block">
+          <div class="type-name"></div>
+          <span class="font-16">2017年</span>
+          <input type="text" class="input width-70" placeholder="例：50%" disabled="disabled" value="80%">
+          <span class="font-16">人;</span>
+        </div>
+
+        <div class="block">
+          <div class="type-name"></div>
+          <span class="font-16">研究人员占员工比例</span>
+          <input type="text" class="input" placeholder="例：50%" disabled="disabled" value="30%">
+        </div>
+      </div>
+
+      <div class="seperate-line">
+        <p class="txt">
+          工作站基本情况<br><span class="color-orange">（必填）</span>
+        </p>
+      </div>
+
+      <div class="container-middle">
+        <p>进展院士及团队成员名称、工作单位、专业领域：</p>
+        <div class="text-area">
+          <textarea disabled="disabled">进展院士及团队成员名称、工作单位、专业领域</textarea>
+           <div class="count">0/300</div>
+        </div>
+       
+        <p>进展专家开展服务内容</p>
+        <p>1、战略咨询&nbsp;&nbsp;2、具体创新难题&nbsp;&nbsp;3、成果转化&nbsp;&nbsp;4、培养创新人才</p>
+        <div class="text-area">
+          <textarea disabled="disabled">战略咨询、具体创新难题、成果转化、培养创新人才</textarea>
+          <div class="count">0/300</div>
+        </div>
+        <p>项目合作情况&合作项目名称</p>
+        <p>1、合作项目进展&nbsp;&nbsp;2、已完成&nbsp;&nbsp;3、正在进行&nbsp;&nbsp;4、未完成</p>
+        <div class="text-area mb-20">
+          <textarea disabled="disabled">正在进行中</textarea>
+          <div class="count">0/300</div>
+        </div>
+      </div>
+      
+      <div class="seperate-line">
+        <p class="txt">
+          工作站基本信息<br>（选填）</span>
+        </p>
+      </div>
+
+      <div class="container width-720">
+        <p class="tip">企业技术创新需求：</p>
+        <div class="text-area">
+          <textarea disabled="disabled">创新</textarea>
+          <div class="count">0/300</div>
+        </div>
+        
+        <p class="tip">希望邀请的进站院士和专家的姓名、工作单位等信息：</p>
+        <div class="text-area">
+          <textarea disabled="disabled">博士、硕士</textarea>
+          <div class="count">0/300</div>
+        </div>
+        <p class="tip">企业希望合作的方式</p>
+        <div class="text-area">
+          <textarea disabled="disabled">互利共赢</textarea>
+          <div class="count">0/300</div>
+        </div>
+        <p class="tip">企业希望投入研发力量如人员、经费等信息：</p>
+        <div class="text-area">
+          <textarea disabled="disabled"></textarea>
+          <div class="count">0/300</div>
+        </div> -->
+      <!-- </div> -->
+    </div>
+
+    <a href="javascript:void(0;)" class="preview-sure">确定</a>
+  </div>
+  <!-- 预览 end-->
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">院士专家工作站认证平台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="verify-info.html">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+
+    // 计算预览的高度
+    var screenHeight = document.body.clientHeight;
+    var height = screenHeight - 200;
+    // console.log(height);
+    $('.pre-view').css('height', height + 'px');
+
+    $('.upload').on('click', function() {
+      $('.file-upload').removeClass('hidden').addClass('show');
+    });
+
+    // 点击预览按钮 显示预览view
+    $('.preview').on('click', function() {
+      $('.blur-view').addClass('show');
+    });
+
+    // 点击确定按钮 预览view消失
+    $('.preview-sure').on('click', function() {
+      $('.blur-view').removeClass('show');
+    });
+
+
+    var firstStr = '<tr class="h-80"><td><input type="text"></td><td><input type="text"></td>' + '<td><input type="text"></td><td><select>' + '<option value="">中国科学院院士</option><option value="">中国工程院院士</option>' + '<option value="">国际欧亚科学院院士</option>' + '<option value="">"千人计划"人才</option>' + '<option value="">"《国家高层次人才特殊支持计划》"人才</option>' + '<option value="">长江学者</option>' + '<option value="">正高</option><option value="">副高</option>' + '<option value="">中级</option><option value="">其他</option></select></td>' + '<td><select><option value="">数学物理学</option><option value="">化学</option>' + '<option value="">生命科学和医学</option><option value="">地学</option>' + '<option value="">信息技术科学</option>' + '<option value="">技术科学</option>' + '<option value="">机械与运载工程</option>' + '<option value="">信息与电子工程</option>' + '<option value="">化工、冶金与材料工程</option>' + '<option value="">能源与矿业工程</option>' + '<option value="">土木、水利与建筑工程</option>' + '<option value="">环境与轻纺工程</option>' + '<option value="">农业</option>' + '<option value="">医药卫生</option><option value="">工程管理</option></select></td>' + '<td><input type="text"></td><td><select><option value="">1年</option>' + '<option value="">2年</option><option value="">3年</option><option value="">4年</option>' + '<option value="">5年</option><option value="">5年以上</option>' + '</select></td><td><input type="text"></td></tr>';
+
+    var secondStr = '<tr class="h-80"><td><input type="text"></td>' + '<td><input type="text"></td><td><input type="text"></td><td><select>' + '<option value="">中国科学院院士</option>' + '<option value="">中国工程院院士</option><option value="">国际欧亚科学院院士</option>' + '<option value="">"千人计划"人才</option>' + '<option value="">"《国家高层次人才特殊支持计划》"人才</option>' + '<option value="">长江学者</option><option value="">正高</option><option value="">副高</option>' + '<option value="">中级</option><option value="">其他</option></select></td><td>' + '<select><option value="">数学物理学</option><option value="">化学</option>' + '<option value="">生命科学和医学</option><option value="">地学</option>' + '<option value="">信息技术科学</option><option value="">技术科学</option>' + '<option value="">机械与运载工程</option><option value="">信息与电子工程</option>' + '<option value="">化工、冶金与材料工程</option><option value="">能源与矿业工程</option>' + '<option value="">土木、水利与建筑工程</option>' + '<option value="">环境与轻纺工程</option>' + '<option value="">农业</option><option value="">医药卫生</option>' + '<option value="">工程管理</option></select></td>' + '<td><input type="text"></td>' + '<td><input type="text"></td></tr>';
+
+    var thirdStr = '<tr class="h-80"><td><input type="text"></td><td>' + '<select><option value="">战略咨询</option><option value="">具体创新难题</option><option value="">成果转化</option><option value="">培养创新人才</option>' + '<option value="">其他</option></select></td><td><input type="text"></td>' + '<td><input type="radio"><label for="">是</label>' + '<input type="radio"><label for="">否</label></td><td>' + '<input type="radio"><label for="">已完成</label><br>' + '<input type="radio"><label for="">进行中</label><br>' + '<input type="radio"><label for="">未完成</label></td>' + '<td class="program-result">1.解决企业发展战略问题<input type="text" class="underline">项<br>2.攻克关键技术难题<input type="text" class="underline">项<br>3.成果转化<input type="text" class="underline">项<br>4.申请发明专利<input type="text" class="underline">项<br>5.为培养企业创新正高<input type="text" class="underline">名、副高<input type="text" class="underline">名、中级<input type="text" class="underline">名、博士<input type="text" class="underline">名、硕士<input type="text" class="underline">名、企业骨干<input type="text" class="underline">名' + '</td><td><input type="button" class="upload" value="上传协议扫描版"></td></tr>';
+
+    $('.first').on('click', function() {
+      $('.first-table').append(firstStr);
+    });
+
+    $('.second').on('click', function() {
+      $('.second-table').append(secondStr);
+    });
+
+    $('.third').on('click', function() {
+      $('.third-table').append(thirdStr);
+    });
+
+
+  </script>
+  <!-- 计算输入的字数 -->
+  <!-- <script>
+    var textArea = $('textarea');
+    var count = $('.count');
+
+    for (var i = 0 ; i < textArea.length; i++) {
+      var start = i + 1;
+      var txtLength = textArea.eq(start).val().length;
+      count.eq(i).text(txtLength + '/300');
+    }
+  </script> -->
+</body>
+</html>

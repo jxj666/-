@@ -1,0 +1,39 @@
+/*底部*/
+.footer {
+  width: 100%;
+  height: 240px;
+  background-image: url(../img/footerBg.png);
+  color: white;
+}
+.footer .introduce {
+  width: 1080px;
+  height: 170px;
+  margin: 0 auto;
+  padding: 50px;
+  vertical-align: top;
+  border-bottom: 1px solid #616161;
+}
+.footer .introduce .title {
+  font-size: 18px;
+  vertical-align: top;
+  margin-right: 390px;
+}
+.footer .introduce .about-us,
+.footer .introduce .contact-us {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+}
+.footer .introduce .about-us {
+  margin-right: 60px;
+}
+.footer .introduce .about-us a {
+  padding-bottom: 10px;
+  display: block;
+  color: white;
+}
+.footer .bottom {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 12px;
+}

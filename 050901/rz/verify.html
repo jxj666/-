@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>认证管理</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/verify.css">
+  <link rel="stylesheet" href="css/pager.css">
+</head>
+<body>
+  <!-- header -->
+  <div class="header">
+    <div class="nav">
+      <span class="title">院士专家工作站认证平台</span>
+      <span class="name">认证管理</span>
+      <div class="user">
+        <img src="img/person.png" class="icon">
+        <span class="user-name">管理员姓名</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">    
+    <div class="tab-bar">
+      <span class="btn btn-highlight">未审核</span>
+      <span class="btn">已通过</span>
+      <span class="btn">未通过</span>
+    </div>
+    
+    <div class="selector">
+      <span class="type">所在市：</span>
+      <select name="" id="">
+        <option value="all">全部</option>
+      </select>
+      <span class="type">所属区域：</span>
+      <select name="" id="">
+        <option value="all">全部</option>
+      </select>
+      <span class="type">所属分类：</span>
+      <select name="" id="">
+        <option value="all">全部</option>
+      </select>
+      <div class="search">
+        <input type="text" class="search-bar">
+        <span class="search-btn">搜索</span>
+      </div>
+      <p>
+        未审核工作站：<span class="number">12390</span>个
+      </p>
+    </div>
+    
+    <div class="list">
+      <!-- 未审核列表 -->
+      <table class="invisible visible">
+        <tr>
+          <th class="w-60"></th>
+          <th>编号</th>
+          <th>工作站名称</th>
+          <th>提交时间</th>
+          <th>所在市</th>
+          <th>所属领域</th>
+          <th>所属分类</th>
+          <th>操作</th>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00001</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="operate">
+            <a href="check.html" class="verify">审核</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00002</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="operate">
+            <a href="check.html" class="verify">审核</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00003</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="operate">
+            <a href="check.html" class="verify">审核</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00004</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="operate">
+            <a href="check.html" class="verify">审核</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00005</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="operate">
+            <a href="check.html" class="verify">审核</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00006</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="operate">
+            <a href="check.html" class="verify">审核</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00007</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="operate">
+            <a href="check.html" class="verify">审核</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00008</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="operate">
+            <a href="check.html" class="verify">审核</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00009</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="operate">
+            <a href="check.html" class="verify">审核</a>
+          </td>
+        </tr>
+      </table>
+      
+      <!-- 已通过列表 -->
+      <table class="passed invisible">
+        <tr>
+          <th class="w-60"></th>
+          <th>编号</th>
+          <th>工作站名称</th>
+          <th>提交时间</th>
+          <th>所在市</th>
+          <th>所属领域</th>
+          <th>所属分类</th>
+          <th>审核人</th>
+          <th>操作</th>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00001</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00002</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00003</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00004</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00005</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00006</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00007</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00008</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00009</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+      </table>
+      <!-- 未通过列表 -->
+      <table class="invisible">
+        <tr>
+          <th class="w-60"></th>
+          <th>编号</th>
+          <th>工作站名称</th>
+          <th>提交时间</th>
+          <th>所在市</th>
+          <th>所属领域</th>
+          <th>所属分类</th>
+          <th>审核人</th>
+          <th>操作</th>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00001</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00002</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00003</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00004</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00005</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00006</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00007</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00008</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td class="no">00009</td>
+          <td class="place-name">工作站名称工作站名称</td>
+          <td class="time">2017-3-20</td>
+          <td class="city">城市名称</td>
+          <td class="area">所属领域名称所属领域名称</td>
+          <td class="type">企业院士专家工作站</td>
+          <td class="person">审核人姓名</td>
+          <td class="operate">
+            <a href="check.html" class="verify">复审</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+    <label for="select-all"><input type="checkbox" id="select-all">全选</label>
+    <div class="page-control"></div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="introduce">
+      <span class="title">院士专家工作站认证平台</span>
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+      </div>
+
+      <div class="about-us">
+        <a href="##">关于我们</a>
+        <a href="##">关于我们</a>
+        <a href="verify-info.html">认证信息</a>
+      </div>
+
+      <div class="contact-us">
+        <img src="img/tel.png">
+        <span>联系我们</span>
+        <p>0794-000-000</p>
+      </div>
+    </div>
+    <p class="bottom">
+      院士专家工作认证 版权所有 联系我们 京ICP 备 10559855 号-4 海淀分局备案 1101025452
+    </p>
+  </div>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/jquery.page.js"></script>
+  <script>
+
+    var search = window.location.search;
+    var type = search.substring(1,search.length);
+    if(type == 'local') {
+      $('.nav .title').text('北京市院士专家工作站认证平台');
+    } else if(type == 'country') {
+      $('.nav .title').text('全国院士专家工作站认证平台');
+    }
+    
+    // 分页器
+    $(".page-control").createPage({
+        pageCount:20,  //总页数
+        current:3,     //当前页数
+        callbackFn:function(page){
+          // console.log(page);
+          // 这里请求接口返回数据, page为当前页数
+        }
+    });
+
+
+    var allSelect = $('#select-all');
+    var checkBox = $('td input:checkbox');
+
+    allSelect.on('click', function(){
+      if (this.checked) {
+        checkBox.attr('checked', true);
+      } else {
+        checkBox.attr('checked', false);
+      }
+    });
+
+    checkBox.on('click', function() {
+
+      if (checkState(this.checked)) {
+        allSelect.attr('checked', true);
+      } else {
+        allSelect.attr('checked', false);
+      }
+    });
+
+    function checkState(state) {
+      var flag = false;
+      for(var i = 0 ; i < checkBox.length ; i++) {
+        if (checkBox[i].checked != state) {
+          flag = false;
+          break;
+        } else {
+          flag = true;
+        }
+      }
+
+      return flag;
+    }
+
+    // tab切换
+    var btn = $('.btn');
+    var table = $('table');
+
+    btn.on('click', function() {
+      $('input:checkbox').attr('checked', false);
+      var index = $(this).index();
+      $(this).addClass('btn-highlight').siblings().removeClass('btn-highlight');
+      $(table).eq(index).addClass('visible').siblings().removeClass('visible');
+    });
+  </script>
+</body>
+</html>
+
+
