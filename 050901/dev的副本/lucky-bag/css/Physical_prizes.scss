@@ -1,0 +1,248 @@
+.jxj {
+    width: 100%
+}
+
+.clb {
+    clear: both
+}
+
+.pp_top .inform {
+    height: .52rem;
+    line-height: .52rem;
+    background: #fff100;
+    overflow: hidden
+}
+
+.pp_top .inform .pirzes {
+    float: left;
+    width: 5rem
+}
+
+.pp_top .inform .pirzes ul {
+    width: 100%
+}
+
+.pp_top .inform .pirzes ul li {
+    background: url(../img/broadcast.png) no-repeat .2rem .13rem;
+    height: .52rem;
+    text-indent: .55rem;
+    background-size: .25rem
+}
+
+.pp_top .inform .pirzes ul li h5 {
+    font-weight: 400;
+    font-size: .24rem;
+    color: #000;
+    line-height: .52rem
+}
+
+.pp_top .inform .pirzes ul li h5 span {
+    color: #ff4545;
+    margin: 0 .05rem
+}
+
+.pp_top .inform .getinfo {
+    width: 1.6rem;
+    float: right;
+    height: .52rem
+}
+
+.pp_top .inform .getinfo a {
+    color: #017efe;
+    font-size: .24rem;
+    line-height: .52rem;
+    display: block
+}
+
+.pp_top .title {
+    background: url(../img/phy_25.png) no-repeat top;
+    background-size: contain;
+    height: 3.66rem;
+    overflow: hidden;
+    width: 100%
+}
+
+.pp_top .title h6 {
+    color: #ffdc22;
+    font-size: .24rem;
+    margin-top: 2.6rem;
+    text-align: center
+}
+
+.pp_body,
+body {
+    background: #fff
+}
+
+.pp_body .chai {
+    width: 100%;
+    height: 7.7rem;
+    background: url(../img/phy_28.jpg) no-repeat center .4rem;
+    background-size: 6.95rem 5.82rem;
+    overflow: hidden
+}
+
+.penyou {
+    text-align: center
+}
+
+.pp_body .chai .renwu img {
+    float: left;
+    width: 1.42rem;
+    height: 1.42rem;
+    margin-left: 1.1rem;
+    margin-right: .4rem
+}
+
+.renwu {
+    margin-top: .35rem
+}
+
+.pp_body .chai .renwu h3 {
+    float: left;
+    font-size: .5rem;
+    color: #fc3625;
+    margin-top: .1rem
+}
+
+.pp_body .chai .renwu h5 {
+    float: left;
+    font-size: .34rem;
+    color: #fc3625;
+    font-weight: 400;
+    margin-top: .1rem
+}
+
+.pp_body .chai .lipin {
+    background: url(../img/phy6.png) no-repeat 50%;
+    background-size: contain
+}
+
+.pp_body .chai .lipin img {
+    display: block;
+    height: 2.74rem;
+    margin: 0 auto
+}
+
+.pp_body .chai .chaiyixia button {
+    background: url(../img/phy_9.png) no-repeat 50%;
+    background-size: cover;
+    border: .16rem solid #f3f3ed;
+    border-radius: .6rem;
+    font-size: .7rem;
+    color: #fff;
+    font-weight: 700;
+    padding: .4rem .88rem;
+    margin-top: .5rem;
+    margin-bottom: .25rem;
+    text-shadow: 0 0 .02rem #ff4545
+}
+
+.chaiyixia {
+    text-align: center
+}
+
+.pp_body .chai .chaiyixia p {
+    font-size: .24rem;
+    color: #e51c1d
+}
+
+.pp_body .penyou h3 {
+    font-size: .5rem;
+    color: #fc3625;
+    line-height: .86rem
+}
+
+.pp_body .penyou h5 {
+    font-size: .3rem;
+    color: #6f6f6f;
+    line-height: .56rem
+}
+
+.pp_body .penyou .imgs {
+    width: 6.08rem;
+    margin: 0 auto;
+    text-align: left;
+    margin: .2rem auto
+}
+
+.pp_body .penyou .imgs img {
+    float: left;
+    width: .88rem;
+    height: .88rem;
+    margin: .06rem
+}
+
+.pp_body .penyou button {
+    background: #ff675a;
+    color: #fff;
+    font-size: .4rem;
+    font-weight: 700;
+    width: 6.92rem;
+    height: .88rem;
+    border-radius: .7rem
+}
+
+.f_cb:after {
+    clear: both;
+    content: ".";
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden
+}
+
+.tv-footer {
+    width: 5.3rem;
+    position: absolute;
+    bottom: .28rem;
+    left: 1.1rem
+}
+
+.tv-footer .tv-code {
+    width: 1.43rem;
+    height: 1.43rem
+}
+
+.tv-footer .footer-text {
+    float: right;
+    padding-top: .1rem;
+    width: 3.4rem;
+    font-size: .28rem;
+    color: #6f6f6f;
+    line-height: .43rem;
+}
+
+.tv-footer .copy,
+.tv-footer .support {
+    font-size: .24rem;
+    color: #666;
+    float: left;
+}
+
+.tv-footer .support {
+    float: right
+}
+
+.pp_foot {
+    height: 7.5rem;
+    position: relative;
+    padding-top: 30px;
+}
+
+.shuomin {
+    padding: 0 30px;
+}
+
+.pp_foot .shuomin h5 {
+    line-height: .68rem;
+    font-size: .36rem;
+    color: #fc3625;
+    font-weight: 400
+}
+
+.pp_foot .shuomin p {
+    line-height: .48rem;
+    color: #6f6f6f;
+    font-size: .3rem
+}

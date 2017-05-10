@@ -1,0 +1,169 @@
+.congratulation {
+	width: 7.5rem;
+	height: 6.39rem;
+	background: url('../img/tv_bg.png') no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+.title {
+	text-align: center;
+	font-size: .8rem;
+	color: #ffe398;
+	margin: .52rem 0 .3rem;
+}
+.get-name {
+	font-size: .4rem;
+	color: #ffdf5c;
+	text-align: center;
+}
+.img-content {
+	width: 6.38rem;
+	height: 2.6rem;
+	background: url('../img/fireworks.png') no-repeat;
+	background-size: cover;
+	margin: .66rem auto .13rem;
+	overflow: hidden;
+}
+.tv-img {
+	display: block;
+	width: 3.23rem;
+	height: 2.1rem;
+	margin: .29rem auto 0;
+}
+.already-get {
+	font-size: .34rem;
+	color: #ffdf5c;
+	text-align: center;
+}
+.skip {
+	margin: .46rem .2rem;
+}
+.tv-btn {
+	float: left;
+	width: 3.4rem;
+	height: .9rem;
+	line-height: .9rem;
+	background: #ff675a;
+	font-size: .4rem;
+	color: #fff;
+	border-radius: .45rem;
+	text-align: center;
+}
+.tv-btn:nth-child(2) {
+	margin-left: .25rem;
+}
+.hb-btn {
+	display: block;
+	height: .9rem;
+	line-height: .9rem;
+	background: #ff675a;
+	font-size: .4rem;
+	color: #fff;
+	border-radius: .45rem;
+	text-align: center;
+}
+.prize-info {
+	padding: 0 .3rem;
+}
+.hb-info-btn {
+	display: block;
+	font-size: .3rem;
+	color: #017efe;
+	text-align: center;
+}
+.prize-title {
+	font-size: .34rem;
+	color: #fc3625;
+}
+.prize-p {
+	margin-top: .3rem;
+	font-size: .3rem;
+	color: #6f6f6f;
+	line-height: .49rem
+}
+.tv-footer {
+	width: 5.3rem;
+	position: absolute;
+	bottom: .28rem;
+	left: 1.1rem;
+	.tv-code {
+		width: 1.43rem;
+		height: 1.43rem;
+	}
+	.footer-text {
+		float: right;
+		padding-top: .1rem;
+		width: 3.4rem;
+		font-size: .26rem;
+		color: #6f6f6f;
+		line-height: .43rem;
+	}
+	.copy, .support {
+		font-size: .2rem;
+		color: #666;
+		float: left;
+	}
+	.support {
+		float: right;
+	}
+}
+.pop-bg {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .7);
+	overflow: hidden;
+	.hb-pop {
+		position: absolute;
+		width: 100%;
+		height: 8.1rem;
+		background: #fff;
+		border-radius: .03rem;
+		margin: 1.45rem auto;
+		padding: .73rem .3rem .4rem;
+		position: relative;
+		.hb-pop-close {
+			position: absolute;
+			display: block;
+			width: .28rem;
+			height: .28rem;
+			background: url('../img/hb_pop_close.png') no-repeat;
+			background-size: .28rem .28rem;
+			top: .3rem;
+			right: .3rem;
+		}
+		.hb-title {
+			font-size: .34rem;
+			color: #fc3625;
+		}
+		.hb-p {
+			font-size: .28rem;
+			color: #666;
+			margin-top: .37rem;
+			line-height: .46rem;
+			.hb_p_img {
+				display: block;
+				width: 4.6rem;
+				height: 1.65rem;
+				margin: 0 auto;
+			}
+		}
+		.bottom-btn {
+			position: absolute;
+			bottom: .3rem;
+			left: 3.6rem;
+			display: block;
+			width: .15rem;
+			height: .15rem;
+			border-top: 1px solid #000;
+			border-left: 1px solid #000;
+			transform: rotate(45deg);
+		}
+	}
+}
+
+
+
+

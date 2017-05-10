@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>中奖详情</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.min.css">
+	<link rel="stylesheet" type="text/css" href="css/tv_detail.min.css">
+</head>
+<body>
+	<div class="congratulation">
+		<h1 class="title">恭喜</h1>
+		<p class="get-name">获得乐视超级电视x40s</p>
+		<div class="img-content">
+			<img class="tv-img" src="img/tv_img.png">
+		</div>
+		<p class="already-get">奖品已成功领取</p>
+	</div>
+	<div class="tv-show">
+		<div class="skip clearfix">
+			<!-- <a href="##" class="tv-btn">订单信息</a> -->
+			<!-- <a href="##" class="tv-btn">我的礼品</a> -->
+			<a href="##" class="hb-btn">我的礼品</a>
+		</div>
+		<div class="prize-info">
+			<!-- <h3 class="prize-title">礼品说明</h3>
+			<p class="prize-p">1.本礼品为乐视超级电视X40S，40寸智能电视。 <br>
+			2.领奖请详细填写配送信息，确认即可成功领取。 <br>
+			3. 10个工作日内发货，快递包邮，全国联保，请留意查收。</p> -->
+			<a href="##" class="hb-info-btn">微信红包领取说明&gt;&gt;</a>
+		</div>
+		<!-- 红包弹窗 -->
+		<div class="pop-bg invisible">
+			<div class="hb-pop">
+				<a href="##" class="hb-pop-close"></a>
+				<h4 class="hb-title">红包领取说明</h4>
+				<p class="hb-p">1.领取微信红包后，将发往您的微信号，请及时领取红包；<br>2.请关闭本页面，返回微信消息查看红包提醒。如果您已关注“天子汇”公众号，请查看公众号的红包提醒，如图1：	<img src="img/hb_pop_from.png" class="hb_p_img">如果您没有关注“天之汇”公众号，请查看“服务通知”的红包提醒，如图2： <img src="img/hb_pop_notice.png" class="hb_p_img"></p>
+				<a href="##" class="bottom-btn"></a>
+			</div>
+		</div>
+		
+	</div>
+	<div class="tv-footer">
+		<img class="tv-code" src="img/tv_code.png">
+		<p class="footer-text">长按识别二维码关注“伊利活动”，参加更多福利活动。</p>
+		<div class="clearfix">
+			<p class="copy">版权所有:<span class="copy-name">引力集团</span></p>
+			<p class="support">技术支持:<span class="support-name">万川营销云</span></p>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/tv_detail.min.js"></script>
+	<script>
+		
+	</script>
+	<script type="text/javascript">
+	    function get_hfs() {
+	        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	    }
+	    get_hfs();
+	    function throttle(method, context) {
+	        clearTimeout(method.timer);
+	        method.timer = setTimeout(function(){
+	            method.call(context);
+	        },100);
+	    }
+	    window.onresize = function (){
+	        throttle(get_hfs);
+	    }
+	</script>
+</body>
+</html>

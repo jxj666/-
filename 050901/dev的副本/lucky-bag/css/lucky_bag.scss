@@ -1,0 +1,221 @@
+.broadcast {
+	height: .5rem;
+}
+body {
+	background: #fff;
+}
+.main {
+	margin-bottom: 1.48rem; 
+}
+.lucky-top {
+	position: relative;
+	width: 100%;
+	height: 4.26rem;
+	.top-img {
+		width: 7.5rem;
+		height: 4.26rem;
+	}
+	.top-text {
+		width: 100%;
+		position: absolute;
+		bottom: .17rem;
+		padding: 0 .25rem;
+		height: .53rem;
+		line-height: .53rem;
+		.countdown {
+			float: left;
+			padding-left: .8rem;
+			background: url('../img/clock.png') no-repeat;
+			background-size: .53rem .53rem;
+			color: #aaa;
+			font-size: .24rem;
+			.days, .hours, .minutes, .seconds {
+				color: #c9811b;
+				font-size: .34rem;
+			}
+		}
+		.stock {
+			float: right;
+			font-size: .24rem;
+			color: #c9811b;
+		}
+	}
+}
+.lucky-bg {
+	width: 5.3rem;
+	height: 4.5rem;
+	margin: .64rem auto 0;
+	background: url('../img/lucky_bg.png') no-repeat;
+	background-size: 5.3rem 4.5rem;
+	position: relative;
+	overflow: hidden;
+	.lucky-btn {
+		display: block;
+		width: 2.23rem;
+		height: 2.23rem;
+		margin: 1.4rem 0 0 1.63rem;
+		background: url('../img/lucky_btn.png') no-repeat;
+		background-size: 2.23rem 2.23rem;
+	}
+	.lucky-p {
+		position: absolute;
+		left: 1.9rem;
+		bottom: .58rem;
+		font-size: .24rem;
+		color: #fff;
+		text-align: center;
+		.lucky-num {
+			color: #ffe022;
+		}
+	}
+}
+.count-list {
+	margin: .45rem .4rem 0;
+	display: -webkit-box;
+  	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: .2rem;
+	border-bottom: .02rem solid #eee;
+	.count-item {
+		color: #646464;
+		font-size: .24rem;
+		.code-count, .prize-count, .person-count {
+			color: #a10f02;
+			font-size: .3rem;
+			margin-bottom: .2rem;
+		}
+	}
+}
+.click-list {
+	display: -webkit-box;
+  	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	margin: .3rem .4rem .95rem;
+	.click-item {
+		color: #017efe;
+		font-size: .26rem;
+	}
+}
+.tv-footer {
+	width: 5.3rem;
+	/*position: absolute;*/
+	/*bottom: .28rem;*/
+	margin: 0 auto .28rem;
+	left: 1.1rem;
+	.tv-code {
+		width: 1.43rem;
+		height: 1.43rem;
+	}
+	.footer-text {
+		float: right;
+		padding-top: .1rem;
+		width: 3.4rem;
+		font-size: .26rem;
+		color: #6f6f6f;
+		line-height: .43rem;
+	}
+	.copy, .support {
+		font-size: .2rem;
+		color: #666;
+		float: left;
+	}
+	.support {
+		float: right;
+	}
+}
+.nav-fixed {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 1.2rem;
+	background: #fff;
+	z-index: 1;
+	.nav-list {
+	display: -webkit-box;
+  	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-around;
+	height: 1.2rem;
+	/*margin-top: .25rem;*/
+	border-top: .01rem solid #989898;
+	.nav {
+		padding-top: .73rem;
+		font-size: .28rem;
+		color: #999;
+	}
+	.bag {
+		background: url('../img/bag_icon.png') no-repeat .25rem .15rem;
+		background-size: .47rem .54rem;
+	}
+	.notice {
+		background: url('../img/notice_icon.png') no-repeat .3rem .1rem;
+		background-size: .57rem .57rem;
+	}
+	.prize {
+		background: url('../img/prize_icon.png') no-repeat .3rem .05rem;
+		background-size: .62rem .6rem;
+	}
+	}
+}
+.pop-bg {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	background: rgba(0, 0, 0, .7);
+	overflow: hidden;
+	.lucky-pop {
+		/*width: 100%;*/
+		height: 9.04rem;
+		background: url('../img/lucky_pop.png') no-repeat;
+		background-size: 7.5rem 9.04rem;
+		overflow: hidden;
+		.pop-close {
+			position: absolute;
+			display: block;
+			width: .28rem;
+			height: .28rem;
+			background: url('../img/hb_pop_close.png') no-repeat;
+			background-size: .28rem .28rem;
+			top: 3.6rem;
+			right: .6rem;
+		}
+		.lucky-title {
+			font-size: .28rem;
+			color: #666;
+			text-align: center;
+			margin-top: 3.86rem;
+		}
+		.img-content {
+			width: 6.38rem;
+			height: 2.6rem;
+			background: url('../img/fireworks.png') no-repeat;
+			background-size: 6.38rem 2.6rem;
+			margin: .5rem auto .3rem;
+			position: relative;
+			.yogurt {
+				display: block;
+				width: 2.79rem;
+				height: 2.13rem;
+				margin: 0 auto;
+			}
+		}
+		.lucky-get {
+			display: block;
+			width: 6.33rem;
+			height: .9rem;
+			margin: 0 auto;
+			line-height: .9rem;
+			background: #ff675a;
+			font-size: .4rem;
+			color: #fff;
+			border-radius: .45rem;
+			text-align: center;
+		}
+	}
+}
+

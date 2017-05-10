@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>订单详情</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Physical_prizes.min.css">
+    <script type="text/javascript">
+    function get_hfs() {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    }
+    get_hfs();
+
+    function throttle(method, context) {
+        clearTimeout(method.timer);
+        method.timer = setTimeout(function() {
+            method.call(context);
+        }, 100);
+    }
+    window.onresize = function() {
+        throttle(get_hfs);
+    }
+    </script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="pp_top">
+        <div class="inform">
+            <div class="pirzes">
+                <ul>
+                    <li>
+                        <h5>恭喜用户<span>123****1234</span>获得<span>118元红包</span></h5>
+                    </li>
+                </ul>
+            </div>
+            <div class="getinfo">
+                <a href="">获奖名单&gt;</a>
+            </div>
+            <div class="clb"></div>
+        </div>
+        <div class="title">
+            <h6>活动时间:2017年5月1日-12月31日</h6>
+        </div>
+    </div>
+    <!-- 主要 -->
+    <div class="pp_body">
+        <div class="chai">
+            <div class="renwu">
+                <img src="img/phy_3.png" alt="">
+                <h3>恭喜小强</h3>
+                <h5>获得乐视超级电视x40s</h5>
+                <div class="clb"></div>
+                </div>
+            <div class="lipin">
+                <img src="img/phylh.png">
+            </div>
+            <div class="chaiyixia">
+                <button> 拆一下</button>
+                <p>请在3天内完成拆礼盒领取奖品</p>
+            </div>
+        </div>
+        <div class="penyou">
+            <h3>请在3天内完成拆礼盒领取奖品</h3>
+            <h5>已有6位好友帮拆，呼朋唤友来帮忙吧</h5>
+            <div class="imgs f_cb">
+            <img src="img/phy_32.jpg" alt="">
+			<img src="img/phy_34.jpg" alt="">
+			<img src="img/phy_36.jpg" alt="">
+			<img src="img/phy_32.jpg" alt="">
+			<img src="img/phy_34.jpg" alt="">
+			<img src="img/phy_36.jpg" alt="">
+			
+            </div>
+            <button>我的礼品</button>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="pp_foot">
+		<div class="shuomin">
+			<h5>礼品说明</h5>
+			<p>1.本礼品为乐视超级电视X40S，40吋智能电视。</p>
+			<p>2.领奖请详细填写配送信息，确认即可成功领取。</p>
+			<p>3.如对大奖的领取有任何疑问，请拨打大奖咨询专线：18908847136。</p>
+			<p>4.如江西中烟提供，活动最终解释权归江西中烟所有。  </p>
+		</div>
+    	<div class="tv-footer">
+		<img class="tv-code" src="img/tv_code.png">
+		<p class="footer-text">长按识别二维码<br>关注“伊利活动”，参加更多福利活动。</p>
+		<div class="clearfix">
+			<p class="copy">版权所有:<span class="copy-name">引力集团</span></p>
+			<p class="support">技术支持:<span class="support-name">万川营销云</span></p>
+		</div>
+	</div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>

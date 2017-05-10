@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/lucky_bag.min.css">
+</head>
+<body>
+	<div class="broadcast">
+	    <i class="icon"></i>
+	    <ul class="list" id="broadcast_list"></ul>
+	    <span class="already-sent">
+	        <!-- 库存 -->
+	        <ul class="stock-list" id="stock_list"></ul>
+	    </span>
+	</div>
+ 	<div class="main">
+ 		<div class="lucky-top">
+ 			<img src="img/lucky_bag_img.png" class="top-img">
+ 			<div class="top-text clearfix">
+ 				<p class="countdown">
+ 					<span class="days">03</span> 天 
+ 					<span class="hours">04</span> 时 
+ 					<span class="minutes">54</span> 分 
+ 					<span class="seconds">33</span> 秒 
+ 				</p>
+ 				<p class="stock">礼品库存： <span class="stock-num">12345</span>份</p>
+ 			</div>
+ 		</div>
+ 		<div class="lucky-bg">
+ 			<a href="##" class="lucky-btn"></a>
+ 			<p class="lucky-p">你还有 <span class="lucky-num">3</span>个福袋</p>
+ 		</div>
+ 		<ul class="count-list">
+ 			<li class="count-item">
+ 				<p class="code-count">1234</p>
+ 				扫码次数
+ 			</li>
+ 			<li class="count-item">
+ 				<p class="prize-count">234</p>
+ 				送出奖品
+ 			</li>
+ 			<li class="count-item">
+ 				<p class="person-count">72344</p>
+ 				访问人数
+ 			</li>
+ 		</ul>
+ 		<ul class="click-list">
+ 			<li class="click-item">活动礼品</li>
+ 			<li class="click-item">联系客服</li>
+ 			<li class="click-item">隐私权声明</li>
+ 		</ul>
+ 		<div class="pop-bg">
+ 			<div class="lucky-pop">
+ 				<a href="##" class="pop-close"></a>
+ 				<p class="lucky-title">获得伊利酸奶一箱</p>
+ 				<div class="img-content">
+ 					<img src="img/yogurt.png" class="yogurt">
+ 				</div>
+ 				<a href="##" class="lucky-get">点击领取</a>	
+ 			</div>
+ 		</div>
+ 		<div class="tv-footer">
+			<img class="tv-code" src="img/tv_code.png">
+			<p class="footer-text">长按识别二维码关注“伊利活动”，参加更多福利活动。</p>
+			<div class="clearfix">
+				<p class="copy">版权所有:<span class="copy-name">引力集团</span></p>
+				<p class="support">技术支持:<span class="support-name">万川营销云</span></p>
+			</div>
+		</div>
+ 	</div>
+ 	
+ 	<nav class="nav-fixed">
+	  <ul class="nav-list" id="navlist">
+	    <li class="nav bag">拆福袋</li>
+	    <li class="nav notice">活动公告</li>
+	    <li class="nav prize">我的礼品</li>
+	  </ul>
+	</nav>
+ 	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+ 	<script>
+ 		$('.lucky-btn').on('click', function () {
+ 			$('.pop-bg').removeClass('invisible');
+ 		});
+ 		$('.pop-close').on('click', function () {
+ 			$('.pop-bg').addClass('invisible');
+ 		});
+ 	</script>
+ 	<script type="text/javascript">
+	    function get_hfs() {
+	        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	    }
+	    get_hfs();
+	    function throttle(method, context) {
+	        clearTimeout(method.timer);
+	        method.timer = setTimeout(function(){
+	            method.call(context);
+	        },100);
+	    }
+	    window.onresize = function (){
+	        throttle(get_hfs);
+	    }
+	</script>
+</body>
+</html>

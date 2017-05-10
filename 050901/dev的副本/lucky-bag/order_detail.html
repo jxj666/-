@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>订单详情</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.min.css">
+	<link rel="stylesheet" type="text/css" href="css/order_detail.min.css">
+</head>
+<body>
+	<div class="order-main">
+		<div class="order-name">
+			<div class="order-img-content">
+				<img src="img/order_img.png" class="order-img">
+			</div>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+	    function get_hfs() {
+	        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	    }
+	    get_hfs();
+	    function throttle(method, context) {
+	        clearTimeout(method.timer);
+	        method.timer = setTimeout(function(){
+	            method.call(context);
+	        },100);
+	    }
+	    window.onresize = function (){
+	        throttle(get_hfs);
+	    }
+	</script>
+</body>
+</html>
