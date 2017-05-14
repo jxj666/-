@@ -52,9 +52,17 @@
 			margin: 0 .3rem;
 			position: relative;
 			.info-item {
+				position: relative;
 				font-size: .28rem;
 				color: #666;
 				line-height: .78rem;
+				p{
+					position: absolute;
+					color: blue;
+					font-size: 16px;
+					line-height: 16px;
+					text-indent: 60px;
+				}
 				.info-anchor {
 					display: inline-block;
 					width: .18rem;
@@ -63,6 +71,7 @@
 					background: #eee;
 					position: relative;
 					margin-right: .32rem;
+
 				}
 				.info-anchor.active-anchor {
 					background: #ffe22f !important;
@@ -82,10 +91,12 @@
 					float: right;
 					color: #999;
 					font-size: .2rem;
+
 				}
 			}
 			.active {
 				color: #fe4537 !important;
+
 			}
 		}
 		.info-list:before {
@@ -99,6 +110,7 @@
 		}
 	}
 	.receipt-info {
+	margin-bottom:50px;
 		background: #fff;
 		margin-top: .2rem;
 		height: 3.7rem;
@@ -117,11 +129,11 @@
 				font-size: .28rem;
 				color: #666;
 				line-height: .48rem;
-				overflow: hidden;
+				
 				.receipt-icon {
 					float: right;
-					width: .32rem;
-					height: .32rem;
+					width: .20rem;
+					height: .20rem;
 					margin-right: .2rem;
 					border-top: .01rem solid #aaa;
 					border-right: .01rem solid #aaa;
@@ -136,3 +148,83 @@
 		}
 	}
 }
+
+.xianqin {
+    left: 0;
+    height: 1.95rem;
+    width: 120%;
+    position: relative;
+    margin-top: .2rem;
+    overflow: hidden;
+    background: #fff
+}
+
+.xianqin .moren {
+    width: .6rem;
+    float: left;
+    overflow: hidden
+}
+
+.xianqin .moren a {
+    margin-top: .42rem;
+    margin-left: .3rem;
+    display: block;
+    width: .26rem;
+    height: .26rem;
+    background: url(../img/input_03.png) no-repeat 50%;
+    background-size: contain
+}
+
+.xianqin .moren .quedin {
+    background: url(../img/input_07.png) no-repeat 50%;
+    background-size: contain
+}
+
+.xianqin .juti {
+    width: 5.6rem;
+    float: left;
+    overflow: hidden;
+    margin-top: .1rem;
+    padding: .1rem
+}
+
+.xianqin .juti h5 {
+    margin-top: .15rem;
+    color: #666;
+    font-size: .3rem;
+    font-weight: 400
+}
+
+.xianqin .juti h5 span {
+    margin-left: .2rem
+}
+
+.xianqin .juti p {
+    color: #999;
+    font-size: .28rem;
+    line-height: .42rem
+}
+
+.xianqin .bianji {
+    width: 1.38rem;
+    float: left;
+    height: 100%;
+    background: url(../img/input_07.png) no-repeat 50%;
+    background-size: .42rem
+}
+
+.xianqin .shanchu {
+    width: 1.4rem;
+    float: left;
+    text-align: center;
+    color: #fff;
+    background: #fe492a;
+    font-size: .32rem;
+    height: 100%;
+    line-height: 1.9rem
+}
+.receipt-notice {
+				font-size: .24rem;
+				color: #fe4537;
+				line-height: .44rem;
+			}

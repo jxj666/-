@@ -225,13 +225,14 @@ body {
 }
 
 .pp_foot {
-    height: 7.5rem;
+    overflow: hidden;
     position: relative;
     padding-top: 30px;
 }
 
 .shuomin {
     padding: 0 30px;
+    margin-bottom: 260px
 }
 
 .pp_foot .shuomin h5 {
@@ -240,7 +241,12 @@ body {
     color: #fc3625;
     font-weight: 400
 }
-
+.pp_foot .shuomin h3 {
+    line-height: .68rem;
+    font-size: .3rem;
+    color: #328fe1;
+    text-align: center;
+}
 .title {
     position: relative;
 }
@@ -257,4 +263,102 @@ body {
     line-height: .48rem;
     color: #6f6f6f;
     font-size: .3rem
+}
+
+.tip-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .7);
+    overflow: hidden;
+    .gift-tip, .kf-tip, .statement-tip {
+        width: 6.9rem;
+        background: #fff;
+        margin: 2.6rem auto 0;
+        border-radius: .03rem;
+        overflow: hidden;
+        position: relative;
+        padding: 0 .58rem;
+        border: .01rem solid #4b473a;
+        .cgray{
+        font-size:30px;
+        color:#888888;
+        margin-top:-10px;
+        margin-bottom:20px;
+        text-align:center;
+        }
+        .tip-list {
+            width: 5.92rem;
+            padding-bottom: 0.5rem;
+            margin: .22rem auto 0;
+            font-size: .24rem;
+            color: #666;
+            text-align: center;
+            .row {
+                display: flex;
+                justify-content: space-around;
+                line-height: .36rem;
+            }
+            .row-border {
+                height: .63rem;
+                line-height: .63rem;
+                border-top: .01rem solid #fc685e;
+                border-bottom: .01rem solid #fc685e;
+                margin-bottom: .12rem;
+                .row-top {
+                    color: #fe4537;
+                    font-size: .26rem;
+                }
+            }
+        }
+        .tip-bottom {
+            width: 100%;
+            height: .43rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    .kf-tip, .statement-tip {
+        height: 5.8rem;
+        .tip-code {
+            display: block;
+            width: 2.34rem;
+            height: 2.34rem;
+            margin: 0 auto;
+        }
+    }
+    .tip-close {
+        position: absolute;
+        display: block;
+        width: .28rem;
+        height: .28rem;
+        background: url('../img/hb_pop_close.png') no-repeat;
+        background-size: .28rem .28rem;
+        top: .3rem;
+        right: .3rem;
+    }
+    .tip-title {
+        color: #fe4537;
+        font-size: .36rem;
+        text-align: center;
+        margin: .6rem 0 .3rem;
+    }
+    .tip-content {
+        margin-top:20px;
+        color: #666;
+        font-size: .26rem;
+        line-height: .4rem;
+        .tip-top {
+            color: #fe4537;
+            display: block;
+        }
+    }
+    .center{
+        text-align: center;
+    }
+
 }

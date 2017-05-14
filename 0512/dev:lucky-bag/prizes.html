@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <title>大奖</title>
     <link rel="stylesheet" type="text/css" href="css/reset.min.css">
-    <link rel="stylesheet" type="text/css" href="css/Physical_prizes.min.css">
+    <link rel="stylesheet" type="text/css" href="css/prizes.min.css">
     <script type="text/javascript">
     function get_hfs() {
         document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
@@ -89,10 +89,6 @@
                 <!-- 朋友看已拆开 -->
                 <s data-type="status" class="invisible">已拆开</s>
                 <button class="invisible">已拆开</button>
-
-
-
-                <button class="invisible">已帮拆</button>
                 <p>请在3天内完成拆礼盒领取奖品</p>
             </div>
         </div>
@@ -112,12 +108,17 @@
     </div>
     <!-- 尾部 -->
     <div class="pp_foot">
-        <div class="shuomin">
+        <!-- 实物大奖 -->
+        <div class="shuomin ">
             <h5>礼品说明</h5>
             <p>1.本礼品为乐视超级电视X40S，40吋智能电视。</p>
             <p>2.领奖请详细填写配送信息，确认即可成功领取。</p>
             <p>3.如对大奖的领取有任何疑问，请拨打大奖咨询专线：18908847136。</p>
             <p>4.如江西中烟提供，活动最终解释权归江西中烟所有。 </p>
+        </div>
+        <!-- 红包大奖 -->
+        <div class=" shuomin invisible">
+            <h3><a href="">微信红包领取说明&gt;&gt;</a></h3>
         </div>
         <div class="tv-footer">
             <img class="tv-code" src="img/code.png">
@@ -127,6 +128,18 @@
                 <p class="copy">版权所有:<span class="copy-name">引力集团</span></p>
                 <p class="support">技术支持:<span class="support-name">万川营销云</span></p>
             </div>
+        </div>
+    </div>
+    <!-- 弹框 -->
+    <div class="tip-bg invisible">
+        <div class="kf-tip ">
+            <a href="##" data-click="tip-close" class="tip-close"></a>
+            <h3 class="tip-title">谢谢您的一臂之力!</h3>
+            <p class="cgray">已用了洪荒之力...</p>
+            <img src="img/code.png" class="tip-code">
+            <p class="tip-content center">长按识别二维码
+                <br>关注“伊利活动”微信号，参加更多福利。
+                <img src="img/winner_bg.png" class="tip-bottom">
         </div>
     </div>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>

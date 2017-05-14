@@ -1,0 +1,40 @@
+{
+  "name": "joymaker-index",
+  "version": "1.0.0",
+  "description": "taozui",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.ellow.cn/kirin/joymaker-index.git"
+  },
+  "author": "CC&&HY",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^6.7.7",
+    "browser-sync": "^2.18.8",
+    "cssgrace": "^3.0.0",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-postcss": "^6.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "postcss-vmin": "^2.0.0"
+  },
+  "devDependencies": {
+    "cssnext": "^1.8.4",
+    "gulp-clean": "^0.3.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-px3rem": "^0.3.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-scss": "^1.4.0",
+    "gulp-useref": "^3.1.2",
+    "imagemin-pngquant": "^5.0.0"
+  }
+}

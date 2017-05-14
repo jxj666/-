@@ -1,0 +1,121 @@
+.container {
+    background: #fff9e5;
+    .get-coupon {
+        width: 100%;
+        height: 4.83rem;
+        overflow: hidden;
+        background: url('../img/coupon_bg.png') no-repeat;
+        background-size: 7.5rem 4.83rem;
+        padding: 0 .3rem;
+        .coupon-title {
+            font-size: .38rem;
+            color: #ffe398;
+            margin: .47rem 0 .64rem 0;
+            text-align: center;
+        }
+        .coupon-p {
+            font-size: .28rem;
+            line-height: .55rem;
+            color: #fff;
+        }
+    }
+    .get-img-list {
+        margin-top: .08rem;
+        padding: 0 .3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .get-img-item {
+            margin: .32rem 0;
+            width: 1.76rem;
+            height: 1.76rem;
+            background: url('../img/get_img_bg.png') no-repeat;
+            background-size: contain;
+            padding: 0 .18rem;
+            a {
+                vertical-align: sub;
+                display: block;
+                height: 100%;
+            }
+            .get-img {
+                display: block;
+                max-height: 88%;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .pop-bg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .7);
+        overflow: hidden;
+        .coupon-pop {
+            background: #fff;
+            width: 100%;
+            height: 8.2rem;
+            margin-top: 1.45rem;
+            border-radius: .03rem;
+            position: relative;
+            overflow: hidden;
+            .coupon-pop-close {
+                position: absolute;
+                display: block;
+                width: .28rem;
+                height: .28rem;
+                background: url('../img/hb_pop_close.png') no-repeat;
+                background-size: .28rem .28rem;
+                top: .3rem;
+                right: .3rem;
+            }
+            .pop-title {
+                font-size: .36rem;
+                text-align: center;
+                margin-top: .6rem;
+            }
+            .pop-img {
+                display: block;
+                width: 1.46rem;
+                height: 1.15rem;
+                margin: .4rem auto 0;
+            }
+            .coupon-info {
+                padding: 0 .3rem;
+                .coupon-title {
+                    font-size: .34rem;
+                    color: #fc3625;
+                    line-height: .88rem;
+                    margin-top: .3rem;
+                }
+                .coupon-p {
+                    font-size: .3rem;
+                    color: #666;
+                    line-height: .44rem;
+                }
+            }
+            .btn-content {
+                background: #fff;
+                height: 1.7rem;
+                position: absolute;
+                left: .3rem;
+                bottom: 0;
+                .get-coupon-btn {
+                    display: block;
+                    width: 6.9rem;
+                    height: .9rem;
+                    line-height: .9rem;
+                    background: #ff675a;
+                    font-size: .4rem;
+                    color: #fff;
+                    border-radius: .45rem;
+                    text-align: center;
+                    margin-top: .4rem;
+                }
+            }
+        }
+    }
+}
