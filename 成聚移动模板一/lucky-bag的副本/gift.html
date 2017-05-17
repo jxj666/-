@@ -42,7 +42,7 @@
         <div class="clb"></div>
     </div>
     <!-- 号码未激活时 -->
-    <div class="mg_head invisible">
+    <div class="mg_head ">
         <div class="renwu f_cb">
             <div class="imgs">
                 <img src="img/phy_3.png" alt="">
@@ -51,12 +51,12 @@
                 <h5>你好，小强</h5>
                 <h5>手机号：未激活</h5>
                 <p><a href="javascript:void(0)">收货地址管理</a></p>
-                <button>激活</button>
+                <button id="jihuo">激活</button>
             </div>
         </div>
     </div>
     <!-- 号码激活时 -->
-    <div class="mg_head ">
+    <div class="mg_head invisible">
         <div class="renwu f_cb">
             <div class="imgs">
                 <img src="img/phy_3.png" alt="">
@@ -65,7 +65,7 @@
                 <h5>你好，小强</h5>
                 <h5>手机号：18811112222</h5>
                 <p><a href="address.html">收货地址管理</a></p>
-                <button class="jieban">解&nbsp;绑</button>
+                <button class="jieban" id="jieban">解&nbsp;绑</button>
             </div>
         </div>
     </div>
@@ -134,7 +134,7 @@
     <div class="mg_foot">
     </div>
     <!-- 弹窗:手机绑定 -->
-    <div class="pop invisible">
+    <div class="pop invisible" id="phone_bind"> 
         <div class="box">
             <div class="close"></div>
             <div class="bindnum">
@@ -149,7 +149,7 @@
         </div>
     </div>
     <!-- 弹窗:手机号验证 -->
-    <div class="pop invisible">
+    <div class="pop invisible" id="num_verify">
         <div class="box">
             <div class="close"></div>
             <div class="bindnum">
@@ -169,7 +169,7 @@
         </div>
     </div>
     <!-- 弹窗:激活解绑成功 -->
-    <div class="pop invisible">
+    <div class="pop invisible" id="bind_success">
         <div class="box">
             <div class="close"></div>
             <div class="success">
