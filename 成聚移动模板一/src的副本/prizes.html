@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
@@ -53,30 +52,30 @@
                 <img src="img/phy_3.png" alt="">
                 <!-- 中奖人自己看 -->
                 <s data-type="status" class="invisible">中奖人自己看</s>
-                <h3 class="invisible">恭喜您</h3>
+                <h3 >恭喜您</h3>
                 <!-- 别人看 -->
                 <s data-type="status" class="invisible">别人看</s>
-                <h3>恭喜小强</h3>
+                <h3 class="invisible">恭喜小强</h3>
                 <h5>获得乐视超级电视x40s</h5>
             </div>
             <div class="lipin">
                 <!-- 礼盒  -->
                 <s data-type="status" class="invisible">未拆开礼盒时</s>
-                <img src="img/phylh.png">
+                <img src="img/phylh.png" class="lihe_k jianpin_k">
                 <!-- 实物 -->
                 <s data-type="status" class="invisible">礼盒拆开后</s>
-                <img src="img/phy_16.png" class="invisible">
+                <img src="img/phy_16.png" class="invisible shiwu_k jianpin_k">
                 <!-- 红包 -->
                 <s data-type="status" class="invisible">大奖是红包时</s>
-                <img src="img/phy_21.png" class="invisible">
+                <img src="img/phy_21.png" class="invisible honbao_k jianpin_k">
             </div>
             <div class="chaiyixia">
                 <!-- 中奖人自己看未拆开时 -->
-                <s data-type="status" class="invisible">中奖人自己看未拆开时</s>
-                <button class="invisible">拆一下</button>
+                <s data-type="status" class=" invisible">中奖人自己看未拆开时</s>
+                <button class="invisible weichaikai_k btn1_k">拆一下</button>
                 <!-- 中奖人自己看拆开未填地址时 -->
                 <s data-type="status" class="invisible">中奖人自己看拆开时</s>
-                <button class="invisible">填写收货哦地址</button>
+                <button class="invisible btn1_k meidizhi_k">填写收货地址</button>
                 <!-- 中奖人自己看拆开时 -->
                 <s data-type="status" class="invisible">中奖人自己看拆开时</s>
                 <button class="invisible">订单详情</button>
@@ -109,7 +108,7 @@
     <!-- 尾部 -->
     <div class="pp_foot">
         <!-- 实物大奖 -->
-        <div class="shuomin ">
+        <div class="shuomin shuomin_k linshuwu_k">
             <h5>礼品说明</h5>
             <p>1.本礼品为乐视超级电视X40S，40吋智能电视。</p>
             <p>2.领奖请详细填写配送信息，确认即可成功领取。</p>
@@ -117,8 +116,8 @@
             <p>4.如江西中烟提供，活动最终解释权归江西中烟所有。 </p>
         </div>
         <!-- 红包大奖 -->
-        <div class=" shuomin invisible">
-            <h3><a href="">微信红包领取说明&gt;&gt;</a></h3>
+        <div class=" shuomin shuomin_k linhonbao_k invisible">
+            <h3><a href="javascript:void(0)">微信红包领取说明&gt;&gt;</a></h3>
         </div>
         <div class="tv-footer">
             <img class="tv-code" src="img/code.png">
@@ -143,6 +142,8 @@
         </div>
     </div>
         <script src='js/jquery.min.js'></script>
+        <script src='js/main.min.js'></script>
+        <script src='js/prizes.min.js'></script>
 </body>
 
 </html>
