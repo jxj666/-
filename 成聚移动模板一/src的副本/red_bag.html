@@ -50,7 +50,7 @@
         <div class="lucky-top">
             <div class="menban"></div>
             <h1>伊利大果粒<br>扫码抢红包</h1>
-            <div class="huodon invisible">活动时间:2017年5月1日-12月31日</div>
+            <div class="huodon ">活动时间:2017年5月1日-12月31日</div>
             <img src="img/redbag_01.png" class="top-img">
             <div class="top-text clearfix">
                 <p class="countdown">
@@ -62,10 +62,13 @@
                 <p class="stock">礼品库存： <span class="stock-num">12345</span>份</p>
             </div>
         </div>
+        <!-- 红包模块 -->
+        <div class="redbag_box">
         <div class="redbag">
-                <img src="img/redbag_02.png">
-                <a href="javascript:void(0)" class="redbag_on redbag_off"></a>
-                <p>你还有<span>3</span>次机会</p>
+            <img src="img/redbag_02.png">
+            <a href="javascript:void(0)" class="j_bag_btn "></a>
+            <p>你还有<span>3</span>次机会</p>
+        </div>
         </div>
         <ul class="count-list">
             <li class="count-item">
@@ -92,7 +95,7 @@
                 <a href="##" data-click="statement">隐私权声明</a>
             </li>
         </ul>
-                <!-- 恭喜红包 -->
+        <!-- 恭喜红包 -->
         <div class="pop-bg invisible honbao_t">
             <div class="lucky-pop">
                 <h3>恭喜您!</h3>
@@ -102,13 +105,14 @@
         </div>
         <!-- 谢谢惠顾 -->
         <div class="pop-bg invisible  xiexie_t">
-             <div class="lucky-pop">
-             <h6>&nbsp;优惠券</h6>
+            <div class="lucky-pop">
+                <h6>&nbsp;优惠券</h6>
                 <h3>谢谢您的参与!</h3>
                 <p>一些优惠券可以领取</p>
                 <button>点击领取</button>
-             </div>
+            </div>
         </div>
+
         <!-- 通用弹框 -->
         <div class="tip-bg invisible">
             <div class="gift-tip invisible">
@@ -181,8 +185,10 @@
             <li class="nav prize">我的礼品</li>
         </ul>
     </nav>
+    <!-- 蒙版 -->
+    <div class="mask">&nbsp;</div>
     <script src='js/jquery.min.js'></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/red_bag.min.js"></script>
 </body>
 
 </html>
