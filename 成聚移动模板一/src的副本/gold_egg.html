@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>拆红包</title>
+    <title>砸金蛋</title>
     <link rel="stylesheet" type="text/css" href="css/reset.min.css">
-    <link rel="stylesheet" type="text/css" href="css/red_bag.min.css">
+    <link rel="stylesheet" type="text/css" href="css/gold_egg.min.css">
     <script type="text/javascript">
     function get_hfs() {
         document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
@@ -49,9 +49,9 @@
     <div class="main">
         <div class="lucky-top">
             <div class="menban"></div>
-            <h1>伊利大果粒<br>扫码抢红包</h1>
-            <div class="huodon ">活动时间:2017年5月1日-12月31日</div>
-            <img src="img/redbag_01.png" class="top-img">
+            <h1>幸运砸金蛋</h1>
+            <div class="huodon">活动时间:2017年5月1日-12月31日</div>
+            <img src="img/gold_02.png" class="top-img">
             <div class="top-text clearfix">
                 <p class="countdown">
                     <span class="days">03</span> 天
@@ -62,13 +62,22 @@
                 <p class="stock">礼品库存： <span class="stock-num">12345</span>份</p>
             </div>
         </div>
-        <!-- 红包模块 -->
-        <div class="redbag_box">
-        <div class="redbag">
-            <img src="img/redbag_02.png">
-            <a href="javascript:void(0)" class="j_bag_btn "></a>
-            <p>你还有<span>3</span>次机会</p>
-        </div>
+
+        <!-- 金蛋 -->
+        <div class="m-eggs">
+            <div class="egg-box">
+                <div class="egg_b"><img src="img/gold_06.png" alt=""></div>
+                <div class="egg_f"><img src="img/base_03.png" alt=""></div>
+            </div>
+            <div class="egg-box">
+                <div class="egg_b"><img src="img/gold_07.png" alt=""></div>
+                <div class="egg_f"><img src="img/base_03.png" alt=""></div>
+            </div>
+            <div class="egg-box">
+                <div class="egg_b"><img src="
+                img/gold_08.png" alt=""></div>
+                <div class="egg_f"><img src="img/base_03.png" alt=""></div>
+            </div>
         </div>
         <ul class="count-list">
             <li class="count-item">
@@ -95,24 +104,43 @@
                 <a href="##" data-click="statement">隐私权声明</a>
             </li>
         </ul>
-        <!-- 恭喜红包 -->
-        <div class="pop-bg invisible honbao_t">
+        <!-- 恭喜奖品 -->
+        <div class="pop-bg pop-bg1 invisible">
             <div class="lucky-pop">
-                <h3>恭喜您!</h3>
-                <p>获得微信红包<span>1.18</span>元</p>
-                <button>点击领取</button>
+                <a href="##" class="pop-close"></a>
+                <p class="lucky-title">获得伊利酸奶一箱</p>
+                <div class="img-content">
+                    <img src="img/yogurt.png" class="yogurt">
+                </div>
+                <a href="##" class="lucky-get">点击领取</a>
+            </div>
+        </div>
+        <!-- 恭喜红包 -->
+        <div class="pop-bg pop-bg2 invisible">
+            <div class="lucky-pop">
+                <a href="##" class="pop-close"></a>
+                <p class="lucky-title">获得微信红包1.18元</p>
+                <div class="img-content">
+                    <img src="img/hb_img.png" class="yogurt">
+                </div>
+                <a href="##" class="lucky-get">点击领取</a>
             </div>
         </div>
         <!-- 谢谢惠顾 -->
-        <div class="pop-bg invisible  xiexie_t">
-            <div class="lucky-pop">
-                <h6>&nbsp;优惠券</h6>
-                <h3>谢谢您的参与!</h3>
-                <p>一些优惠券可以领取</p>
-                <button>点击领取</button>
+        <div class="pop-bg pop-bg3 invisible">
+            <div class="liquan_pop">
+            <div class="img_h">
+                <img src="img/egg_bad_03.png">
+            </div>
+                <div class="close_pop">
+                    <a href=""></a>
+                </div>
+                <h3>谢谢您的参与 !</h3>
+                <p> 一些优惠券可以领取</p>
+                <div class="imgbox"><img src="img/huanliquan_03.png"></div>
+                <button class="btn">点击领取</button>
             </div>
         </div>
-
         <!-- 通用弹框 -->
         <div class="tip-bg invisible">
             <div class="gift-tip invisible">
@@ -185,10 +213,8 @@
             <li class="nav prize">我的礼品</li>
         </ul>
     </nav>
-    <!-- 蒙版 -->
- <!--    <div class="mask">&nbsp;</div> -->
     <script src='js/jquery.min.js'></script>
-    <script src="js/red_bag.min.js"></script>
+    <script src="js/gold_egg.min.js"></script>
 </body>
 
 </html>
