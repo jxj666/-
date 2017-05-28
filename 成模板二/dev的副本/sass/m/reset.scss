@@ -1,0 +1,106 @@
+.pop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050;
+  background: rgba(0, 0, 0, .7);
+  padding-top: 110px;
+  color: #666;
+}
+
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
+html, body, div, p, ul, ol, li, h1, h2, h3, h4, h5, h6, img {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 30px;
+	color: #444;
+	font-family: STHeiti, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-overflow-scrolling: touch; /*流畅滚动*/
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul, ol, li {
+	list-style: none;
+}
+em, address, i {
+	font-style: normal;
+}
+button, input {
+	border: 0 none;
+	outline: none;
+}
+input[type="submit"], input[type="button"] {
+	-webkit-user-select: none;
+	user-select: none;
+}
+input, textarea {
+	/*-webkit-appearance: none;*/
+	-webkit-user-modify: read-write-plaintext-only;
+}
+a, img {
+	-webkit-touch-callout: none;
+}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0; 
+}
+
+.visible {
+	display: block;
+}
+
+.invisible {
+	display: none !important;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.body-scroll-forbidden {
+	height: 100%;
+	overflow: hidden;
+}
+
+.body-fixed {
+	overflow: hidden;
+	position:fixed;
+	bottom:0;
+	top:0;
+	left:0;
+	right:0;
+}
+
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.price-color {
+	color: #fb564e;
+}
+
+.main-orange-color {
+	color: #f39800;
+}
+.clearfix:after, .clearfix:before {
+	display: table;
+  content: " ";
+  clear: both;
+}

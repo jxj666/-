@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>落地页</title>
+	<link rel="stylesheet" href="/custom/css/m/reset.min.css">
+	<link rel="stylesheet" href="/custom/css/m/m-qr/m_login.min.css">
+	<script type="text/javascript">
+		function get_hfs() {
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		}
+		get_hfs();
+		function throttle(method, context) {
+			clearTimeout(method.timer);
+			method.timer = setTimeout(function () {
+				method.call(context);
+			}, 100);
+		}
+		window.onresize = function () {
+			throttle(get_hfs);
+		}
+	</script>
+</head>
+<body>
+	<div class="scan-content">
+		<div class="fixed">
+			<ul class="nav navbar-nav nav-justified data-nav">
+				<li class="nav-item active"><a href="javascript:;">扫码数据</a></li>
+				<li class="nav-item"><a href="javascript:;">用户数据</a></li>
+				<li class="nav-item"><a href="javascript:;">奖品数据</a></li>
+			</ul>
+			<div class="btn-group tag_box" id="top_bar">
+				<div>
+					<button class="time-tag" id="advance-daterange">
+						<img src="/custom/img/m/m-qr/calendar.png" class="calendar">
+						<span class="time-data">2017/04/18</span>
+					</button>
+				</div>
+				<button class="time-tag border-radius" tag="7">7天</button>
+				<button class="time-tag border-radius" tag="14">14天</button>
+				<button class="time-tag border-radius" tag="28">28天</button>
+				<button class="time-tag border-radius" tag="all">全部</button>
+			</div>
+		</div>
+	</div>
+	<script src="/custom/js/m/jquery.min.js"></script>
+	<script src="/custom/js/m/m-qc/m_login.min.js"></script>
+</body>
+</html>

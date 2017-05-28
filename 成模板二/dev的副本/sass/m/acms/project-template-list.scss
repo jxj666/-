@@ -1,0 +1,153 @@
+@import "../common/_mixins";
+$cjBlue: #0090ff;
+$nav-link-bor-bottom: 5px;
+$nav-link-padding-top: 30px;
+@mixin padding-top-bottom($top:$nav-link-padding-top,$border-bottom:$nav-link-bor-bottom) {
+  padding-top: $top;
+  padding-bottom: $top - $border-bottom;
+}
+
+.body {
+  background-color: #f1f1f1;
+  font-size: 30px;
+  color: #444;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.fade {
+  opacity: 0;
+  transition: opacity .3s linear;
+}
+.fade.in{
+    opacity: 1;
+}
+.nav {
+  display: flex;
+  margin-bottom: 0;
+  list-style: none;
+  padding: 0 10px;
+}
+
+.nav-link {
+  display: block;
+}
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom: 1px solid #ccc; /*no*/
+
+  .nav-item {
+    margin-bottom: -1px; /*no*/
+  }
+
+  .nav-link {
+    box-sizing: border-box;
+    padding: 0 20px;
+    @include padding-top-bottom();
+    border-bottom: $nav-link-bor-bottom solid transparent;
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $cjBlue;
+    border-bottom: $nav-link-bor-bottom solid $cjBlue;
+  }
+
+  .nav-justified {
+    .nav-item {
+      flex: 0 1 100%;
+      text-align: center;
+    }
+  }
+}
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  padding: 20px;
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+
+.current-activity, .over-activity {
+  position: relative;
+  text-align: center;
+}
+
+.current, .over {
+  margin: 0 30px;
+}
+
+.goods-list {
+  display: flex;
+  flex-flow:row wrap;
+}
+
+.goods-item {
+  flex: 0 1 335px;
+  margin: 20px 10px 0;
+  background: #fff;
+  border-radius: 6px;
+  .goods-title{
+    width: 335px;
+    height: 170px;
+    position: relative;
+  }
+  .goods-mask{
+    background-color: rgba(255,255,255,.3);
+    position: absolute;
+    right:0;
+    left:0;
+    bottom: 0;
+    color: #fff;
+    font-size: 22px;
+    line-height: 45px;
+  }
+  .goods-mask_hot{
+    position: absolute;
+    right:0;
+    left:5px;
+    bottom: 0;
+    margin-bottom: -30px;
+    width:60px;
+    height:70px;
+  }
+  .activity_img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .goods-info {
+    padding: 30px 0 40px;
+    .goods-info_title{
+      @include nowrap(335px);
+    }
+    .detail-btn {
+      width:270px;
+      margin: 30px auto 0;
+      display: block;
+      line-height: 70px;
+      text-align: center;
+      color: $cjBlue;
+      border: 1px solid $cjBlue; /*no*/
+      border-radius: 10px;
+    }
+  }
+}

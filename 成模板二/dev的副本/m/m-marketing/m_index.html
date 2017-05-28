@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>落地页</title>
+	<link rel="stylesheet" href="/custom/css/m/reset.min.css">
+	<link rel="stylesheet" href="/custom/css/m/m-marketing/m_index.min.css">
+	<script type="text/javascript">
+		function get_hfs() {
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		}
+		get_hfs();
+		function throttle(method, context) {
+			clearTimeout(method.timer);
+			method.timer = setTimeout(function () {
+				method.call(context);
+			}, 100);
+		}
+		window.onresize = function () {
+			throttle(get_hfs);
+		}
+	</script>
+</head>
+<body>
+	<div class="floor-content">
+		<!-- 实时数据 -->
+		<div class="live-data">
+			<h3 class="data-title">实时数据</h3>
+			<ul class="data-list clearfix">
+				<li class="data-item">
+					<img src="/custom/img/m/m-marketing/data_scan.png" class="data-img">
+					<p class="data-name">扫码量</p>
+					<strong  class="num data_scan">1,947,294,723</strong>
+				</li>
+				<li class="data-item">
+					<img src="/custom/img/m/m-marketing/data_person.png" class="data-img">
+					<p class="data-name">扫码用户数</p>
+					<strong  class="num data_person">1,947,294,723</strong>
+				</li>
+				<li class="data-item">
+					<img src="/custom/img/m/m-marketing/data_goods.png" class="data-img">
+					<p class="data-name">扫码商品数</p>
+					<strong  class="num data_goods">1,947,294,723</strong>
+				</li>
+				<li class="data-item">
+					<img src="/custom/img/m/m-marketing/data_visit.png" class="data-img">
+					<p class="data-name">访问用户数</p>
+					<strong  class="num data_visit">1,947,294,723</strong>
+				</li>
+				<li class="data-item">
+					<img src="/custom/img/m/m-marketing/data_added.png" class="data-img">
+					<p class="data-name">新用户数</p>
+					<strong  class="num data_added">1,947,294,723</strong>
+				</li>
+				<li class="data-item">
+					<img src="/custom/img/m/m-marketing/data_hb.png" class="data-img">
+					<p class="data-name">红包发放费用</p>
+					<strong  class="num data_hb">1,947,294,723</strong>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src="/custom/js/m/jquery.min.js"></script>
+</body>
+</html>

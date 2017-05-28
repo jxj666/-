@@ -1,0 +1,23 @@
+.unactivation-bg {
+	width: 750px;
+	height: 503px;
+	background: url('/custom/img/m/m-qc/unactivation.png') no-repeat;
+	background-size: 750px 503px;
+	position: relative;
+	.activation-img {
+		width: 116px;
+		height: 171px;
+		position: absolute;
+		top: 250px;
+		left: 319px;
+	}
+}
+.activate-content {
+	width: 365px;
+	height: 118px;
+	margin: 130px auto 0;
+	.activate {
+		width: 365px;
+		height: 118px;
+	}
+}

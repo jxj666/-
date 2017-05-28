@@ -1,0 +1,8 @@
+@mixin nowrap($width) {
+  @if $width > 0{
+    width: $width;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

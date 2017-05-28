@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>落地页</title>
+	<link rel="stylesheet" href="/custom/css/m/reset.min.css">
+	<link rel="stylesheet" href="/custom/css/m/m-qc/m_unactivation.min.css">
+	<script type="text/javascript">
+		function get_hfs() {
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		}
+		get_hfs();
+		function throttle(method, context) {
+			clearTimeout(method.timer);
+			method.timer = setTimeout(function () {
+				method.call(context);
+			}, 100);
+		}
+		window.onresize = function () {
+			throttle(get_hfs);
+		}
+	</script>
+</head>
+<body>
+	<div class="in_production_bg">
+		<img src="/custom/img/m/m-qc/clock.png" class="clock">
+		<div class="circle_bg">
+			<img src="/custom/img/m/m-qc/activation_img.png" class="activation_img">
+		</div>
+	</div>
+	<div class="product-content">
+		<p class="product-name">芙蓉王（硬）</p>
+		<p>规格：<span class="product-size">盒</span></p>
+		<p>生产商：<span class="producter">湖南中烟工业有限责任公司</span></p>
+	</div>
+	<div class="production-batch">
+		<p>二维码批次</p>
+		<p class="code-num">20160929000029</p>
+		<img src="/custom/img/m/m-qc/in_production_img.png" class="in_production_img">
+		<img src="/custom/img/m/m-qc/already_activation.png" class="already_activation invisible">
+	</div>
+	<div class="activation-list invisible">
+		<div class="activation-info">
+	    <p>12/06/2016</p>
+	    <p>常德二分厂入库质检</p>
+	    <p>申请激活</p>
+	  </div>
+	  <p class="formal">正式激活：<span class="activation-time">12/06/2016</span></p>
+	</div>
+
+	<a href="javascript:;" class="activation-btn" data-click="activation-btn">激活本批次</a>
+	<a href="javascript:;" class="again-activation-btn invisible">继续激活其他批次</a>
+	<script src="/custom/js/m/jquery.min.js"></script>
+	<script>
+		$('[data-click="activation-btn"]').click(function () {
+			$('.in_production_img').addClass('invisible');
+			$('.already_activation').removeClass('invisible');
+			$('.activation-list').removeClass('invisible');
+		})
+	</script>
+</body>
+</html>

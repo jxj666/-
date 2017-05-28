@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>落地页</title>
+	<link rel="stylesheet" href="/custom/css/m/reset.min.css">
+	<link rel="stylesheet" href="/custom/css/m/m-qc/m_login.min.css">
+	<script type="text/javascript">
+		function get_hfs() {
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		}
+		get_hfs();
+		function throttle(method, context) {
+			clearTimeout(method.timer);
+			method.timer = setTimeout(function () {
+				method.call(context);
+			}, 100);
+		}
+		window.onresize = function () {
+			throttle(get_hfs);
+		}
+	</script>
+</head>
+<body>
+<!-- <div id="content" class="content"> -->
+
+	<div class="login-bg">
+		<div class="logo">
+			<img src="../../img/m/m-qc/m_logo.png" class="login-logo">
+		</div>
+		<div class="headshot-content">
+			<img src="../../img/m/m-qc/headshot.png" class="headshot">
+		</div>
+		<div class="login-text">
+			<p>您将以访客的身份登陆</p>
+			<p class="company-name">成聚二维码营销云</p>	
+		</div>
+		<div class="bottom">
+			<p class="enterprise">当前企业：<span class="enterprise-name">湖南中烟工业有限责任公司</span></p>
+			<a href="javascript:;" class="cut-enterprise" data-click="cut-enterprise">切换企业</a>
+		</div>
+	</div>
+	<a class="login-btn" data-click="login-btn">确认进入</a>
+	<div class="pop invisible">
+		<div class="enterprise-pop invisible">
+			<h3 class="title">企业列表</h3>
+			<ul class="enterprise-list">
+				<li class="enterprise-item">
+					<a href="javascript:;">湖南中烟工业有限责任公司1</a>
+				</li>
+				<li class="enterprise-item">
+					<a href="javascript:;">湖南中烟工业有限责任公司2</a>
+				</li>
+				<li class="enterprise-item">
+					<a href="javascript:;">湖南中烟工业有限责任公司3</a>
+				</li>
+				<li class="enterprise-item">
+					<a href="javascript:;">湖南中烟工业有限责任公司4</a>
+				</li>
+				<li class="enterprise-item">
+					<a href="javascript:;">湖南中烟工业有限责任公司5</a>
+				</li>
+			</ul>
+			<a href="javascript:;" class="confirm-cut" data-click="confirm-cut">确认切换</a>
+		</div>
+	</div>
+
+<!-- </div> -->
+<script src="/custom/js/m/jquery.min.js"></script>
+<script src="/custom/js/m/m-qc/m_login.min.js"></script>
+<script>
+
+  // App.restartGlobalFunction();
+  // App.setPageTitle('登陆授权');
+
+  // $.getScript('/custom/js/m-qr/m_login.min.js').done(function () {
+  // })
+</script>
+</body>
+</html>

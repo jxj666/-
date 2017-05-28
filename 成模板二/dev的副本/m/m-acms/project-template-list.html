@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>模板管理</title>
+    <link rel="stylesheet" href="/custom/css/m/common/normalize.min.css">
+    <link rel="stylesheet" href="/custom/css/m/common/common.min.css">
+    <link rel="stylesheet" href="/custom/css/m/acms/project-template-list.min.css">
+    <script type="text/javascript">
+        function get_hfs() {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        }
+        get_hfs();
+        function throttle(method, context) {
+            clearTimeout(method.timer);
+            method.timer = setTimeout(function () {
+                method.call(context);
+            }, 100);
+        }
+        window.onresize = function () {
+            throttle(get_hfs);
+        }
+    </script>
+</head>
+<body class="body">
+<div class="content">
+    <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+            <a class="nav-link" href="#all" data-cj="tab">全部</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#saoma" data-cj="tab">扫码抽奖</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#kanjia" data-cj="tab">砍价促销</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#xifen" data-cj="tab">吸粉游戏</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#xuanchuan" data-cj="tab">宣传页</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade" id="all">
+            <div class="goods-list">
+                <div class="goods-item">
+                    <div class="goods-title">
+                        <img src="/custom/img/m/acms/activity_img1.png" class="activity_img">
+                        <div class="goods-mask text-center">
+                            <span>3000</span>个活动使用
+                        </div>
+                        <img src="/custom/img/m/acms/hot.png" class="goods-mask_hot">
+                    </div>
+                    <div class="goods-info">
+                        <div class="goods-info_title text-center">全部活动</div>
+                        <a href="javascript:;" class="detail-btn border-radius">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane active fade in" id="saoma">
+            <div class="goods-list">
+                <div class="goods-item">
+                    <div class="goods-title">
+                        <img src="/custom/img/m/acms/activity_img1.png" class="activity_img">
+                        <div class="goods-mask text-center">
+                            <span>3000</span>个活动使用
+                        </div>
+                        <img src="/custom/img/m/acms/hot.png" class="goods-mask_hot">
+                    </div>
+                    <div class="goods-info">
+                        <div class="goods-info_title text-center">扫码活动</div>
+                        <a href="javascript:;" class="detail-btn border-radius">查看详情</a>
+                    </div>
+                </div>
+                <div class="goods-item">
+                    <div class="goods-title">
+                        <img src="/custom/img/m/acms/activity_img2.png" class="activity_img">
+                        <div class="goods-mask text-center">
+                            <span>3000</span>个活动使用
+                        </div>
+                        <img src="/custom/img/m/acms/hot.png" class="goods-mask_hot">
+                    </div>
+                    <div class="goods-info">
+                        <div class="goods-info_title text-center">抽奖活动</div>
+                        <a href="javascript:;" class="detail-btn">查看详情</a>
+                    </div>
+                </div>
+                <div class="goods-item">
+                    <div class="goods-title">
+                        <img src="/custom/img/m/acms/activity_img2.png" class="activity_img">
+                        <div class="goods-mask text-center">
+                            <span>3000</span>个活动使用
+                        </div>
+                        <img src="/custom/img/m/acms/hot.png" class="goods-mask_hot">
+                    </div>
+                    <div class="goods-info">
+                        <div class="goods-info_title text-center">扫码抽奖活动扫码抽奖活动扫码抽奖活动</div>
+                        <a href="javascript:;" class="detail-btn">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/cadmin-ajax/plugins/jquery/jquery-3.2.1.min.js"></script>
+<script src="/custom/js/m/common/common.min.js"></script>
+<script src="/custom/js/m/acms/project-template-list.min.js"></script>
+</body>
+</html>

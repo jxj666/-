@@ -1,0 +1,135 @@
+$tzBlue: #03b0ff;
+.vertical-box {
+  background: #fff;
+  .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    background: $tzBlue;
+    color: #fff;
+    [contenteditable=true] {
+      color: #333;
+    }
+  }
+  .nav > li > a:focus, .nav > li > a:hover {
+    background: #e1e1e1;
+  }
+
+  .nav > li > a.focus {
+    background: transparent;
+  }
+  .nav > li.active > a.focus {
+    background: transparent;
+    [contenteditable=true] {
+      border: 1px solid $tzBlue;
+    }
+  }
+
+  .nav li a .fa {
+    font: inherit;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    outline: none;
+    display: block;
+  }
+
+  .box-title {
+    padding: 0 23px;
+    margin: 0;
+    margin-bottom: 10px;
+    height: 50px;
+    line-height: 50px;
+    a, a:hover, a:focus, a:visited, a:link {
+      color: $tzBlue;
+      text-decoration: none;
+    }
+  }
+
+  .wrapper {
+    padding: 0 0 15px !important;
+    overflow-y: auto;
+  }
+
+  .width-250 {
+    border-right: 1px #e1e1e1 solid;
+  }
+
+  .nav.nav-pills.nav-sm > li {
+    margin: 0;
+  }
+
+  .nav.nav-pills.nav-sm > li a {
+    padding: 0 25px;
+    border-radius: 0;
+    i {
+      line-height: 32px;
+      height: 32px;
+    }
+  }
+
+  [contenteditable=true] {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 10px;
+  }
+  //右半部分
+  .list-email > li.list-group-item:before {
+    content: none;
+  }
+  .list-email {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+  .list-email:before {
+    content: attr(data-title) "：";
+    position: absolute;
+    margin-top: 6px;
+    margin-left: -8em;
+  }
+
+  .list-group-item {
+    background-color: transparent;
+  }
+
+  .list-email > li.selected {
+    background: transparent;
+  }
+
+  .fa-square-o:before {
+    color: #444;
+  }
+
+  .list-email > li.selected .email-info, .list-email > li.selected .fa-square-o:before {
+    color: $tzBlue;
+  }
+
+  .list-email > li.list-group-item + li.list-group-item {
+    border-top: none;
+  }
+
+  .list-email > li.list-group-item {
+    padding: 5px 15px 5px 20px;
+  }
+
+  .list-email .email-checkbox {
+    height: auto;
+    line-height: 1;
+  }
+
+  .list-email {
+    padding-left: 8em;
+    margin-left: 23px;
+  }
+  label {
+    font-weight: inherit;
+    color: inherit;
+  }
+}
+
+.box-title {
+  .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+    top: 50%;
+    margin-top: -6px;
+  }
+}

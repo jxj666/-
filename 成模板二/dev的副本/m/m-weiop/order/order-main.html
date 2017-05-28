@@ -1,0 +1,224 @@
+<<<<<<< Updated upstream:html/dev/m/m-weiop/order/order-main.html
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>订单管理</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta name="keywords" content="企业,大数据,二维码,移动营销,营销,数据统计,万川">
+	<meta name="description" content="成聚移动,一站式营销解决方案">
+	<meta content="成聚移动" name="author" />
+	<link rel="icon" href="/custom/img/common/wc.png">
+	<script type="text/javascript">
+        function get_hfs() {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        }
+        get_hfs();
+        function throttle(method, context) {
+            clearTimeout(method.timer);
+            method.timer = setTimeout(function () {
+                method.call(context);
+            }, 100);
+        }
+        window.onresize = function () {
+            throttle(get_hfs);
+        }
+	</script>
+	<script src="/cadmin-ajax/plugins/pace/pace.min.js"></script>
+	<link href="/custom/css/m/m-qr/m_order.min.css" rel="stylesheet"/>
+</head>
+<div id="content" class="content">
+	<div class="m-container">
+		<div class="search-content margin-auto">
+			<select class="selectpicker form-control" data-live-search="true" data-style="btn-white" data-size="10"
+					id="getActivityId">
+				<#if activityList?? && (activityList?size gt 0) >
+					<#list activityList as a>
+						<option value="${a.activityId}">${a.name}</option>
+					</#list>
+					<#else>
+						<option value="-1">暂无活动</option>
+				</#if>
+			</select>
+=======
+<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
+<link href="/cadmin-ajax/plugins/DataTables/media/css/dataTables.bootstrap.min.css"
+      rel="stylesheet"/>
+<link href="/cadmin-ajax/plugins/bootstrap-select/dist/css/bootstrap-select.min.css"
+      rel="stylesheet"/>
+<!-- ================== END PAGE LEVEL STYLE ================== -->
+
+<link href="/custom/css/m/m-qr/m_order.min.css" rel="stylesheet"/>
+<link href="/custom/css/m/m-qr/reset.min.css" rel="stylesheet"/>
+
+<div id="content" class="content">
+	<div class="m-container">
+		<div class="search-content">
+			<input type="text" name="" class="search" placeholder="活动类型">
+			<span class="dropdown-icon"></span>
+>>>>>>> Stashed changes:html/dev/m-qr/m_order.html
+			<div class="btns">
+				<a href="javascript:;" aria-hidden="true">
+					<img src="img/m-qr/search_icon.png" class="search-icon">
+				</a>
+				<span class="divider"></span>
+				<a href="javascript:;" class="share-icon"></a>
+			</div>
+		</div>
+		<ul class="step-list">
+			<li class="step-item order-status dropdown active">
+				<a href="javascript:;" data-toggle="dropdown">订单状态
+					<span class="glyphicon glyphicon-triangle-bottom"></span>
+				</a>
+				
+				<ul class="dropdown-menu">
+					<li>待支付</li>
+					<li>已支付</li>
+					<li class="active bg-warning">配送中</li>
+				</ul>
+			</li>
+			<li class="step-item pay-status">支付状态
+				<span class="glyphicon glyphicon-triangle-bottom"></span>
+			</li>
+			<li class="step-item create-time">创建时间
+				<span class="glyphicon glyphicon-triangle-bottom"></span>
+			</li>
+			<li class="step-item prize-type">奖品类型
+				<span class="glyphicon glyphicon-triangle-bottom"></span>
+			</li>
+		</ul>	
+	</div>
+	<div class="show-list clearfix">
+		<div class="card clearfix">
+			<div class="left">
+				<div class="left-top clearfix">
+					<p class="orders">订单号：<strong class="order-num">12424629223478</strong></p>
+					<p class="goods">商品：<span class="goods-name">伊利大果粒2瓶</span></p>
+					<p class="pay">支付金额： <span class="pay-money">￥100</span></p>
+				</div>
+				<div class="left-bottom">
+					<p class="receiving-name">王二宝先生&nbsp;&nbsp;&nbsp;&nbsp;<span class="plone">13888888889</span></p>
+					<p class="receiving-address">北京市朝阳区北苑路凯旋城170号院1号楼8号楼9号楼702</p>
+				</div>
+			</div>
+			<ul class="right">
+				<li class="send">配送中</li>
+				<li class="modification">修改</li>
+				<li class="scan-waybill">扫运单</li>
+				<li class="log" data-click="log">日志</li>
+			</ul>
+		</div>
+		<div class="card clearfix">
+			<div class="left">
+				<div class="left-top clearfix">
+					<p class="orders">订单号：<strong class="order-num">12424629223478</strong></p>
+					<p class="goods">商品：<span class="goods-name">伊利大果粒2瓶</span></p>
+					<p class="pay">支付金额： <span class="pay-money">￥100</span></p>
+				</div>
+				<div class="left-bottom">
+					<p class="receiving-name">王二宝先生&nbsp;&nbsp;&nbsp;&nbsp;<span class="plone">13888888889</span></p>
+					<p class="receiving-address">北京市朝阳区北苑路凯旋城170号院1号楼8号楼9号楼702</p>
+				</div>
+			</div>
+			<ul class="right">
+				<li class="paid">已支付</li>
+				<li class="modification">修改</li>
+				<li class="scan-waybill">扫运单</li>
+				<li class="log" data-click="log">日志</li>
+			</ul>
+		</div>
+		<div class="card clearfix">
+			<div class="left">
+				<div class="left-top clearfix">
+					<p class="orders">订单号：<strong class="order-num">12424629223478</strong></p>
+					<p class="goods">商品：<span class="goods-name">伊利大果粒2瓶</span></p>
+					<p class="pay">支付金额： <span class="pay-money">￥100</span></p>
+				</div>
+				<div class="left-bottom">
+					<p class="receiving-name">王二宝先生&nbsp;&nbsp;&nbsp;&nbsp;<span class="plone">13888888889</span></p>
+					<p class="receiving-address">北京市朝阳区北苑路凯旋城170号院1号楼8号楼9号楼702</p>
+				</div>
+			</div>
+			<ul class="right">
+				<li class="send">配送中</li>
+				<li class="modification">修改</li>
+				<li class="scan-waybill">扫运单</li>
+				<li class="log" data-click="log">日志</li>
+			</ul>
+		</div>
+	</div>
+	<div class="pop clearfix">
+	 	<div class="order-pop">
+			<h3>修改订单信息操作</h3>
+			<div class="form-group">
+				<label class="form-item">收货人 
+					<input type="text" name="" value="王二宝先生">
+				</label>
+			</div>
+			<div class="form-group">
+				<label class="form-item">联系电话 
+					<input type="text" name="" value="13888888889">
+				</label>
+			</div>
+			<div class="form-group">
+				<label class="form-item">收货地址
+					<div class="select-menu">
+						<span class="province">省</span>
+						<select class="province-list">
+							<option>云南省</option>
+							<option>河北省</option>
+							<option>河南省</option>
+							<option>黑龙江省</option>
+						</select>
+						<span class="glyphicon glyphicon-triangle-bottom dropdown-icon" aria-hidden="true"></span>
+					</div>
+				</label>
+				<label class="form-item border-radius">
+					<input type="text" name="">
+				</label>
+			</div>
+			<!-- <div class="input-group input-group-lg">
+			  <span class="input-group-addon" id="sizing-addon1">收货人</span>
+			  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+			</div> -->
+		</div>
+		<!-- 日志弹出框 -->
+		<div class="log-pop border-radius margin-auto none">
+			<h3 class="text-center">修改日志信息操作</h3>
+			<ul class="log-list list-unstyled">
+				<li class="log-item clearfix">
+					<p class="log-time pull-left text-center">2017.03.07 14:02:02</p>
+					<span class="divider"></span>
+					<P class="log-operat pull-right text-center">二维码批次修改<span class="operat-name">王二宝</span></P>
+				</li>
+				<li class="log-item clearfix">
+					<p class="log-time pull-left text-center">2017.03.07 14:02:02</p>
+					<span class="divider"></span>
+					<P class="log-operat pull-right text-center">二维码批次修改<span class="operat-name">王二宝</span></P>
+				</li><li class="log-item clearfix">
+					<p class="log-time pull-left text-center">2017.03.07 14:02:02</p>
+					<span class="divider"></span>
+					<P class="log-operat pull-right text-center">二维码批次修改<span class="operat-name">王二宝</span></P>
+				</li>
+			</ul>
+			<a href="javascript:;" data-click="return" class="return text-center border-radius">返回</a>
+		</div>
+	</div>
+</div>
+
+<script>
+    $.getScript('/cadmin-ajax/plugins/moment/min/moment.min.js').done(function () {
+        $.getScript('/cadmin-ajax/plugins/moment/locale/zh-cn.js').done(function () {
+            $.getScript('/cadmin-ajax/plugins/microtemplating/microtemplating.min.js').done(function () {
+                $.getScript('/custom/js/order/order-index.min.js').done(function () {
+                    $.getScript('/cadmin-ajax/plugins/bootstrap-select/dist/js/bootstrap-select.min.js').done(function () {
+                        $.getScript('/cadmin-ajax/plugins/bootstrap-select/dist/js/i18n/defaults-zh_CN.min.js').done(function () {
+                            $('.selectpicker').selectpicker();
+                        })
+                    })
+                })
+            })
+        })
+    })
+</script>

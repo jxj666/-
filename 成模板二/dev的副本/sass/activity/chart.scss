@@ -1,0 +1,46 @@
+.text-detail{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color:#6abae8;
+  font-size: 14px;
+  p{
+    margin:0;
+    padding:0;
+  }
+  .rate{
+    font-size: 30px;
+    span{
+      font-size: 16px;
+    }
+  }
+  .direct{
+    font-size: 14px;
+    padding:12px 0 8px;
+  }
+}
+
+#data-table td{
+  vertical-align: middle;
+}
+
+
+.tip_btn{
+  background: #e6ecef;
+  font-size: 12px;
+  border-radius: 50%;
+  color: #92a0a7;
+  padding: 0;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+  vertical-align: bottom;
+  border: none;
+}
+
+.tooltip-inner{max-width:200px;padding:3px 8px;color:#e1e1e1;background-color:#676767 ;border-radius:4px;text-align: left}
+.tooltip-arrow{position:absolute;width:0;height:0;border-color:transparent;border-style:solid}
+
+.tooltip.right .tooltip-arrow{top:50%;left:0;margin-top:-5px;border-width:5px 5px 5px 0;border-right-color:#676767}

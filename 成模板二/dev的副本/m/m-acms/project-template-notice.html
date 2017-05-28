@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>公告配置</title>
+    <link rel="stylesheet" href="/custom/css/m/common/normalize.min.css">
+    <link rel="stylesheet" href="/custom/css/m/common/common.min.css">
+    <link rel="stylesheet" href="/cadmin-ajax/plugins/Swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="/cadmin-ajax/plugins/baguette/baguetteBox.min.css">
+    <link rel="stylesheet" href="/custom/css/m/acms/j_reset.min.css">
+    <link rel="stylesheet" href="/custom/css/m/acms/project-template-notice.min.css">
+    <script type="text/javascript">
+    function get_hfs() {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    }
+    get_hfs();
+
+    function throttle(method, context) {
+        clearTimeout(method.timer);
+        method.timer = setTimeout(function() {
+            method.call(context);
+        }, 100);
+    }
+    window.onresize = function() {
+        throttle(get_hfs);
+    }
+    </script>
+</head>
+<!-- 专属单词: notice -->
+<!-- ^_^
+特殊前后缀说明:
+前缀:1. g_ 布局 2. m_ 模块 3. j_ 交互
+后缀:1. _h 头部 2. _b 主体 3. _f 尾部 4. _s 段落 5. _n 导航 6. _a 部分/其他 7. _c 控制 8. _e 说明
+^_^ -->
+
+<body class="body">
+    <div class="content">
+        <!-- 头部大图 -->
+        <div class="banner">
+            <h1 class="banner-info">伊利大果粒<br>扫码抢红包</h1>
+            <img src="/custom/img/m/acms/fudai.png" class="banner-img">
+            <p class="banner-time">活动时间：2017年5月1日-12月31日</p>
+            <ul class="banner-mask clearfix">
+                <li class="banner-mask_item">
+                    2017/04/18-2017/06/30
+                </li>
+                <li class="banner-mask_item spread">
+                    #扫码抽奖
+                </li>
+            </ul>
+        </div>
+        <!-- 活动与数据 -->
+        <div class="g_notice_data">
+            <div class="data_title">
+                <h3>芙蓉王扫码活动</h3></div>
+            <div class="base_data">
+                <h5>基础数据</h5>
+                <div class="data_wall">
+                    <div class="data_boxs">
+                        <div class="data_box">
+                            <img src="/custom/img/m/acms/notice_07.png" alt="tb">
+                            <h6>用户访问量</h6>
+                            <p>1,222,3333,111</p>
+                        </div>
+                        <div class="data_box">
+                            <img src="/custom/img/m/acms/notice_09.png" alt="tb">
+                            <h6>页面访问量</h6>
+                            <p>1,222,3333,111</p>
+                        </div>
+                        <div class="data_box">
+                            <img src="/custom/img/m/acms/notice_12.png" alt="tb">
+                            <h6>扫码访问量</h6>
+                            <p>1,222,3333,111</p>
+                        </div>
+                        <div class="data_box">
+                            <img src="/custom/img/m/acms/notice_07.png" alt="tb">
+                            <h6>其他访问量</h6>
+                            <p>1,222,3333,111</p>
+                        </div>
+                        <div class="data_box">
+                            <img src="/custom/img/m/acms/notice_07.png" alt="tb">
+                            <h6>其他访问量</h6>
+                            <p>1,222,3333,111</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 相关配置 -->
+        <div class="g_notice_set">
+            <div class="set_switch">
+                <div class="switch_n">
+                    <ul>
+                        <li>活动属性</li>
+                        <li class="j_active">公告配置</li>
+                        <li>礼品政策</li>
+                        <li>关联码包</li>
+                        <li>权限管理</li>
+                        <li>其他管理</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="set_menu">
+                <div class="menu_h">
+                    <p>是否启用公告列表</p>
+                    <div class="menu_c">
+                        <div class="yes_c  j_active">是</div>
+                        <div class="no_c">否</div>
+                    </div>
+                </div>
+                <div class="menu_b">
+                    <div class="menu_a">
+                        <img src="/custom/img/m/acms/notice_18.png" alt="sx">
+                        <div class="menu_s">
+                            <h3>伊利大果粒&nbsp;&nbsp;&nbsp;扫码领红包</h3>
+                            <p>2017/01/01-2017/11/11</p>
+                            <button>编辑</button>
+                        </div>
+                    </div>
+                    <div class="menu_a">
+                        <img src="/custom/img/m/acms/notice_18.png" alt="sx">
+                        <div class="menu_s">
+                            <h3>伊利大果粒&nbsp;&nbsp;&nbsp;扫码领红包</h3>
+                            <p>2017/01/01-2017/11/11</p>
+                            <button>编辑</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部按钮 -->
+        <div class="g_notice_btn">
+            <button>活动数据</button>
+            <button>点击体验</button>
+        </div>
+        <!-- 弹窗 -->
+        <div class="g_notice_pop hide">
+            <div class="pop_box">
+                <div class="box_h">
+                    <h2>内容编辑</h2></div>
+                <div class="box_g">
+                    <div class="box_a">
+                        <h5>公告图片上传</h5>
+                        <div class="img_up">
+                            <h5>+</h5>
+                            <h6>点击上传</h6>
+                            <p>建议图片尺寸（690*340）</p>
+                        </div>
+                    </div>
+                    <input id="j_img_up" type="file" name="" style="width: 0;height: 0;visibility: hidden;">
+                    <div class="box_a">
+                        <h5>主题设置</h5>
+                        <div class="title_set">
+                            <h6>活动主题文字:</h6>
+                            <input type="text" name="" maxlength="16" placeholder="请输入活动主题，字数不可超过16字">
+                        </div>
+                    </div>
+                    <div class="box_a">
+                        <h5>时间设置</h5>
+                        <div class="time_a">
+                            <div class="time_s"><span>开始时间:</span>
+                                <input type="date">
+                            </div>
+                            <div class="time_s"><span>结束时间:</span>
+                                <input type="date" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_a">
+                        <div class="link">
+                            <div class="link_e">（非必填选项）</div>
+                            <input type="text" name="" placeholder="请输入跳转链接">
+                        </div>
+                    </div>
+                </div>
+                <div class="box_f">
+                    <div class="menu_h">
+                        <p>是否顶置</p>
+                        <div class="menu_c">
+                            <div class="yes_c  j_active">是</div>
+                            <div class="no_c">否</div>
+                        </div>
+                        <div class="menu_btns">
+                            <button class="j_yes">确定</button>
+                            <button class="j_no">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/cadmin-ajax/plugins/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/cadmin-ajax/plugins/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/custom/js/m/common/common.min.js"></script>
+    <script src="/cadmin-ajax/plugins/baguette/baguetteBox.min.js"></script>
+    <script src="/cadmin-ajax/plugins/Swiper/dist/js/swiper.jquery.min.js"></script>
+    <script src="/custom/js/m/acms/project-template-notice.min.js"></script>
+</body>
+
+</html>

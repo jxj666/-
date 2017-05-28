@@ -1,0 +1,1260 @@
+body {
+    background: #201f2f;
+}
+
+#ajax-content, #page-container {
+    width: 100%;
+    height: 100%;
+}
+
+#ajax-content .content {
+    padding-top: 8%;
+    height: 100%;
+}
+
+#ajax-content .content h2 {
+    float: right;
+    margin-right: 100px;
+    color: #fff;position: relative;z-index: 1000;
+}
+
+#ajax-content .content h4 {
+    float: left;
+    margin-right: 30px;
+    color: #fff000;
+}
+/*切换数据*/
+.cut-container {
+    width: 120px;
+    position: relative;
+    z-index: 10;
+    top: 50px;
+    z-index: 10;
+    left: 160px;
+}
+.activation {
+    background: #8f8f97;
+    color: #f4e635 !important;
+    font-weight: bold;
+}
+.cut {
+    list-style: none;
+    padding: 0;
+    width: 120px;
+    font-size: 1px;
+    background: #575662;
+}
+.cut a {
+    color: #d5d5d6;
+    text-decoration: none;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px 0 30px;
+    font-size: 14px;
+}
+
+#ajax-content .content .time {
+    display: inline-block;
+    color: #fff;
+    -webkit-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9);
+}
+
+#ajax-content .content .total-num {
+    clear: both;
+    color: #fff;
+    letter-spacing: 10px;
+}
+
+#ajax-content .content .total-num span {
+    display: inline-block;
+    margin-right: 4px;
+    text-align: center;
+    text-indent: 5px;
+    background: #146e7c;
+}
+
+#ajax-content .content .total-num span:nth-child(2), #ajax-content .content .total-num span:nth-child(5), #ajax-content .content .total-num span:nth-child(8){
+    margin-right: 15px;
+}
+
+#ajax-content .content .row {
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#ajax-content .content .left {
+    float: left;
+    margin-top: 15px;
+    border-top: 1px solid #3d3c4d;
+}
+
+#ajax-content .content .desc {
+    position: relative;
+    display: block;
+    line-height: 1.5;
+    color: #fff;
+}
+
+#ajax-content .content .desc em {
+    color: #fff000;
+}
+
+#ajax-content .content .left h6 {
+    color: #fff;
+}
+
+.top100cities-wrap {
+    position: relative;
+    border-bottom: 1px solid #3d3c4d;
+    padding-bottom: 10px;
+}
+
+#ajax-content .content .left .top100cities-wrap .top20cities {
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+    color: #fff;
+}
+
+#ajax-content .content .left .top100cities-wrap .top20cities .city-wrap {
+    overflow: hidden;
+}
+
+#ajax-content .content .left .top100cities-wrap .top20cities .city {
+    float: left;
+    width: 130px;
+}
+
+#ajax-content .content .left .top100cities-wrap .top20cities .city span {
+    width: 80px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#ajax-content .content .left .top100cities-wrap .top20cities .city em {
+    /*margin-left: 8px;*/
+    color: #fff700;
+}
+
+/*#ajax-content .content .left .top100cities-wrap:after, #ajax-content .content .left .top100cities-wrap:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #4a4956
+}*/
+
+#ajax-content .content .right {
+    float: left;
+}
+
+#ajax-content .content .right span {
+    position: absolute;
+    right: 2%;
+    bottom: 10%;
+    z-index: 9999;
+    padding: 3px 6px;
+    color: #fff;
+    cursor: pointer;
+    background: hsla(0, 0%, 100%, .1);
+    border-radius: 2px;
+}
+
+#ajax-content .content .list {
+    overflow: hidden;
+    /*position: absolute;*/
+    color: #fff;
+}
+
+#ajax-content .content .list li {
+    margin-bottom: 5px;
+}
+
+#ajax-content .content .list li img {
+    margin-right: 6px;
+}
+
+#ajax-content .content .list li em {
+    margin-left: 8px;
+    color: #6d6a95;
+}
+
+.color {
+    color: #fff700;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.invisible {
+    display: none;
+}
+
+.content.fixed {
+    position: fixed;
+    left: 0;
+    top: 50px;
+    z-index: 9990;
+    margin-left: 0;
+    padding: 20px 15px 0 45px;
+    width: 100%;
+    height: 100%;
+    background: #201f2f;
+}
+
+.tab_fix{
+    position: fixed !important;top:0;left: 0;margin-left: 0 !important;z-index: 10000 !important;
+}
+
+@media screen and (max-width: 1006px) {
+    .content {
+        margin-left: 160px;
+    }
+
+    .tab_list{
+        margin-left: 160px;
+    }
+
+    .time {
+        margin-top: 3px;
+        font-size: 10px;
+    }
+
+    .total-num {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 26px;
+    }
+
+    .total-num span {
+        height: 38px;
+        line-height: 40px;
+        width: 30px;
+    }
+
+    h2, h4 {
+        font-size: 14px;
+    }
+
+    .left {
+        font-size: 12px;
+        width: 34%;
+        /*height: 90%;*/
+        height: 60%;
+    }
+
+    .left h6 {
+        margin-top: 26px;
+        font-size: 1em;
+    }
+
+    .left .top100cities-wrap {
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    .left .top100cities-wrap .top20cities {
+        margin-top: 8px;
+        height: 220px;
+        font-size: .7em;
+    }
+
+    .left .top100cities-wrap .top20cities .city {
+        margin-bottom: 3px;
+    }
+
+    .left .top100cities-wrap .top20cities .city span {
+        width: 50px;
+        vertical-align: -20%;
+    }
+
+    .left .top100cities-wrap .top20cities .city:nth-child(odd) {
+        margin-right: 34px;
+    }
+
+    /*.left .top100cities-wrap:before {
+        top: -38px
+    }*/
+
+    /*.left .top100cities-wrap:after, .left .top100cities-wrap:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #4a4956
+    }*/
+
+    /*.left .top100cities-wrap:after {
+        bottom: -15px
+    }*/
+
+    .desc {
+        font-size: .8em;
+    }
+
+    .right {
+        width: 66%;
+        /*height: 90%;*/
+        height: 60%;
+    }
+
+    .right .map {
+        top: 8%;
+        left: 40%;
+    }
+
+    .right span {
+        font-size: 12px;
+    }
+
+    .list {
+        bottom: -1%;
+        height: 24px;
+        line-height: 24px;
+        font-size: 10px;
+    }
+
+    .list img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (min-width: 1006px) and (max-width: 1205px) {
+    .content {
+        margin-left: 150px;
+    }
+    .cut-container {
+        left: 150px;
+    }
+    .tab_list{
+        margin-left: 150px;
+    }
+
+    .time {
+        margin-top: 3px;
+        font-size: 10px;
+    }
+
+    .total-num {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    .total-num span {
+        height: 45px;
+        line-height: 48px;
+        width: 34px;
+    }
+
+    h2, h4 {
+        font-size: 16px;
+    }
+
+    .left {
+        font-size: 15px;
+        width: 34%;
+        /*height: 90%;*/
+        height: 65%;
+    }
+
+    .left h6 {
+        margin-top: 30px;
+        font-size: 1em;
+    }
+
+    .left .top100cities-wrap {
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .left .top100cities-wrap .top20cities {
+        margin-top: 8px;
+        height: 240px;
+        font-size: .7em;
+    }
+
+    .left .top100cities-wrap .top20cities .city {
+        margin-bottom: 3px;
+    }
+
+    .left .top100cities-wrap .top20cities .city span {
+        width: 50px;
+        vertical-align: -20%;
+    }
+
+    .left .top100cities-wrap .top20cities .city:nth-child(odd) {
+        margin-right: 40px;
+    }
+
+    /*.left .top100cities-wrap:before {
+        top: -45px;
+    }
+
+    .left .top100cities-wrap:after, .left .top100cities-wrap:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #4a4956;
+    }
+
+    .left .top100cities-wrap:after {
+        bottom: -15px;
+    }*/
+
+    .desc {
+        font-size: .8em;
+    }
+
+    .right {
+        width: 66%;
+        /*height: 90%;*/
+        height: 65%;
+    }
+
+    .right .map {
+        top: 8%;
+        left: 40%;
+    }
+
+    .right span {
+        font-size: 14px;
+    }
+
+    .list {
+        bottom: 6%;
+        height: 26px;
+        line-height: 26px;
+        font-size: 12px;
+    }
+
+    .list img {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media screen and (min-width: 1206px) and (max-width: 1380px) {
+    .content {
+        margin-left: 160px;
+    }
+
+    .tab_list{
+        margin-left: 160px;
+    }
+
+    .time {
+        margin-top: 3px;
+        font-size: 13px;
+    }
+
+    .total-num {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 45px;
+    }
+
+    .total-num span {
+        height: 59px;
+        line-height: 60px;
+        width: 38px;
+    }
+
+    .left, h2, h4 {
+        font-size: 18px;
+    }
+
+    .left {
+        width: 34%;
+        /*height: 90%;*/
+        height: 65%;
+    }
+
+    .left h6 {
+        margin-top: 50px;
+        font-size: 1em;
+    }
+
+    .left .top100cities-wrap {
+        position: relative;
+        padding-bottom: 25px;
+    }
+
+    .left .top100cities-wrap .top20cities {
+        margin-top: 12px;
+        height: 260px;
+        font-size: .8em;
+    }
+
+    .left .top100cities-wrap .top20cities .city {
+        margin-bottom: 5px;
+    }
+
+    .left .top100cities-wrap .top20cities .city span {
+        width: 65px;
+        vertical-align: -20%;
+    }
+
+    .left .top100cities-wrap .top20cities .city:nth-child(odd) {
+        margin-right: 60px;
+    }
+
+    /*.left .top100cities-wrap:before {
+        top: -60px;
+    }
+
+    .left .top100cities-wrap:after, .left .top100cities-wrap:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #4a4956;
+    }
+
+    .left .top100cities-wrap:after {
+        bottom: -15px;
+    }*/
+
+    .desc {
+        font-size: .8em;
+    }
+
+    .right {
+        width: 66%;
+        /*height: 90%;*/
+        height: 65%;
+    }
+
+    .right .map {
+        top: 8%;
+        left: 40%;
+    }
+
+    .right span {
+        font-size: 16px;
+    }
+
+    .list {
+        bottom: 5%;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .list img {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media screen and (min-width: 1381px) and (max-width: 1830px) {
+    .content {
+        margin-left: 170px;
+    }
+
+    .tab_list{
+        margin-left: 170px;
+    }
+    .cut-container {
+        left: 170px;
+    }
+    .time {
+        margin-top: 9px;
+        font-size: 17px;
+    }
+
+    .total-num {
+        margin-top: 13px;
+        margin-bottom: 13px;
+        font-size: 80px;
+    }
+
+    .total-num span {
+        height: 84px;
+        line-height: 86px;
+        width: 54px;
+    }
+
+    h2, h4 {
+        font-size: 28px;
+    }
+
+    .left {
+        font-size: 19px;
+        width: 37%;
+        height: 90%;
+    }
+
+    .left h6 {
+        margin-top: 52px;
+        font-size: 1.4em;
+    }
+
+    .left .top100cities-wrap {
+        position: relative;
+        padding-bottom: 25px;
+    }
+
+    .left .top100cities-wrap .top20cities {
+        margin-top: 16px;
+        height: 415px;
+        font-size: 1.2em;
+    }
+
+    .left .top100cities-wrap .top20cities .city {
+        margin-bottom: 8px;
+    }
+
+    .left .top100cities-wrap .top20cities .city span {
+        width: 106px;
+        vertical-align: -20%;
+    }
+
+    .left .top100cities-wrap .top20cities .city:nth-child(odd) {
+        margin-right: 90px;
+    }
+
+    /*.left .top100cities-wrap:before {
+        top: -60px;
+    }
+
+    .left .top100cities-wrap:after, .left .top100cities-wrap:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #4a4956;
+    }
+
+    .left .top100cities-wrap:after {
+        bottom: -20px;
+    }*/
+
+    .desc {
+        font-size: 1.3em;
+    }
+
+    .right {
+        width: 60%;
+        height: 90%;
+    }
+
+    .right .map {
+        top: 8%;
+        left: 38%;
+    }
+
+    .right span {
+        font-size: 18px;
+    }
+
+    .list {
+        bottom: 6%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 24px;
+    }
+
+    .list img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media screen and (min-width: 1831px) and (max-width: 1880px) {
+    .content {
+        margin-left: 170px;
+    }
+
+    .tab_list{
+        margin-left: 170px;
+    }
+    .cut-container {
+        left: 170px;
+    }
+    .time {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .total-num {
+        margin-top: 13px;
+        margin-bottom: 13px;
+        font-size: 78px;
+    }
+
+    .total-num span {
+        height: 82px;
+        line-height: 85px;
+        width: 51px;
+    }
+
+    h2, h4 {
+        font-size: 28px;
+    }
+
+    .left {
+        width: 34%;
+        font-size: 19px;
+    }
+
+    .left h6 {
+        margin-top: 52px;
+        font-size: 1.4em;
+    }
+
+    .left .top100cities-wrap {
+        position: relative;
+        padding-bottom: 25px;
+    }
+
+    .left .top100cities-wrap .top20cities {
+        margin-top: 16px;
+        height: 415px;
+        font-size: 1.2em;
+    }
+
+    .left .top100cities-wrap .top20cities .city {
+        margin-bottom: 8px;
+    }
+
+    .left .top100cities-wrap .top20cities .city span {
+        width: 68px;
+        vertical-align: -20%;
+    }
+
+    .left .top100cities-wrap .top20cities .city:nth-child(odd) {
+        margin-right: 60px;
+    }
+
+    /*.left .top100cities-wrap:before {
+        top: -60px;
+    }
+
+    .left .top100cities-wrap:after, .left .top100cities-wrap:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #4a4956;
+    }
+
+    .left .top100cities-wrap:after {
+        bottom: -20px;
+    }*/
+
+    .desc {
+        font-size: 1.2em;
+    }
+
+    .right {
+        width: 62%;
+    }
+
+    .right .map {
+        top: 8%;
+        left: 34%;
+    }
+
+    .right span {
+        font-size: 18px;
+    }
+
+    .list {
+        bottom: 8%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 24px;
+    }
+
+    .list img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media screen and (min-width: 1881px) and (max-width: 1900px) {
+    .content {
+        margin-left: 170px;
+    }
+
+    .tab_list{
+        margin-left: 170px;
+    }
+    .cut-container {
+        left: 170px;
+    }
+    .time {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .total-num {
+        margin-top: 13px;
+        margin-bottom: 13px;
+        font-size: 94px;
+    }
+
+    .total-num span {
+        height: 95px;
+        line-height: 99px;
+        width: 61px;
+    }
+
+    h2, h4 {
+        font-size: 34px;
+    }
+
+    .left {
+        width: 34%;
+        font-size: 24px;
+    }
+
+    .left h6 {
+        margin-top: 72px;
+        font-size: 1.2em;
+    }
+
+    .left .top100cities-wrap {
+        position: relative;
+        padding-bottom: 30px;
+    }
+
+    .left .top100cities-wrap .top20cities {
+        margin-top: 19px;
+        height: 455px;
+        font-size: 1.1em;
+    }
+
+    .left .top100cities-wrap .top20cities .city {
+        margin-bottom: 8px;
+    }
+
+    .left .top100cities-wrap .top20cities .city span {
+        width: 100px;
+        vertical-align: -20%;
+    }
+
+    .left .top100cities-wrap .top20cities .city:nth-child(odd) {
+        margin-right: 110px;
+    }
+
+    /*.left .top100cities-wrap:before {
+        top: -82px;
+    }
+
+    .left .top100cities-wrap:after, .left .top100cities-wrap:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #4a4956;
+    }
+
+    .left .top100cities-wrap:after {
+        bottom: -35px;
+    }*/
+
+    .desc {
+        font-size: 1.2em;
+    }
+
+    .right {
+        width: 62%;
+    }
+
+    .right .map {
+        top: 8%;
+        left: 34%;
+    }
+
+    .right span {
+        font-size: 18px;
+    }
+
+    .list {
+        bottom: 10%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 24px;
+    }
+
+    .list img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media screen and (min-width: 1901px) and (max-width: 2416px) {
+    .content {
+        margin-left: 200px;
+    }
+
+    .tab_list{
+        margin-left: 200px;
+    }
+    .cut-container {
+        left: 200px;
+    }
+    .total-num {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 100px;
+    }
+
+    .total-num span {
+        height: 128px;
+        line-height: 132px;
+        width: 73px;
+    }
+
+    .right {
+        width: 62%;
+        height: 90%;
+    }
+
+    .right .map {
+        top: 8%;
+        left: 38%;
+    }
+
+    .right span {
+        font-size: 24px;
+    }
+
+    .left {
+        width: 38%;
+        height: 90%;
+        font-size: 30px;
+    }
+
+    .right span {
+        font-size: 20px;
+    }
+
+    h2, h4 {
+        font-size: 40px;
+    }
+
+    h6 {
+        margin-top: 110px;
+        font-size: 35px;
+    }
+
+    .time {
+        margin-top: 14px;
+        font-size: 22px;
+    }
+    .top100cities-wrap {
+        padding-bottom: 35px;
+    }
+    .top100cities-wrap .top20cities {
+        margin-top: 19px;
+        height: 465px;
+        font-size: .9em;
+    }
+
+    .top100cities-wrap .top20cities .city {
+        margin-bottom: 8px;
+    }
+
+    .top100cities-wrap .top20cities .city span {
+        width: 120px;
+        vertical-align: -20%;
+    }
+
+    .top100cities-wrap .top20cities .city:nth-child(odd) {
+        margin-right: 130px;
+    }
+
+    /*.top100cities-wrap:before {
+        top: -120px;
+    }
+
+    .top100cities-wrap:after, .top100cities-wrap:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #4a4956;
+    }
+
+    .top100cities-wrap:after {
+        bottom: -60px;
+    }*/
+
+    .list {
+        bottom: 5%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 28px;
+    }
+
+    .list img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 2417px) and (max-width: 3200px) {
+    .content {
+        margin-left: 200px;
+    }
+
+    .tab_list{
+        margin-left: 200px;
+    }
+    .cut-container {
+        left: 200px;
+    }
+
+    .total-num {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 100px;
+    }
+
+    .total-num span {
+        height: 128px;
+        line-height: 132px;
+        width: 73px;
+    }
+
+    .right {
+        width: 71%;
+        height: 90%;
+    }
+
+    .right .map {
+        top: 8%;
+        left: 29%;
+    }
+
+    .right span {
+        font-size: 24px;
+    }
+
+    .left {
+        width: 28%;
+        height: 90%;
+        font-size: 30px;
+    }
+
+    .right span {
+        font-size: 20px;
+    }
+
+    h2, h4 {
+        font-size: 40px;
+    }
+
+    h6 {
+        margin-top: 110px;
+        font-size: 30px;
+    }
+
+    .time {
+        margin-top: 14px;
+        font-size: 22px;
+    }
+    .top100cities-wrap {
+        padding-bottom: 35px;
+    }
+    .top100cities-wrap .top20cities {
+        margin-top: 30px;
+        height: 450px;
+        font-size: 24px;
+    }
+
+    .top100cities-wrap .top20cities .city {
+        margin-bottom: 10px;
+    }
+
+    .top100cities-wrap .top20cities .city span {
+        width: 90px;
+        vertical-align: -20%;
+    }
+
+    .top100cities-wrap .top20cities .city:nth-child(odd) {
+        margin-right: 160px;
+    }
+
+    /*.top100cities-wrap:before {
+        top: -120px;
+    }
+
+    .top100cities-wrap:after, .top100cities-wrap:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #4a4956;
+    }
+
+    .top100cities-wrap:after {
+        bottom: -60px;
+    }*/
+
+    .list {
+        bottom: 10%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 28px;
+    }
+
+    .list img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 3201px) {
+    .content {
+        margin-left: 260px;
+    }
+
+    .tab_list{
+        margin-left: 260px;
+    }
+
+    .total-num {
+        margin-top: 28px;
+        margin-bottom: 20px;
+        font-size: 210px;
+        letter-spacing: 15px;
+    }
+
+    .total-num span {
+        height: 210px;
+        line-height: 224px;
+        width: 138px;
+    }
+
+    h2, h4 {
+        font-size: 70px;
+    }
+
+    .time {
+        margin-top: 26px;
+        font-size: 40px;
+    }
+
+    h6 {
+        margin-top: 150px;
+        font-size: 58px;
+    }
+
+    .right {
+        width: 66%;
+        height: 90%;
+    }
+
+    .right .map {
+        top: 8%;
+        left: 39%;
+    }
+
+    .left, .right span {
+        font-size: 40px;
+    }
+
+    .left {
+        width: 33%;
+        height: 90%;
+    }
+    .top100cities-wrap {
+        padding-bottom: 40px;
+    }
+    .top100cities-wrap .top20cities {
+        margin-top: 30px;
+        height: 750px;
+        font-size: 42px;
+    }
+
+    .top100cities-wrap .top20cities .city {
+        margin-bottom: 16px;
+    }
+
+    .top100cities-wrap .top20cities .city span {
+        width: 140px;
+        vertical-align: -20%;
+    }
+
+    .top100cities-wrap .top20cities .city:nth-child(odd) {
+        margin-right: 210px;
+    }
+
+    /*.top100cities-wrap:before {
+        top: -160px;
+    }
+
+    .top100cities-wrap:after, .top100cities-wrap:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #4a4956;
+    }
+
+    .top100cities-wrap:after {
+        bottom: -90px;
+    }*/
+
+    .desc {
+        font-size: 1.5em;
+    }
+
+    .list {
+        bottom: 13%;
+        height: 70px;
+        line-height: 70px;
+        font-size: 50px;
+    }
+
+    .list img {
+        width: 70px;
+        height: 70px;
+    }
+}
+.tab_list{
+    height: 50px;width: 100%;
+    line-height: 50px;
+    font-size: 14px;
+    color: #dddddd;
+    background: #2c2b3d;
+    text-align: center;
+    z-index: 1002;
+    position: fixed;
+    top: 54px;
+}
+
+.tab_list li{
+    width: 120px;
+    float: left;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.tab_list .active{
+    color: #f1e800;
+}

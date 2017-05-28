@@ -1,0 +1,250 @@
+$tzBlue: #03b0ff;
+.phone-container {
+  width: 100%;
+  height: 655px;
+  background-image: url(../../img/activity/phone325s.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.wx-title {
+  width: 325px;
+  height: 65px;
+  margin: 60px auto 0;
+  background-image: url(../../img/activity/wx-title325.jpg);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.wx-title .activeName {
+  font-size: 15px;
+  color: #fff;
+  height: 15px;
+  line-height: 15px;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 36px;
+  margin-left: -105px;
+  width: 210px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.content-container {
+  width: 325px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+//编辑框
+.edit-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 300px;
+  z-index: 20;
+  transform: translate(100%, -50%);
+  border: 2px solid #03b0ff;
+  padding: 10px 5px;
+  background-color: #fff;
+  display: none;
+  .edit-btn {
+    border-radius: 0;
+  }
+  .img-edit, .text-edit {
+    display: none;
+  }
+}
+
+.file {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.pic {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-weight: lighter;
+  color: #4abf9c;
+  background: #eee;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-user-select: none;
+  overflow: hidden;
+}
+
+.pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ion.RangeSlider, Simple Skin
+// css version 2.0.3
+// © Denis Ineshin, 2014    https://github.com/IonDen
+// © guybowden, 2014        https://github.com/guybowden
+// ===================================================================================================================*/
+
+/* =====================================================================================================================
+// Skin details */
+
+.irs {
+  height: 55px;
+}
+
+.irs-with-grid {
+  height: 75px;
+}
+
+.irs-line {
+  height: 10px;
+  top: 33px;
+  background: #EEE;
+  //background: linear-gradient(to bottom, #DDD -50%, #FFF 150%); /* W3C */
+  border: 1px solid #CCC;
+  border-radius: 16px;
+  -moz-border-radius: 16px;
+}
+
+.irs-line-left {
+  height: 8px;
+}
+
+.irs-line-mid {
+  height: 8px;
+}
+
+.irs-line-right {
+  height: 8px;
+}
+
+.irs-bar {
+  height: 10px;
+  top: 33px;
+  border-top: 1px solid $tzBlue;
+  border-bottom: 1px solid $tzBlue;
+  background: $tzBlue;
+  //background: linear-gradient(to top, rgba(66,139,202,1) 0%,rgba(127,195,232,1) 100%); /* W3C */
+}
+
+.irs-bar-edge {
+  height: 10px;
+  top: 33px;
+  width: 14px;
+  border: 1px solid $tzBlue;
+  border-right: 0;
+  background: $tzBlue;
+  //background: linear-gradient(to top, rgba(66,139,202,1) 0%,rgba(127,195,232,1) 100%); /* W3C */
+  border-radius: 16px 0 0 16px;
+  -moz-border-radius: 16px 0 0 16px;
+}
+
+.irs-shadow {
+  height: 2px;
+  top: 38px;
+  background: #000;
+  opacity: 0.3;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.lt-ie9 .irs-shadow {
+  filter: alpha(opacity=30);
+}
+
+.irs-slider {
+  top: 25px;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #AAA;
+  background: #DDD;
+  //background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(220,220,220,1) 20%,rgba(255,255,255,1) 100%); /* W3C */
+  border-radius: 27px;
+  -moz-border-radius: 27px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background .1s ease-in-out;
+}
+
+.irs-slider.state_hover, .irs-slider:hover {
+  background: #FFF;
+}
+
+.irs-min, .irs-max {
+  color: #333;
+  font-size: 12px;
+  line-height: 1.333;
+  text-shadow: none;
+  top: 0;
+  padding: 1px 5px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.lt-ie9 .irs-min, .lt-ie9 .irs-max {
+  background: #ccc;
+}
+
+.irs-from, .irs-to, .irs-single {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.333;
+  text-shadow: none;
+  padding: 1px 5px;
+  background: $tzBlue !important;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single {
+  background: #999;
+}
+
+.irs-grid {
+  height: 27px;
+}
+
+.irs-grid-pol {
+  opacity: 0.5;
+  background: $tzBlue;
+}
+
+.irs-grid-pol.small {
+  background: #999;
+}
+
+.irs-grid-text {
+  bottom: 5px;
+  color: #99a4ac;
+}
+
+.irs-disabled {
+}
+
+.nav-tabs.nav-edit {
+  background: #fff;
+  border-bottom: 2px solid $tzBlue !important;
+}
+
+.nav-tabs.nav-edit > li {
+  border-bottom: 1px solid transparent;
+  width: 33.33%;
+  &.active {
+    border-bottom: 1px solid $tzBlue;
+  }
+  a {
+    text-align: center;
+  }
+}

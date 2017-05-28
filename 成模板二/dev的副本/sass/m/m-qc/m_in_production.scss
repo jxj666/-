@@ -1,0 +1,100 @@
+.in_production_bg {
+	width: 750px;
+	height: 279px;
+	background: url(/custom/img/m/m-qc/in_production_bg.png) no-repeat;
+	background-size: 750px 279px;
+	position: relative;
+	.clock {
+		width: 103px;
+		height: 104px;
+		position: absolute;
+		top: 10px;
+		right: 27px;
+	}
+	.circle_bg {
+		width: 321px;
+		height: 321px;
+		border-radius: 50%;
+		border: 1px solid #0fa2ff;
+		background: #fff;
+		position: absolute;
+		top: 17px;
+		left: 213px;
+		.activation_img {
+			width: 116px;
+			height: 171px;
+			position: absolute;
+			top: 80px;
+			left: 101px;
+		}
+	}
+}
+.product-content {
+	height: 195px;
+	padding: 20px 0 30px;
+	border-bottom: 1px solid #eee;
+	margin-top: 60px;
+	font-size: 30px;
+	color: #444;
+	text-align: center;
+	p {
+		line-height: 50px;
+	}
+	.product-name {
+		color: #0090ff;
+		margin: 0 auto;
+	}
+	.product-size, .producter {
+		color: #666;
+	}
+}
+.production-batch {
+	text-align: center;
+	margin: 40px 0 30px 0;
+	font-size: 24px;
+	.code-num {
+		font-size: 48px;
+		color: #0090ff;
+		line-height: 112px;
+	}
+	.in_production_img, .already_activation {
+		width: 365px;
+		height: 118px;
+		margin-top: 10px;
+	}
+}
+.activation-list {
+	width: 690px;
+	border-top: 10px solid #eee;
+	color: #444;
+	line-height: 85px;
+	margin: 0 auto;
+	.activation-info {
+		border-bottom: 1px solid #eee;
+		display: flex;
+		justify-content: space-between;
+	}
+	.formal {
+		color: #0090ff;
+		font-size: 36px;
+		text-align: center;
+	}
+}
+.activation-btn, .again-activation-btn {
+	text-align: center;
+	border-radius: 6px;
+	margin: 0 auto;
+	width: 690px;
+	height: 100px;
+	display: block;
+	line-height: 100px;
+	font-size: 44px;
+	position: fixed;
+	bottom: 30px;
+	left: 30px;
+	color: #fff !important;
+	box-shadow: 0 0 10px 5px #c8e3fc;
+	-webkit-box-shadow: 0 0 10px 5px #c8e3fc;
+	-moz-box-shadow: 0 0 10px 5px #c8e3fc;
+	background: linear-gradient(to bottom right, #11b7ff , #009cff) no-repeat;
+}

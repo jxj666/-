@@ -1,0 +1,275 @@
+.m-container {
+	width: 750px;
+	height: 198px;
+	padding: 22px 30px;
+	position: fixed;
+	background: #fff;
+	.search-content {
+		/*width: 690px;*/
+		/*margin: 0 30px;*/
+		position: relative;
+		margin: 0 auto;
+		::-webkit-input-placeholder { /* WebKit browsers */ 
+		color: #666;
+		}
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+		color: #666; 
+		}
+		::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+		color: #666; 
+		}
+		:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+		color: #666; 
+		}
+		.search {
+			width: 440px;
+			height: 90px;
+			font-size: 28px;
+			color: #666;
+			padding-left: 18px;
+			border: 2px solid #90d0fa;
+			border-top-left-radius: 6px;
+			border-bottom-left-radius: 6px;
+			outline: none;
+		}
+		.dropdown-icon {
+			border: 16px solid transparent;
+			border-top-color: #ccc;
+			position: absolute;
+			left: 385px;
+			top: 40px;
+			color: #ccc;
+		}
+		.btns {
+			float: right;
+			width: 250px;
+			height: 90px;
+			background: #ddd;
+			border-top-right-radius: 6px;
+			border-bottom-right-radius: 6px;
+			a {
+				display: inline-block;
+				text-decoration: none;
+				margin-left: 47px;
+				width: 55px;
+				height: 55px;
+			}
+			.search-icon {
+				width: 55px;
+				height: 55px;
+				text-decoration: none;
+			}
+			.divider {
+				display: inline-block;
+	    	width: 2px;
+	    	height: 41px;
+	    	background: #abddfe;
+	    	margin-top: 24px;
+			}
+			.share-icon {
+				display: inline-block;
+				width: 51px;
+				height: 51px;
+				margin: 20px 0 0 30px;
+				background: url(https://saascore.oss-cn-beijing.aliyuncs.com/custom/img/m-qr/m-share.png) no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+	.step-list {
+		width: 690px;
+		height: 90px;
+		line-height: 90px;
+		font-size: 28px;
+		color: #444;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		.step-item{
+			width: 142px;
+			position: relative;
+			&.active {
+				a, span{
+					color: #ff4545;
+				}	
+			}
+			.dropdown-menu {
+				width: 750px;
+				margin-top: 1px;
+				left: -30px;
+				font-size: 24px;
+				border-radius: 0;
+				box-shadow: none;
+				padding: 0;
+				li {
+					line-height: 36px;
+					margin-top: 18px;
+					padding: 30px;
+					&.active {
+						color: #ff4545;
+					}
+				}
+			}
+			span {
+				position: absolute;
+				top: 32px;
+				right: 0px;
+				color: #ccc;
+			}
+		}
+	}
+}
+
+.show-list {
+	background: #f1f1f1;
+	padding: 208px 30px 60px;
+	.card {
+		/*width: 690px;*/
+		/*height: 410px;*/
+		margin: 30px auto 0;
+		border-radius: 6px;
+		background: #fff;
+		font-size: 30px;
+		box-shadow: 0 7px 15px #e2e9ec;
+		-webkit-box-shadow: 0 7px 15px #e2e9ec;
+    -moz-box-shadow: 0 7px 15px #e2e9ec;
+		.left {
+			float: left;
+			width: 530px;
+			padding: 40px 30px;
+			color: #666;
+			p {
+				line-height: 48px;
+			}
+			.left-top {
+				width: 435px;
+				height: 175px;
+				border-bottom: 1px solid #abddfe;
+				.orders {
+					line-height: 28px;
+					margin: 6px 0 28px;
+					color: #0da0ff;
+				}
+				.goods-name, .pay-money {
+					color: #999;
+				}
+			}
+			.left-bottom {
+				margin-top: 21px;
+			}
+		}
+		.right {
+			float: right;
+			width: 160px;
+			background: #eff7fe;
+			border-top-right-radius: 6px;
+			border-bottom-right-radius: 6px;
+			text-align: center;
+			li {
+				height: 100px;
+				line-height: 100px;
+			}
+			li:first-child {
+				border-top-right-radius: 6px;
+				height: 120px;
+				line-height: 30px;
+				padding-top: 77px;
+				background-color: #47afff;
+			}
+			.send {
+				background: url(https://saascore.oss-cn-beijing.aliyuncs.com/custom/img/m-qr/m-send.png) no-repeat 35px 10px;
+				background-size: 85px 62px;
+			}
+			.paid {
+				background: url(https://saascore.oss-cn-beijing.aliyuncs.com/custom/img/m-qr/m-pay.png) no-repeat 48px 10px;
+				background-size: 64px 60px;
+			}
+			li:nth-child(3) {
+				width: 100px;
+				height: 90px;
+				line-height: 90px;
+				margin: 0 auto;
+				border-top: 1px solid #abddfe;
+				border-bottom: 1px solid #abddfe;
+			}
+		}
+	}
+}
+.pop {
+	.log-pop, .order-pop {
+		width: 690px;
+		height: 828px;
+		background: #fff;
+		padding: 70px 40px;
+		font-size: 36px;
+	}
+	.order-pop {
+		margin: 0 auto;
+		border-radius: 6px;
+		padding: 60px 40px;
+		h3 {
+			text-align: center;
+			font-size: 36px;
+			margin-bottom: 50px;
+		}
+		.form-group {
+			margin: 0 auto 20px;
+			border-radius: 6px;
+			.form-item {
+				display: inline-block;
+				width: 100%;
+				height: 90px;
+				line-height: 90px;
+				border-radius: 6px;
+				border: 1px solid #b2e8ff;
+				padding-left: 20px;
+    		max-width: 100%;
+    		margin-bottom: 5px;
+				input {
+					line-height: 36px;
+					color: #999;
+				}
+				.select-menu {
+					width: 186px;
+					display: inline-block;
+				}
+			}
+			.form-item:nth-child(2) {
+				margin-top: 20px;
+			}
+		}	
+	}
+	.log-pop {
+		.log-item {
+			height: 140px;
+			.log-time {
+				font-size: 30px;
+				width: 254px;
+				color: #999;
+			}
+			.divider {
+				display: inline-block;
+		    width: 1px;
+		    height: 50px;
+		    background: #b7e9ff;
+		    margin-top: 20px;
+			}
+			.log-operat {
+				width: 355px;
+				padding: 0 40px 0 60px;
+			}
+		}
+		.return {
+			display: block;
+			width: 610px;
+			height: 100px;
+			line-height: 100px;
+			font-size: 44px;
+			color: #fff;
+			box-shadow: 0 0 10px 5px #c8e3fc;
+		  -webkit-box-shadow: 0 0 10px 5px #c8e3fc;
+      -moz-box-shadow: 0 0 10px 5px #c8e3fc;
+			background: linear-gradient(to bottom right, #11b7ff , #009cff) no-repeat;
+		}
+	}
+}

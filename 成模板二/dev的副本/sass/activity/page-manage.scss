@@ -1,0 +1,22 @@
+@media (min-width: 992px) {
+  .modal-dialog {
+    width: 900px
+  }
+}
+
+@media (min-width: 1280px) {
+  .modal-dialog {
+    width: 1200px
+  }
+}
+.editor-container{
+  height: 500px;
+  position: relative;
+}
+#editor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

@@ -1,0 +1,213 @@
+@import "../common/_mixins";
+
+$cjBlue: #0090ff;
+.body {
+  background-color: #f1f1f1;
+  padding-bottom: 160px;
+  font-size: 30px;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.p-30 {
+  padding: 30px;
+}
+
+.bor-b-1 {
+  border-bottom: 1px solid $cjBlue; /*no*/
+}
+
+.banner {
+  width: 100%;
+  height: 380px;
+
+  overflow: hidden;
+  position: relative;
+  .banner-info {
+    z-index: 100;
+    line-height: 112px;
+    font-size: 98px;
+    margin-top: 33px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #FED619;
+
+  }
+  .banner-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+  .banner-time {
+    color: #fff887;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    top: 263px;
+    margin: 0;
+    width: 100%;
+  }
+  .banner-mask {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 49%, rgba(0, 0, 0, .5) 100%);
+    height: 90px;
+    padding: 0 30px;
+    .spread {
+      float: right;
+    }
+  }
+  .banner-mask_item {
+    float: left;
+    line-height: 90px;
+  }
+  .banner-mask_hot {
+    display: block;
+    height: 90px;
+  }
+}
+
+.block-container {
+  background-color: #fff;
+}
+
+.template-title {
+  margin-top: 10px;
+  border-left: 10px solid $cjBlue;
+  padding-left: 10px;
+  color: $cjBlue;
+}
+
+.template-info {
+  padding: 30px 0;
+  font-size: 28px;
+  color: rgb(153, 153, 153);
+  line-height: 1.6;
+}
+
+.overflow-x {
+  margin: 35px -30px 0 0;
+}
+
+.swiper-slide {
+  .img-container {
+    width: 200px;
+    height: 385px;
+    background: url(/custom/img/m/acms/phone-container.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    img {
+      position: absolute;
+      top: 46px;
+      left: 16px;
+      width: 170px;
+      height: 295px;
+    }
+  }
+}
+
+.template-demo_desc {
+  margin: 30px 0;
+  color: #666;
+}
+//展示
+#baguetteBox-overlay .full-image {
+  background-image: url(/custom/img/m/acms/phone-container.png);
+  background-repeat: no-repeat;
+  background-size: auto 1080px;
+  background-position: center center;
+  img{
+    width:489px;
+    height:820px;
+    margin-right:-6px;
+    margin-bottom:-16px;
+  }
+}
+// 优秀案列
+.case-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px 1px rgba(84, 168, 203, 0.11);
+  width: 335px;
+  height: 170px;
+  position: relative;
+  .case-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .case-title {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    margin:0;
+    padding:0;
+    text-align: center;
+    color: #fff;
+  }
+  .case-mask {
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height:60px;
+    overflow: hidden;
+    img{
+      position: absolute;
+      bottom:0;
+      left:0;
+      width:100%;
+      -webkit-filter: blur(6px);/*no*/
+    }
+  }
+  .case-info{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    color: #fff;
+    padding:0 20px;
+    background-color: rgba(255,255,255,.1);
+    .p{
+      margin:0;
+      padding:0;
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  height: 160px;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.btn-act_create {
+  color: #fff;
+  font-size: 44px;
+  font-weight: bold;
+  padding: 30px 235px;
+  margin-top: 28px;
+  background-image: linear-gradient(106deg, rgb(17, 183, 255) 0%, rgb(0, 156, 255) 100%);
+  box-shadow: 0 0 10px 3px rgba(3, 126, 241, 0.3);
+}

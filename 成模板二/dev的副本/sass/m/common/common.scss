@@ -1,0 +1,43 @@
+$cjBlue: #0090ff;
+/*
+!*移动端项目*!
+font-family:Tahoma,Arial,Roboto,'Droid Sans','Helvetica Neue','Droid Sans Fallback','Heiti SC',sans-self;
+!*pc端(含Mac)项目*!
+font-family:Tahoma,Arial,'Helvetica Neue“,'Hiragino Sans GB',Simsun,sans-self;
+*/
+
+/*移动和pc端项目*/
+body {
+  font-family:Tahoma,Arial,Roboto,'Droid Sans','Helvetica Neue','Droid Sans Fallback','Heiti SC',sans-self;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch; /*流畅滚动*/
+}
+.clearfix{
+  &:before{
+    content: '';
+    display: table;
+  }
+  &:after{
+    content: '';
+    display: table;
+    clear:both;
+  }
+}
+.text-center{
+  text-align: center;
+}
+.text-justify{
+  text-align: justify;
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border-radius: 10px;
+  line-height: 1;
+  transition: all .2s ease-in-out;
+}

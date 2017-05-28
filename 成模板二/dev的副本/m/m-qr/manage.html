@@ -1,0 +1,620 @@
+<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
+<link href="/cadmin-ajax/plugins/DataTables/media/css/dataTables.bootstrap.min.css"
+      rel="stylesheet"/>
+<link href="/cadmin-ajax/plugins/bootstrap-select/dist/css/bootstrap-select.min.css"
+      rel="stylesheet"/>
+<!-- ================== END PAGE LEVEL STYLE ================== -->
+
+<link href="/custom/css/qr/manage.min.css" rel="stylesheet"/>
+
+<div id="content" class="content">
+    <!-- begin page-header -->
+    <h1 class="page-header">二维码资源管理
+        <small>批次概览</small>
+    </h1>
+    <!-- end page-header -->
+    <div class="row">
+        <div class="col-md-12 clearfix">
+            <a href="#modal-create" class="btn btn-tz-blue m-r-5 pull-left" data-toggle="modal">生成二维码</a>
+            <a href="#modal-query" class="btn btn-tz-blue pull-left m-r-5" data-toggle="modal">批次管理</a>
+            <!--<a href="#scan-code-tab" class="btn btn-tz-blue" data-toggle="modal">批量作废</a>-->
+            <div class="dataTables_filter width-250 pull-right">
+                <div class="input-group">
+                    <input type="search" class="form-control" placeholder="单码查询" id="keyword">
+                    <button type="button" class="close search-clear-btn hide">×</button>
+                    <div class="input-group-btn">
+                        <button class="btn btn-tz-blue" type="button" data-tz="search">
+                            <i class="fa fa-search m-r-5"></i>搜索
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="col-md-4 form-horizontal">
+            <div class="form-group">
+                <label for="productSel" class="col-md-5 text-right control-label">产品</label>
+                <div class="col-md-7">
+                    <select class="selectpicker form-control" data-live-search="false" data-style="btn-white" data-size="10"
+                            id="productSel">
+                        <option value="all">全部</option>
+                        <#list products as p>
+                            <option value="${p.productId}">${p.awardName}</option>
+                        </#list>
+                    </select>
+                </div>
+
+            </div>
+
+        </div>-->
+    </div>
+    <div class="panel m-t-20">
+        <div class="panel-body">
+            <div id="data-table_wrapper"
+                 class="tab-pane fade in active dataTables_wrapper form-inline dt-bootstrap no-footer "
+                 aria-expanded="true">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table id="data-table"
+                               class="table table-striped  table-condensed dataTable no-footer dtr-inline collapsed table-hover"
+                               role="grid">
+                            <thead>
+                            <tr>
+                                <th>二维码批次</th>
+                                <th>
+                                    <a href="javascript:;" data-sort="product">
+                                        关联产品<i class="fa fa-sort m-l-5" aria-hidden="true"></i>
+                                    </a>
+                                </th>
+                                <th>批次状态</th>
+                                <th>详情</th>
+                                <th>备注</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <script type="text/html" id="template_list">
+                                {{ if(batches.length <= 0){ }}
+                                <tr>
+                                    <td class="text-center" colspan="5">没有数据~</td>
+                                </tr>
+                                {{ }else{ }}
+                                {{ for(var i=0;i< batches.length;i++){ }}
+                                <tr>
+                                    <td>{{= batches[i].batchNo }}</td>
+
+                                    <td>{{= batches[i].productName }}</td>
+                                    <td>
+                                        <a href="#modal-progress" data-batchno="{{= batches[i].batchNo }}"
+                                           class="btn btn-xs btn-tz-blue m-r-5" data-toggle="modal"
+                                           data-tz="progress">查看</a>
+
+                                        {{ if(batches[i].status > 2){ }}
+                                        <a href="javascript:;" data-batchno="{{= batches[i].batchNo }}"
+                                           class="btn btn-xs btn-tz-blue" data-tz="downLoad">下载
+                                        </a>
+                                        {{ } }}
+                                    </td>
+                                    <td>
+                                        <a href="#modal-query" class="btn btn-xs btn-tz-blue m-r-5"
+                                           data-size="{{= batches[i].size }}"
+                                           data-batch="{{= batches[i].batchNo }}"
+                                           data-product="{{= batches[i].productName }}"
+                                           data-memo="{{= batches[i].memo }}"
+                                           data-orgid="{{= batches[i].orgId }}"
+                                           data-toggle="modal" data-tz="check">查看</a>
+                                    </td>
+                                    <td>{{= batches[i].memo }}</td>
+                                </tr>
+                                {{ } }}
+                                {{ } }}
+                            </script>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="dataTables_info" id="data-table_info" role="status" aria-live="polite">
+                            显示第 <span data-info="page">0</span> 页，共 <span data-info="totalPage">0</span> 页
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="dataTables_paginate paging_simple_numbers pull-right"
+                             id="data-table_paginate">
+                            <ul class="pagination">
+
+                            </ul>
+                        </div>
+                        <div class="dataTables_length pull-right" id="data-table_length">
+                            <label>显示
+                                <select name="data-table_length" aria-controls="data-table"
+                                        class="form-control input-sm">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                                项结果</label>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- begin panel-body-loader -->
+                <div class="fade in table-loader hide"><span class="spinner"></span></div>
+                <!-- end panel-body-loader -->
+            </div>
+        </div>
+    </div>
+    <!-- 生成二维码 -->
+    <form id="modal-create" class="modal fade form-horizontal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">生成二维码</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">成码方式:</label>
+                        <div class="col-md-8 clearfix">
+                            <button type="button" class="btn btn-tz-blue">自有域名</button>
+                            <!--<button type="button" class="btn btn-white pull-left m-r-5">托管域名</button>
+                            <div class="width-150 pull-left">
+                                <input class="form-control" type="url" id="globalUrl" name="globalUrl"
+                                       placeholder="http://xx.xxx" data-parsley-type="url"/>
+                            </div>-->
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="size">企业域:</label>
+                        <div class="col-md-8">
+                            <select class="selectpicker form-control" data-live-search="false" data-style="btn-white"
+                                    data-size="10">
+                                <option>江西中烟</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">
+                            不关联产品:
+                            <input type="checkbox" data-tz="linkage" data-target="#productSn"/>
+                        </label>
+                        <div class="col-md-8">
+                            <label class="radio-inline">
+                                <input type="radio" name="verificationvCode" value="code4" checked/>
+                                四位验证码
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="verificationvCode" value="code6"/>
+                                六位验证码
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="productSn">关联产品:</label>
+                        <div class="col-md-8">
+                            <select class="selectpicker form-control" data-live-search="true" data-style="btn-white"
+                                    data-size="10" disabled
+                                    id="productSn" required data-parsley-required>
+                                <#list products as p>
+                                    <option value="${p.productId}">${p.awardName}</option>
+                                </#list>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="size">本批次产码量:</label>
+                        <div class="col-md-6">
+                            <input class="form-control" type="tel" id="size" name="size" placeholder="1到999999之间的整数"
+                                   required data-parsley-require min="1" max="999999" maxlength="6"
+                                   data-parsley-type="integer" data-parsley-min="1"
+                                   data-parsley-max="999999">
+                        </div>
+                        <div class="col-md-2">
+                            <span data-info="num2CN"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="memo">备注:</label>
+                        <div class="col-md-8">
+                            <textarea class="form-control" id="memo" name="memo" rows="4" placeholder="批次备注"
+                                      maxlength="40" data-parsley-maxlength="40"></textarea>
+                            <div class="m-t-5">最多40个字符</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white m-r-5" data-dismiss="modal">关闭</button>
+                    <button type="submit" class="btn btn-tz-blue" data-tz="addNewBatch">提交</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- 批次查询 -->
+    <div id="modal-query" class="modal fade form-horizontal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <div class="dataTables_filter width-250">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="批次查询" id="batchQuery">
+                            <button type="button" class="close search-clear-btn hide">×</button>
+                            <div class="input-group-btn">
+                                <button class="btn btn-tz-blue" type="button" data-tz="batchSearch">
+                                    <i class="fa fa-search m-r-5"></i>搜索
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="col-md-4">成码方式:</label>
+                        <div class="col-md-8 clearfix">
+                            <button type="button" class="btn btn-tz-blue">自有域名</button>
+                            <!--<button type="button" class="btn btn-white pull-left m-r-5">托管域名</button>
+                            <div class="width-150 pull-left">
+                                <input class="form-control" type="url" id="globalUrl" name="globalUrl"
+                                       placeholder="http://xx.xxx" data-parsley-type="url"/>
+                            </div>-->
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">企业域:</label>
+                        <div class="col-md-8">
+                            <span data-info="domain"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4">关联产品:</label>
+                        <div class="col-md-8">
+                            <span data-info="product"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">本批次产码量:</label>
+                        <div class="col-md-6">
+                            <span data-info="size"></span>
+                        </div>
+                        <div class="col-md-2">
+                            <span data-info="num2CN"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">备注:</label>
+                        <div class="col-md-8">
+                            <span data-info="memo"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-tz-blue" data-tz="destoryBatch">作废本批次</button>
+                    <div class="form-group text-left hide" data-info="statusList">
+                        <label class="col-md-3">批次状态:</label>
+                        <div class="col-md-3">
+                            <span data-info="batchStatus" class="text-tz-blue"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <span data-info="date"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <span data-info="user"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 批次查询 -->
+    <div id="modal-code" class="modal fade form-horizontal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <div class="form-group">
+                        <label class="col-md-4">单码查询:</label>
+                        <div class="col-md-8">
+                            <span data-info="code"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">所属批次:</label>
+                        <div class="col-md-8">
+                            <span data-info="batch"></span>
+                            <button type="button" class="btn btn-tz-blue" data-tz="checkBatch">批次详情</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">企业域:</label>
+                        <div class="col-md-8">
+                            <span data-info="domain"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4">关联产品:</label>
+                        <div class="col-md-8">
+                            <span data-info="product"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4">单码状态:</label>
+                        <div class="col-md-8">
+                            <span data-info="status"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-tz-blue" data-tz="destoryCode">作废单码</button>
+                    <div class="form-group text-left hide" data-info="statusList">
+                        <label class="col-md-3">单码状态:</label>
+                        <div class="col-md-3">
+                            <span data-info="codeStatus" class="text-tz-blue"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <span data-info="date"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <span data-info="user"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #modal-delete -->
+    <div id="scan-code-tab" class="modal fade form-horizontal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">批量作废</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-sm-4 col-md-5" for="scan-code">扫码或直接输入:</label>
+                        <div class="col-sm-8 col-md-7 p-r-30">
+                            <input class="form-control" type="text" id="scan-code" name="扫码"
+                                   placeholder="手动或使用扫码枪输入作废产品二维码"/>
+                            <button type="button" class="tip_btn pull-right" data-toggle="tooltip"
+                                    data-placement="right"
+                                    title="如何使用">?
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 col-md-5">
+                            <div class="img-container">
+                                <img src="/custom/img/qr/scan-gun.gif" alt="">
+                            </div>
+                            <div class="m-t-5 text-center">如何使用扫码枪？</div>
+                        </div>
+                        <div class="col-sm-8 col-md-7 border-l">
+                            <ul class="code-menu" id="codeMenu">
+                                <li class="code-header row">
+                                    <div class="col-sm-3">作废列表</div>
+                                    <div class="col-sm-4">二维码ID</div>
+                                    <div class="col-sm-4">作废时间</div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white m-r-5" data-dismiss="modal">返回</button>
+                    <button type="button" class="btn btn-tz-blue" data-tz="destoryCode">确认作废</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #modal-update -->
+    <form class="modal fade form-horizontal" id="modal-update">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">修改信息（ <span class="text-danger">*</span>已成码的只能修改关联URL）</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="batchNoEdit" name="batchNoEdit" disabled required data-parsley-required/>
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="memo">批次备注 * :</label>
+                        <div class="col-md-8">
+                            <textarea class="form-control" id="memoEdit" name="memo" rows="4"
+                                      placeholder="批次备注" disabled required data-parsley-required maxlength="40"
+                                      data-parsley-maxlength="40">
+                            </textarea>
+                            <div class="m-t-5">最多40个字符</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="size">总数 * :</label>
+                        <div class="col-md-8">
+                            <input class="form-control" type="tel" id="sizeEdit" name="size"
+                                   placeholder="1到999999之间的整数" disabled required data-parsley-required min="1"
+                                   max="999999"
+                                   data-parsley-type="integer" data-parsley-min="1" data-parsley-max="999999"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="withVerifyEdit">类型 * :</label>
+                        <div class="col-md-8">
+                            <select class="selectpicker form-control" data-live-search="false" data-style="btn-white"
+                                    data-size="10"
+                                    id="withVerifyEdit" disabled required data-parsley-required>
+                                <option value="0">通码</option>
+                                <option value="1">二次验证</option>
+                            </select>
+                            <div class="m-t-5">通码：开放型扫码，扫码后可直接访问关联活动或项目</div>
+                            <div class="m-t-5">二次验证：扫码后需要输入验证码二次校验</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="globalUrlPatternEdit">关联URL:</label>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" id="globalUrlPatternEdit" name="globalUrlPattern"
+                                   required data-parsley-required placeholder="http://xx.xxx" data-parsley-type="url"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="productSn">产品 * :</label>
+                        <div class="col-md-8">
+                            <select class="selectpicker form-control" data-live-search="true" data-style="btn-white"
+                                    data-size="10"
+                                    id="productSnEdit" disabled required data-parsley-required>
+                                <#list products as p>
+                                    <option value="${p.productId}">${p.awardName}</option>
+                                </#list>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:;" class="btn btn-white" data-dismiss="modal">取消</a>
+                    <button type="submit" class="btn btn-tz-blue">提交</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- #modal-progress -->
+    <div class="modal fade" id="modal-progress">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">二维码批次信息</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- begin timeline -->
+                    <ul class="progress-menu">
+
+                    </ul>
+                    <!-- end timeline -->
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:;" class="btn btn btn-white" data-dismiss="modal">关闭</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/html" id="template_codeList">
+        <li class="code-header row">
+            <div class="col-sm-3">作废列表</div>
+            <div class="col-sm-4">二维码ID</div>
+            <div class="col-sm-4">作废时间</div>
+        </li>
+        {{ for(var i = data.length-1; i >= 0; i--){ }}
+        <li class="row">
+            <div class="col-sm-3">{{= i+1 }}</div>
+            <div class="col-sm-4">{{= data[i].code }}</div>
+            <div class="col-sm-4">{{= data[i].date }}</div>
+            <div class="col-sm-1"><a href="javascript:;" class="operate" data-i="{{= i }}">X</a></div>
+        </li>
+        {{ } }}
+    </script>
+    <script type="text/html" id="template_page">
+        <li class="paginate_button previous disabled" id="data-table_previous">
+            <a href="javascript:;" aria-controls="data-table" data-tz="page"
+               data-page="" tabindex="0"><i
+                    class="fa fa-angle-double-left m-r-3"></i>上页</a>
+        </li>
+        {{ if(totalPage<=5){ }}
+        {{ for(var j=1;j<= totalPage;j++){ }}
+        <li><a href="javascript:;" data-tz="page" data-page="{{= j }}">{{= j }}</a>
+        </li>
+        {{ } }}
+        {{ }else if(totalPage-page>=4){ }}
+        {{ if(page>2){ }}
+        <li><a href="javascript:;" data-tz="page" data-page="1">1&nbsp;&nbsp;...</a>
+        </li>
+        {{ } }}
+        {{ for(var j=page;j< page+5;j++){ }}
+        <li><a href="javascript:;" data-tz="page" data-page="{{= j }}">{{= j }}</a>
+        </li>
+        {{ } }}
+        {{ if(totalPage-page>4){ }}
+        <li><a href="javascript:;" data-tz="page" data-page="{{= totalPage }}">...&nbsp;&nbsp;{{=
+            totalPage}}</a></li>
+        {{ } }}
+        {{ }else{ }}
+        <li><a href="javascript:;" data-tz="page" data-page="1">1&nbsp;&nbsp;...</a>
+        </li>
+        {{ for(var j=totalPage-4;j<= totalPage;j++){ }}
+        <li><a href="javascript:;" data-tz="page" data-page="{{= j }}">{{= j }}</a>
+        </li>
+        {{ } }}
+        {{ } }}
+        <li class="paginate_button next disabled" id="data-table_next">
+            <a href="javascript:;" aria-controls="data-table" data-tz="page"
+               data-page="" tabindex="0">下页<i
+                    class="fa fa-angle-double-right m-l-3"></i></a>
+        </li>
+    </script>
+    <script type="text/html" id="template_progress">
+        <li class="progress-header clearfix">
+            <p class="operate">操作</p>
+            <p class="time">时间</p>
+            <p class="operator">操作者</p>
+        </li>
+        {{ for(var i= 0;i < mStatus ; i++){ }}
+        <li>
+            <div class="clearfix">
+                <p class="operate">{{= progress[i].description }}</p>
+                <p class="time">{{= progress[i].createTime }}</p>
+                <p class="operator">{{= progress[i].operator }}</p>
+            </div>
+            <!-- end timeline-time -->
+        </li>
+        {{ } }}
+        {{ if(mStatus < 4){ }}
+        <li>
+            <div class="clearfix active">
+                <p class="operate">
+                    {{ if(mStatus === 1){ }}
+                    <button class="btn btn-tz-blue" data-batchno="{{= progress[0].batchNo }}"
+                            data-tz="generate">成码
+                    </button>
+                    {{ }else if(mStatus === 2){ }}
+                    <button class="btn btn-tz-blue" data-batchno="{{= progress[0].batchNo }}"
+                            data-tz="generateimg">导出
+                    </button>
+                    {{ }else if(mStatus === 3){ }}
+                    <button class="btn btn-tz-blue" data-batchno="{{= progress[0].batchNo }}"
+                            data-tz="setstatus">激活
+                    </button>
+                    {{ }else if(mStatus === 4){ }}
+                    <!--<button class="btn btn-tz-blue" data-batchno="{{= progress[0].batchNo }}"
+                            data-tz="setstatus">作废</button>-->
+                    {{ } }}
+                </p>
+            </div>
+        </li>
+        {{ } }}
+    </script>
+</div>
+<script>
+    App.restartGlobalFunction();
+    App.setPageTitle('批次概览');
+
+    $.getScript('/cadmin-ajax/plugins/moment/min/moment.min.js').done(function () {
+        $.getScript('/cadmin-ajax/plugins/moment/locale/zh-cn.js').done(function () {
+            $.getScript('/cadmin-ajax/plugins/microtemplating/microtemplating.min.js').done(function () {
+                $.getScript('/custom/js/qr/overview.min.js').done(function () {
+                    $.getScript('/cadmin-ajax/plugins/bootstrap-select/dist/js/bootstrap-select.min.js').done(function () {
+                        $.getScript('/cadmin-ajax/plugins/bootstrap-select/dist/js/i18n/defaults-zh_CN.min.js').done(function () {
+                            $('.selectpicker').selectpicker();
+                        })
+                    })
+                })
+            })
+        })
+    })
+</script>

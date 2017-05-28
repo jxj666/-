@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>落地页</title>
+	<link rel="stylesheet" href="/custom/css/m/reset.min.css">
+	<link rel="stylesheet" href="/custom/css/m/m-qc/m_unactivation.min.css">
+	<script type="text/javascript">
+		function get_hfs() {
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		}
+		get_hfs();
+		function throttle(method, context) {
+			clearTimeout(method.timer);
+			method.timer = setTimeout(function () {
+				method.call(context);
+			}, 100);
+		}
+		window.onresize = function () {
+			throttle(get_hfs);
+		}
+	</script>
+</head>
+<body>
+  <div class="unactivation-bg">
+  	<img src="/custom/img/m/m-qc/activation_img.png" class="activation-img">
+  </div>
+  <div class="activate-content">
+  	<img src="/custom/img/m/m-qc/activate.png" class="activate">
+  </div>
+
+</body>
+</html>

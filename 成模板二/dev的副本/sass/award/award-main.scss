@@ -1,0 +1,75 @@
+.file {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.pic {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-weight: lighter;
+  color: #4abf9c;
+  background: #eee;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-user-select: none;
+  overflow: hidden;
+}
+
+.pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.tab-content {
+  border-radius: 0 !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+  transition: box-shadow .2s;
+  position: relative;
+
+  &:hover {
+    border-radius: 0 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
+  }
+}
+
+.img-container {
+  width: 40px;
+  height: 40px;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+td {
+  vertical-align: middle;
+}
+
+[data-sort], [data-sort]:hover, [data-sort]:visited, [data-sort]:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+[data-sort] i {
+  color: #e1e1e1;
+}
+
+[data-sort].active i {
+  color: #03b0ff;
+}
+
+// 导入活动奖品
+@media (min-width: 768px) {
+  #modal-actAward .modal-dialog {
+    margin: 120px auto 30px;
+  }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>活动列表</title>
+    <link rel="stylesheet" href="/custom/css/m/common/normalize.min.css">
+    <link rel="stylesheet" href="/custom/css/m/common/common.min.css">
+    <link rel="stylesheet" href="/custom/css/m/acms/activity-list.min.css">
+    <script type="text/javascript">
+        function get_hfs() {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        }
+        get_hfs();
+        function throttle(method, context) {
+            clearTimeout(method.timer);
+            method.timer = setTimeout(function () {
+                method.call(context);
+            }, 100);
+        }
+        window.onresize = function () {
+            throttle(get_hfs);
+        }
+    </script>
+</head>
+<body class="body">
+<div class="content">
+    <div class="activity-content">
+        <!-- 当前活动 -->
+        <div class="current">
+            <div class="goods-title">
+                <div class="goods-title_line"></div>
+                <div class="goods-title_name"><span>正在进行</span></div>
+                <div class="goods-title_line"></div>
+            </div>
+            <div class="goods-list clearfix">
+                <div class="goods-item">
+                    <div class="img-content">
+                        <img src="/custom/img/m/acms/activity_img1.png" class="activity_img">
+                    </div>
+                    <div class="goods-info">
+                        <div>芙蓉王扫码活动</div>
+                        <p class="activity-time">2017/04/17</p>
+                        <a href="javascript:;" class="detail-btn border-radius">查看详情</a>
+                    </div>
+                </div>
+                <div class="goods-item">
+                    <div class="img-content">
+                        <img src="/custom/img/m/acms/activity_img2.png" class="activity_img">
+                    </div>
+                    <div class="goods-info">
+                        <div>芙蓉王扫码活动</div>
+                        <p class="activity-time">2017/04/17</p>
+                        <a href="javascript:;" class="detail-btn">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 已结束 -->
+        <div class="over">
+            <div class="goods-title">
+                <div class="goods-title_line"></div>
+                <div class="goods-title_name"><span>已结束</span></div>
+                <div class="goods-title_line"></div>
+            </div>
+            <div class="goods-list clearfix">
+                <div class="goods-item">
+                    <div class="img-content">
+                        <img src="/custom/img/m/acms/activity_img1.png" class="activity_img">
+                        <img src="/custom/img/m/acms/finish.png" class="finish">
+                        <span class="shade"></span>
+                    </div>
+                    <div class="goods-info">
+                        <div>芙蓉王扫码活动</div>
+                        <p class="activity-time">2017/04/17</p>
+                        <a href="javascript:;" class="detail-btn">查看数据</a>
+                    </div>
+                </div>
+                <div class="goods-item">
+                    <div class="img-content">
+                        <img src="/custom/img/m/acms/activity_img2.png" class="activity_img">
+                        <img src="/custom/img/m/acms/finish.png" class="finish">
+                        <span class="shade"></span>
+                    </div>
+                    <div class="goods-info">
+                        <div>芙蓉王扫码活动</div>
+                        <p class="activity-time">2017/04/17</p>
+                        <a href="javascript:;" class="detail-btn">查看数据</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

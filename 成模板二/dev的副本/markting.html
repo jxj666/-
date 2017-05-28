@@ -1,0 +1,288 @@
+<!--不要修改-->
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="zh-cn" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh-cn">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>成聚移动 - 成聚移动</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name="keywords" content="企业,大数据,二维码,移动营销,营销,数据统计,万川">
+    <meta name="description" content="成聚移动,一站式营销解决方案">
+    <meta content="成聚移动" name="author" />
+    <link rel="icon" href="/custom/img/common/wc.png">
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="/cadmin-ajax/plugins/jquery-ui/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet"/>
+    <link href="/cadmin-ajax/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/cadmin-ajax/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="/cadmin-ajax/css/animate.min.css" rel="stylesheet"/>
+    <link href="/cadmin-ajax/css/style.min.css" rel="stylesheet"/>
+    <link href="/cadmin-ajax/css/style-responsive.min.css" rel="stylesheet"/>
+    <link href="/cadmin-ajax/css/theme/black.css" rel="stylesheet" id="theme"/>
+    <!-- ================== END BASE CSS STYLE ================== -->
+    <!-- ================== BEGIN CUSTOM CSS STYLE ================== -->
+    <link href="/custom/css/m/common/m_custom.min.css" rel="stylesheet"/>
+    <!-- ================== END CUSTOM CSS STYLE ================== -->
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="/cadmin-ajax/plugins/pace/pace.min.js"></script>
+    <!-- ================== END BASE JS ================== -->
+<script type="text/javascript">
+        function get_hfs() {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        }
+        get_hfs();
+        function throttle(method, context) {
+            clearTimeout(method.timer);
+            method.timer = setTimeout(function () {
+                method.call(context);
+            }, 100);
+        }
+        window.onresize = function () {
+            throttle(get_hfs);
+        }
+    </script>
+</head>
+
+<body>
+<!-- begin #page-loader -->
+<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+<!-- end #page-loader -->
+<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+    <!-- begin #header -->
+    <div id="header" class="header navbar navbar-default navbar-fixed-top">
+        <!-- begin container-fluid -->
+        <div class="container-fluid">
+            <!-- begin mobile sidebar expand / collapse button -->
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand">
+                    <img class="m-logo" src="img/m-qr/m_logo.png" alt="logo">
+                </a>
+
+                <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="current pull-right">订单列表</span>
+            </div>
+            <!-- end mobile sidebar expand / collapse button -->
+            
+        </div>
+        <!-- end container-fluid -->
+    </div>
+
+    <form class="modal fade pwd" id="edit-password">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                            class="sr-only">Close</span></button>
+                    <h2 class="modal-title text-center m-t-30" id="myModalLabel">修改密码</h2>
+                </div>
+                <div class="modal-body">
+                    <p class="info text-center">密码为8-20位，不能输入中文、空格</p>
+                    <div class="input-wrap">
+                        <div class="input">
+                            <input class="input-txt" id="old" type="password" placeholder="旧密码"
+                                   required data-parsley-required/>
+                        </div>
+                        <div class="input">
+                            <input id="new" type="password" placeholder="新密码" data-parsley-pattern-message="不能包含中文、空格"
+                                   pattern="/^[^\s\u4e00-\u9fa5]*$/" data-parsley-pattern="/^[^\s\u4e00-\u9fa5]*$/"
+                                   data-parsley-maxlength="20" maxlength="20" data-parsley-minlength="8" minlength="8"
+                                   required data-parsley-required/>
+                        </div>
+                        <div class="input">
+                            <input id="new-confirm" type="password" placeholder="再次输入"
+                                   data-parsley-pattern-message="不能包含中文、空格"
+                                   pattern="/^[^\s\u4e00-\u9fa5]*$/" data-parsley-pattern="/^[^\s\u4e00-\u9fa5]*$/"
+                                   data-parsley-maxlength="20" maxlength="20" data-parsley-minlength="8" minlength="8"
+                                   required data-parsley-required data-parsley-equalto="#new"
+                                   data-parsley-equalto-message="两次输入不一致"/>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn submit">确认</button>
+                </div>
+
+
+            </div>
+        </div>
+    </form>
+    <div class="modal fade modal-contactus" id="modal-contact-us">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title clearfix">
+                        <span class="title-line m-r-10"></span>
+                        <span>联系我们</span>
+                        <span class="title-line m-l-10"></span>
+                    </h4>
+                    <p class="text-center m-t-10">CONTACT US</p>
+                    <div class="row mail">
+                        <div class="col-xs-6 text-center">
+                            <a href="mailto:yuhailan@joymaker.cc">
+                                <div class="mail-container">
+                                    <!-- <img src="/custom/img/common/contactus-mail.png" alt=""> -->
+                                </div>
+                                <p class="m-t-10">发送邮件</p>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 text-center">
+                            <a href="javascript:;">
+                                <div class="advise-container">
+                                    <!-- <img src="/custom/img/common/contactus-advise.png" alt=""> -->
+                                </div>
+                                <p class="m-t-10">意见反馈</p>
+                            </a>
+                        </div>
+                    </div>
+                    <p>
+                        成聚移动定位于烟酒茶行业二维码和新媒体营销服务，并正在孵化烟酒茶品鉴和产品众筹的网络平台。团队成立半年，团队现有10多人，由多名清华毕业生、搜狐、网易、新浪、360、和讯等网络公司高管组成。技术团队均为前知名大厂资深级以上的研发骨干。公司气氛很好，全心做事，快乐工作，典型的合伙式互联网文化，提供高于同类公司的福利待遇、成长空间。
+                    </p>
+                    <footer> 客户服务专线：400800800</footer>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end #header -->
+    <!-- begin #sidebar -->
+    <div id="sidebar" class="sidebar invisible">
+        <!-- begin sidebar scrollbar -->
+        <div data-scrollbar="true" data-height="100%">
+
+            <!-- begin sidebar nav -->
+            <ul class="nav">
+                <li class="nav-header"></li>
+                <li class="all-item">
+                    <a href="#index" class="nav-btn" data-toggle="ajax">
+                        <div class="icon-bar-container">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </div>
+                        <div>仪表盘</div>
+                    </a>
+                </li>
+
+                <li class="has-sub">
+                    <a href="javascript:;">
+
+                        <i class="fa fa-qrcode"></i>
+                        <span>二维码营销</span>
+                    </a>
+                    <!--<ul class="sub-menu" >-->
+                    <ul class="sub-menu">
+                        <li class=""><a href="#/qrmgr/manage" data-toggle="ajax">批次管理</a></li>
+                        <li class=""><a href="#/qr_code/toList" data-toggle="ajax">二维码管理</a></li>
+                        <li class=""><a href="#/qr_product/toList" data-toggle="ajax">产品库</a></li>
+                        <li class=""><a href="#/qrmgr/data" data-toggle="ajax">扫码数据</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="javascript:;">
+
+                        <i class="fa fa-users"></i>
+                        <span>传播营销</span>
+                    </a>
+                    <!--<ul class="sub-menu" style="display:block">-->
+                    <ul class="sub-menu">
+
+                        <li class=""><a href="#/acms/tmpl/tolist" data-toggle="ajax">模板管理</a></li>
+                        <li class=""><a href="#/acms/act/tolist" data-toggle="ajax">活动管理</a></li>
+                        <li class=""><a href="#/award/products" data-toggle="ajax">奖品管理</a></li>
+                        <li class=""><a href="#/weiop/activity/stat" data-toggle="ajax">活动数据</a></li>
+                        <li class=""><a href="#/weiop/activity/pageManage" data-toggle="ajax">活动页面管理</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="javascript:;">
+
+                        <i class="fa fa-gear"></i>
+                        <span>基础管理</span>
+                    </a>
+                    <!--<ul class="sub-menu" >-->
+                    <ul class="sub-menu">
+                        <li class=""><a href="#/user/index" data-toggle="ajax">用户管理</a></li>
+                        <li class=""><a href="#/weiop/order/toList" data-toggle="ajax">订单管理</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="javascript:;">
+
+                        <i class="fa fa-building-o"></i>
+                        <span>企业配置</span>
+                    </a>
+                    <!--<ul class="sub-menu" >-->
+                    <ul class="sub-menu">
+                        <li class=""><a href="#/org/account/index" data-toggle="ajax">账户信息</a></li>
+                        <li class=""><a href="#/org/tolist" data-toggle="ajax">企业用户</a></li>
+                        <li class=""><a href="#/org/perm/tolist" data-toggle="ajax">权限管理</a></li>
+                        <li class=""><a href="#/org/role/tolist" data-toggle="ajax">角色管理</a></li>
+                        <li class=""><a href="#/org/module/tolist" data-toggle="ajax">模块管理</a></li>
+                        <li class=""><a href="#/org/user/tolist" data-toggle="ajax">员工管理</a></li>
+                    </ul>
+                </li>
+                <!-- begin sidebar kefu button -->
+                <!-- <li class="contact-container">
+                    <div class="contact-us">
+                        <p class="icon-customservice"></p>
+                        <p>在线客服</p>
+                    </div>
+                    <div class="contact-us" data-toggle="modal" data-target="#modal-contact-us">
+                        <p class="icon-contactus"></p>
+                        <p>联系我们</p>
+                    </div>
+                </li> -->
+                <!-- end sidebar kefu button -->
+            </ul>
+            <!-- end sidebar nav -->
+        </div>
+        <!-- end sidebar scrollbar -->
+    </div>
+    <div class="sidebar-bg"></div>
+    <!-- end #sidebar -->
+    <!-- begin #content -->
+
+    <div id="ajax-content">
+
+    </div>
+
+    <!-- end #content -->
+
+    <!-- begin scroll to top btn -->
+    <a href="javascript:;" class="btn btn-icon btn-circle btn-tz-blue btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+    <!-- end scroll to top btn -->
+</div> <!-- end #page_container -->
+<!-- ================== BEGIN BASE JS ================== -->
+<script src="/cadmin-ajax/plugins/jquery/jquery-1.12.4.min.js"></script>
+<script src="/cadmin-ajax/plugins/jquery/jquery-migrate-1.4.1.min.js"></script>
+<script src="/cadmin-ajax/plugins/jquery-ui/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="/cadmin-ajax/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!--[if lt IE 9]>
+<script src="/cadmin-ajax/crossbrowserjs/html5shiv.js"></script>
+<script src="/cadmin-ajax/crossbrowserjs/respond.min.js"></script>
+<script src="/cadmin-ajax/crossbrowserjs/excanvas.min.js"></script>
+<![endif]-->
+<script src="/cadmin-ajax/plugins/jquery-hashchange/jquery.hashchange.min.js"></script>
+<script src="/cadmin-ajax/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/cadmin-ajax/plugins/jquery-cookie/jquery.cookie.js"></script>
+<script src="/cadmin-ajax/plugins/store.js/dist/store.legacy.min.js"></script>
+<!-- ================== END BASE JS ================== -->
+<!-- ================== BEGIN PARSLEY JS ================== -->
+<script src="/cadmin-ajax/plugins/parsley/dist/parsley.min.js"></script>
+<script src="/cadmin-ajax/plugins/parsley/dist/i18n/zh_cn.js"></script>
+<!-- ================== END PARSLEY JS ================== -->
+<script src="/cadmin-ajax/js/apps.min.js"></script>
+<script src="/custom/js/common/common.min.js"></script>
+</body>
+</html>

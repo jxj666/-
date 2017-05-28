@@ -1,0 +1,43 @@
+.scan-content {
+	font-size: 30px;
+	color: #444;
+	.fixed {
+		.data-nav {
+			height: 100px;
+			.nav-item {
+				width: 250px;
+				&.active {
+					background: #0da0ff;
+				}
+				a {
+					display: block;
+					line-height: 100px;
+					padding: 0;
+					position: relative;
+				}
+			}
+			.nav-item:nth-child(2) a:before, .nav-item:nth-child(2) a:after{
+				content: '';
+				display: block;
+				width: 2px;
+				height: 40px;
+				background: #d7e8f1;
+				position: absolute;
+				top: 30px;
+			}
+			.nav-item:nth-child(2) a:before {
+				left: 0;
+			}
+			.nav-item:nth-child(2) a:after {
+				right: 0;
+			}
+		}
+		.time-tag {
+			width: 88px;
+			height: 40px;
+		}
+		.btn-group {
+			height: 90px;
+		}
+	}	
+}

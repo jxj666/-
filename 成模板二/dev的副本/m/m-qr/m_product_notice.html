@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>落地页</title>
+	<link rel="stylesheet" href="/custom/css/m/reset.min.css">
+	<link rel="stylesheet" href="/custom/css/m/m-qr/m_product_notice.min.css">
+	<script type="text/javascript">
+		function get_hfs() {
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+		}
+		get_hfs();
+		function throttle(method, context) {
+			clearTimeout(method.timer);
+			method.timer = setTimeout(function () {
+				method.call(context);
+			}, 100);
+		}
+		window.onresize = function () {
+			throttle(get_hfs);
+		}
+	</script>
+</head>
+<body>
+	<div class="marketing-list">
+		<a href="marketing.html" class="marketing-item">
+			<div class="marketing-left">
+				<p class="marketing-p">全员营销+助力抢购助力抢购</p>
+				<p class="time">2017.04.27</p>
+			</div>
+			<img src="/custom/img/m/m-qr/marketing1.png" class="markeing-img">
+		</a>
+		<a href="marketing.html" class="marketing-item">
+			<div class="marketing-left">
+				<p class="marketing-p">全员营销+助力抢购助力抢购</p>
+				<p class="time">2017.04.27</p>
+			</div>
+			<img src="/custom/img/m/m-qr/marketing2.png" class="markeing-img">
+		</a>
+		<a href="marketing.html" class="marketing-item">
+			<div class="marketing-left">
+				<p class="marketing-p">全员营销+助力抢购助力抢购全员营销+助力抢购</p>
+				<p class="time">2017.04.27</p>
+			</div>
+			<img src="/custom/img/m/m-qr/marketing3.png" class="markeing-img">
+		</a>
+		<a href="marketing.html" class="marketing-item">
+			<div class="marketing-left">
+				<p class="marketing-p">全员营销+助力抢购助力抢购全员营销+助力抢购</p>
+				<p class="time">2017.04.27</p>
+			</div>
+			<img src="/custom/img/m/m-qr/marketing1.png" class="markeing-img">
+		</a>
+	</div>
+	<script src="/custom/js/m/jquery.min.js"></script>
+	<script src="/custom/js/m/m-qc/m_login.min.js"></script>
+</body>
+</html>

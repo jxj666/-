@@ -1,0 +1,128 @@
+$tzBlue: #03b0ff;
+//弹出层内容样式  所有项目
+
+.popup_title {
+  padding: 30px;
+  font-size: 14px;
+}
+
+.popup_container {
+  padding: 0 60px 40px 60px;
+  display: none;
+}
+
+.device_list {
+  list-style: none;
+  float: left;
+  padding-left: 0;
+}
+
+.device_list li {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 30px;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .info{
+    color:#666;
+  }
+}
+
+.device_list li.active {
+  border: 2px solid $tzBlue;
+  border-radius: 8px;
+  .info{
+    color:$tzBlue;
+  }
+}
+
+.item-label {
+  color: #aaaaaa;
+}
+
+.popup_container p {
+  color: #aaaaaa;
+}
+
+/*.popup_container input {
+  padding: 10px;
+  border: none;
+  background: #f6f7f7;
+  height: 30px;
+  width: 100%;
+}*/
+
+.popup_container{
+  .button {
+    width: 120px;
+    line-height: 36px;
+    color: #fff;
+    text-align: center;
+    background: #03b0ff;
+    margin-right: 30px;
+    border: none;
+  }
+  a{
+    text-decoration:none;
+  }
+  .hide.active{
+    display: block !important;
+  }
+}
+
+.deployment_code {
+  width: 100%;
+  background: #f6f7f7;
+  line-height: 25px;
+  padding:10px 10px 10px 30px;
+}
+
+.btn-list{
+  padding:0 20px;
+  .btn-list-header{
+    font-weight: bold;
+  }
+  .list{
+    background-color:#fff ;
+  }
+}
+.nav-tabs{
+  //background: $tzBlue;
+  >li>a{
+    color:#fff;
+  }
+
+}
+i.fa{
+   transition:all .3s linear;
+ }
+i.fa.rotate{
+  transform: rotate(180deg);
+}
+.del-btn{
+  color:$tzBlue;
+  font-size: 20px;
+  position: absolute;
+  right:20px;
+  top:50%;
+  margin-top:-10px;
+}
+// 复制按钮
+.copy-target-container{
+  position: relative;
+}
+.clip_button{
+  opacity: 0;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left:0;
+  right:0;
+  background-color: rgba(3,176,255,.5);
+}
+.clip_button.zeroclipboard-is-hover{
+  opacity: 1;
+}

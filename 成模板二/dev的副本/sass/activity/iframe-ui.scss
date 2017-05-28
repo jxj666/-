@@ -1,0 +1,50 @@
+/*注入iframe*/
+s{
+  display: block;
+  font-size: 12px;
+}
+// 图片编辑
+.iframe-img_src,.iframe-img_bg,.iframe-bc_editable {
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+
+.iframe-img_src:hover,.iframe-img_bg:hover,.iframe-img_src.active,.iframe-img_bg.active,.iframe-bc_editable:hover,.iframe-bc_editable.active {
+  border: 2px solid #03b0ff;
+}
+
+.iframe-edit_img,.iframe-edit_bc {
+  position: relative;
+  display: none;
+}
+
+.iframe-edit_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  display: block;
+  padding: 5px 8px;
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #03b0ff;
+}
+.iframe-edit_bc .iframe-edit_btn{
+  padding:0 3px;
+}
+// 文字编辑
+.iframe-txt_editable:hover,.iframe-txt_editable.active {
+  background-color: #03b0ff;
+  color:#fff;
+}
+// 规则编辑
+.iframe-rule_editable:hover,.iframe-rule_editable.active{
+  background-color: #03b0ff;
+  color:#fff;
+}
+// 不同几种状态的编辑
+.iframe-status_editable:hover,.iframe-status_editable.active{
+  background-color: #03b0ff;
+  color:#fff;
+}
