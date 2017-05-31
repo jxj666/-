@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
- 
+
 <head>
     <meta charset="UTF-8">
     <title>翻牌</title>
     <link rel="stylesheet" type="text/css" href="css/reset.min.css">
-    <link rel="stylesheet" href="css/card.min.css">
+    <link rel="stylesheet" type="text/css" href="css/draw_card.min.css">
     <script type="text/javascript">
     function get_hfs() {
         document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
@@ -49,8 +49,9 @@
     <div class="main">
         <div class="lucky-top">
             <div class="menban"></div>
-            <div class="huodon invisible">活动时间:2017年5月1日-12月31日</div>
-            <img src="img/fanpai_02.png" class="top-img">
+            <h1>翻牌有礼相送</h1>
+           <!--  <div class="huodon">活动时间:2017年5月1日-12月31日</div> -->
+            <img src="img/draw_02.png" class="top-img">
             <div class="top-text clearfix">
                 <p class="countdown">
                     <span class="days">03</span> 天
@@ -112,13 +113,13 @@
         </ul>
         <ul class="click-list">
             <li class="click-item">
-                <a href="javascript:void(0)" data-click="gift">活动礼品</a>
+                <a href="##" data-click="gift">活动礼品</a>
             </li>
             <li class="click-item">
-                <a href="javascript:void(0)" data-click="kf">联系客服</a>
+                <a href="##" data-click="kf">&nbsp;联系客服</a>
             </li>
             <li class="click-item">
-                <a href="javascript:void(0)" data-click="statement">隐私权声明</a>
+                <a href="##" data-click="statement">隐私权声明</a>
             </li>
         </ul>
         <!-- 恭喜奖品 -->
@@ -158,7 +159,7 @@
         <!-- 通用弹框 -->
         <div class="tip-bg invisible">
             <div class="gift-tip invisible">
-                <a href="javascript:void(0)" data-click="tip-close" class="tip-close"></a>
+                <a href="##" data-click="tip-close" class="tip-close"></a>
                 <h3 class="tip-title">活动礼品</h3>
                 <p class="tip-content">微信扫伊利大果粒二维码，首次验真可获得福袋。</p>
                 <p class="tip-content center">本期礼品（2017年4月10日-5月30日）如下：</p>
@@ -182,7 +183,7 @@
                 <img src="img/winner_bg.png" class="tip-bottom">
             </div>
             <div class="kf-tip invisible">
-                <a href="javascript:void(0)" data-click="tip-close" class="tip-close"></a>
+                <a href="##" data-click="tip-close" class="tip-close"></a>
                 <h3 class="tip-title">联系客服</h3>
                 <img src="img/code.png" class="tip-code">
                 <p class="tip-content center">长按识别二维码，关注“伊利活动”微信号，发送微信留言，客户将及时处理。
@@ -191,12 +192,18 @@
                 <img src="img/winner_bg.png" class="tip-bottom">
             </div>
             <div class="statement-tip invisible">
-                <a href="javascript:void(0)" data-click="tip-close" class="tip-close"></a>
+                <div class="close_pop">
+                    <a href="##" data-click="tip-close" class="tip-close"></a>
+                </div>
                 <h3 class="tip-title">隐私权声明</h3>
                 <p class="tip-content">
                     <span class="tip-top">特别声明：</span> 伊利集团非常重视用户信息的保护，在使用伊利集团的所有产品和服务前，请您务必仔细阅读并透彻理解本声明。一旦您选择使用，即表示您认可并接受本条款，现有内容及其可能随时更新的内容。
                     <br>一、隐私权政策
-                    <br>有关您的若干信息及其它资料将受到中国有关隐私的法律和本公司《隐私权政策》之规范，
+                    <br>有关您的若干信息及其它资料将受到中国有关隐私的法律和本公司《隐私权政策》之规范.
+                    <br>二、隐私权政策
+                    <br>有关您的若干信息及其它资料将受到中国有关隐私的法律和本公司《隐私权政策》之规范.
+                    <br>三、隐私权政策
+                    <br>有关您的若干信息及其它资料将受到中国有关隐私的法律和本公司《隐私权政策》之规范.
                 </p>
             </div>
         </div>
@@ -210,7 +217,7 @@
             </p>
             <div class="clearfix f_cb">
                 <p class="copy">版权所有:<span class="copy-name">引力集团</span></p>
-                <p class="support">技术支持:<span class="support-name">万川营销云</span></p>
+                <p class="support">技术支持:<span class="support-name">万川营销云&nbsp;&nbsp;</span></p>
             </div>
         </div>
     </div>
@@ -221,8 +228,9 @@
             <li class="nav prize">我的礼品</li>
         </ul>
     </nav>
-        <script src='js/jquery.min.js'></script>
-    <script src="js/card.min.js"></script>
+    <script src='js/jquery.min.js'></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/draw_card.min.js"></script>
 </body>
 
 </html>

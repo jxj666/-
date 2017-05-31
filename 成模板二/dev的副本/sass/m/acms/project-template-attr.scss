@@ -1,0 +1,347 @@
+@import "../common/_mixins";
+
+$cjBlue: #0090ff;
+//活动属性
+/*图标开始*/
+.icon {
+  display: inline-block;
+  height: 34px;
+  line-height: 34px;
+  padding-left: 39px;
+  background-repeat: no-repeat;
+  background-size: 34px 34px;
+}
+
+.icon-color {
+  background-image: url(/custom/img/m/acms/icon-color.png);
+}
+
+.icon-theme {
+  background-image: url(/custom/img/m/acms/icon-theme.png);
+}
+
+.icon-info {
+  background-image: url(/custom/img/m/acms/icon-info.png);
+}
+
+.icon-time {
+  background-image: url(/custom/img/m/acms/icon-time.png);
+}
+
+.icon-bc {
+  background-image: url(/custom/img/m/acms/icon-bc.png);
+}
+
+.icon-user {
+  background-image: url(/custom/img/m/acms/icon-user.png);
+}
+.icon-power {
+  background-image: url(/custom/img/m/acms/icon-power.png);
+}
+
+/*图标结束*/
+.attr-edit_btn {
+  text-decoration: underline;
+  color: $cjBlue;
+}
+
+.attr-edit_title {
+  padding: 0 30px;
+  color: $cjBlue;
+}
+
+.attr-edit_head {
+  background-color: #fff;
+  padding: 30px 30px 0;
+}
+
+.attr-edit_content {
+  padding: 0 30px;
+}
+
+.attr-edit_block {
+  background-color: #fff;
+  padding: 30px 0;
+  border-bottom: 1px solid #f1f1f1; /*no*/
+}
+
+/*色系开始*/
+.color-block_container {
+  display: flex;
+}
+
+.color-block_item {
+  flex: 0 1 auto;
+  margin-right: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.color-block_item.active {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .4);
+    text-align: center;
+  }
+  &:after {
+    content: '\2713';
+    position: absolute;
+    top: 4px;
+    left: 22px;
+    z-index: 2;
+    text-align: center;
+    font-size: 33px;
+    line-height: 33px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+  }
+}
+
+.color-block {
+  display: block;
+  width: 77px;
+  height: 41px;
+}
+
+.color-ffe5bc {
+  background-color: #ffe5bc;
+}
+
+.color-ffe1cf {
+  background-color: #ffe1cf;
+}
+
+.color-96e6fd {
+  background-color: #96e6fd;
+}
+
+.color-eee {
+  background-color: #eee;
+}
+
+/*色系结束*/
+/*主题设置开始*/
+.attr-edit_show {
+  font-size: 30px;
+  line-height: 1;
+  .attr-show_item {
+    margin-top: 35px;
+    display: flex;
+  }
+  .label {
+    flex: 0 1 auto;
+    white-space: nowrap;
+  }
+  .value {
+    flex: 0 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $cjBlue;
+    font-size: 24px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    border-radius: 10px;
+    background-color: rgb(239, 247, 254);
+  }
+}
+
+/*主题设置结束*/
+/*小广播设置开始*/
+.prizes-block_container {
+  display: flex;
+}
+
+.prizes-block {
+  flex: 0 1 auto;
+  display: block;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 24px;
+  padding: 8px 10px;
+  background-color: #eee;
+  color: #bbb;
+  &.active {
+    background-color: rgb(0, 178, 255);
+    color: #fff;
+  }
+}
+
+.prizes-block_container {
+  padding-left: 40px;
+}
+
+.radio {
+  position: relative;
+  padding-left: 40px;
+  font-size: 24px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #eee;
+  }
+}
+
+.radio.checked {
+  &:before {
+    background-color: $cjBlue;
+  }
+}
+
+/*小广播设置结束*/
+/*背景图设置结束*/
+.bg-img_container {
+  display: flex;
+}
+
+.bg-img_item {
+  flex: 0 1 auto;
+  margin-right: 10px;
+  .bg-img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .upload {
+    color: $cjBlue;
+    background-color: #ddd;
+    font-size: 62px;
+    line-height: 200px;
+    text-align: center;
+  }
+}
+
+/*背景图设置结束*/
+/*banner图设置结束*/
+.banner-img_container {
+  display: flex;
+}
+
+.banner-img_item {
+  flex: 0 1 auto;
+  margin-right: 10px;
+  .banner-img {
+    display: block;
+    width: 200px;
+    height: 85px;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .upload {
+    color: $cjBlue;
+    background-color: #ddd;
+    font-size: 62px;
+    line-height: 85px;
+    text-align: center;
+  }
+}
+
+/*banner图设置结束*/
+.box_a {
+  .textarea {
+    display: block;
+    color: #aaaaaa;
+    font-size: 24px;
+    border: 1px solid #b2e8ff;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0 20px;
+  }
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  .btn {
+    border-radius: 10px;
+    width: 290px;
+    height: 100px;
+    font-size: 44px;
+    line-height: 100px;
+    &.default {
+      color: #bbb;
+      background-image: linear-gradient(106deg, rgb(221, 221, 221) 0%, rgb(238, 238, 238) 100%);
+      box-shadow: 0 0 10px 3px rgba(204, 204, 204, 0.3);
+    }
+    &.save {
+      color: #fff;
+      background-image: linear-gradient(106deg, rgb(17, 183, 255) 0%, rgb(0, 156, 255) 100%);
+      box-shadow: 0 0 10px 3px rgba(3, 126, 241, 0.3);
+    }
+  }
+}
+
+/*权限设置开始*/
+.power-edit_btn {
+  text-decoration: underline;
+  color: $cjBlue;
+}
+.power-edit_title {
+  padding: 0 30px;
+  color: $cjBlue;
+}
+
+.power-edit_head {
+  background-color: #fff;
+  padding: 30px 30px 0;
+}
+
+.power-edit_block {
+  background-color: #fff;
+  padding: 30px 0;
+  border-bottom: 1px solid #f1f1f1; /*no*/
+}
+.power-edit_content {
+  padding: 0 30px;
+  .power-content_item{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.power-block_container {
+  display: flex;
+}
+
+.power-block_item {
+  flex: 0 1 auto;
+  margin-right: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  .power-block {
+    display: block;
+    border-radius: 10px;
+    background-color: rgb(239, 247, 254);
+    padding: 8px 10px;
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    color: #0da0ff;
+  }
+}
+
+/*权限设置结束*/

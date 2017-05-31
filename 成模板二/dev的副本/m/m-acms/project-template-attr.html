@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>公告配置</title>
+    <link rel="stylesheet" href="/custom/css/m/common/normalize.min.css">
+    <link rel="stylesheet" href="/custom/css/m/common/common.min.css">
+    <link rel="stylesheet" href="/custom/css/m/acms/j_reset.min.css">
+    <link rel="stylesheet" href="/custom/css/m/acms/project-template-notice.min.css">
+    <link rel="stylesheet" href="/custom/css/m/acms/project-template-attr.min.css">
+    <script type="text/javascript">
+        function get_hfs() {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        }
+        get_hfs();
+
+        function throttle(method, context) {
+            clearTimeout(method.timer);
+            method.timer = setTimeout(function () {
+                method.call(context);
+            }, 100);
+        }
+        window.onresize = function () {
+            throttle(get_hfs);
+        }
+    </script>
+</head>
+<!-- 类名前后缀:
+前缀:
+1. g_ 布局 2. m_ 模块 3. j_ 交互
+后缀:
+1. _h 头部 2. _b 主体 3. _f 尾部 4. _s 段落 5. _n 导航 6. _a 部分/其他 7. _c 控制
+-->
+
+<body class="body">
+<div class="content">
+    <!-- 头部大图 -->
+    <div class="banner">
+        <h1 class="banner-info">伊利大果粒<br>扫码抢红包</h1>
+        <img src="/custom/img/m/acms/fudai.png" class="banner-img">
+        <p class="banner-time">活动时间：2017年5月1日-12月31日</p>
+        <ul class="banner-mask clearfix">
+            <li class="banner-mask_item">
+                2017/04/18-2017/06/30
+            </li>
+            <li class="banner-mask_item spread">
+                #扫码抽奖
+            </li>
+        </ul>
+    </div>
+    <!-- 活动与数据 -->
+    <div class="g_notice_data">
+        <div class="data_title">
+            <h3>芙蓉王扫码活动</h3></div>
+        <div class="base_data">
+            <h5>基础数据</h5>
+            <div class="data_wall">
+                <div class="data_boxs">
+                    <div class="data_box">
+                        <img src="/custom/img/m/acms/notice_07.png" alt="tb">
+                        <h6>用户访问量</h6>
+                        <p>1,222,3333,111</p>
+                    </div>
+                    <div class="data_box">
+                        <img src="/custom/img/m/acms/notice_09.png" alt="tb">
+                        <h6>页面访问量</h6>
+                        <p>1,222,3333,111</p>
+                    </div>
+                    <div class="data_box">
+                        <img src="/custom/img/m/acms/notice_12.png" alt="tb">
+                        <h6>扫码访问量</h6>
+                        <p>1,222,3333,111</p>
+                    </div>
+                    <div class="data_box">
+                        <img src="/custom/img/m/acms/notice_07.png" alt="tb">
+                        <h6>其他访问量</h6>
+                        <p>1,222,3333,111</p>
+                    </div>
+                    <div class="data_box">
+                        <img src="/custom/img/m/acms/notice_07.png" alt="tb">
+                        <h6>其他访问量</h6>
+                        <p>1,222,3333,111</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 相关配置 -->
+    <div class="g_notice_set">
+        <div class="set_switch">
+            <div class="switch_n">
+                <ul>
+                    <li>活动属性</li>
+                    <li class="j_active">公告配置</li>
+                    <li>礼品政策</li>
+                    <li>关联码包</li>
+                    <li>权限管理</li>
+                    <li>其他管理</li>
+                </ul>
+            </div>
+        </div>
+        <!--活动属性-->
+        <div class="set_menu fade active in">
+            <div class="attr-edit_head clearfix">
+                <a href="javascript:;" class="attr-edit_btn fr">编辑</a>
+            </div>
+            <div class="attr-edit_block">
+                <div class="attr-edit_title">
+                    <span class="icon icon-color">色系</span>
+                </div>
+                <div class="attr-edit_content m-t-20">
+                    <ul class="color-block_container">
+                        <li class="color-block_item">
+                            <a href="javascript:;" class="color-block color-ffe5bc"></a>
+                        </li>
+                        <li class="color-block_item">
+                            <a href="javascript:;" class="color-block color-ffe1cf"></a>
+                        </li>
+                        <li class="color-block_item active">
+                            <a href="javascript:;" class="color-block color-96e6fd"></a>
+                        </li>
+                        <li class="color-block_item">
+                            <a href="javascript:;" class="color-block color-eee"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="attr-edit_block">
+                <div class="attr-edit_title">
+                    <span class="icon icon-theme">主题设置</span>
+                </div>
+                <div class="attr-edit_content">
+                    <ul class="attr-edit_show">
+                        <li class="attr-show_item clearfix">
+                            <div class="label">活动主题文字：</div>
+                            <div class="value">现金红包1.68元</div>
+                        </li>
+                        <li class="attr-show_item clearfix">
+                            <div class="label">背景图：</div>
+                            <div class="value">http://saascore.oss-cn-beijing.aliyuncs.com/custom/img/index/wc1.png
+                            </div>
+                        </li>
+                        <li class="attr-show_item clearfix">
+                            <div class="label">活动主题banner图：</div>
+                            <div class="value">http://saascore.oss-cn-beijing.aliyuncs.com/custom/img/index/wc1.png
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="attr-edit_block">
+                <div class="attr-edit_title">
+                    <span class="icon icon-info">文案编辑</span>
+                </div>
+                <div class="attr-edit_content">
+                    <ul class="attr-edit_show">
+                        <li class="attr-show_item clearfix">
+                            <div class="label">奖项规则：</div>
+                            <div class="value">文案</div>
+                        </li>
+                        <li class="attr-show_item clearfix">
+                            <div class="label">联系客服文案：</div>
+                            <div class="value">文案</div>
+                        </li>
+                        <li class="attr-show_item clearfix">
+                            <div class="label">底部文案：</div>
+                            <div class="value">文案</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="attr-edit_block">
+                <div class="attr-edit_title">
+                    <span class="icon icon-time">时间设置</span>
+                </div>
+                <div class="attr-edit_content">
+                    <ul class="attr-edit_show">
+                        <li class="attr-show_item clearfix">
+                            <div class="label">开始时间：</div>
+                            <div class="value">2017/05/25 12:00</div>
+                        </li>
+                        <li class="attr-show_item clearfix">
+                            <div class="label">结束时间：</div>
+                            <div class="value">2017/05/26 12:00</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="attr-edit_block">
+                <div class="attr-edit_title">
+                    <span class="icon icon-bc">小广播设置</span>
+                </div>
+                <div class="attr-edit_content">
+                    <ul class="attr-edit_show">
+                        <li class="attr-show_item">
+                            <label class="radio"><input type="radio" disabled hidden name="bc">显示最新中奖礼品和条数</label>
+                        </li>
+                        <li class="attr-show_item">
+                            <label class="radio checked"><input type="radio" disabled hidden checked name="bc">显示最新中奖礼品和条数</label>
+                        </li>
+                        <li class="attr-show_item">
+                            <ul class="prizes-block_container">
+                                <li class="prizes-block_item">
+                                    <a href="javascript:;" class="prizes-block active">现金红包</a>
+                                </li>
+                                <li class="prizes-block_item">
+                                    <a href="javascript:;" class="prizes-block active">乐视电视</a>
+                                </li>
+                                <li class="prizes-block_item">
+                                    <a href="javascript:;" class="prizes-block active">88元红包</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部按钮 -->
+
+    <div class="g_notice_btn">
+        <button>活动数据</button>
+        <button>点击体验</button>
+    </div>
+    <!-- 底部按钮 -->
+</div>
+<!-- 属性弹窗 -->
+<!-- 弹窗 -->
+<div class="g_notice_pop" id="modal-attr">
+    <div class="pop_box">
+        <div class="box_h">
+            <h2>编辑</h2></div>
+        <div class="box_g">
+            <div class="box_a">
+                <h5>色系</h5>
+                <ul class="color-block_container m-t-20">
+                    <li class="color-block_item active">
+                        <a href="javascript:;" class="color-block color-ffe5bc"></a>
+                    </li>
+                    <li class="color-block_item">
+                        <a href="javascript:;" class="color-block color-ffe1cf"></a>
+                    </li>
+                    <li class="color-block_item">
+                        <a href="javascript:;" class="color-block color-96e6fd"></a>
+                    </li>
+                    <li class="color-block_item">
+                        <a href="javascript:;" class="color-block color-eee"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box_a m-t-60">
+                <h5>主题设置</h5>
+                <div class="title_set">
+                    <h6>活动主题文字:</h6>
+                    <input class="m-t-20" type="text" name="" maxlength="16" placeholder="请输入活动主题，字数不可超过16字">
+                    <div class="m-t-40">
+                        <h6>背景图</h6>
+                        <div class="overflow-x m-t-20">
+                            <ul class="bg-img_container">
+                                <li class="bg-img_item active">
+                                    <a href="javascript:;" class="bg-img upload">
+                                        +
+                                    </a>
+                                </li>
+                                <li class="bg-img_item">
+                                    <a href="javascript:;" class="bg-img">
+                                        <img src="/custom/img/m/acms/fudai.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="bg-img_item">
+                                    <a href="javascript:;" class="bg-img">
+                                        <img src="/custom/img/m/acms/fanpai.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="m-t-40">
+                        <h6>活动主题banner图</h6>
+                        <div class="overflow-x m-t-20">
+                            <ul class="banner-img_container">
+                                <li class="banner-img_item active">
+                                    <a href="javascript:;" class="banner-img upload">
+                                        +
+                                    </a>
+                                </li>
+                                <li class="banner-img_item">
+                                    <a href="javascript:;" class="banner-img">
+                                        <img src="/custom/img/m/acms/fudai.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="banner-img_item">
+                                    <a href="javascript:;" class="banner-img">
+                                        <img src="/custom/img/m/acms/fanpai.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_a m-t-60">
+                <h5>文案编辑</h5>
+                <div class="title_set">
+                    <h6>奖项规则:</h6>
+                    <textarea class="textarea m-t-20" rows="8">
+                    </textarea>
+                    <div class="m-t-40">
+                        <h6>联系客服文案:</h6>
+                        <textarea class="textarea m-t-20" rows="4">
+                    </textarea>
+                    </div>
+                    <div class="m-t-40">
+                        <h6>底部文案:</h6>
+                        <textarea class="textarea m-t-20" rows="4">
+                    </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="box_a">
+                <h5>时间设置</h5>
+                <div class="time_a">
+                    <div class="time_s"><span>开始时间:</span>
+                        <input type="date">
+                    </div>
+                    <div class="time_s"><span>结束时间:</span>
+                        <input type="date" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="box_a">
+               <h5>小广播设置</h5>
+                    <li class="attr-show_item">
+                        <label class="radio"><input type="radio" hidden name="bc">显示最新中奖礼品和条数</label>
+                    </li>
+                    <li class="attr-show_item">
+                        <label class="radio checked"><input type="radio" hidden checked name="bc">显示最新中奖礼品和条数</label>
+                    </li>
+                    <li class="attr-show_item">
+                        <ul class="prizes-block_container">
+                            <li class="prizes-block_item">
+                                <a href="javascript:;" class="prizes-block">现金红包</a>
+                            </li>
+                            <li class="prizes-block_item">
+                                <a href="javascript:;" class="prizes-block">乐视电视</a>
+                            </li>
+                            <li class="prizes-block_item">
+                                <a href="javascript:;" class="prizes-block">88元红包</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer m-t-60 p-b-60">
+                <a href="javascript:;" class="btn save">保存</a>
+                <a href="#modal-attr" data-miss="modal" class="btn default">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/cadmin-ajax/plugins/jquery/jquery-3.2.1.min.js"></script>
+<script src="/custom/js/m/common/common.min.js"></script>
+<script src="/custom/js/m/acms/project-template-notice.min.js"></script>
+</body>
+
+</html>

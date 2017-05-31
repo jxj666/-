@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>活动管理</title>
+    <link rel="stylesheet" href="/custom/css/m/common/normalize.min.css">
+    <link rel="stylesheet" href="/custom/css/m/common/common.min.css">
+    <link rel="stylesheet" href="/custom/css/m/acms/j_reset.min.css">
+    <link rel="stylesheet" href="/custom/css/m/acms/project-template-notice.min.css">
+    <link rel="stylesheet" href="/custom/css/m/acms/project-template-attr.min.css">
+    <link rel="stylesheet" href="/custom/css/m/acms/project-template-strategy.min.css">
+    <script type="text/javascript">
+        function get_hfs() {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        }
+        get_hfs();
+
+        function throttle(method, context) {
+            clearTimeout(method.timer);
+            method.timer = setTimeout(function() {
+                method.call(context);
+            }, 100);
+        }
+        window.onresize = function() {
+            throttle(get_hfs);
+        }
+    </script>
+</head>
+<!-- ^_^
+特殊前后缀说明:
+前缀:1. g_ 布局 2. m_ 模块 3. j_ 交互
+后缀:1. _h 头部 2. _b 主体 3. _f 尾部 4. _s 段落 5. _n 导航 6. _a 部分/其他 7. _c 控制 8. _e 说明
+^_^ -->
+
+<body class="body">
+<div class="content">
+    <!-- 头部大图 -->
+    <div class="banner">
+        <h1 class="banner-info">伊利大果粒<br>扫码抢红包</h1>
+        <img src="/custom/img/m/acms/fudai.png" class="banner-img">
+        <p class="banner-time">活动时间：2017年5月1日-12月31日</p>
+        <ul class="banner-mask clearfix">
+            <li class="banner-mask_item">
+                2017/04/18-2017/06/30
+            </li>
+            <li class="banner-mask_item spread">
+                #扫码抽奖
+            </li>
+        </ul>
+    </div>
+    <!-- 活动与数据 -->
+    <div class="g_notice_data">
+        <div class="data_title">
+            <h3>芙蓉王扫码活动</h3></div>
+        <div class="base_data">
+            <h5>基础数据</h5>
+            <div class="data_wall">
+                <div class="data_boxs">
+                    <div class="data_box">
+                        <img src="/custom/img/m/acms/notice_07.png" alt="tb">
+                        <h6>用户访问量</h6>
+                        <p>1,222,3333,111</p>
+                    </div>
+                    <div class="data_box">
+                        <img src="/custom/img/m/acms/notice_09.png" alt="tb">
+                        <h6>页面访问量</h6>
+                        <p>1,222,3333,111</p>
+                    </div>
+                    <div class="data_box">
+                        <img src="/custom/img/m/acms/notice_12.png" alt="tb">
+                        <h6>扫码访问量</h6>
+                        <p>1,222,3333,111</p>
+                    </div>
+                    <div class="data_box">
+                        <img src="/custom/img/m/acms/notice_07.png" alt="tb">
+                        <h6>其他访问量</h6>
+                        <p>1,222,3333,111</p>
+                    </div>
+                    <div class="data_box">
+                        <img src="/custom/img/m/acms/notice_07.png" alt="tb">
+                        <h6>其他访问量</h6>
+                        <p>1,222,3333,111</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 相关配置 -->
+    <div class="g_notice_set">
+        <div class="set_switch">
+            <div class="switch_n">
+                <ul class="nav">
+                    <li data-cj="tab" data-target="#attr">活动属性</li>
+                    <li data-cj="tab" data-target="#notice">公告配置</li>
+                    <li data-cj="tab" data-target="#strategy">礼品政策</li>
+                    <li data-cj="tab" data-target="#">关联码包</li>
+                    <li class="j_active" data-cj="tab" data-target="#power">权限管理</li>
+                    <li data-cj="tab" data-target="#">其他管理</li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content g_strategy_set">
+            <!--活动属性-->
+            <div class="set_menu fade" id="attr">
+                <div class="attr-edit_head clearfix">
+                    <a href="#modal-attr" class="attr-edit_btn fr" data-cj="modal">编辑</a>
+                </div>
+                <div class="attr-edit_block">
+                    <div class="attr-edit_title">
+                        <span class="icon icon-color">色系</span>
+                    </div>
+                    <div class="attr-edit_content m-t-20">
+                        <ul class="color-block_container">
+                            <li class="color-block_item">
+                                <a href="javascript:;" class="color-block color-ffe5bc"></a>
+                            </li>
+                            <li class="color-block_item">
+                                <a href="javascript:;" class="color-block color-ffe1cf"></a>
+                            </li>
+                            <li class="color-block_item active">
+                                <a href="javascript:;" class="color-block color-96e6fd"></a>
+                            </li>
+                            <li class="color-block_item">
+                                <a href="javascript:;" class="color-block color-eee"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="attr-edit_block">
+                    <div class="attr-edit_title">
+                        <span class="icon icon-theme">主题设置</span>
+                    </div>
+                    <div class="attr-edit_content">
+                        <ul class="attr-edit_show">
+                            <li class="attr-show_item clearfix">
+                                <div class="label">活动主题文字：</div>
+                                <div class="value">现金红包1.68元</div>
+                            </li>
+                            <li class="attr-show_item clearfix">
+                                <div class="label">背景图：</div>
+                                <div class="value">http://saascore.oss-cn-beijing.aliyuncs.com/custom/img/index/wc1.png
+                                </div>
+                            </li>
+                            <li class="attr-show_item clearfix">
+                                <div class="label">活动主题banner图：</div>
+                                <div class="value">http://saascore.oss-cn-beijing.aliyuncs.com/custom/img/index/wc1.png
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="attr-edit_block">
+                    <div class="attr-edit_title">
+                        <span class="icon icon-info">文案编辑</span>
+                    </div>
+                    <div class="attr-edit_content">
+                        <ul class="attr-edit_show">
+                            <li class="attr-show_item clearfix">
+                                <div class="label">奖项规则：</div>
+                                <div class="value">文案</div>
+                            </li>
+                            <li class="attr-show_item clearfix">
+                                <div class="label">联系客服文案：</div>
+                                <div class="value">文案</div>
+                            </li>
+                            <li class="attr-show_item clearfix">
+                                <div class="label">底部文案：</div>
+                                <div class="value">文案</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="attr-edit_block">
+                    <div class="attr-edit_title">
+                        <span class="icon icon-time">时间设置</span>
+                    </div>
+                    <div class="attr-edit_content">
+                        <ul class="attr-edit_show">
+                            <li class="attr-show_item clearfix">
+                                <div class="label">开始时间：</div>
+                                <div class="value">2017/05/25 12:00</div>
+                            </li>
+                            <li class="attr-show_item clearfix">
+                                <div class="label">结束时间：</div>
+                                <div class="value">2017/05/26 12:00</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="attr-edit_block">
+                    <div class="attr-edit_title">
+                        <span class="icon icon-bc">小广播设置</span>
+                    </div>
+                    <div class="attr-edit_content">
+                        <ul class="attr-edit_show">
+                            <li class="attr-show_item">
+                                <label class="radio"><input type="radio" disabled hidden name="bc">显示最新中奖礼品和条数</label>
+                            </li>
+                            <li class="attr-show_item">
+                                <label class="radio checked"><input type="radio" disabled hidden checked name="bc">显示最新中奖礼品和条数</label>
+                            </li>
+                            <li class="attr-show_item">
+                                <ul class="prizes-block_container">
+                                    <li class="prizes-block_item">
+                                        <a href="javascript:;" class="prizes-block active">现金红包</a>
+                                    </li>
+                                    <li class="prizes-block_item">
+                                        <a href="javascript:;" class="prizes-block active">乐视电视</a>
+                                    </li>
+                                    <li class="prizes-block_item">
+                                        <a href="javascript:;" class="prizes-block active">88元红包</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--公告-->
+            <div class="set_menu fade" id="notice">
+                <div class="menu_h">
+                    <p>是否启用公告列表</p>
+                    <div class="menu_c">
+                        <div class="yes_c  j_active">是</div>
+                        <div class="no_c">否</div>
+                    </div>
+                </div>
+                <div class="menu_b">
+                    <div class="menu_a">
+                        <img src="/custom/img/m/acms/notice_18.png" alt="sx">
+                        <div class="menu_s">
+                            <h3>伊利大果粒&nbsp;&nbsp;&nbsp;扫码领红包</h3>
+                            <p>2017/01/01-2017/11/11</p>
+                            <button data-cj="modal" data-target="#modal-notice">编辑</button>
+                        </div>
+                    </div>
+                    <div class="menu_a">
+                        <img src="/custom/img/m/acms/notice_18.png" alt="sx">
+                        <div class="menu_s">
+                            <h3>伊利大果粒&nbsp;&nbsp;&nbsp;扫码领红包</h3>
+                            <p>2017/01/01-2017/11/11</p>
+                            <button data-cj="modal" data-target="#modal-notice">编辑</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--礼品策略-->
+            <div class="set_menu set_boxs fade" id="strategy">
+                <div class="m_set gift">
+                    <h3>礼品列表</h3>
+                    <div class="gifts">
+                        <div class="gifts_box">
+                            <div class="gift_s">
+                                <img src="/custom/img/m/acms/celue_07.png" alt="">
+                                <h5>红包188元</h5>
+                                <p>剩余库存:<span>88888</span>个</p>
+                                <p>需要拆礼盒</p>
+                                <p>默认概率:<span>20%</span></p>
+                            </div>
+                            <div class="gift_s">
+                                <img src="/custom/img/m/acms/celue_07.png" alt="">
+                                <h5>红包188元</h5>
+                                <p>剩余库存:<span>88888</span>个</p>
+                                <p>需要拆礼盒</p>
+                                <p>默认概率:<span>20%</span></p>
+                            </div>
+                            <div class="gift_s">
+                                <h3 class="j_add_gift"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m_set strategy">
+                    <h3>策略配置</h3>
+                    <div class="first_set">
+                        首次必中
+                        <select name="first_bag" id="">
+                            <option value="1">红包1.88元</option>
+                            <option value="2">红包2.88元</option>
+                        </select>
+                        <select name="first_time" id="">
+                            <option value="1">整个活动期间</option>
+                            <option value="2">三个月</option>
+                        </select>
+                        <br>
+                        <select name="third_bag" id="">
+                            <option value="1">3</option>
+                            <option value="2">5</option>
+                        </select>
+                        次之后概率降低
+                        <select name="third_time" id="">
+                            <option value="1">整个活动期间</option>
+                            <option value="2">三个月</option>
+                        </select>
+                        <a href="">对应概率</a>
+                    </div>
+                    <div class="people_set">
+                        <div class="set_a">
+                            <p>灰名单策略</p>
+                            <button>对应概率</button>
+                            <button>灰名单规则</button>
+                            <button>灰名单名单</button>
+                        </div>
+                        <div class="set_a">
+                            <p>灰名单策略</p>
+                            <button>对应概率</button>
+                            <button>白名单规则</button>
+                            <button>白名单名单</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="m_set waring">
+                    <h3>预警配置</h3>
+                    <div class="set_l">
+                        <p>礼品库存提醒点</p>
+                        <select name="kokc" id="">
+                            <option value="1">1000</option>
+                            <option value="2">100</option>
+                        </select>
+                    </div>
+                    <div class="set_l">
+                        <p>当日礼品总费用提醒点</p>
+                        <select name="drlpzfy" id="">
+                            <option value="1">10000</option>
+                            <option value="2">1000</option>
+                        </select>
+                    </div>
+                    <div class="set_l">
+                        <p>礼品总费用提醒点</p>
+                        <select name="lpzfy" id="">
+                            <option value="1">100000</option>
+                            <option value="2">10000</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--权限设置-->
+            <div class="set_menu fade active in" id="power">
+                <div class="power-edit_head clearfix">
+                    <a href="#modal-power" class="power-edit_btn fr" data-cj="modal">编辑</a>
+                </div>
+                <div class="power-edit_block">
+                    <div class="power-edit_title">
+                        <span class="icon icon-user">活动编辑人员</span>
+                    </div>
+                    <div class="power-edit_content">
+                        <div class="power-content_item m-t-20">
+                            <div>王二宝</div>
+                            <ul class="power-block_container">
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可上线</a>
+                                </li>
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可下线</a>
+                                </li>
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可编辑</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="power-content_item m-t-20">
+                            <div>王二宝</div>
+                            <ul class="power-block_container">
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可下线</a>
+                                </li>
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可编辑</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="power-edit_block">
+                    <div class="power-edit_title">
+                        <span class="icon icon-power">数据报告查看权限</span>
+                    </div>
+                    <div class="power-edit_content">
+                        <div class="power-content_item m-t-20">
+                            <div>王二宝</div>
+                            <ul class="power-block_container">
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可上线</a>
+                                </li>
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可下线</a>
+                                </li>
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可编辑</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="power-content_item m-t-20">
+                            <div>王二宝</div>
+                            <ul class="power-block_container">
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可下线</a>
+                                </li>
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可编辑</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- 底部按钮 -->
+    <div class="g_notice_btn">
+        <button>活动数据</button>
+        <button>点击体验</button>
+    </div>
+</div>
+<!-- 公告弹窗 -->
+<div class="g_notice_pop hide" id="modal-notice">
+    <div class="pop_box">
+        <div class="box_h">
+            <h2>内容编辑</h2></div>
+        <div class="box_g">
+            <div class="box_a">
+                <h5>公告图片上传</h5>
+                <div class="img_up">
+                    <h5>+</h5>
+                    <h6>点击上传</h6>
+                    <p>建议图片尺寸（690*340）</p>
+                </div>
+            </div>
+            <input id="j_img_up" type="file" name="" style="width: 0;height: 0;visibility: hidden;">
+            <div class="box_a">
+                <h5>主题设置</h5>
+                <div class="title_set">
+                    <h6>活动主题文字:</h6>
+                    <input type="text" name="" maxlength="16" placeholder="请输入活动主题，字数不可超过16字">
+                </div>
+            </div>
+            <div class="box_a">
+                <h5>时间设置</h5>
+                <div class="time_a">
+                    <div class="time_s"><span>开始时间:</span>
+                        <input type="date">
+                    </div>
+                    <div class="time_s"><span>结束时间:</span>
+                        <input type="date" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="box_a">
+                <div class="link">
+                    <div class="link_e">（非必填选项）</div>
+                    <input type="text" name="" placeholder="请输入跳转链接">
+                </div>
+            </div>
+        </div>
+        <div class="box_f">
+            <div class="menu_h">
+                <p>是否顶置</p>
+                <div class="menu_c">
+                    <div class="yes_c  j_active">是</div>
+                    <div class="no_c">否</div>
+                </div>
+                <div class="modal-footer m-t-40 p-b-60">
+                    <a href="javascript:;" class="btn save">保存</a>
+                    <a href="#modal-notice" data-miss="modal" class="btn default">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 属性弹窗 -->
+<div class="g_notice_pop hide" id="modal-attr">
+    <div class="pop_box">
+        <div class="box_h">
+            <h2>属性编辑</h2></div>
+        <div class="box_g">
+            <div class="box_a">
+                <h5>色系</h5>
+                <ul class="color-block_container m-t-20">
+                    <li class="color-block_item active">
+                        <a href="javascript:;" class="color-block color-ffe5bc"></a>
+                    </li>
+                    <li class="color-block_item">
+                        <a href="javascript:;" class="color-block color-ffe1cf"></a>
+                    </li>
+                    <li class="color-block_item">
+                        <a href="javascript:;" class="color-block color-96e6fd"></a>
+                    </li>
+                    <li class="color-block_item">
+                        <a href="javascript:;" class="color-block color-eee"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box_a m-t-60">
+                <h5>主题设置</h5>
+                <div class="title_set">
+                    <h6>活动主题文字:</h6>
+                    <input class="m-t-20" type="text" name="" maxlength="16" placeholder="请输入活动主题，字数不可超过16字">
+                    <div class="m-t-40">
+                        <h6>背景图</h6>
+                        <div class="overflow-x m-t-20">
+                            <ul class="bg-img_container">
+                                <li class="bg-img_item active">
+                                    <a href="javascript:;" class="bg-img upload">
+                                        +
+                                    </a>
+                                </li>
+                                <li class="bg-img_item">
+                                    <a href="javascript:;" class="bg-img">
+                                        <img src="/custom/img/m/acms/fudai.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="bg-img_item">
+                                    <a href="javascript:;" class="bg-img">
+                                        <img src="/custom/img/m/acms/fanpai.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="m-t-40">
+                        <h6>活动主题banner图</h6>
+                        <div class="overflow-x m-t-20">
+                            <ul class="banner-img_container">
+                                <li class="banner-img_item active">
+                                    <a href="javascript:;" class="banner-img upload">
+                                        +
+                                    </a>
+                                </li>
+                                <li class="banner-img_item">
+                                    <a href="javascript:;" class="banner-img">
+                                        <img src="/custom/img/m/acms/fudai.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="banner-img_item">
+                                    <a href="javascript:;" class="banner-img">
+                                        <img src="/custom/img/m/acms/fanpai.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_a m-t-60">
+                <h5>文案编辑</h5>
+                <div class="title_set">
+                    <h6>奖项规则:</h6>
+                    <textarea class="textarea m-t-20" rows="8">
+                    </textarea>
+                    <div class="m-t-40">
+                        <h6>联系客服文案:</h6>
+                        <textarea class="textarea m-t-20" rows="4">
+                    </textarea>
+                    </div>
+                    <div class="m-t-40">
+                        <h6>底部文案:</h6>
+                        <textarea class="textarea m-t-20" rows="4">
+                    </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="box_a">
+                <h5>时间设置</h5>
+                <div class="time_a">
+                    <div class="time_s"><span>开始时间:</span>
+                        <input type="date">
+                    </div>
+                    <div class="time_s"><span>结束时间:</span>
+                        <input type="date" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="box_a">
+                <h5>小广播设置</h5>
+                <ul class="attr-edit_show">
+                    <li class="attr-show_item">
+                        <label class="radio"><input type="radio" hidden name="bc">显示最新中奖礼品和条数</label>
+                    </li>
+                    <li class="attr-show_item">
+                        <label class="radio checked"><input type="radio" hidden checked name="bc">显示最新中奖礼品和条数</label>
+                    </li>
+                    <li class="attr-show_item">
+                        <ul class="prizes-block_container">
+                            <li class="prizes-block_item">
+                                <a href="javascript:;" class="prizes-block">现金红包</a>
+                            </li>
+                            <li class="prizes-block_item">
+                                <a href="javascript:;" class="prizes-block">乐视电视</a>
+                            </li>
+                            <li class="prizes-block_item">
+                                <a href="javascript:;" class="prizes-block">88元红包</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer m-t-60 p-b-60">
+                <a href="javascript:;" class="btn save">保存</a>
+                <a href="#modal-attr" data-miss="modal" class="btn default">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 权限弹窗 -->
+<div class="g_notice_pop hide" id="modal-power">
+    <div class="pop_box">
+        <div class="box_h">
+            <h2>权限编辑</h2></div>
+        <div class="box_g">
+            <div class="box_a">
+                <div class="power-edit_block">
+                    <div class="power-edit_title">
+                        活动编辑人员
+                    </div>
+                    <div class="power-edit_content">
+                        <div class="power-content_item m-t-20">
+                            <div>王二宝</div>
+                            <ul class="power-block_container">
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可上线</a>
+                                </li>
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可下线</a>
+                                </li>
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可编辑</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="power-content_item m-t-20">
+                            <div>王二宝</div>
+                            <ul class="power-block_container">
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可下线</a>
+                                </li>
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可编辑</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_a">
+                <div class="power-edit_block">
+                    <div class="power-edit_title">
+                        数据报告查看权限
+                    </div>
+                    <div class="power-edit_content">
+                        <div class="power-content_item m-t-20">
+                            <div>王二宝</div>
+                            <ul class="power-block_container">
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可上线</a>
+                                </li>
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可下线</a>
+                                </li>
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可编辑</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="power-content_item m-t-20">
+                            <div>王二宝</div>
+                            <ul class="power-block_container">
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可下线</a>
+                                </li>
+                                <li class="power-block_item">
+                                    <a href="javascript:;" class="power-block">可编辑</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer m-t-60 p-b-60">
+                <a href="javascript:;" class="btn save">确定</a>
+                <a href="#modal-power" data-miss="modal" class="btn default">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 礼品策略弹窗 -->
+<div class="g_strategy_pop hide" id="modal-strategy">
+    <div class="pop_box pop_box1">
+        <div class="box_h">
+            <h2>礼品配置</h2>
+        </div>
+        <div class="box_gift_b">
+            <div class="gift_s">
+                <h5>礼品选择</h5>
+            </div>
+            <div class="gift_c">
+                <div class="gift_l">
+                    <h5>库存设置</h5>
+                </div>
+                <div class="gift_l">
+                    <h5>参与方式</h5>
+                </div>
+                <div class="gift_l">
+                    <h5>概率设置</h5>
+                </div>
+            </div>
+        </div>
+        <div class="box_f">
+            <div class="menu_h">
+                <div class="menu_btns">
+                    <button class="j_yes">确定</button>
+                    <button class="j_no">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop_box pop_box2 hide">
+        <div class="box_h">
+            <h2>对应概率</h2>
+        </div>
+        <div class="box_f">
+            <div class="menu_h">
+                <div class="menu_btns">
+                    <button class="j_yes">确定</button>
+                    <button class="j_no">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop_box pop_box3 hide">
+        <div class="box_h">
+            <h2>名单</h2>
+        </div>
+        <div class="box_f">
+            <div class="menu_h">
+                <div class="menu_btns">
+                    <button class="j_yes">确定</button>
+                    <button class="j_no">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/cadmin-ajax/plugins/jquery/jquery-3.2.1.min.js"></script>
+<script src="/custom/js/m/common/common.min.js"></script>
+<script src="/custom/js/m/acms/project-template-main.min.js"></script>
+</body>
+
+</html>

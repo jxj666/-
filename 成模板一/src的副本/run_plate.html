@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>砸金蛋</title>
+    <title>转盘</title>
     <link rel="stylesheet" type="text/css" href="css/reset.min.css">
-    <link rel="stylesheet" type="text/css" href="css/gold_egg.min.css">
+    <link rel="stylesheet" type="text/css" href="css/run_plate.min.css">
     <script type="text/javascript">
     function get_hfs() {
         document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
@@ -49,9 +49,9 @@
     <div class="main">
         <div class="lucky-top">
             <div class="menban"></div>
-            <h1>幸运砸金蛋</h1>
-            <div class="huodon">活动时间:2017年5月1日-12月31日</div>
-            <img src="img/gold_02.png" class="top-img">
+            <h1>欢乐大转盘</h1>
+            <!-- <div class="huodon">活动时间:2017年5月1日-12月31日</div> -->
+            <img src="img/plate_02.png" class="top-img">
             <div class="top-text clearfix">
                 <p class="countdown">
                     <span class="days">03</span> 天
@@ -62,21 +62,40 @@
                 <p class="stock">礼品库存： <span class="stock-num">12345</span>份</p>
             </div>
         </div>
-
-        <!-- 金蛋 -->
-        <div class="m-eggs">
-            <div class="egg-box">
-                <div class="egg_b"><img src="img/gold_06.png" alt=""></div>
-                <div class="egg_f"><img src="img/base_03.png" alt=""></div>
+        <div class="dial">
+            <div class="shenyu"><img src="img/zuanpan_05.png">
+                <p>剩余次数
+                    <br><span>3次</span>
+                </p>
             </div>
-            <div class="egg-box">
-                <div class="egg_b"><img src="img/gold_07.png" alt=""></div>
-                <div class="egg_f"><img src="img/base_03.png" alt=""></div>
-            </div>
-            <div class="egg-box">
-                <div class="egg_b"><img src="
-                img/gold_08.png" alt=""></div>
-                <div class="egg_f"><img src="img/base_03.png" alt=""></div>
+            <div class="dizuo"></div>
+            <div class="canvas-wrap">
+                <button id="turnPlatebtn" class="btn "></button>
+                <canvas id="canvas" class="canvas" width="590" height="590">您的浏览器不支持canvas！</canvas>
+                <div class="award plate-deg_0">
+                    <img src="//weiop.oss-cn-beijing.aliyuncs.com/ruanyuxi/img/5yuan.png" alt="">
+                </div>
+                <div class="award plate-deg_45">
+                    <img src="//weiop.oss-cn-beijing.aliyuncs.com/ruanyuxi/img/jd-gift-card.png" alt="">
+                </div>
+                <div class="award plate-deg_90">
+                    <img src="//weiop.oss-cn-beijing.aliyuncs.com/ruanyuxi/img/wxhb.png" alt="">
+                </div>
+                <div class="award plate-deg_135">
+                    <img src="//weiop.oss-cn-beijing.aliyuncs.com/ruanyuxi/img/5yuan.png" alt="">
+                </div>
+                <div class="award plate-deg_180">
+                    <img src="//weiop.oss-cn-beijing.aliyuncs.com/ruanyuxi/img/wxhb.png" alt="">
+                </div>
+                <div class="award plate-deg_225">
+                    <img src="//weiop.oss-cn-beijing.aliyuncs.com/ruanyuxi/img/20yuan.png" alt="">
+                </div>
+                <div class="award plate-deg_270">
+                    <img src="//weiop.oss-cn-beijing.aliyuncs.com/ruanyuxi/img/wxhb.png" alt="">
+                </div>
+                <div class="award plate-deg_315">
+                    <img src="//weiop.oss-cn-beijing.aliyuncs.com/ruanyuxi/img/tk.png" alt="">
+                </div>
             </div>
         </div>
         <ul class="count-list">
@@ -104,45 +123,6 @@
                 <a href="##" data-click="statement">隐私权声明</a>
             </li>
         </ul>
-        <!-- 恭喜奖品 -->
-        <div class="pop-bg pop-bg1 invisible">
-            <div class="liquan_pop">
-            <div class="img_h">
-                <img src="img/egg_bad_05.png">
-            </div>
-
-                <h3>获得伊利酸奶一箱</h3>
-                <div class="imgbox"><img src="img/yogurt.png"></div>
-                <button class="btn">点击领取</button>
-            </div>
-        </div>
-        <!-- 恭喜红包 -->
-        <div class="pop-bg pop-bg2 invisible">
-            <div class="liquan_pop">
-            <div class="img_h">
-                <img src="img/egg_bad_05.png">
-            </div>
-
-                <h3>获得微信红包1.18元</h3>
-                <div class="imgbox"><img src="img/hb_img.png"></div>
-                <button class="btn">点击领取</button>
-            </div>
-        </div>
-        <!-- 谢谢惠顾 -->
-        <div class="pop-bg pop-bg3 invisible">
-            <div class="liquan_pop">
-            <div class="img_h">
-                <img src="img/egg_bad_03.png">
-            </div>
-                <div class="close_pop">
-                    <a href=""></a>
-                </div>
-                <h3>谢谢您的参与 !</h3>
-                <p> 一些优惠券可以领取</p>
-                <div class="imgbox"><img src="img/huanliquan_03.png"></div>
-                <button class="btn">点击领取</button>
-            </div>
-        </div>
         <!-- 通用弹框 -->
         <div class="tip-bg invisible">
             <div class="gift-tip invisible">
@@ -194,6 +174,67 @@
                 </p>
             </div>
         </div>
+        <!-- 转盘弹框 -->
+        <!-- 恭喜奖品 -->
+        <div class="pop-bg pop-bg1 invisible gonxi_t t1">
+            <div class="pop_head"></div>
+            <div class="lucky-pop">
+                <div class="img-content">
+                    <img src="img/order_img.png" class="yogurt">
+                </div>
+                <p class="lucky-title">电视</p>
+                <a href="##" class="lucky-get">点击领取</a>
+            </div>
+        </div>
+        <!-- 恭喜红包 -->
+        <div class="pop-bg pop-bg2 invisible gonxi_t t2">
+            <div class="pop_head"></div>
+            <div class="lucky-pop">
+                <div class="img-content">
+                    <img src="img/hb_img.png" class="yogurt">
+                </div>
+                <p class="lucky-title">获得微信红包1.18元</p>
+                <a href="##" class="lucky-get">点击领取</a>
+            </div>
+        </div>
+        <!--  谢谢惠顾 -->
+        <div class="pop-bg pop-bg3 invisible gonxi_t t3">
+            <div class="lucky-pop">
+                <div class="pop-close">
+                    <a href=""></a>
+                </div>
+                <h2>谢谢您的参与!</h2>
+                <p class="lucky-title">一些优惠券可以领取</p>
+                <div class="img-content">
+                    <img src="img/youhuiquan_03.png" class="yogurt">
+                </div>
+                <a href="##" class="lucky-get">点击领取</a>
+            </div>
+        </div>
+        <!--  抽奖 -->
+        <div class="pop-bg pop-bg3  invisible coujian_t t4">
+            <div class="pop_head"></div>
+            <div class="lucky-pop">
+                <h2>恭喜您获得一次钱抢积分机会!</h2>
+                <a href="##" class="lucky-get">抢积分</a>
+            </div>
+        </div>
+        <!--  没有抽奖机会 -->
+        <div class="pop-bg pop-bg3  invisible kexi_t t5">
+            <div class="pop_head"></div>
+            <div class="lucky-pop">
+                <h2>积分已抢完!</h2>
+                <a href="##" class="lucky-get">确定</a>
+            </div>
+        </div>
+        <!-- 恭喜中奖 -->
+        <div class="pop-bg pop-bg2 invisible gonxi_t t6">
+            <div class="pop_head"></div>
+            <div class="lucky-pop">
+                <h3>抢得20积分</h3>
+                <a href="##" class="lucky-get">点击领取</a>
+            </div>
+        </div>
         <div class="footer">
             <div class="footer-img-content">
                 <img class="code" src="img/code.png">
@@ -216,7 +257,8 @@
         </ul>
     </nav>
     <script src='js/jquery.min.js'></script>
-    <script src="js/gold_egg.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/run_plate.min.js"></script>
 </body>
 
 </html>

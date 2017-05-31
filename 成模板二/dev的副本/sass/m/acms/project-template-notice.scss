@@ -183,6 +183,10 @@ a {
         }
     }
     .set_menu {
+        display: none;
+        &.active{
+            display: block;
+        }
         .menu_h {
             height: 110px;
             line-height: 110px;

@@ -32,7 +32,7 @@ $(".g_notice_pop .box_a").on('click', '.img_up', function(ev) {
  $('.link input').on('focus',function(){
 
     $('.link_e').hide()
- })   
+ })
     // 顶置切换
     $('.g_notice_pop .menu_c div').on('click', function(ev) {
         var target = ev.target;
@@ -49,5 +49,5 @@ $(".j_yes").click(function(){
 $('.g_notice_pop').addClass('hide')
 })
 $(".j_no").click(function(){
-  $('.g_notice_pop').addClass('hide')  
+  $('.g_notice_pop').addClass('hide')
 })

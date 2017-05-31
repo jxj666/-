@@ -41,3 +41,29 @@ body {
   line-height: 1;
   transition: all .2s ease-in-out;
 }
+
+.fr{
+  float: right;
+}
+.fl{
+  float: left;
+}
+.m-r-5{
+  margin-right:5px;
+}
+.m-t-20{
+  margin-top:20px;
+}
+.m-t-40{
+  margin-top:40px;
+}
+.m-t-60{
+  margin-top:60px;
+}
+.p-b-60{
+  padding-bottom: 60px;
+}
+.overflow-x{
+  width: 100%;
+  overflow-x:auto ;
+}
