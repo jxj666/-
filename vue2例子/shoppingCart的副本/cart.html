@@ -66,7 +66,7 @@
                             <ul class="cart-item-list">
                                 <li v-for="item in productList">
                                     <div class="cart-tab-1">
-                                        <div class="cart-item-check">
+                                         <div class="cart-item-check">
                                             <a href="javascript:void 0" class="item-check-btn" v-bind:class="{'check': item.checked}" @click="selectedProduct(item)">
                                                 <svg class="icon icon-ok">
                                                     <use xlink:href="#icon-ok"></use>
@@ -74,7 +74,7 @@
                                             </a>
                                         </div>
                                         <div class="cart-item-pic">
-                                            <img v-bind:src="item.productImage" alt="烟">
+                                            <img v-bind:src="item.productImage" alt="img">
                                         </div>
                                         <div class="cart-item-title">
                                             <div class="item-name">{{ item.productName }}</div>
