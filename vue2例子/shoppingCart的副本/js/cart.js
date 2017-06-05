@@ -3,7 +3,9 @@
 var vm = new Vue({
     el: '#app',
     data: {
-        title: '靳小健'
+        title: '靳小健',
+        productList:[],
+        totalMoney:0
     },
     filters: {},
     mounted: function() {
@@ -11,9 +13,11 @@ var vm = new Vue({
     },
     methods: {
         cartView:function(){
+          var _this=this;
           this.title +='的购物车';
           this.$http.get('data/cartData.json',{'id':123}).then(function(res){
-
+              _this.productList=res.body.result.list;
+              _this.totalMoney=res.body.result.totalMoney;
           })
         }
     }
