@@ -120,12 +120,11 @@
                     <!-- footer -->
                     <div class="cart-foot-wrap">
                         <div class="cart-foot-l">
-                         <span class="item-check-btn" :class="{'check':checkAllNum}" @click="checkAll(true)">
+                            <div class="item-all-check">
+                                <span class="item-check-btn" :class="{'check':checkAllNum}">
                       <svg class="icon icon-ok"><use xlink:href="#icon-ok"></use></svg>
                     </span>
-                            <div class="item-all-check">
-                                <a href="javascript:void 0">
-                                   
+                                <a href="javascript:void 0" @click="checkAll(true)">
                                     <span v-show="!checkAllNum">全选</span>
                                 </a>
                             </div>
