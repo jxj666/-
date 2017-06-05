@@ -5,7 +5,8 @@ var vm = new Vue({
     data: {
         title: '靳小健',
         productList: [],
-        totalMoney: 0
+        totalMoney: 0,
+        checkAllNum: false
     },
     filters: {
         formatMoney: function(val) {
@@ -35,13 +36,25 @@ var vm = new Vue({
             }
 
         },
-        selectedProduct:function(obj){
-          if(typeof obj.checked == 'undefined'){
-            Vue.set(obj,'checked',true)
-            // this.$set(obj,'checked',true)
-          }else{
-            obj.checked=!obj.checked;
-          }
+        selectedProduct: function(obj) {
+            if (typeof obj.checked == 'undefined') {
+                Vue.set(obj, 'checked', true)
+                    // this.$set(obj,'checked',true)
+            } else {
+                obj.checked = !obj.checked;
+            }
+        },
+        checkAll: function(bol) {
+            this.checkAllNum = bol;
+            var _this = this;
+            this.productList.forEach(function(obj, index) {
+                if (typeof obj.checked == 'undefined') {
+                    Vue.set(obj, 'checked', _this.checkAllNum)
+                } else {
+                    obj.checked = _this.checkAllNum;
+                }
+            })
+
         }
     }
 });
