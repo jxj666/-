@@ -125,12 +125,12 @@
                                     <span class="item-check-btn" :class="{'check':checkAllNum}" @click="checkAll(true)">
                       <svg class="icon icon-ok"><use xlink:href="#icon-ok"></use></svg>
                     </span>
-                                    <span v-show="!checkAllFlag">全选</span>
+                                    <span v-show="!checkAllNum">全选</span>
                                 </a>
                             </div>
                             <div class="item-all-del">
                                 <a href="javascript:void 0" class="item-del-btn" @click="checkAll(false)">
-                                    <span v-show="checkAllFlag">取消全选</span>
+                                    <span v-show="checkAllNum">取消全选</span>
                                 </a>
                             </div>
                         </div>
