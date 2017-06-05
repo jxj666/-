@@ -31,9 +31,17 @@ var vm = new Vue({
             if (val > 0) {
                 obj.productQuantity++;
             } else {
-                obj.productQuantity > 0 ? obj.productQuantity-- : console.log('0');
+                obj.productQuantity > 1 ? obj.productQuantity-- : console.log('不可减少了');
             }
 
+        },
+        selectedProduct:function(obj){
+          if(typeof obj.checked == 'undefined'){
+            Vue.set(obj,'checked',true)
+            // this.$set(obj,'checked',true)
+          }else{
+            obj.checked=!obj.checked;
+          }
         }
     }
 });
