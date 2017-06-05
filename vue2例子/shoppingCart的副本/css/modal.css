@@ -210,3 +210,8 @@ button {
     width: 100%;
 }
 .md-input__inner:focus{border-color:#20a0ff}
+
+input[type="text"]{
+    width: 3rem;
+    text-align: center;
+}
