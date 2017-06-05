@@ -64,9 +64,9 @@
                                 </ul>
                             </div>
                             <ul class="cart-item-list">
-                                <li v-for="item in productList">
+                                <li v-for="(item,index) in productList">
                                     <div class="cart-tab-1">
-                                         <div class="cart-item-check">
+                                        <div class="cart-item-check">
                                             <a href="javascript:void 0" class="item-check-btn" v-bind:class="{'check': item.checked}" @click="selectedProduct(item)">
                                                 <svg class="icon icon-ok">
                                                     <use xlink:href="#icon-ok"></use>
