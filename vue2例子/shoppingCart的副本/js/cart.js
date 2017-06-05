@@ -31,7 +31,7 @@ var vm = new Vue({
             if (val > 0) {
                 obj.productQuantity++;
             } else {
-                obj.productQuantity > 0 ? obj.productQuantity-- : return;
+                obj.productQuantity > 0 ? obj.productQuantity-- : console.log('0');
             }
 
         }
