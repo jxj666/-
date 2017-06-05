@@ -27,9 +27,13 @@ var vm = new Vue({
             )
 
         },
-        changeMoney:function(obj,val){
-          console.log('1');
-          obj.productQuantity+=val;
+        changeMoney: function(obj, val) {
+            if (val > 0) {
+                obj.productQuantity++;
+            } else {
+                obj.productQuantity > 0 ? obj.productQuantity-- : return;
+            }
+
         }
     }
 });
