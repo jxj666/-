@@ -23,7 +23,7 @@ var vm = new Vue({
             this.$http.get('data/cartData.json', { 'id': 123 }).then(
                 res => {
                     this.productList = res.body.result.list;
-                    this.totalMoney = res.body.result.totalMoney;
+                    
                 }
             )
 
@@ -34,6 +34,7 @@ var vm = new Vue({
             } else {
                 obj.productQuantity > 1 ? obj.productQuantity-- : console.log('不可减少了');
             }
+            this.toutalNum();
 
         },
         selectedProduct: function(obj) {
@@ -43,6 +44,7 @@ var vm = new Vue({
             } else {
                 obj.checked = !obj.checked;
             }
+            this.toutalNum();
         },
         checkAll: function(bol) {
             this.checkAllNum = bol;
@@ -54,7 +56,17 @@ var vm = new Vue({
                     obj.checked = _this.checkAllNum;
                 }
             })
+            this.toutalNum();
 
+        },
+        toutalNum:function(){
+          var _this=this;
+          _this.totalMoney=0;
+          this.productList.forEach(function(obj, index) {
+            if(obj.checked){
+              _this.totalMoney +=obj.productPrice*obj.productQuantity;
+            }
+          })
         }
     }
 });
