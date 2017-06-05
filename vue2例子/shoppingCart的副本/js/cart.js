@@ -28,5 +28,8 @@ var vm = new Vue({
 
         }
     }
+});
+Vue.filter('money',function(val,type){
+return '共'+ val ;
 })
 
