@@ -28,6 +28,7 @@ var vm = new Vue({
 
         },
         changeMoney:function(obj,val){
+          console.log('1');
           obj.productQuantity+val;
         }
     }
