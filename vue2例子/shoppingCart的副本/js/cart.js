@@ -13,17 +13,15 @@ var vm = new Vue({
             },
             methods: {
                 cartView: function() {
-                    // let _this = this;
+
                     this.title += '的购物车';
                     this.$http.get('data/cartData.json', { 'id': 123 }).then(
                         res => {
                             this.productList = res.body.result.list;
                             this.totalMoney = res.body.result.totalMoney;
                         }
-                        // function(res) {
-                        //     _this.productList = res.body.result.list;
-                        //     _this.totalMoney = res.body.result.totalMoney;
-                        // })
+                        )
+
                     }
                 }
             })
