@@ -8,9 +8,9 @@ var vm = new Vue({
         totalMoney: 0
     },
     filters: {
-      formatMoney:function(val){
-        return '￥'+ val ;
-      }
+        formatMoney: function(val) {
+            return '￥' + val;
+        }
     },
     mounted: function() {
         this.cartView();
@@ -26,10 +26,12 @@ var vm = new Vue({
                 }
             )
 
+        },
+        changeMoney:function(obj,val){
+          obj.productQuantity+val;
         }
     }
 });
-Vue.filter('money',function(val,type){
-return '共'+ val +type;
+Vue.filter('money', function(val, type) {
+    return '共' + val + type;
 })
-
