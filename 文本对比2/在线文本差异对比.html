@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://www.jq22.com/textDifference -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在线文本差异对比</title>
+    <meta name="description" content="本工具可以方便大家快速对比两个文本文件中的不同之处。结果清晰明了，可快带替换差异内容并将结果直接下载。">
+    <meta name="keywords" content="在线文本差异对比,文本对比,文本比较,文本比较工具,代码差异对比,内容差异对比">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+
+<!-- Bootstrap -->
+<link href="./在线文本差异对比_files/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="./在线文本差异对比_files/font-awesome.min.css" rel="stylesheet" media="screen">
+
+<!--[if lt IE 9]>
+ 	<script src="js/respond.min.js"></script> 
+	<script src="js/html5shiv.min.js"></script>    
+<![endif]-->
+<link href="./在线文本差异对比_files/my.css" rel="stylesheet" media="screen">
+<link href="./在线文本差异对比_files/dl.css" rel="stylesheet" media="screen">
+<script src="./在线文本差异对比_files/hm.js"></script><script src="./在线文本差异对比_files/jquery.min.js"></script>
+<script src="./在线文本差异对比_files/bootstrap.min.js"></script>
+<script>var n = 1;</script>
+<script src="./在线文本差异对比_files/m.js"></script>
+
+<script type="text/javascript" src="./在线文本差异对比_files/c.min.js"></script>
+<link type="text/css" rel="stylesheet" href="./在线文本差异对比_files/c.css">
+<script type="text/javascript" src="./在线文本差异对比_files/m(1).js"></script> 
+<link type="text/css" rel="stylesheet" href="./在线文本差异对比_files/m.css">
+<style type="text/css">
+	    body{ background-color: #1A1A1A; color: #fff }
+		.drop_zone {
+			border: 2px dashed #BBBBBB;
+			border-radius: 5px 5px 5px 5px;
+			color: #BBBBBB;
+			padding: 10px 25px;
+			text-align: center;
+			align: center;
+			width: 80%;
+		}
+		#path-lhs,#path-rhs{ font-size: 40px; font-family: Arial; color:#C9C9C9}
+		#path-rhs{ padding-left:20px}
+		#compare-editor-lhs{ background-color: #212121; }
+		#compare-editor-rhs{ background-color: #002035 }
+		#compare-lhs-margin,#compare-rhs-margin{ display:none}		
+		.CodeMirror - scroll {
+			background - color: #1d1f20;
+		}
+		#merge-lhs-4{ font-family: "宋体"; }
+		.save-link { color: #F8F8F8; }
+		.dmsm{ font-family: "微软雅黑"; font-size: 12px; padding-left: 20px; }
+		#compare .CodeMirror-lines pre{transition: all 1s ease 0s;}
+		#compare .CodeMirror-lines pre:hover{ background-color:#FDFFC6; color:#000000}
+        td, th {
+            border: 0px ;
+        }
+    .wbbt { text-align:center; border-bottom: 1px solid #333333; line-height:40px}
+</style>
+<script type="text/javascript">
+
+		$(document).ready(function () {
+			$('#compare').mergely({
+				width: 'auto',
+				height: 'auto', // containing div must be given a height
+				cmsettings: { readOnly: false },
+			});
+			var lhs_url = 'js/dm/a.txt';
+			var rhs_url = 'js/dm/b.txt'
+			$.ajax({
+				type: 'GET', async: true, dataType: 'text',
+				url: lhs_url,
+				success: function (response) {
+					$('#path-lhs').text("A");
+					$('#compare').mergely('lhs', response);
+				}
+			});
+			$.ajax({
+				type: 'GET', async: true, dataType: 'text',
+				url: rhs_url,
+				success: function (response) {
+					$('#path-rhs').text("B");
+					$('#compare').mergely('rhs', response);
+				}
+			});
+
+			function checkFileList(files) {
+				if (typeof window.FileReader !== 'function')
+					error_msg("The file API isn't supported on this browser yet.");
+
+				if (files.length>0) readFile(files[0], "lhs");
+				if (files.length>1) readFile(files[1], "rhs");
+			}
+
+			function readFile(file, side) {
+				var reader = new FileReader();
+				reader.onload = function file_onload() {
+					// document.getElementById('td1').innerHTML = ..
+					$('#path-'+side).text(file.name);
+					$('#compare').mergely(side, reader.result);
+				}
+				reader.readAsBinaryString(file);
+
+			}
+			function handleDragOver(evt) {
+				evt.stopPropagation();
+				evt.preventDefault();
+				evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+			}
+			function handleFileSelect(evt) {
+				document.getElementById('drop_zone').visibility = "collapse";
+				evt.stopPropagation();
+				evt.preventDefault();
+				var files = evt.dataTransfer.files; // FileList object.
+				checkFileList(files);
+			}
+			var dropZone = document.getElementById('drop_zone');
+			document.body.addEventListener('dragover', handleDragOver, false);
+			document.body.addEventListener('drop', handleFileSelect, false);
+
+			function download_content(a, side) {
+				//a.innerHTML = "preparing content..";
+				var txt = $('#compare').mergely('get', side);
+				var datauri = "data:plain/text;charset=UTF-8," + encodeURIComponent(txt);
+				a.setAttribute('download', side+".txt");
+				a.setAttribute('href', datauri);
+				//a.innerHTML = "content ready.";
+			}
+			document.getElementById('save-lhs').addEventListener('mouseover', function() { download_content(this, "lhs"); }, false);
+			document.getElementById('save-rhs').addEventListener('mouseover', function() { download_content(this, "lhs"); }, false);
+			document.getElementById('ignorews').addEventListener('change', function() {
+				$('#compare').mergely('options', { ignorews: this.checked });
+			}, false);
+		});
+		
+	</script>
+
+<style type="text/css">#compare .CodeMirror-gutter-text { padding: 5px 0 0 0; }#compare .CodeMirror-lines pre, #compare .CodeMirror-gutter-text pre { line-height: 18px; }.CodeMirror-linewidget { overflow: hidden; };compare .CodeMirror-scroll { height: 100%; overflow: auto; }
+.CodeMirror { line-height: 18px; }</style></head>
+<body data-spy="scroll" data-target=".navbar-example" style="overflow-x: hidden;">
+
+  <!--nav-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-logo" href="http://www.jq22.com/"><img src="./在线文本差异对比_files/logo.png" height="100%" alt="jQuery插件,jQuery,jQuery特效.jQuery ui,jQuery 教程,css3,网页特效,JS特效"></a> </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://www.jq22.com/daima"><i class="fa fa-code"></i> &nbsp;在线代码</a></li>
+        <li><a href="http://www.jq22.com/textDifference"><i class="fa fa-balance-scale" aria-hidden="true"></i> &nbsp;文本比较</a></li>
+      	<li><a href="http://www.jq22.com/jquery-info122"><i class="fa fa-download"></i> &nbsp;jQuery下载</a></li>
+        <li><a href="http://www.jq22.com/jquery/jquery.html" target="_blank"><i class="fa fa-ship" aria-hidden="true"></i> &nbsp;前端库</a></li>
+        <li><a href="http://www.jq22.com/chm/jquery1.8.3.html" target="_blank"><i class="fa fa-book"></i> &nbsp;在线手册</a></li>
+        <li class="dropdown"><a rel="nofollow" href="http://weibo.com/jq22" target="_blank"><i class="fa fa-weibo"></i> &nbsp;微博</a></li>
+        <li>
+             
+       <a href="http://www.jq22.com/textDifference#" data-toggle="modal" data-target="#myModal">
+            <i class="fa fa-user"></i> &nbsp;注册/登录<span class="sr-only">(current)</span></a>
+    
+        </li>
+      </ul>
+    </div>
+    <!--/.nav-collapse --> 
+  </div>
+</nav>
+<!--end nav-->
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content2 tcc">
+         <div class="modal-header2 top20">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  ×
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+               
+            </h4>
+         </div>
+         <div class="modal-body tcck">     
+            <div class="input-group input-group-lg parentCls">
+              <span class="input-group-addon" id="email"><i class="fa fa-envelope-o"></i></span>                
+              <input type="text" class="form-control inputElem" placeholder="请输入登录邮箱" aria-describedby="email" id="ema" style="width: 466px;">             
+            </div>
+            <div class="input-group input-group-lg top20">
+              <span class="input-group-addon" id="pwd"><i class="fa fa-unlock-alt" style="width:18px"></i></span>
+              <input type="password" class="form-control" placeholder="请输入登录密码" aria-describedby="pwd" id="pw">
+              <span class="input-group-btn tccBut">
+                <button class="btn btn-success" type="button" onclick="emdl()">登 录</button>
+              </span>
+            </div>          
+         </div>
+               
+        <div class="modal-footer2">
+            <div class="f">
+            <a href="http://www.jq22.com/pwd.aspx">忘记密码?</a></div>
+            <div class="r"><a href="http://www.jq22.com/register.aspx">注册新用户</a></div>
+            <div class="dr"></div>
+         </div>
+         
+         <div class="d3f modal-body tcck2">          
+             <a href="http://www.jq22.com/textDifference#" onclick="tz()" class="qq"></a>
+             <a href="https://api.weibo.com/oauth2/authorize?client_id=3364913104&amp;redirect_uri=http%3A%2F%2Fwww.jq22.com%2FWeiboReturn.aspx&amp;response_type=code&amp;display=default" class="sina"></a>
+             <a href="http://www.jq22.com/zfbReturn.aspx" class="zfb"></a>
+             <a href="http://www.jq22.com/textDifference#" onclick="gt()" class="git"></a>
+         </div>
+         <script>          
+             function tz() {
+                 var urldz = "https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101135281&redirect_uri=http://www.jq22.com/QQReturn.aspx?tjurl=" + window.location.href;
+                window.location.href = urldz;
+             }
+             function gt() {
+                 var urldz = "https://github.com/login/oauth/authorize?client_id=cf869185ea7d8fcab6df&state=jq22&redirect_uri=http://www.jq22.com/github.aspx?tjurl=" + window.location.href;
+                 window.location.href = urldz;
+             }
+         </script>
+         
+      </div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+
+ 	
+
+    <!--nav-->
+    <div class="yn jz container-fluid nav-bgn m0 visible-lg visible-md visible-sm" id="menu_wrap">	
+	    <div class="container m0" style="position:relative;"><a class="nzz" href="http://www.jq22.com/jqueryUI-1-jq" id="z1"><span class="sort"><i class="fa fa-paint-brush"></i>&nbsp;UI <i class="fa fa-angle-down"></i></span></a>|<a class="nzz" href="http://www.jq22.com/jquery%E8%BE%93%E5%85%A5-1-jq" id="z2"><span class="sort"><i class="fa fa-keyboard-o"></i>&nbsp;输入 <i class="fa fa-angle-down"></i></span></a>|<a class="nzz" href="http://www.jq22.com/jquery%E5%AA%92%E4%BD%93-1-jq" id="z3"><span class="sort"><i class="fa fa-film"></i>&nbsp;媒体 <i class="fa fa-angle-down"></i></span></a>|<a class="nzz" href="http://www.jq22.com/jquery%E5%AF%BC%E8%88%AA-1-jq" id="z4"><span class="sort "><i class="fa fa-paper-plane-o"></i>&nbsp;导航 <i class="fa fa-angle-down"></i></span></a><span class="navxs">|<a class="nzz" href="http://www.jq22.com/jquery%E5%85%B6%E4%BB%96-1-jq" id="z5"><span class="sort"><i class="fa fa-dropbox"></i>&nbsp;其他 <i class="fa fa-angle-down"></i></span></a></span><span class="navxs">|<a href="http://www.jq22.com/jquery-plugins%E5%B8%83%E5%B1%80-1-jq" target="_blank"><span class="sort"><i class="fa fa-th-large"></i>&nbsp;网页模板</span></a>|<a href="http://www.jq22.com/webinfo1" target="_blank"><span class="sort"><i class="fa fa-file-code-o"></i>&nbsp;常用代码</span></a>|<a href="https://www.mysubmail.com/sms?s=jq22" target="_blank" onclick="adtonji()"><span class="sort"><i class="fa fa-comment"></i>&nbsp;短信平台</span></a><span class="adgg">|<a href="http://www.faisco.com/pro8.html?_ta=2253" target="_blank" onclick="adtonji2()"><span class="sort"><i class="fa fa-desktop"></i>&nbsp; <b>免费建站</b></span></a></span></span></div>
+<script>
+    function adtonji() { $.post("adtongji.aspx", { name: "a1" }) }
+    function adtonji2() { $.post("adtongji.aspx", { name: "a2" }) }
+</script>
+<div class="container-fluid"><div id="n1" class="nav-zi ty" style="display: none;"><ul id="nz1" class="nn list-inline container m0 nadc" style="display: block;"><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E8%83%8C%E6%99%AF-1-jq"><i class="fa fa-delicious ls"></i>背景</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%AF%B9%E8%AF%9D%E6%A1%86%E5%92%8C%E7%81%AF%E7%AE%B1-1-jq"><i class="fa fa-bell-o ls"></i>对话框和灯箱</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E7%AD%9B%E9%80%89%E5%8F%8A%E6%8E%92%E5%BA%8F-1-jq"><i class="fa fa-sort-numeric-desc ls"></i>筛选及排序</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%8F%8D%E9%A6%88-1-jq"><i class="fa fa-comments-o ls"></i>反馈</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%BC%B9%E5%87%BA%E5%B1%82-1-jq"><i class="fa fa-stack-overflow ls"></i>弹出层</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%82%AC%E5%81%9C-1-jq"><i class="fa fa-hand-o-up ls"></i>悬停</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%B8%83%E5%B1%80-1-jq"><i class="fa fa-th-large ls"></i>布局</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%9B%BE%E8%A1%A8-1-jq"><i class="fa fa-bar-chart ls"></i>图表</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%8A%A0%E8%BD%BD-1-jq"><i class="fa fa-spinner ls"></i>加载</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%9C%86%E8%BE%B9-1-jq"><i class="fa fa-circle-o ls"></i>圆边</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%BB%9A%E5%8A%A8-1-jq"><i class="fa fa-long-arrow-down ls"></i>滚动</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%A0%87%E7%AD%BE-1-jq"><i class="fa fa-tags ls"></i>标签</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%96%87%E6%9C%AC%E9%93%BE%E6%8E%A5-1-jq"><i class="fa fa-link ls"></i>文本链接</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA-1-jq"><i class="fa fa-info-circle ls"></i>工具提示</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B-1-jq"><i class="fa fa-code-fork ls"></i>网络类型</a></li></ul><ul id="nz2" class="nn list-inline container m0" style="display: none;"><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%8B%BE%E8%89%B2%E5%99%A8-1-jq"><i class="fa fa-eyedropper ls"></i>拾色器</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%AE%9A%E5%88%B6%E5%92%8C%E9%A3%8E%E6%A0%BC-1-jq"><i class="fa fa-paint-brush ls"></i>定制和风格</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4-1-jq"><i class="fa fa-clock-o ls"></i>日期和时间</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%8B%96%E5%92%8C%E6%94%BE-1-jq"><i class="fa fa-arrows ls"></i>拖和放</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E9%80%9A%E7%94%A8%E8%BE%93%E5%85%A5-1-jq"><i class="fa fa-keyboard-o ls"></i>通用输入</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E8%87%AA%E5%8A%A8%E5%AE%8C%E6%88%90-1-jq"><i class="fa fa-calculator ls"></i>自动完成</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%AF%86%E7%A0%81-1-jq"><i class="fa fa-lock ls"></i>密码</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%8A%95%E7%A5%A8%E7%8E%87-1-jq"><i class="fa fa-thumbs-up ls"></i>投票率</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%90%9C%E7%B4%A2-1-jq"><i class="fa fa-search ls"></i>搜索</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E9%80%89%E6%8B%A9%E6%A1%86-1-jq"><i class="fa fa-caret-square-o-down ls"></i>选择框</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%BF%AB%E6%8D%B7%E9%94%AE-1-jq"><i class="fa fa-adn ls"></i>快捷键</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E8%A7%A6%E6%91%B8-1-jq"><i class="fa fa-hand-o-down ls"></i>触摸</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E4%B8%B0%E5%AF%8C%E7%9A%84%E8%BE%93%E5%85%A5-1-jq"><i class="fa fa-h-square ls"></i>丰富的输入</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E4%B8%8A%E4%BC%A0-1-jq"><i class="fa fa-upload ls"></i>上传</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E9%AA%8C%E8%AF%81-1-jq"><i class="fa fa-key ls"></i>验证</a></li></ul><ul id="nz3" class="nn list-inline container m0" style="display: none;"><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E9%9F%B3%E9%A2%91%E5%92%8C%E8%A7%86%E9%A2%91-1-jq"><i class="fa fa-play-circle-o ls"></i>音频和视频</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%B9%BB%E7%81%AF%E7%89%87%E5%92%8C%E8%BD%AE%E6%92%AD%E5%9B%BE-1-jq"><i class="fa fa-exchange ls"></i>幻灯片和轮播图</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%9B%BE%E7%89%87%E5%B1%95%E7%A4%BA-1-jq"><i class="fa fa-eye ls"></i>图片展示</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%9B%BE%E5%83%8F-1-jq"><i class="fa fa-picture-o ls"></i>图像</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%9C%B0%E5%9B%BE-1-jq"><i class="fa fa-map-marker ls"></i>地图</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%BB%91%E5%9D%97%E5%92%8C%E6%97%8B%E8%BD%AC-1-jq"><i class="fa fa-arrows-h ls"></i>滑块和旋转</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-pluginsTabs-1-jq"><i class="fa fa-folder-o ls"></i>Tabs</a></li></ul><ul id="nz4" class="nn list-inline container m0" style="display: none;"><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%B0%B4%E5%B9%B3%E5%AF%BC%E8%88%AA-1-jq"><i class="fa fa-long-arrow-right ls"></i>水平导航</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%9E%82%E7%9B%B4%E5%AF%BC%E8%88%AA-1-jq"><i class="fa fa-long-arrow-down ls"></i>垂直导航</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%96%87%E4%BB%B6%E6%A0%91-1-jq"><i class="fa fa-sitemap ls"></i>文件树</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%88%86%E9%A1%B5-1-jq"><i class="fa fa-chevron-right ls"></i>分页</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%89%8B%E9%A3%8E%E7%90%B4%E8%8F%9C%E5%8D%95-1-jq"><i class="fa fa-trello ls"></i>手风琴菜单</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%85%B6%E4%BB%96%E5%AF%BC%E8%88%AA-1-jq"><i class="fa fa-location-arrow ls"></i>其他导航</a></li></ul><ul id="nz5" class="nn list-inline container m0" style="display: none;"><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C-1-jq"><i class="fa fa-rocket ls"></i>动画效果</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E6%95%B4-1-jq"><i class="fa fa-expand ls"></i>浏览器调整</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E7%A7%BB%E5%8A%A8-1-jq"><i class="fa fa-arrows-v ls"></i>移动</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E7%8B%AC%E7%AB%8B%E7%9A%84%E9%83%A8%E4%BB%B6-1-jq"><i class="fa fa-cogs ls"></i>独立的部件</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%9D%82%E9%A1%B9-1-jq"><i class="fa fa-gift ls"></i>杂项</a></li><li><a class="c-btn c-btn--border-line" href="http://www.jq22.com/jquery-plugins%E6%B8%B8%E6%88%8F-1-jq"><i class="fa fa-gamepad ls"></i>游戏</a></li></ul></div></div> 	   
+    </div>
+    <!--end nav-->
+
+    
+     <div class="container-fluid m0 bod top70" id="zt">
+         <h3 class="wbbt"><i class="fa fa-balance-scale" aria-hidden="true"></i> 在线文本比较工具</h3>
+      <table style="width: 98%;display:none"><tbody><tr>
+		<td style="width: 50%;"><div id="drop_zone" class="drop_zone">Drop files here</div></td>
+		<td style="width: 50%;"><input type="checkbox" id="ignorews">ignore witespaces</td>
+	</tr></tbody></table>
+
+	<table align="center" style="width: 98%;"><tbody><tr style="border-left: 1px solid #1D1D1D; border-top:1px solid #1D1D1D;">
+		<td style="width: 50%;background-color: #1a1a1a;color: #bd6969;"><tt id="path-lhs">A</tt> &nbsp; <a id="save-lhs" class="save-link" href="data:plain/text;charset=UTF-8,%2F*%E4%BB%A5%E4%B8%8B%E4%B8%BA%E6%BC%94%E7%A4%BA%E5%86%85%E5%AE%B9%EF%BC%8C%E8%AF%B7%E6%B7%BB%E5%8A%A0%E6%82%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E5%86%85%E5%AE%B9%20~_~%20*%2F%0A%0Ahtml%2C%0Abody%20%7B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20margin%3A%200%3B%0A%20%20padding%3A%200%3B%0A%20%20overflow%3A%20hidden%3B%0A%20%20font-family%3A%20&#39;Fira%20Mono&#39;%2C%20helvetica%2C%20arial%2C%20sans-serif%3B%0A%20%20font-weight%3A%20400%3B%0A%20%20font-size%3A%2062.5%25%3B%0A%7D%0A%0A%23webgl-container%20%7B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20cursor%3A%20pointer%3B%0A%7D%0A%0A.loading%20%7B%0A%20%20position%3A%20absolute%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20background-color%3A%20%23000000%3B%0A%20%20opacity%3A%201%3B%0A%20%20-webkit-transition%3A%20opacity%201.2s%20ease-out%3B%0A%20%20-o-transition%3A%20opacity%201.2s%20ease-out%3B%0A%20%20transition%3A%20opacity%201.2s%20ease-out%3B%0A%20%20pointer-events%3A%20none%3B%0A%20%20z-index%3A%205%3B%0A%7D%0A%0A.loading__progress%20%7B%0A%20%20position%3A%20absolute%3B%0A%20%20top%3A%2050%25%3B%0A%20%20left%3A%2050%25%3B%0A%20%20transform%3A%20translate(-50%25%2C%20-50%25)%3B%0A%20%20text-align%3A%20center%3B%0A%20%20-webkit-transition%3A%20opacity%200.25s%20ease-out%3B%0A%20%20-o-transition%3A%20opacity%200.25s%20ease-out%3B%0A%20%20transition%3A%20opacity%200.25s%20ease-out%3B%0A%20%20opacity%3A%200%3B%0A%7D" download="lhs.txt"><i class="fa fa-floppy-o" aria-hidden="true"></i> save</a><span class="dmsm">(在下面输入您的代码或文本，或直接把文件拖入到框中，内容会自动获取)</span></td>
+		<td style="width: 50%;background-color: #1a1a1a;color: #8bcaf3"><tt id="path-rhs">B</tt> &nbsp; <a id="save-rhs" class="save-link" href="data:plain/text;charset=UTF-8," download="lhs.txt"><i class="fa fa-floppy-o" aria-hidden="true"></i> save</a><span class="dmsm">(在下面输入您的代码或文本，或直接把文件拖入到框中)</span></td>
+	</tr></tbody></table>
+
+	<div id="mergely-resizer" style="height:800px;">
+		<div id="compare" style="display: block; width: 1895px; height: 800px; clear: both;">
+		<div class="mergely-margin" style="height: 800px;"><canvas id="compare-lhs-margin" width="8px" height="800"></canvas></div><div style="position: relative; width: 923.5px; height: 800px;" id="compare-editor-lhs" class="mergely-column"><textarea style="display: none; height: 800px; width: 923.5px;" id="compare-lhs"></textarea><div class="CodeMirror cm-s-default" style="height: 800px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 34px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 923.5px; height: 800px; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" style="height: 800px;"><div class="CodeMirror-sizer" style="margin-left: 30px; min-width: 7px; margin-bottom: -15px; border-right-width: 15px; min-height: 26px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style="visibility: hidden;"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 18px;">&nbsp;</div></div><div class="CodeMirror-code"><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 15px; width: 1px; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 815px;"><div class="CodeMirror-gutter merge"></div><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></div><div class="mergely-canvas" style="height: 800px;"><canvas id="compare-lhs-compare-rhs-canvas" style="width:28px" width="28px" height="800"></canvas></div><div style="width: 923.5px; height: 800px;" id="compare-editor-rhs" class="mergely-column"><textarea style="display: none; height: 800px; width: 923.5px;" id="compare-rhs"></textarea><div class="CodeMirror cm-s-default" style="height: 800px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 34px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 923.5px; height: 800px; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" style="height: 800px;"><div class="CodeMirror-sizer" style="margin-left: 30px; min-width: 7px; margin-bottom: -15px; border-right-width: 15px; min-height: 26px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 18px;">&nbsp;</div></div><div class="CodeMirror-code"><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 15px; width: 1px; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 815px;"><div class="CodeMirror-gutter merge"></div><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></div><div class="mergely-margin" style="height: 800px;"><canvas id="compare-rhs-margin" width="8px" height="800"></canvas></div></div>
+	</div>
+        
+     </div>
+	
+	
+	
+
+
+
+<nav class="foot navbar-inverse navbar-fixed-bottom">
+	<ul class="list-inline">
+      <li class="footer-ss"><a href="http://www.jq22.com/copyright.aspx">版权声明</a></li>
+      <li class="footer-ss"><a href="http://www.jq22.com/feedback.aspx">在线反馈</a></li>
+      <li class="footer-ss"><a href="http://www.jq22.com/cooperation.aspx">广告合作</a></li>
+      <li class="footer-ss">帮助中心</li>
+      <li>Copyright © 2012-2017 jQuery插件库Version 3.0.0. 备案号:<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">沪ICP备13043785号-1</a></li>
+    </ul>
+    <ul class="list-inline text-right">
+   	 	<li>
+     
+    	</li>
+    </ul>
+</nav>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?b3a3fc356d0af38b811a0ef8d50716b8";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+ 
+
+
+</body></html>
