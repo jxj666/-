@@ -26,9 +26,9 @@
     <div id="btns">
         <div>
             <br>
-            <button onclick="alert('调用上传接口!')">发送到服务器保存</button>
+            <button onclick="getContent()">创建版本发送到服务器保存</button>
             <button onclick="set_text()">编辑器获取服务器内容</button>
-            <button>文档与上一版本对比</button>
+            <button onclick="contrast()">文档与上一版本对比</button>
         </div>
     </div>
     <script type="text/javascript" src='data.js'>
@@ -41,9 +41,25 @@
         autoHeight: false
     });
 
+    function getContent() {
+        var arr = [];
+        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getContent());
+        alert(arr.join("\n"));
+    }
+
     function set_text(isAppendTo) {
         UE.getEditor('editor').setContent(data.data, isAppendTo);
         alert('调用下载接口!')
+    }
+
+    function contrast() {
+        var old_data = data.data.replace()
+        document.getElementById('baseText').value = data.data.replace(/<.*?>|\。/g, "jxj2991").replace(/&nbsp;|&lt;|&qt;/g, " ").replace(/(jxj2991)+/g, "\n")
+        document.getElementById('newText').value = UE.getEditor('editor').getContent().replace(/<.*?>|\。/g, "jxj2991").replace(/&nbsp;|&lt;|&qt;/g, " ").replace(/(jxj2991)+/g, "\n")
+        alert('请选择对比显示方法!')
+
     }
     </script>
     <div>
@@ -95,6 +111,10 @@
         #diffoutput {
             width: 100%;
         }
+        
+        .disnone {
+            display: none;
+        }
         </style>
         <script type="text/javascript">
         function diffUsingJS(viewType) {
@@ -109,7 +129,7 @@
                 diffoutputdiv = byId("diffoutput")
 
             diffoutputdiv.innerHTML = "";
-           
+
 
             diffoutputdiv.appendChild(diffview.buildView({
                 baseTextLines: base,
@@ -123,12 +143,11 @@
         }
         </script>
         <h1 class="top"><a href="http://github.com/cemerick/jsdifflib">文档对比</a> demo</h1>
-
-        <div class="textInput">
+        <div class="textInput disnone">
             <h2>旧文本</h2>
             <textarea id="baseText"></textarea>
         </div>
-        <div class="textInput spacer">
+        <div class="textInput spacer disnone">
             <h2>新文本</h2>
             <textarea id="newText"></textarea>
         </div>
@@ -137,7 +156,7 @@
             <label for="sidebyside">并排比较差异</label>
             &nbsp; &nbsp;
             <input type="radio" name="_viewtype" id="inline" onclick="diffUsingJS(1);">
-            <label for="inline">串联比较差异</label>
+            <label for="inline">上下比较差异</label>
         </div>
         <div id="diffoutput"></div>
     </div>
