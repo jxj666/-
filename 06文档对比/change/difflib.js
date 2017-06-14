@@ -1,33 +1,4 @@
-/***
-This is part of jsdifflib v1.0. <http://snowtide.com/jsdifflib>
 
-Copyright (c) 2007, Snowtide Informatics Systems, Inc.
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification,
-are permitted provided that the following conditions are met:
-
-	* Redistributions of source code must retain the above copyright notice, this
-		list of conditions and the following disclaimer.
-	* Redistributions in binary form must reproduce the above copyright notice,
-		this list of conditions and the following disclaimer in the documentation
-		and/or other materials provided with the distribution.
-	* Neither the name of the Snowtide Informatics Systems nor the names of its
-		contributors may be used to endorse or promote products derived from this
-		software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
-EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
-SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
-TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
-BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
-DAMAGE.
-***/
-/* Author: Chas Emerick <cemerick@snowtide.com> */
 __whitespace = {" ":true, "\t":true, "\n":true, "\f":true, "\r":true};
 
 difflib = {
@@ -49,8 +20,7 @@ difflib = {
 		
 		return lines;
 	},
-	
-	// iteration-based reduce implementation
+
 	__reduce: function (func, list, initial) {
 		if (initial != null) {
 			var value = initial;
@@ -68,8 +38,7 @@ difflib = {
 		
 		return value;
 	},
-	
-	// comparison function for sorting lists of numeric tuples
+
 	__ntuplecomp: function (a, b) {
 		var mlen = Math.max(a.length, b.length);
 		for (var i = 0; i < mlen; i++) {
@@ -83,15 +52,11 @@ difflib = {
 	__calculate_ratio: function (matches, length) {
 		return length ? 2.0 * matches / length : 1.0;
 	},
-	
-	// returns a function that returns true if a key passed to the returned function
-	// is in the dict (js object) provided to this function; replaces being able to
-	// carry around dict.has_key in python...
+
 	__isindict: function (dict) {
 		return function (key) { return dict.hasOwnProperty(key); };
 	},
-	
-	// replacement for python's dict.get function -- need easy default values
+
 	__dictget: function (dict, key, defaultValue) {
 		return dict.hasOwnProperty(key) ? dict[key] : defaultValue;
 	},	
@@ -307,9 +272,7 @@ difflib = {
 			
 			return answer;
 		}
-		
-		// this is a generator function in the python lib, which of course is not supported in javascript
-		// the reimplementation builds up the grouped opcodes into a list in their entirety and returns that.
+
 		this.get_grouped_opcodes = function (n) {
 			if (!n) n = 3;
 			var codes = this.get_opcodes();
