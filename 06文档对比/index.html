@@ -143,11 +143,14 @@
         document.getElementById('baseText').value = code_str(data_old)
         var data_new=UE.getEditor('editor').getContent();
         document.getElementById('newText').value = code_str(data_new)
+
         function code_str(old_str){
-            var new_str=old_str.replace(/<.*?>/, "jxj2991").replace(/<.*?>/, "jxj2991").replace(/<.*?>/g, "jxj1992").replace(/(\。”?|\？”?|\！”?|\；”?|\?”?|\!”?|\;”?|，|：)/g,'$1 jxj2991').replace(/&nbsp;|&lt;|&qt;/g, " ").replace(/(jxj2991)+/g, "\n").replace(/(jxj1992)+/g, "\n");
+            var new_str=old_str.replace(/<.*?>/, "jxj11111").replace(/<.*?>/, "jxj11111").replace(/<\s*img.*?src="(.*?)".*?\/>/g, "jxj33333 - 图片 : $1 -  jxj33333").replace(/<.*?>/g, "jxj22222").replace(/&nbsp;|&lt;|&qt;|&quot;/g, " ").replace(/(\。”?|\？”?|\！”?|\；”?|\?”?|\!”?|\;”?|，)/g,'$1 jxj11111').replace(/(jxj11111)+/g, "\n").replace(/(jxj22222)+/g, "\n").replace(/(jxj33333)+/g, "\n");
             return new_str;
         }
-        //(\。|\？|\！|\；|\?|\!|\;)
+        
+   //.replace(/<\s*img.\s*src="(.*?)"\s*\/>/, "图片 $1")
+
 
         diffUsingJS(0);
         var viwe = document.getElementById('view');
