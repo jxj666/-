@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>大奖</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/prizes.min.css">
+    <script type="text/javascript">
+    function get_hfs() {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    }
+    get_hfs();
+
+    function throttle(method, context) {
+        clearTimeout(method.timer);
+        method.timer = setTimeout(function() {
+            method.call(context);
+        }, 100);
+    }
+    window.onresize = function() {
+        throttle(get_hfs);
+    }
+    </script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="pp_top">
+        <div class="inform">
+            <div class="pirzes">
+                <ul>
+                    <li>
+                        <h5>用户<span>微信名</span>获得<span>118元红包</span></h5>
+                    </li>
+                </ul>
+            </div>
+            <div class="getinfo">
+                <a href="javascript:void(0)">获奖名单&gt;</a>
+            </div>
+            <div class="clb"></div>
+        </div>
+        <div class="title">
+        <h1>伊利大果粒<br>扫码抢红包</h1>
+            <img src="img/fudai_03.png">
+            <h6>活动时间:2017年5月1日-12月31日</h6>
+        </div>
+    </div>
+    <!-- 主要 -->
+    <div class="pp_body">
+        <div class="chai">
+            <div class="renwu f_cb">
+                <img src="img/phy_3.png" alt="">
+                <!-- 中奖人自己看 -->
+                <s data-type="status" class="invisible">中奖人自己看</s>
+                <h3 >恭喜您</h3>
+                <!-- 别人看 -->
+                <s data-type="status" class="invisible">别人看</s>
+                <h3 class="invisible">恭喜小强</h3>
+                <h5>获得乐视超级电视x40s</h5>
+            </div>
+            <div class="lipin">
+                <!-- 礼盒  -->
+                <s data-type="status" class="invisible">未拆开礼盒时</s>
+                <img src="img/phylh.png" class="lihe_k jianpin_k ">
+                <!-- 实物 -->
+                <s data-type="status" class="invisible">礼盒拆开后</s>
+                <img src="img/phy_16.png" class="invisible shiwu_k jianpin_k">
+                <!-- 红包 -->
+                <s data-type="status" class="invisible">大奖是红包时</s>
+                <img src="img/phy_21.png" class="invisible honbao_k jianpin_k">
+            </div>
+            <div class="chaiyixia">
+                <!-- 领取红包 -->
+                <s data-type="status" class=" invisible ">领取红包</s>
+                <button class="invisible linhonbao_k btn1_k btn_font4 ">领取红包</button>
+                <!-- 中奖人自己看未拆开时 -->
+                <s data-type="status" class=" invisible">中奖人自己看未拆开时</s>
+                <button class="invisible weichaikai_k btn1_k ">拆一下</button>
+                <!-- 中奖人自己看拆开未填地址时 -->
+                <s data-type="status" class="invisible">中奖人自己看拆开时</s>
+                <button class="invisible btn1_k meidizhi_k btn_font6">填写收货地址</button>
+                <!-- 中奖人自己看拆开时 -->
+                <s data-type="status" class="invisible">中奖人自己看拆开时</s>
+                <button class="invisible btn_font4">订单详情</button>
+                <!-- 朋友未帮拆 -->
+                <s data-type="status" class="invisible">拆一下</s>
+                <button class="invisible">拆一下</button>
+                <!-- 朋友已帮拆 -->
+                <s data-type="status" class="invisible btn_fontg">已帮拆</s>
+                <button class="invisible">已帮拆</button>
+                <!-- 朋友看已拆开 -->
+                <s data-type="status" class="invisible">已拆开</s>
+                <button class="invisible">已拆开</button>
+                <p>请在3天内完成拆礼盒领取奖品</p>
+            </div>
+        </div>
+        <div class="penyou">
+            <h3>需要58位朋友帮忙拆开礼盒</h3>
+            <h5>已有6位好友帮拆，呼朋唤友来帮忙吧</h5>
+            <div class="imgs f_cb">
+            <div class="img-box">
+                <img src="img/phy_32.jpg" alt="">
+                <img src="img/phy_34.jpg" alt="">
+                <img src="img/phy_36.jpg" alt="">
+                <img src="img/phy_32.jpg" alt="">
+                <img src="img/phy_34.jpg" alt="">
+                <img src="img/phy_36.jpg" alt="">
+                </div>
+            </div>
+            <button>我的礼品</button>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="pp_foot">
+        <!-- 实物大奖 -->
+        <div class="shuomin shuomin_k linshuwu_k">
+            <h5>礼品说明</h5>
+            <p>1.本礼品为乐视超级电视X40S，40吋智能电视。</p>
+            <p>2.领奖请详细填写配送信息，确认即可成功领取。</p>
+            <p>3.如对大奖的领取有任何疑问，请拨打大奖咨询专线：18908847136。</p>
+            <p>4.如江西中烟提供，活动最终解释权归江西中烟所有。 </p>
+        </div>
+        <!-- 红包大奖 -->
+        <div class=" shuomin shuomin_k baoshuomin_k invisible">
+            <h3><a href="javascript:void(0)" style="font-weight: normal;">微信红包领取说明&gt;&gt;</a></h3>
+        </div>
+        <div class="tv-footer">
+            <img class="tv-code" src="img/code.png">
+            <p class="footer-text">长按识别二维码
+                <br>关注“伊利活动”，参加更多福利活动。</p>
+            <div class="clearfix">
+                <p class="copy">版权所有:<span class="copy-name">引力集团</span></p>
+                <p class="support">技术支持:<span class="support-name">万川营销云</span></p>
+            </div>
+        </div>
+    </div>
+        <!-- 红包弹窗 -->
+    <div class="pop-bg invisible">
+                 <div class="pop_close">
+           <a href="##" class="hb-pop-close"></a> 
+      </div>
+        <div class="hb-pop">
+
+            <h4 class="hb-title">红包领取说明</h4>
+            <div class="hb-p">
+                <p>1.领取微信红包后，将发往您的微信号，请及时领取红包；
+                    <br>2.请关闭本页面，返回微信消息查看红包提醒。如果您已关注“天子汇”公众号，请查看公众号的红包提醒，如图1：</p>
+                <div class="hb-p-img-content">
+                    <img src="img/hb_pop_from.png" class="hb-p-img">
+                </div>
+                <p>如果您没有关注“天之汇”公众号，请查看“服务通知”的红包提醒，如图2：</p>
+                <div class="hb-p-img-content">
+                    <img src="img/hb_pop_notice.png" class="hb-p-img">
+                </div>
+                <div class="chide ">
+                    <p>3.红包24小时内有效，请及时领取，超时无法补发。</p>
+                    <p>4.红包先进领取后会自动存入微信钱包零钱（可在微信-我的-钱包进行查看）。</p>
+                    <p>5.如果领取时出现“发送失败，此请求可能存在风险，已被微信拦截”提示，狮子目标账户被微信列为风险账户而冻结，微信支付的原因导致的用户无法领取红包，我们将不能补发。</p>
+                </div>
+            </div>
+        </div>
+        <div class="hb-pop-2">
+            <a href="javascript:void(0)" class="bottom-btn"></a>
+        </div>
+    </div>
+    <!-- 弹框 -->
+    <div class="tip-bg invisible">
+        <div class="kf-tip ">
+            <a href="##" data-click="tip-close" class="tip-close"></a>
+            <h3 class="tip-title">谢谢您的一臂之力!</h3>
+            <p class="cgray">已用了洪荒之力...</p>
+            <img src="img/code.png" class="tip-code">
+            <p class="tip-content center">长按识别二维码
+                <br>关注“伊利活动”微信号，参加更多福利。
+                <img src="img/winner_bg.png" class="tip-bottom">
+        </div>
+    </div>
+        <script src='js/jquery.min.js'></script>
+        <script src='js/main.min.js'></script>
+        <script src='js/prizes.min.js'></script>
+</body>
+
+</html>

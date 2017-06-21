@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>扫码领福袋</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="css/scan_code.min.css">
+    <script type="text/javascript">
+    function get_hfs() {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    }
+    get_hfs();
+
+    function throttle(method, context) {
+        clearTimeout(method.timer);
+        method.timer = setTimeout(function() {
+            method.call(context);
+        }, 100);
+    }
+    window.onresize = function() {
+        throttle(get_hfs);
+    }
+    </script>
+</head>
+
+<body>
+<!-- 顶部通知 -->
+    <div class="inform">
+        <div class="pirzes">
+            <ul>
+                <li>
+                    <h5>用户<span>微信名</span>获得<span>118元红包</span></h5>
+                </li>
+            </ul>
+        </div>
+        <div class="getinfo">
+            <a href="javascript:void(0)" data-click="winner-list">获奖名单&gt;</a>
+        </div>
+        <div class="clb"></div>
+    </div>
+    <div class="scan-code">
+    <h1>伊利大果粒<br>扫码抢红包</h1>
+        <img src="img/fudai_03.png" class="scan-code-img">
+        <p class="scan-time">活动时间：2017年5月1日-12月31日</p>
+    </div>
+    <div class="scan-tip">
+        <img src="img/dgl_img.png" class="left">
+        <div class="right">
+            <!-- 未领取 -->
+            <p class="product">扫码产品： <span class="product-name">伊利大果粒（黄桃·草莓）</span>此次为第 <span class="product-count">1</span> 次扫码。
+                <br>有一个福袋未领取。</p>
+            <!-- 他人已领取 -->
+            <p class="product invisible">扫码产品： <span class="product-name">伊利大果粒（黄桃·草莓）</span>此次为第 <span class="product-count">2</span> 次扫码。
+                <br><span class="product-notice">福袋已被他人领取</span>
+                <br> 如有异常请 <a href="##" class="contact">联系客服</a>。</p>
+            <!-- 自己已领取 -->
+            <p class="product invisible">扫码产品： <span class="product-name">伊利大果粒（黄桃·草莓）</span>此次为第 <span class="product-count">2</span> 次扫码。
+                <br><span class="product-notice">本产品您已领取过福袋。</span>
+                <br> 如有异常请 <a href="##" class="contact">联系客服</a>。</p>
+        </div>
+    </div>
+    <p class="scan-notice">每盒大果粒的二维码有1个福袋，首次扫码验真时送出。福袋内有最高88元微信红包、优惠券、伊利酸奶等礼品！祝您好运！</p>
+    <!-- 需要验证码 -->
+    <div class="neednum">
+        <div class="input-wrap">
+            <div class="v-line-w">
+                <div class="v-line"></div>
+                <div class="v-line"></div>
+                <div class="v-line"></div>
+            </div>
+            <input type="tel" id="input" class="input" maxlength="4">
+        </div>
+        <p class="six-code">请输入4位验证码</p>
+    </div>
+    <!-- 无需验证码 -->
+    <div class="noneednum invisible">
+        <span class="invisible">无需验证码(不显示)</span>
+    </div>
+    <a href="##" class="scan-btn" id="get-bag">领福袋</a>
+    <a href="##" class="scan-btn invisible" id="join-activity">进入活动</a>
+    <ul class="count-list">
+        <li class="count-item">
+            <p class="code-count">1234</p>
+            扫码次数
+        </li>
+        <li class="count-item">
+            <p class="prize-count">234</p>
+            送出奖品
+        </li>
+        <li class="count-item">
+            <p class="person-count">72344</p>
+            访问人数
+        </li>
+    </ul>
+    <ul class="click-list">
+        <li class="click-item">
+            <a href="##" data-click="gift">活动礼品</a>
+        </li>
+        <li class="click-item">
+            <a href="##" data-click="kf">联系客服</a>
+        </li>
+        <li class="click-item">
+            <a href="##" data-click="statement">隐私权声明</a>
+        </li>
+    </ul>
+    <div class="footer">
+        <div class="footer-img-content">
+            <img class="code" src="img/code.png">
+        </div>
+        <p class="footer-text">长按识别二维码
+            <br>关注“伊利活动”，参加更多福利活动。</p>
+        <div class="clearfix f_cb">
+            <p class="copy">版权所有:<span class="copy-name">引力集团</span></p>
+            <p class="support">技术支持:<span class="support-name">万川营销云&nbsp;&nbsp;</span></p>
+        </div>
+    </div>
+    <!-- 活动福袋 -->
+    <div class="pop-bg pop-bg1 invisible">
+        <div class="scan-pop">
+            <a href="##" class="pop-close"></a>
+            <h3 class="pop-title">恭喜您获得福袋</h3>
+            <div class="pop-main">
+                <img src="img/scan_bag_img.png" class="pop-img">
+            </div>
+            <p class="pop-p">你目前拥有 <span class="pop-num">3</span> 个福袋</p>
+            <a href="##" class="scan-pop-btn">进入活动</a>
+        </div>
+    </div>
+    <!-- 验证码输入错误 -->
+    <div class="pop-bg pop-bg2 invisible">
+        <div class="scan-pop" style="height: auto;">
+            <a href="##" class="pop-close"></a>
+            <h3 class="pop-title">验证码错误</h3>
+            <p class="pop-p" style="font-size:0.30rem">请核对输入正确</p>
+            <a href="##" class="scan-pop-btn">确定</a>
+        </div>
+    </div>
+    <!-- 通用组件 -->
+    <div class="tip-bg invisible ">
+        <!-- 活动礼品 -->
+        <div class="gift-tip invisible">
+            <a href="##" data-click="tip-close" class="tip-close"></a>
+            <h3 class="tip-title">活动礼品</h3>
+            <p class="tip-content">微信扫伊利大果粒二维码，首次验真可获得福袋。</p>
+            <p class="tip-content center">本期礼品（2017年4月10日-5月30日）如下：</p>
+            <ul class="tip-list">
+                <li class="row row-border">
+                    <span class="row-color">礼品</span>
+                    <span class="row-color">说明</span>
+                    <span class="row-color">数量</span>
+                </li>
+                <li class="row">
+                    <span>微信红包</span>
+                    <span>随机金额最高88元</span>
+                    <span>12334份</span>
+                </li>
+                <li class="row">
+                    <span>伊利牛奶</span>
+                    <span>纯牛奶快递包邮</span>
+                    <span>3434份</span>
+                </li>
+            </ul>
+            <img src="img/winner_bg.png" class="tip-bottom">
+        </div>
+        <!-- 联系客服 -->
+        <div class="kf-tip invisible">
+            <a href="##" data-click="tip-close" class="tip-close"></a>
+            <h3 class="tip-title">联系客服</h3>
+            <img src="img/code.png" class="tip-code">
+            <p class="tip-content center">长按识别二维码，关注“伊利活动”微信号，发送微信留言，客户将及时处理。
+                <br>客服电话：400-400-400
+                <br>客服微信：yilihuodong</p>
+            <img src="img/winner_bg.png" class="tip-bottom">
+        </div>
+        <!-- 隐私声明 -->
+        <div class="statement-tip invisible">
+                <div class="close_pop">
+                    <a href="##" data-click="tip-close" class="tip-close"></a>
+                </div>
+                <h3 class="tip-title">隐私权声明</h3>
+                <p class="tip-content">
+                    <span class="tip-top">特别声明：</span> 伊利集团非常重视用户信息的保护，在使用伊利集团的所有产品和服务前，请您务必仔细阅读并透彻理解本声明。一旦您选择使用，即表示您认可并接受本条款，现有内容及其可能随时更新的内容。
+                    <br>一、隐私权政策
+                    <br>有关您的若干信息及其它资料将受到中国有关隐私的法律和本公司《隐私权政策》之规范.
+                    <br>二、隐私权政策
+                    <br>有关您的若干信息及其它资料将受到中国有关隐私的法律和本公司《隐私权政策》之规范.
+                    <br>三、隐私权政策
+                    <br>有关您的若干信息及其它资料将受到中国有关隐私的法律和本公司《隐私权政策》之规范.
+                </p>
+            </div>
+    </div>
+       <script src='js/jquery.min.js'></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>

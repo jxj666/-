@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>活动公告</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="css/winner.min.css">
+    <script type="text/javascript">
+    function get_hfs() {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    }
+    get_hfs();
+
+    function throttle(method, context) {
+        clearTimeout(method.timer);
+        method.timer = setTimeout(function() {
+            method.call(context);
+        }, 100);
+    }
+    window.onresize = function() {
+        throttle(get_hfs);
+    }
+    </script>
+</head>
+
+<body>
+    <div class="big-prize" >
+        <h3 class="winner-title">中大奖名单</h3>
+        <ul class="bigprize-list">
+            <li class="prize-item">
+                <span class="phone">尾号4567</span><span class="name">杨林</span>
+                <em class="prize-name">获得乐视超级电视X40S</em>
+            </li>
+            <li class="prize-item">
+                <span class="phone">尾号4567</span><span class="name">杨林</span>
+                <em class="prize-name">获得乐视超级电视X40S</em>
+            </li>
+            <li class="prize-item">
+                <span class="phone">尾号4567</span><span class="name">杨林</span>
+                <em class="prize-name">获得乐视超级电视X40S</em>
+            </li>
+
+            <li class="prize-item">
+                <span class="phone">尾号4567</span><span class="name">杨林</span>
+                <em class="prize-name">获得乐视超级电视X40S</em>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="prize">
+        <h3 class="winner-title">最新中奖名单</h3>
+        <ul class="prize-list">
+            <li class="prize-item">
+                <span class="phone">尾号4567</span><span class="name">杨林</span>
+                <em class="prize-name">获得乐视超级电视X40S</em>
+            </li>
+            <li class="prize-item">
+                <span class="phone">尾号4567</span><span class="name">杨林</span>
+                <em class="prize-name">获得乐视超级电视X40S</em>
+            </li>
+            <li class="prize-item">
+                <span class="phone">尾号4567</span><span class="name">杨林</span>
+                <em class="prize-name">获得乐视超级电视X40S</em>
+            </li>
+            <li class="prize-item">
+                <span class="phone">尾号4567</span><span class="name">杨林</span>
+                <em class="prize-name">获得乐视超级电视X40S</em>
+            </li>
+
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="footer-img-content">
+            <img class="code" src="img/code.png">
+        </div>
+        <p class="footer-text">长按识别二维码
+            <br>关注“伊利活动”，参加更多福利活动。</p>
+        <div class="clearfix f_cb">
+            <p class="copy">版权所有:<span class="copy-name">引力集团</span></p>
+            <p class="support">技术支持:<span class="support-name">万川营销云</span></p>
+        </div>
+    </div>
+    <div class="winner-bg"></div>
+    <script src='js/jquery.min.js'></script>
+    <script src="js/winner.min.js"></script> 
+</body>
+
+</html>

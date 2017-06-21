@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>地址管理</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/address.min.css">
+    <script type="text/javascript">
+    function get_hfs() {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    }
+    get_hfs();
+
+    function throttle(method, context) {
+        clearTimeout(method.timer);
+        method.timer = setTimeout(function() {
+            method.call(context);
+        }, 100);
+    }
+    window.onresize = function() {
+        throttle(get_hfs);
+    }
+    </script>
+</head>
+
+<body>
+    <!-- 已有页面 -->
+    <div class="g_has">
+        <div class="xianqin clearfix">
+            <div class="moren">
+                <a href="javascript:void(0)" class="quedin"></a>
+            </div>
+            <div class="juti">
+                <h5>杨林<span>18888888888</span></h5>
+                <p>北京市朝阳区北苑路170号凯旋城7号楼1202室</p>
+            </div>
+            <div class="bianji"></div>
+            <div class="shanchu">删除</div>
+        </div>
+        <div class="xianqin clearfix">
+            <div class="moren">
+                <a href="javascript:void(0)" class=""></a>
+            </div>
+            <div class="juti">
+                <h5>杨林<span>18888888888</span></h5>
+                <p>北京市朝阳区北苑路170号凯旋城7号楼1202室</p>
+            </div>
+            <div class="bianji"></div>
+            <div class="shanchu">删除</div>
+        </div>
+        <div class="xinzhen">
+            <h5><a href="javascript:void(0)">+新增收货地址</a></h5>
+            <p><a href="javascript:void(0)">&nbsp;&nbsp;</a></p>
+        </div>
+    </div>
+    <!-- 新建页面 -->
+    <div class="g_new invisible">
+        <div class="shuru">
+            <div class="block clearfix">
+                <div class="left">收货人</div>
+                <div class="right"><input type="text" placeholder="名字"></div>
+            </div>
+            <div class="block clearfix">
+                <div class="left">联系电话</div>
+                <div class="right"> <input type="text" name="" placeholder="电话"></div>
+            </div>
+            <div class="block clearfix">
+                <div class="left">选择地区</div>
+                <div class="right"> <button>选择省份</button>
+                <button>选择城市</button>
+                <button>选择地区</button></div>
+            </div>
+            <div class="block clearfix">
+                <div class="left">详细地址</div>
+                <div class="right"><textarea placeholder="如街道，楼层和门牌等"></textarea></div>
+            </div>
+            <div class="block clearfix">
+                <div class="left">邮政编码</div>
+                <div class="right"> <input type="text" name="" placeholder="选填"></div>
+            </div>
+        </div>
+        <div class="baocun">
+            <button>保存</button>
+        </div>
+        <div class="chuqu">
+            <button>删除收货地址</button>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="g_pop invisible">
+    <div class="pop_box">
+    <p class="abandon_p">确定要放弃此次编辑吗?</p>
+    <p class="delete_p invisible">确定要删除这个地址吗?</p>
+    <div class="btns">
+       <button>取消</button>
+       <button>确定</button> 
+    </div>
+        </div>
+    </div>
+
+    <script src='js/jquery.min.js'></script>
+    <script src="js/address.min.js"></script>
+</body>
+
+</html>

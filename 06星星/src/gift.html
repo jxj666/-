@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>我的礼品</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="css/gift.min.css">
+    <script type="text/javascript">
+    function get_hfs() {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    }
+    get_hfs();
+
+    function throttle(method, context) {
+        clearTimeout(method.timer);
+        method.timer = setTimeout(function() {
+            method.call(context);
+        }, 100);
+    }
+    window.onresize = function() {
+        throttle(get_hfs);
+    }
+    </script>
+</head>
+
+<body>
+    <!-- 通告栏 -->
+    <div class="inform">
+        <div class="pirzes">
+            <ul>
+                <li>
+                    <h5>用户<span>微信名</span>获得<span>118元红包</span></h5>
+                </li>
+            </ul>
+        </div>
+        <div class="getinfo">
+            <a href="javascript:void(0)" data-click="winner-list">获奖名单&gt;</a>
+        </div>
+        <div class="clb"></div>
+    </div>
+    <!-- 号码未激活时 -->
+    <div class="mg_head mg_head1 ">
+        <div class="renwu f_cb">
+            <div class="imgs">
+                <img src="img/phy_3.png" alt="">
+            </div>
+            <div class="xinxi">
+                <h5>你好，小强</h5>
+                <h5>手机号：未激活</h5>
+                <p><a href="address.html">收货地址管理</a></p>
+                <button id="jihuo">激活</button>
+            </div>
+        </div>
+    </div>
+    <!-- 号码激活时 -->
+    <div class="mg_head mg_head2 invisible">
+        <div class="renwu f_cb">
+            <div class="imgs">
+                <img src="img/phy_3.png" alt="">
+            </div>
+            <div class="xinxi">
+                <h5>你好，小强</h5>
+                <h5>手机号：18811112222</h5>
+                <p><a href="address.html">收货地址管理</a></p>
+                <button class="jieban" id="jieban">解&nbsp;绑</button>
+            </div>
+        </div>
+    </div>
+    <!-- 主要 -->
+    <div class="mg_body">
+        <!-- 切换 -->
+        <div class="qihuan">
+            <ul id="linquSwitch">
+                <li class=" line1" id="switch1"><a href="javascript:void(0)">已领取</a></li>
+                <li class="active" id="switch2">
+                    <a href="javascript:void(0)">未领取</a></li>
+            </ul>
+        </div>
+        <div class="lipin weilinqu" id="divswitch1" style="display: none">
+            <div class="jingao">
+                <p>
+                    您有未领取的礼品即将过期，
+                    <br> 请点击领取！
+                    <br> 礼品有效期为自获得后7天。
+                </p>
+            </div>
+            <!-- 如果为空时 -->
+            <div class="empty-box ">
+                <div class="empty-content">
+                    <img class="empty" src="img/empty.png" alt="empty">
+                </div>
+                <p style="font-size:0.3rem; text-align: center; line-height: 1.5; color: #ffa41f">空空如也……
+                    <br>扫伊利条码，获得更多积分好礼</p>
+            </div>
+        </div>
+        <div class="lipin yilinqu " id="divswitch2">
+            <div class="jingao">
+                <p>
+                    您有未领取的礼品即将过期，
+                    <br> 请点击领取！
+                    <br> 礼品有效期为自获得后7天。
+                </p>
+            </div>
+            <div class="xianqin" data-gift='1'>
+                <div class="imgl"><img src="img/tv_img.png"></div>
+                <div class="xinxi">
+                    <h5>乐视超级电视X40S</h5>
+                    <p>获得时间 : 2016\08\10 17:30</p>
+                </div>
+                <div class="qinkuan"><a href="javascript:void(0)" data-click="detail-btn">详情</a></div>
+            </div>
+            <div class="xianqin" data-gift="2">
+                <div class="imgl"><img src="img/hb_img.png"></div>
+                <div class="xinxi">
+                    <h5>微信红包1.18元</h5>
+                    <p>获得时间 : 2016\08\10 17:30</p>
+                </div>
+                <div class="qinkuan"><a href="javascript:void(0)" data-click="detail-btn">已过期</a></div>
+            </div>
+            <div class="xianqin" data-gift="0">
+                <div class="imgl"><img src="img/mg1_07.png"></div>
+                <div class="xinxi">
+                    <h5>三网通1G流量包</h5>
+                    <p>获得时间 : 2016\08\10 17:30</p>
+                </div>
+                <div class="qinkuan"><a href="javascript:void(0)" data-click="detail-btn">详情</a></div>
+            </div>
+            <div class="xianqin" data-gift="12">
+                <div class="imgl"><img src="img/hb_img.png"></div>
+                <div class="xinxi">
+                    <h5>礼盒微信红包</h5>
+                    <p>获得时间 : 2016\08\10 17:30</p>
+                </div>
+                <div class="qinkuan"><a href="javascript:void(0)" data-click="detail-btn">已过期</a></div>
+            </div>
+            <div class="xianqin" data-gift='11'>
+                <div class="imgl"><img src="img/tv_img.png"></div>
+                <div class="xinxi">
+                    <h5>礼盒乐视超级电视</h5>
+                    <p>获得时间 : 2016\08\10 17:30</p>
+                </div>
+                <div class="qinkuan"><a href="javascript:void(0)" data-click="detail-btn">详情</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="mg_foot">
+    </div>
+    <!-- 弹窗:手机绑定 -->
+    <div class="pop invisible" id="phone_bind">
+        <div class="box">
+            <div class="close"></div>
+            <div class="bindnum">
+                <h3>请激活手机号</h3>
+                <div class="cinput">
+                    <input type="text" name="" placeholder="输入手机号">
+                </div>
+                <div class="h40"></div>
+                <button>获取短信验证码</button>
+                <p class="">一次激活，活动通用。用于账号管理和礼品通知，不做任何其他用途。</p>
+            </div>
+        </div>
+    </div>
+    <!-- 弹窗:手机号验证 -->
+    <div class="pop invisible" id="num_verify">
+        <div class="box">
+            <div class="close"></div>
+            <div class="bindnum">
+                <h3>激活手机号获取奖励</h3>
+                <div class="cinput">
+                    <input type="text" name="" placeholder="输入手机号">
+                    <p>验证码已发往您的手机,请查收</p>
+                </div>
+                <div class="cnum clearfix">
+                    <input type="text" name="" placeholder="输入验证码">
+                    <button>获取验证码</button>
+                    <p> 验证码错误,请核对是否输入正确!</p>
+                </div>
+                <button>提交</button>
+                <p>一次激活，活动通用。用于账号管理和礼品通知，不做任何其他用途。</p>
+            </div>
+        </div>
+    </div>
+    <!-- 弹窗:激活解绑成功 -->
+    <div class="pop invisible" id="bind_success">
+        <div class="box">
+            <div class="close"></div>
+            <div class="success">
+                <h3>激活成功</h3>
+            </div>
+            <button type="button">确定</button>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <div class="mg_nav">
+        <nav class="nav-fixed">
+            <ul class="nav-list" id="navlist">
+                <li class="nav bag">拆福袋</li>
+                <li class="nav notice">活动公告</li>
+                <li class="nav prize active">我的礼品</li>
+            </ul>
+        </nav>
+    </div>
+    <script src='js/jquery.min.js'></script>
+    <script src="js/main.min.js"></script>
+    <script type="text/javascript" src='js/mygift.min.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>订单详情</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="css/order_detail.min.css">
+    <script type="text/javascript">
+    function get_hfs() {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    }
+    get_hfs();
+
+    function throttle(method, context) {
+        clearTimeout(method.timer);
+        method.timer = setTimeout(function() {
+            method.call(context);
+        }, 100);
+    }
+    window.onresize = function() {
+        throttle(get_hfs);
+    }
+    </script>
+</head>
+
+<body>
+    <div class="order-main">
+        <div class="order-name">
+            <div class="order-img-content">
+                <img src="img/notice_img.png" class="order-img">
+            </div>
+            <div class="order-right">
+                <h3 class="order-title">超级电视X40S</h3>
+                <p class="order-p">礼品由“伊利集团”提供</p>
+            </div>
+        </div>
+        <div class="order-info">
+            <h3 class="info-title">订单信息</h3>
+            <ul class="info-list">
+                <li class="info-item active">
+                    <a href="##" class="info-anchor active-anchor"></a>
+                    订单已创建
+                    <span class="info-time ">2017-04-20 11:08:34</span>
+                </li>
+                <li class="info-item">
+                    <a href="##" class="info-anchor"></a>
+                    订单支付
+                    <span class="info-time active-time">2017-04-20 11:08:34</span>
+                </li>
+                <!-- 未发货 -->
+                <li class="info-item invisible">
+                    <a href="##" class="info-anchor"></a>
+                    礼品配送 <em style="font-size: .24rem">（完善信息后10个工作日内发货）</em>
+                </li>
+                <!-- 已发货 -->
+                 <li class="info-item">
+                    <a href="##" class="info-anchor"></a>
+                     已发货
+                    <span class="info-time active-time">2017-04-20 11:08:34</span>
+                    <p>物流查询:<span>顺丰1234567890</span></p>
+                </li>
+            </ul>
+        </div>
+        <!-- 订单详情未填地址 -->
+        <div class="receipt-info invisible">
+            <h3 class="receipt-title">收货信息</h3>
+            <div class="receipt-content">
+                <a href="##" data-click="receipt-click" class="receipt-click">+填写收货地址 <span class="receipt-icon"></span></a>
+                <p class="receipt-notice">请准确填写信息，一旦进入发货流程将无法更改。</p>
+            </div>
+        </div>
+        <!-- 订单详情已填地址 -->
+        <div class="receipt-info invisible">
+            <h3 class="receipt-title">收货信息</h3>
+            <div class="xianqin clearfix">
+                <div class="juti">
+                    <h5>杨林<span>18888888888</span></h5>
+                    <p>北京市朝阳区北苑路170号凯旋城7号楼1202室</p>
+                </div>
+                <div class="bianji"></div>
+                <div class="shanchu">删除</div>
+            </div>
+            <p class="receipt-notice">请准确填写信息，一旦进入发货流程将无法更改。</p>
+        </div>
+        <!-- 已经发货 -->
+        <div class="receipt-info ">
+            <h3 class="receipt-title">收货信息</h3>
+            <div class="xianqin clearfix">
+                <div class="juti" style="width: 7rem">
+                    <h5>杨林<span>18888888888</span></h5>
+                    <p>北京市朝阳区北苑路170号凯旋城7号楼1202室</p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+        <script src='js/jquery.min.js'></script>
+    <script src="js/main.min.js"></script>
+    <script>
+    $('.info-item').on('click', function() {
+        $(this).addClass('active').siblings().removeClass('active');
+        $(this).siblings().children('span').removeClass('active');
+      
+        $(this).siblings().children('a').removeClass('active-anchor');
+        $(this).children('a').addClass('active-anchor');
+    })
+    $('[data-click="receipt-click"]').click(function() {
+        location.href = 'address.html';
+    });
+    </script>
+</body>
+
+</html>

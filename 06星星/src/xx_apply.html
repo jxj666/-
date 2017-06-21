@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>星星少儿秒杀页</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/xx_apply.min.css">
+    <script type="text/javascript">
+    function get_hfs() {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    }
+    get_hfs();
+
+    function throttle(method, context) {
+        clearTimeout(method.timer);
+        method.timer = setTimeout(function() {
+            method.call(context);
+        }, 100);
+    }
+    window.onresize = function() {
+        throttle(get_hfs);
+    }
+    </script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="pp_top">
+        <div class="inform">
+            <div class="pirzes">
+                <ul>
+                    <li>
+                        <h5>用户<span>微信名</span>获得<span>118元红包</span></h5>
+                    </li>
+                </ul>
+            </div>
+            <div class="getinfo">
+                <a href="javascript:void(0)">获奖名单&gt;</a>
+            </div>
+            <div class="clb"></div>
+        </div>
+        <div class="title">
+            <img src="img/banner_02.png">
+        </div>
+    </div>
+    <!-- 主要 -->
+    <div class="pp_body">
+        <div class="chai">
+            <div class="renwu f_cb">
+                <img src="img/phy_3.png" alt="">
+                <p><span>微信昵称六字</span>分享给您一个“星星少儿暑期舞蹈精品体验课”秒杀名额，两周舞蹈精品入门课程+少儿艺术专业素质评测报告，仅19.9元！报名还有星星少儿14周年礼包送哦！</p>
+            </div>
+        </div>
+        <div class="order">
+            <button>我的订单</button>
+            <p>您已经秒杀报名成功，获得有奖邀请资格！</p>
+        </div>
+        <div class="order order2 invisible">
+            <button>我的订单</button>
+            <button>我的邀请</button>
+        </div>
+        <div class="order invisible">
+            <button>报名秒杀</button>
+        </div>
+        <div class="award">
+            <img src="img/apply_03.jpg">
+            <p>推荐超过 <span>4</span> 人报名，即可获得价值 <span>299</span> 元的儿童电话手表 <a href="">（领奖说明）</a> </p>
+        </div>
+        <div class="get_award">
+            <h2>恭喜您邀请成功，获得奖品！</h2>
+            <h3>找工作人员领取奖品时，请点击“确认领取”</h3>
+            <button>确认领取</button>
+        </div>
+        <div class="penyou">
+            <h5>已推荐报名成功 <span>2</span> 位好友</h5>
+            <div class="imgs f_cb">
+                <div class="img-box">
+                    <img src="img/phy_32.jpg" alt="">
+                    <img src="img/phy_34.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="pp_foot">
+        <div class="info">
+            <ul class="count-list">
+                <li class="count-item">
+                    <p class="code-count">1234</p>
+                    扫码次数
+                </li>
+                <li class="count-item">
+                    <p class="prize-count">234</p>
+                    送出奖品
+                </li>
+                <li class="count-item">
+                    <p class="person-count">72344</p>
+                    访问人数
+                </li>
+            </ul>
+            <div class="intro">
+                <div class="intro_title">星星少儿暑期舞蹈精品体验课</div>
+                <h2>(课程介绍)</h2>
+                <h3>亮点一：为期两周舞蹈精品入门课程</h3>
+                <p>提高艺术素养，提升毅力;采用国家专利形体矫正舞蹈训练器进行基础软开度以及基本素质训练，改善弯腰驼背、不良腿型，快速提升气质，让孩子轻松快乐的学习舞蹈。</p>
+                <h3>亮点二：上课还有多重奖励和福利</h3>
+                <p>少儿艺术专业素质评测报告
+                    <br> 儿童摄影师拍摄班级成长电子相册
+                    <br> 课程毕业证书
+                    <br> 优秀学员获得秋季1个月课时(舞蹈、口才、美术等)
+                    <br> 优秀学员还将获得“童星工厂”签约机会
+                </p>
+            </div>
+            <ul class="click-list">
+                <li class="click-item">
+                    <a href="##" data-click="kf">联系客服</a>
+                </li>
+                <li class="click-item">
+                    <a href="##" data-click="statement">隐私权声明</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tv-footer">
+            <img class="tv-code" src="img/2code.jpg">
+            <p class="footer-text">长按识别二维码
+                <br>关注“星星少儿”，参加更多福利活动。</p>
+            <div class="clearfix">
+                <p class="copy">主办:<span class="copy-name">星星少儿</span></p>
+                <p class="support">技术支持:<span class="support-name">成聚移动&nbsp;</span></p>
+            </div>
+        </div>
+    </div>
+    <!-- 已领取弹框 -->
+    <div class="tip-bg get_ed invisible">
+        <div class="kf-tip  ">
+            <div class="h20"></div>
+            <div class="h50"></div>
+            <a href="##" data-click="tip-close" class="tip-close"></a>
+            <h3 class="tip-title">本券的礼盒已被领取!<br>如有异常,请联系客服</h3>
+            <div class="h50"></div>
+            <p class="cgray">
+                客服电话：400-400-400
+            </p>
+            <p class="cgray">
+                客服微信：xingxingshaoer
+            </p>
+            <img src="img/winner_bg.png" class="tip-bottom">
+        </div>
+    </div>
+    <!-- 确认领取弹框 -->
+    <div class="tip-bg get_submint  invisible">
+        <div class="kf-tip  ">
+            <a href="##" data-click="tip-close" class="tip-close"></a>
+            <h3 class="tip-title">请填写支付信息</h3>
+            <div class="info_l">
+                <input type="text" placeholder="手机号">
+            </div>
+            <div class="info_l">
+                <input type="text" placeholder="姓名">
+            </div>
+            <button>去支付</button>
+            <img src="img/winner_bg.png" class="tip-bottom">
+        </div>
+    </div>
+    <script src='js/jquery.min.js'></script>
+    <script src='js/main.min.js'></script>
+    <script src='js/prizes.min.js'></script>
+</body>
+
+</html>

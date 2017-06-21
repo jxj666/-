@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>活动公告</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+	<link rel="stylesheet" type="text/css" href="css/notice.min.css">
+	<script type="text/javascript">
+	    function get_hfs() {
+	        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	    }
+	    get_hfs();
+	    function throttle(method, context) {
+	        clearTimeout(method.timer);
+	        method.timer = setTimeout(function(){
+	            method.call(context);
+	        },100);
+	    }
+	    window.onresize = function (){
+	        throttle(get_hfs);
+	    }
+	</script>
+</head>
+<body>
+
+ 	<div class="notice-card">
+ 		<img src="img/foreshow.png" class="foreshow">
+ 		<p class="notice-text">10台电视超级大奖，每个整点投入一台</p>
+ 	</div>
+ 	<div class="notice-card">
+ 		<p class="notice-text">10台电视超级大奖，每个整点投入一台</p>
+ 		<div class="notice-time">
+ 			<p class="time-top">活动时间：2017年5月1日</p>
+ 			上午9点至11点 <br>下午2点至5点 <br>晚上7点至9点
+ 		</div>
+ 	</div>
+ 	<div class="notice-card">
+ 		<div class="notice-show">
+ 			<img src="img/notice_img.png" class="notice-img">
+ 		</div>
+ 	</div>
+ 	<nav class="nav-fixed">
+	  <ul class="nav-list" id="navlist">
+	    <li class="nav bag" id="bag">拆福袋</li>
+	    <li class="nav notice active" id="notice">活动公告</li>
+	    <li class="nav prize" id="prize">我的礼品</li>
+	  </ul>
+	</nav>
+
+	    <script src='js/jquery.min.js'></script>
+	<script src="js/main.min.js"></script>
+	<script>
+		
+	</script>
+	
+</body>
+</html>

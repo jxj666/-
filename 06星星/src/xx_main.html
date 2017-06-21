@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>星星少儿活动页</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/xx_main.min.css">
+    <script type="text/javascript">
+    function get_hfs() {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    }
+    get_hfs();
+
+    function throttle(method, context) {
+        clearTimeout(method.timer);
+        method.timer = setTimeout(function() {
+            method.call(context);
+        }, 100);
+    }
+    window.onresize = function() {
+        throttle(get_hfs);
+    }
+    </script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="pp_top">
+        <div class="inform">
+            <div class="pirzes">
+                <ul>
+                    <li>
+                        <h5>用户<span>微信名</span>获得<span>118元红包</span></h5>
+                    </li>
+                </ul>
+            </div>
+            <div class="getinfo">
+                <a href="javascript:void(0)">获奖名单&gt;</a>
+            </div>
+            <div class="clb"></div>
+        </div>
+        <div class="title">
+            <img src="img/banner_02.png">
+        </div>
+    </div>
+    <!-- 主要 -->
+    <div class="pp_body">
+        <div class="chai">
+            <div class="renwu f_cb">
+                <img src="img/phy_3.png" alt="">
+                <!-- 中奖人自己看 -->
+                <!--                 <s data-type="status" class="invisible">中奖人自己看</s>
+                <h3 >恭喜您</h3> -->
+                <!-- 别人看 -->
+                <!--                 <s data-type="status" class="invisible">别人看</s>
+                <h3 class="invisible">恭喜小强</h3>
+                <h5>获得乐视超级电视x40s</h5> -->
+                <p>恭喜 <span>xxx（昵称）</span>获得星星少儿赠送的价值18元-28元的礼盒！ 兄弟姐妹帮忙拆一下！</p>
+            </div>
+            <div class="lipin">
+                <!-- 礼盒  -->
+                <s data-type="status" class="invisible">未拆开礼盒时</s>
+                <img src="img/phylh.png" class="lihe_k jianpin_k ">
+                <!-- 实物 -->
+                <s data-type="status" class="invisible">礼盒拆开后</s>
+                <img src="img/phy_16.png" class="invisible shiwu_k jianpin_k">
+                <!-- 红包 -->
+                <s data-type="status" class="invisible">大奖是红包时</s>
+                <img src="img/phy_21.png" class="invisible honbao_k jianpin_k">
+            </div>
+            <div class="chaiyixia">
+                <div class="btns">
+                    <button class="separate_on">&nbsp;</button>
+                    <button class="good_on">&nbsp;</button>
+                </div>
+                <p><a href="">领奖说明</a></p>
+            </div>
+        </div>
+        <div class="penyou">
+            <h3>需要58位朋友帮忙拆开礼盒</h3>
+            <h5>已有6位好友帮拆，呼朋唤友来帮忙吧</h5>
+            <div class="imgs f_cb">
+                <div class="img-box">
+                    <img src="img/phy_32.jpg" alt="">
+                    <img src="img/phy_34.jpg" alt="">
+                    <img src="img/phy_36.jpg" alt="">
+                    <img src="img/phy_32.jpg" alt="">
+                    <img src="img/phy_34.jpg" alt="">
+                    <img src="img/phy_36.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="pp_foot">
+        <div class="seckill">
+            <h2>您有一个</h2>
+            <h3>精品体验课名额</h3>
+            <p>两周舞蹈精品入门课程，少儿艺术专业素质评测报告
+                <br>仅<span>19.9</span>元（还有星星少儿14周年礼包送哦）</p>
+            <button>查看详情</button>
+        </div>
+        <div class="info">
+            <ul class="count-list">
+                <li class="count-item">
+                    <p class="code-count">1234</p>
+                    扫码次数
+                </li>
+                <li class="count-item">
+                    <p class="prize-count">234</p>
+                    送出奖品
+                </li>
+                <li class="count-item">
+                    <p class="person-count">72344</p>
+                    访问人数
+                </li>
+            </ul>
+            <ul class="click-list">
+                <li class="click-item">
+                    <a href="##" data-click="kf">联系客服</a>
+                </li>
+                <li class="click-item">
+                    <a href="##" data-click="statement">隐私权声明</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tv-footer">
+            <img class="tv-code" src="img/code.png">
+            <p class="footer-text">长按识别二维码
+                <br>关注“伊利活动”，参加更多福利活动。</p>
+            <div class="clearfix">
+                <p class="copy">主办:<span class="copy-name">星星少儿</span></p>
+                <p class="support">技术支持:<span class="support-name">成聚移动&nbsp;</span></p>
+            </div>
+        </div>
+    </div>
+    <!-- 自己已领取弹框 -->
+    <div class="tip-bg get_ed get_ed1 ">
+        <div class="kf-tip  ">
+            <div class="h50"></div>
+            <a href="##" data-click="tip-close" class="tip-close"></a>
+            <h3 class="tip-title"> 一个微信号只能领一个福袋，
+<br>您已领过一个。
+<br>如有异常，请联系客服。</h3>
+            <div class="h50"></div>
+            <p class="cgray">
+                客服电话：400-400-400
+            </p>
+            <p class="cgray">
+                客服微信：xingxingshaoer
+            </p>
+            <img src="img/winner_bg.png" class="tip-bottom">
+        </div>
+    </div>
+    <!-- 已被领取弹框 -->
+    <div class="tip-bg get_ed get_ed2 invisible">
+        <div class="kf-tip  ">
+            <div class="h20"></div>
+            <div class="h50"></div>
+            <a href="##" data-click="tip-close" class="tip-close"></a>
+            <h3 class="tip-title">本券的礼盒已被领取!<br>如有异常,请联系客服</h3>
+            <div class="h50"></div>
+            <p class="cgray">
+                客服电话：400-400-400
+            </p>
+            <p class="cgray">
+                客服微信：xingxingshaoer
+            </p>
+            <img src="img/winner_bg.png" class="tip-bottom">
+        </div>
+    </div>
+    <!-- 确认领取弹框 -->
+    <div class="tip-bg get_submint invisible ">
+        <div class="kf-tip  ">
+            <a href="##" data-click="tip-close" class="tip-close"></a>
+            <h3 class="tip-title">确认领取礼品</h3>
+            <div class="info_l">
+                <input type="text" placeholder="孩子姓名">
+            </div>
+            <div class="info_l info_sex">
+                <span>孩子性别</span>
+                <select name="" id=""></select>
+            </div>
+            <div class="info_l info_birth">
+                <span>出生日期</span>
+                <select name="" id=""></select>
+            </div>
+            <div class="info_l">
+                <input type="text" placeholder="家长电话">
+            </div>
+            <img src="img/winner_bg.png" class="tip-bottom">
+        </div>
+    </div>
+    <!-- 隐私声明弹框 -->
+    <div class="tip-bg privacy  invisible">
+        <div class="kf-tip  ">
+            <a href="##" data-click="tip-close" class="tip-close"></a>
+            <h3 class="tip-title">隐私声明</h3>
+            <div class="h20"></div>
+            <p class="cgray">星星少儿非常重视学员信息的保护，所有资料仅用于学员服务、通知领奖。
+            </p>
+            <p class="cgray">未经您的同意，我们将不会向第三方披露您的信息以用于其各自的独立市场营销或商业用途。</p>
+            <p class="cgray">同时提醒，请妥善保管您的账户信息，不与他人共用账户，避免纠纷。</p>
+            <img src="img/winner_bg.png" class="tip-bottom">
+        </div>
+    </div>
+    <!-- 领奖声明弹框 -->
+    <div class="tip-bg explain invisible ">
+        <div class="kf-tip  ">
+            <a href="##" data-click="tip-close" class="tip-close"></a>
+            <h3 class="tip-title">领奖说明</h3>
+            <div class="h10"></div>
+            <div class="explain_l l1">
+                <span></span>
+                <p class="cgray">1、报名秒杀后，即可获得含有价值18元-28元的实物礼盒（舞蹈鞋或者爬爬垫），朋友帮拆开后即可获得</p>
+            </div>
+            <div class="explain_l l2">
+                <span></span>
+                <p class="cgray">2、您同时拥有5个19.9元精品体验课抢购名额（两周的舞蹈入门课程，含素质评测等服务），可以分享给亲友，如果推荐超过4人在线缴费报名，即可获得价值299元的儿童电话手表。</p>
+            </div>
+            <p class="time">领取礼品：星星少儿xx校区，6月25日至7月25日每天14：00-18:00，领奖时请用手机出示获奖页面。</p>
+            <img src="img/winner_bg.png" class="tip-bottom">
+        </div>
+    </div>
+    <!-- 联系客服弹框 -->
+    <div class="tip-bg service invisible">
+        <div class="kf-tip  ">
+            <a href="##" data-click="tip-close" class="tip-close"></a>
+            <h3 class="tip-title">联系客服</h3>
+            <img src="img/2code.jpg" class="code">
+            <p class="cgray">
+                长按识别二维码
+                <br> 关注“星星少儿”，微信号，
+                <br> 发送微信留言，客服将及时处理。
+            </p>
+            <div class="h10"></div>
+            <p class="cred">
+                客服电话：400-400-400
+                <br> 客服微信：xingxingshaoer
+            </p>
+            <img src="img/winner_bg.png" class="tip-bottom">
+        </div>
+    </div>
+    <script src='js/jquery.min.js'></script>
+    <script src='js/main.min.js'></script>
+    <script src='js/prizes.min.js'></script>
+</body>
+
+</html>
